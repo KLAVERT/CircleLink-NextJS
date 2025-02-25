@@ -12,9 +12,16 @@
     }
   },
   "navigation": {
-    "about": "About",
-    "projects": "Projects",
-    "skills": "Skills",
-    "contact": "Contact"
+    "home": "Home",
+    "hosting": "Hosting",
+    "help": "Help",
+    "contact": "Contact us",
+    "panelLogin": "Panel Login",
+    "gameHosting": "Game Hosting",
+    "gameHostingDescription": "Hosted With Pelican Panel For The Best User Experience.",
+    "webHosting": "Web Hosting",
+    "webHostingDescription": "Get Powerful Web Servers To Run You're Own Sites.",
+    "discordHosting": "Discord Hosting",
+    "discordHostingDescription": "Get Powerful, Discord Hosting For Discord Developers."
   }
 } 

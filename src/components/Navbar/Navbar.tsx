@@ -7,11 +7,20 @@ import { useLocale, useTranslations } from 'next-intl';
 import LanguageSwitcher from '../LanguageSwitcher/LanguageSwitcher';
 import ThemeSwitch from '../ThemeSwitch/ThemeSwitch';
 import Button from '../Button/Button';
+import Dropdown from '../Dropdown/Dropdown';
+import { useTheme } from 'next-themes';
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isMobileHostingOpen, setIsMobileHostingOpen] = useState(false);
+  const [mounted, setMounted] = useState(false);
+  const { resolvedTheme } = useTheme();
   const t = useTranslations('navigation');
   const locale = useLocale();
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   useEffect(() => {
     if (isMenuOpen) {
@@ -25,54 +34,102 @@ export default function Navbar() {
     };
   }, [isMenuOpen]);
 
+  const hostingOptions = [
+    {
+      title: t('gameHosting'),
+      description: t("gameHostingDescription"),
+      icon: 'fad fa-gamepad',
+      href: '/game-hosting'
+    },
+    {
+      title: t('webHosting'),
+      description: t("webHostingDescription"),
+      icon: 'fad fa-microchip',
+      href: '/web-hosting'
+    },
+    {
+      title: t('discordHosting'),
+      description: t("discordHostingDescription"),
+      icon: 'fab fa-discord',
+      href: '/discord-hosting'
+    }
+  ];
+
   const navItems = [
-    { label: t('about'), href: `/${locale}#about` },
-    { label: t('projects'), href: `/${locale}#projects` },
-    { label: t('skills'), href: `/${locale}#skills` },
+    { label: t('help'), href: `/${locale}#skills` },
     { label: t('contact'), href: `/${locale}#contact` },
   ];
 
   return (
-    <nav className="fixed top-0 left-0 right-0 bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-700 z-50">
+    <nav className="fixed top-0 left-0 right-0 bg-[var(--color-primary)] z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          {/* Logo */}
-          <Link href={`/${locale}`} className="flex-shrink-0">
-            <Image
-              src="/svg/klavertjuh-logo.svg"
-              alt="Klavertjuh Logo"
-              width={56}
-              height={56}
-              className="w-auto h-14"
-              priority
-            />
-          </Link>
+          {/* Left: Logo */}
+          <div className="flex-shrink-0 lg:pr-8">
+            <Link href={`/${locale}`}>
+              {!mounted ? (
+                <Image
+                  src="/svg/logo.svg"
+                  alt="Klavertjuh Logo"
+                  width={56}
+                  height={56}
+                  className="w-auto h-10"
+                  priority
+                />
+              ) : resolvedTheme === 'dark' ? (
+                <Image
+                  src="/svg/logo-w.svg"
+                  alt="Klavertjuh Logo"
+                  width={56}
+                  height={56}
+                  className="w-auto h-10"
+                  priority
+                />
+              ) : (
+                <Image
+                  src="/svg/logo.svg"
+                  alt="Klavertjuh Logo"
+                  width={56}
+                  height={56}
+                  className="w-auto h-10"
+                  priority
+                />
+              )}
+            </Link>
+          </div>
 
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          {/* Center: Navigation Links */}
+          <div className="hidden min-[1101px]:flex items-center justify-center space-x-8 lg:flex-1 lg:px-12">
+            <Dropdown
+              trigger="Hosting"
+              items={hostingOptions}
+              variant="hosting"
+            />
             {navItems.map(({ label, href }) => (
               <Link
                 key={href}
                 href={href}
-                className="text-gray-700 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white transition-colors"
+                className="text-[var(--color-text-primary)] hover:text-[var(--color-quinary)] transition-colors"
               >
                 {label}
               </Link>
             ))}
           </div>
 
-          {/* Right Side Items */}
-          <div className="hidden md:flex items-center space-x-4">
+          {/* Right: Language, Theme, Panel Login */}
+          <div className="hidden min-[1101px]:flex items-center space-x-6 lg:pl-8">
             <LanguageSwitcher />
             <div className="w-px h-6 bg-gray-200 dark:bg-gray-700" />
             <ThemeSwitch />
+            <div className="w-px h-6 bg-gray-200 dark:bg-gray-700" />
+            <Button variant="secondary" href="https://panel.circlelink.eu/">Panel login</Button>
           </div>
 
           {/* Mobile Menu Button */}
           <Button
             variant="ghost"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="md:hidden"
+            className="min-[1101px]:hidden"
             ariaLabel={isMenuOpen ? 'Close menu' : 'Open menu'}
           >
             <svg
@@ -96,27 +153,72 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       <div
-        className={`md:hidden transition-all duration-300 ease-in-out ${
+        className={`min-[1101px]:hidden transition-all duration-300 ease-in-out ${
           isMenuOpen
             ? 'max-h-screen opacity-100 visible'
             : 'max-h-0 opacity-0 invisible'
         }`}
       >
-        <div className="px-4 pt-2 pb-3 space-y-1 border-t border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900">
+        <div className="px-4 pt-2 pb-3 space-y-1 border-t border-gray-200 dark:border-gray-700 bg-[var(--color-primary)]">
+          {/* Mobile Hosting Dropdown */}
+          <div className="block px-3 py-2">
+            <button
+              onClick={() => setIsMobileHostingOpen(!isMobileHostingOpen)}
+              className="flex items-center justify-between w-full text-[var(--color-text-primary)] hover:text-[var(--color-quinary)] transition-colors"
+            >
+              <span>Hosting</span>
+              <svg
+                className={`w-4 h-4 transition-transform ${isMobileHostingOpen ? 'rotate-180' : ''}`}
+                fill="none"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+            <div className={`mt-2 space-y-1 ${isMobileHostingOpen ? 'block' : 'hidden'}`}>
+              {hostingOptions.map((item, index) => (
+                <Link
+                  key={index}
+                  href={item.href || '#'}
+                  className="block pl-4 py-2"
+                >
+                  <div className="flex items-center space-x-3">
+                    <i className={`${item.icon} text-2xl text-[var(--color-text-primary)]`} />
+                    <div>
+                      <div className="text-[var(--color-text-primary)]">{item.title}</div>
+                      <p className="text-sm text-[var(--color-text-subtle)]">{item.description}</p>
+                    </div>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </div>
           {navItems.map(({ label, href }) => (
             <Link
               key={href}
               href={href}
-              className="block px-3 py-2 text-gray-700 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white transition-colors"
+              className="block px-3 py-2 text-[var(--color-text-primary)] hover:text-[var(--color-quinary)] transition-colors"
               onClick={() => setIsMenuOpen(false)}
             >
               {label}
             </Link>
           ))}
-          <div className="flex items-center space-x-4 px-3 py-2">
-            <LanguageSwitcher />
-            <div className="w-px h-6 bg-gray-200 dark:bg-gray-700" />
-            <ThemeSwitch />
+          <div className="flex flex-col space-y-4 px-3 py-2">
+            <div className="flex justify-center">
+              <LanguageSwitcher />
+            </div>
+            <div className="flex justify-center">
+              <ThemeSwitch />
+            </div>
+            <div className="w-full">
+              <Button variant="secondary" href="https://panel.circlelink.eu/" fullWidth>
+                {t("panelLogin")}
+              </Button>
+            </div>
           </div>
         </div>
       </div>

@@ -18,13 +18,12 @@ const LANGUAGES = {
 } as const;
 
 export default function LanguageSwitcher() {
-  const locale = useLocale();
   const router = useRouter();
   const pathname = usePathname();
+  const currentLocale = useLocale();
 
-  const switchLocale = (newLocale: string) => {
-    // Haal de huidige route op en vervang de taal
-    const newPath = pathname.replace(`/${locale}`, `/${newLocale}`);
+  const switchLanguage = (locale: string) => {
+    const newPath = pathname.replace(`/${currentLocale}`, `/${locale}`);
     router.push(newPath);
   };
 
@@ -32,22 +31,21 @@ export default function LanguageSwitcher() {
     <>
       <span className="flex items-center">
         <Image
-          src={LANGUAGES[locale as keyof typeof LANGUAGES].flag}
-          alt={`${LANGUAGES[locale as keyof typeof LANGUAGES].name} flag`}
+          src={LANGUAGES[currentLocale as keyof typeof LANGUAGES].flag}
+          alt={`${LANGUAGES[currentLocale as keyof typeof LANGUAGES].name} flag`}
           width={20}
           height={15}
           className="object-cover"
         />
       </span>
-      <span className="flex-1 text-sm">
-        {LANGUAGES[locale as keyof typeof LANGUAGES].name}
+      <span className="flex-1 ml-2 text-sm">
+        {LANGUAGES[currentLocale as keyof typeof LANGUAGES].name}
       </span>
       <span className="text-xs">▼</span>
     </>
   );
 
   const items = Object.entries(LANGUAGES).map(([code, {name, flag}]) => ({
-    key: code,
     content: (
       <div className="flex items-center gap-2 w-full">
         <Image 
@@ -60,9 +58,16 @@ export default function LanguageSwitcher() {
         <span className="text-sm truncate">{name}</span>
       </div>
     ),
-    onClick: () => switchLocale(code),
-    isSelected: code === locale
+    onClick: () => switchLanguage(code),
+    isSelected: code === currentLocale
   }));
 
-  return <Dropdown trigger={trigger} items={items} width="180px" />;
+  return (
+    <Dropdown
+      trigger={trigger}
+      items={items}
+      variant="language"
+      width="180px"
+    />
+  );
 } 

@@ -5,8 +5,8 @@ import Navbar from '@/components/Navbar/Navbar';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Portfolio - Klavertjuh',
-  description: 'Personal portfolio of Klavertjuh',
+  title: 'Circlelink - VOF',
+  description: 'Official website of Circlelink - VOF',
 };
 
 const VALID_LOCALES = ['en', 'nl'] as const;

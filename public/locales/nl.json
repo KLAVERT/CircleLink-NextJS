@@ -12,9 +12,16 @@
     }
   },
   "navigation": {
-    "about": "Over mij",
-    "projects": "Projecten",
-    "skills": "Vaardigheden",
-    "contact": "Contact"
+    "home": "Home",
+    "hosting": "Hosting",
+    "help": "Help",
+    "contact": "Contact ons",
+    "panelLogin": "Panel Login",
+    "gameHosting": "Game Hosting",
+    "gameHostingDescription": "Gehost met Pelican Panel voor de beste gebruikerservaring.",
+    "webHosting": "Web Hosting",
+    "webHostingDescription": "Krijg krachtige webservers om je eigen sites te runnen.",
+    "discordHosting": "Discord Hosting",
+    "discordHostingDescription": "Krijg krachtige Discord hosting voor Discord ontwikkelaars."
   }
 } 

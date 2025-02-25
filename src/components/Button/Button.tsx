@@ -6,11 +6,13 @@ interface ButtonProps {
   children: ReactNode;
   onClick?: () => void;
   disabled?: boolean;
-  variant?: 'primary' | 'secondary' | 'ghost';
+  variant?: 'primary' | 'secondary' | 'ghost' | 'success' | 'blue' | 'error';
   fullWidth?: boolean;
   className?: string;
   type?: 'button' | 'submit' | 'reset';
   ariaLabel?: string;
+  href?: string;
+  target?: '_blank' | '_self' | '_parent' | '_top';
 }
 
 export default function Button({
@@ -22,27 +24,49 @@ export default function Button({
   className = '',
   type = 'button',
   ariaLabel,
+  href,
+  target,
 }: ButtonProps) {
   const baseStyles = 'flex items-center justify-center gap-2 px-4 py-2 rounded-md transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed';
   
   const variants = {
-    primary: 'bg-white text-gray-900 hover:bg-gray-100 dark:bg-gray-800 dark:text-white dark:hover:bg-gray-700 border border-gray-200 dark:border-gray-700',
-    secondary: 'bg-gray-100 text-gray-900 hover:bg-gray-200 dark:bg-gray-700 dark:text-white dark:hover:bg-gray-600',
-    ghost: 'bg-transparent hover:bg-gray-100 dark:hover:bg-gray-800 text-gray-900 dark:text-white',
+    primary: 'bg-[var(--color-primary)] text-[var(--color-text-primary)] hover:bg-[var(--color-secondary)] border border-[var(--color-border)]',
+    secondary: 'bg-[var(--color-secondary)] text-[var(--color-text-primary)] hover:bg-[var(--color-tertiary)]',
+    ghost: 'bg-transparent hover:bg-[var(--color-bg-surface)] text-[var(--color-text-primary)]',
+    success: 'bg-[var(--color-success)] hover:bg-[var(--color-success)] text-white',
+    blue: 'bg-[var(--color-quaternary)] hover:bg-[var(--color-quinary)] text-white dark:bg-[var(--color-quaternary)] dark:hover:bg-[var(--color-quinary)]',
+    error: 'bg-[var(--color-error)] hover:bg-[var(--color-error)] text-white',
   };
+
+  const commonProps = {
+    disabled,
+    'aria-label': ariaLabel,
+    className: `
+      ${baseStyles}
+      ${variants[variant]}
+      ${fullWidth ? 'w-full' : ''}
+      ${className}
+    `,
+  };
+
+  if (href && !disabled) {
+    return (
+      <a
+        href={href}
+        target={target}
+        rel={target === '_blank' ? 'noopener noreferrer' : undefined}
+        {...commonProps}
+      >
+        {children}
+      </a>
+    );
+  }
 
   return (
     <button
       onClick={onClick}
-      disabled={disabled}
       type={type}
-      aria-label={ariaLabel}
-      className={`
-        ${baseStyles}
-        ${variants[variant]}
-        ${fullWidth ? 'w-full' : ''}
-        ${className}
-      `}
+      {...commonProps}
     >
       {children}
     </button>
