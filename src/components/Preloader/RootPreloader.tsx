@@ -1,21 +1,30 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import Image from 'next/image';
+import { useTheme } from 'next-themes';
 
 export default function RootPreloader() {
   const [isLoading, setIsLoading] = useState(true);
-  const [opacity, setOpacity] = useState(1);
+  const [mounted, setMounted] = useState(false);
+  const { resolvedTheme } = useTheme();
+
+  useEffect(() => {
+    setMounted(true);
+    // Voorkom scrollen tijdens laden
+    document.body.style.overflow = 'hidden';
+    return () => {
+      document.body.style.overflow = '';  
+    };
+  }, []);
 
   useEffect(() => {
     const handleLoad = () => {
-      // Start fade out wanneer alles is geladen
-      setOpacity(0);
-      // Verwijder preloader na fade
-      setTimeout(() => setIsLoading(false), 500);
+      // Wacht even met uitfaden voor betere UX
+      setTimeout(() => {
+        setIsLoading(false);
+      }, 800);
     };
 
-    // Check of de pagina al geladen is
     if (document.readyState === 'complete') {
       handleLoad();
     } else {
@@ -24,37 +33,33 @@ export default function RootPreloader() {
     }
   }, []);
 
-  if (!isLoading) return null;
+  if (!mounted) return null;
 
   return (
     <div 
-      className="fixed inset-0 bg-white dark:bg-gray-900 flex flex-col items-center justify-center z-[9999]"
-      style={{ 
-        opacity,
-        transition: 'opacity 0.5s ease-in-out'
-      }}
+      className={`fixed inset-0 bg-[var(--color-bg-deep)] flex items-center justify-center z-[9999] transition-opacity duration-500 ${
+        isLoading ? 'opacity-100' : 'opacity-0 pointer-events-none'
+      }`}
     >
-      <h2 className="text-2xl font-bold mb-8 text-gray-900 dark:text-white">
-        Loading...
-      </h2>
-      <div className="flex items-center gap-8">
-        {[...Array(3)].map((_, i) => (
-          <div
-            key={i}
-            style={{
-              animation: `spin 1.5s ease-in-out infinite`,
-              animationDelay: `${i * 0.2}s`
-            }}
+      <div className="flex flex-col items-center space-y-8">
+        <div className="w-[180px] h-[90px]">
+          <svg 
+            viewBox="0 0 120 60" 
+            xmlns="http://www.w3.org/2000/svg"
+            fill={resolvedTheme === 'dark' ? 'var(--color-senary)' : 'var(--color-quinary)'}
+            className="w-full h-full"
           >
-            <Image
-              src="/svg/klavertjuh-logo.svg"
-              alt={`Loading ${i + 1}`}
-              width={40}
-              height={40}
-              priority
-            />
-          </div>
-        ))}
+            <circle cx="30" cy="30" r="8">
+              <animateTransform attributeName="transform" dur="1s" type="translate" values="0 15 ; 0 -15; 0 15" repeatCount="indefinite" begin="0.1" />
+            </circle>
+            <circle cx="60" cy="30" r="8">
+              <animateTransform attributeName="transform" dur="1s" type="translate" values="0 10 ; 0 -10; 0 10" repeatCount="indefinite" begin="0.2" />
+            </circle>
+            <circle cx="90" cy="30" r="8">
+              <animateTransform attributeName="transform" dur="1s" type="translate" values="0 5 ; 0 -5; 0 5" repeatCount="indefinite" begin="0.3" />
+            </circle>
+          </svg>
+        </div>
       </div>
     </div>
   );

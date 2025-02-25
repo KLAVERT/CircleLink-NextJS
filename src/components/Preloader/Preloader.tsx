@@ -1,35 +1,65 @@
 'use client';
 
-import Image from 'next/image';
 import { useEffect, useState } from 'react';
+import { useTheme } from 'next-themes';
 
 export default function Preloader() {
-  const [opacity, setOpacity] = useState(0);
+  const [isVisible, setIsVisible] = useState(true);
+  const [mounted, setMounted] = useState(false);
+  const { resolvedTheme } = useTheme();
 
   useEffect(() => {
-    // Start fade in
-    const fadeIn = setTimeout(() => setOpacity(1), 100);
-
-    return () => clearTimeout(fadeIn);
+    setMounted(true);
+    // Voorkom scrollen tijdens laden
+    document.body.style.overflow = 'hidden';
+    return () => {
+      document.body.style.overflow = '';
+    };
   }, []);
 
+  useEffect(() => {
+    const handleLoad = () => {
+      // Wacht even met uitfaden voor betere UX
+      setTimeout(() => {
+        setIsVisible(false);
+      }, 800);
+    };
+
+    if (document.readyState === 'complete') {
+      handleLoad();
+    } else {
+      window.addEventListener('load', handleLoad);
+      return () => window.removeEventListener('load', handleLoad);
+    }
+  }, []);
+
+  if (!mounted) return null;
+
   return (
-    <div className="fixed inset-0 bg-white dark:bg-gray-900 flex items-center justify-center z-[100]">
-      <div
-        className="transition-all duration-1000 ease-in-out transform"
-        style={{ 
-          opacity,
-          transform: `scale(${opacity === 0 ? 0.95 : 1})`
-        }}
-      >
-        <Image
-          src="/svg/klavertjuh-logo.svg"
-          alt="Klavertjuh Logo"
-          width={150}
-          height={150}
-          className="w-auto h-auto animate-pulse"
-          priority
-        />
+    <div 
+      className={`fixed inset-0 bg-[var(--color-bg-deep)] flex items-center justify-center z-[9999] transition-opacity duration-500 ${
+        isVisible ? 'opacity-100' : 'opacity-0 pointer-events-none'
+      }`}
+    >
+      <div className="flex flex-col items-center space-y-8">
+        <div className="w-[180px] h-[90px]">
+          <svg 
+            viewBox="0 0 120 60" 
+            xmlns="http://www.w3.org/2000/svg"
+            fill={resolvedTheme === 'dark' ? 'var(--color-senary)' : 'var(--color-quinary)'}
+            className="w-full h-full"
+          >
+            <circle cx="30" cy="30" r="8">
+              <animateTransform attributeName="transform" dur="1s" type="translate" values="0 15 ; 0 -15; 0 15" repeatCount="indefinite" begin="0.1" />
+            </circle>
+            <circle cx="60" cy="30" r="8">
+              <animateTransform attributeName="transform" dur="1s" type="translate" values="0 10 ; 0 -10; 0 10" repeatCount="indefinite" begin="0.2" />
+            </circle>
+            <circle cx="90" cy="30" r="8">
+              <animateTransform attributeName="transform" dur="1s" type="translate" values="0 5 ; 0 -5; 0 5" repeatCount="indefinite" begin="0.3" />
+            </circle>
+          </svg>
+        </div>
       </div>
     </div>
   );
