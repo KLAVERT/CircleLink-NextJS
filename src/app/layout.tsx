@@ -2,6 +2,12 @@ import "./globals.scss";
 import { ThemeProvider } from 'next-themes';
 import { Metadata } from 'next';
 import RootPreloader from '@/components/Preloader/RootPreloader';
+import '@/lib/fontawesome';
+import { config } from '@fortawesome/fontawesome-svg-core';
+import '@fortawesome/fontawesome-svg-core/styles.css';
+
+// Tell Font Awesome to skip adding CSS automatically since we imported it above
+config.autoAddCss = false;
 
 export const metadata: Metadata = {
   title: 'Circlelink - VOF',
@@ -16,12 +22,6 @@ export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="nl" suppressHydrationWarning>
       <head>
-        <link
-          rel="stylesheet"
-          href="https://pro.fontawesome.com/releases/v5.15.4/css/all.css"
-          integrity="sha384-rqn26AG5Pj86AF4SO72RK5fyefcQ/x32DNQfChxWvbXIyXFePlEktwD18fEz+kQU"
-          crossOrigin="anonymous"
-        />
         <script
           dangerouslySetInnerHTML={{
             __html: `

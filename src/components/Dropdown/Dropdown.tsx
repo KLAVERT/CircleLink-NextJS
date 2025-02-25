@@ -3,11 +3,13 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import Button from '../Button/Button';
+import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 interface DropdownItem {
   title?: string;
   description?: string;
-  icon?: string;
+  icon?: IconDefinition;
   href?: string;
   onClick?: () => void;
   content?: React.ReactNode;
@@ -33,7 +35,7 @@ export default function Dropdown({ trigger, items, variant = 'default', classNam
       <div className="flex items-center space-x-4 relative group-hover/item:bg-[var(--color-quinary)] rounded-md transition-all duration-300 p-2 -mx-2">
         {item.icon && (
           <div className="flex-shrink-0 flex items-center justify-center w-12 h-12">
-            <i className={`${item.icon} text-4xl text-[var(--color-text-primary)] group-hover/item:text-white transition-colors duration-300`}></i>
+            <FontAwesomeIcon icon={item.icon} className="text-4xl text-[var(--color-text-primary)] group-hover/item:text-white transition-colors duration-300" />
           </div>
         )}
         <div className="flex flex-col">
