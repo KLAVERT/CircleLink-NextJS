@@ -1,0 +1,20 @@
+{
+  "common": {
+    "welcome": "Welcome",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "error": {
+    "404": {
+      "title": "404 - Page Not Found",
+      "description": "The page you are looking for does not exist.",
+      "backHome": "Back to Home"
+    }
+  },
+  "navigation": {
+    "about": "About",
+    "projects": "Projects",
+    "skills": "Skills",
+    "contact": "Contact"
+  }
+} 

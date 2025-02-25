@@ -1,0 +1,20 @@
+{
+  "common": {
+    "welcome": "Welkom",
+    "about": "Over ons",
+    "contact": "Contact"
+  },
+  "error": {
+    "404": {
+      "title": "404 - Pagina niet gevonden",
+      "description": "De pagina die je zoekt bestaat niet.",
+      "backHome": "Terug naar home"
+    }
+  },
+  "navigation": {
+    "about": "Over mij",
+    "projects": "Projecten",
+    "skills": "Vaardigheden",
+    "contact": "Contact"
+  }
+} 
