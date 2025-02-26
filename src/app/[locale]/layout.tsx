@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   description: 'Official website of Circlelink - VOF',
 };
 
-const VALID_LOCALES = ['en', 'nl'] as const;
+const VALID_LOCALES = ['en', 'nl', 'de', 'fr'] as const;
 type ValidLocale = typeof VALID_LOCALES[number];
 
 interface LocaleLayoutProps {

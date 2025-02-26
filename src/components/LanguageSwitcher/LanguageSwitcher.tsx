@@ -15,6 +15,14 @@ const LANGUAGES = {
     name: 'English',
     flag: '/svg/country/gb-flag.svg'
   },
+  de: {
+    name: 'Deutsch',
+    flag: '/svg/country/de-flag.svg'
+  },
+  fr: {
+    name: 'Français',
+    flag: '/svg/country/fr-flag.svg'
+  },
 } as const;
 
 export default function LanguageSwitcher() {

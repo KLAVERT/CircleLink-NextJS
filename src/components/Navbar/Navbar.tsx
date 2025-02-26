@@ -73,7 +73,7 @@ export default function Navbar() {
               {!mounted ? (
                 <Image
                   src="/svg/logo.svg"
-                  alt="Klavertjuh Logo"
+                  alt="Circlelink"
                   width={56}
                   height={56}
                   className="w-auto h-10"
@@ -82,7 +82,7 @@ export default function Navbar() {
               ) : resolvedTheme === 'dark' ? (
                 <Image
                   src="/svg/logo-w.svg"
-                  alt="Klavertjuh Logo"
+                  alt="Circlelink"
                   width={56}
                   height={56}
                   className="w-auto h-10"
@@ -91,7 +91,7 @@ export default function Navbar() {
               ) : (
                 <Image
                   src="/svg/logo.svg"
-                  alt="Klavertjuh Logo"
+                  alt="Circlelink"
                   width={56}
                   height={56}
                   className="w-auto h-10"
