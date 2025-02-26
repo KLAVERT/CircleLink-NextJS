@@ -1,12 +1,10 @@
 'use client';
 
-import { useTranslations } from 'next-intl';
 import { useState, useEffect } from 'react';
 import Preloader from '@/components/Preloader/Preloader';
 
 export default function HomePage() {
   const [isLoading, setIsLoading] = useState(true);
-  const t = useTranslations('common');
 
   useEffect(() => {
     // Wacht tot de pagina volledig is geladen

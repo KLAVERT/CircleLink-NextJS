@@ -5,7 +5,7 @@ export default createMiddleware({
   locales: ['nl', 'en', 'de', 'fr'],
   
   // Used when no locale matches
-  defaultLocale: 'nl',
+  defaultLocale: 'en',
   localePrefix: 'always'
 });
 

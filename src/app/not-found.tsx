@@ -6,7 +6,7 @@ export default async function RootNotFound() {
   const acceptLanguage = (await headers()).get('accept-language') || '';
   // const preferredLocale = acceptLanguage.includes('nl') ? 'nl' : 'en' : 'de' : 'fr';
   const locales = ['nl', 'en', 'de', 'fr'];
-  const preferredLocale = locales.find(lang => acceptLanguage.includes(lang)) || 'nl';
+  const preferredLocale = locales.find(lang => acceptLanguage.includes(lang)) || 'en';
   
   // Redirect naar de root van de juiste taal
   redirect(`/${preferredLocale}/404`);
