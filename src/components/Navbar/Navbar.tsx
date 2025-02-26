@@ -42,19 +42,19 @@ export default function Navbar() {
       title: t('gameHosting'),
       description: t("gameHostingDescription"),
       icon: faGamepad,
-      href: '/game-hosting'
+      href: '/games'
     },
     {
       title: t('webHosting'),
       description: t("webHostingDescription"),
       icon: faMicrochip,
-      href: '/web-hosting'
+      href: '/web'
     },
     {
       title: t('discordHosting'),
       description: t("discordHostingDescription"),
       icon: faDiscord,
-      href: '/discord-hosting'
+      href: '/discord'
     }
   ];
 

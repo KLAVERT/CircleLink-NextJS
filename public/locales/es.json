@@ -1,0 +1,27 @@
+{
+  "common": {
+    "welcome": "Bienvenido",
+    "about": "Acerca de",
+    "contact": "Contacto"
+  },
+  "error": {
+    "404": {
+      "title": "404 - Página No Encontrada",
+      "description": "La página que buscas no existe.",
+      "backHome": "Volver al inicio"
+    }
+  },
+  "navigation": {
+    "home": "Inicio",
+    "hosting": "Alojamiento",
+    "help": "Ayuda",
+    "contact": "Contáctanos",
+    "panelLogin": "Inicio de sesión en el panel",
+    "gameHosting": "Alojamiento de juegos",
+    "gameHostingDescription": "Alojado con Pelican Panel para la mejor experiencia de usuario.",
+    "webHosting": "Alojamiento web",
+    "webHostingDescription": "Obtén servidores web potentes para gestionar tus propios sitios.",
+    "discordHosting": "Alojamiento de Discord",
+    "discordHostingDescription": "Obtén un alojamiento de Discord potente para desarrolladores de Discord."
+  }
+}

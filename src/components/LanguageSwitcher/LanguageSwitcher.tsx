@@ -23,6 +23,10 @@ const LANGUAGES = {
     name: 'Français',
     flag: '/svg/country/fr-flag.svg'
   },
+  es: {
+    name: 'Español',
+    flag: '/svg/country/es-flag.svg'
+  },
 } as const;
 
 export default function LanguageSwitcher() {
