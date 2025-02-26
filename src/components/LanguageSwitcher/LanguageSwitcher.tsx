@@ -9,11 +9,11 @@ import Dropdown from '../Dropdown/Dropdown';
 const LANGUAGES = {
   nl: {
     name: 'Nederlands',
-    flag: '/svg/nl-flag.svg'
+    flag: '/svg/country/nl-flag.svg'
   },
   en: {
     name: 'English',
-    flag: '/svg/gb-flag.svg'
+    flag: '/svg/country/gb-flag.svg'
   },
 } as const;
 

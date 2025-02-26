@@ -30,12 +30,7 @@ export default function HomePage() {
     <>
       {isLoading && <Preloader />}
       <div className={`transition-opacity duration-1000 ${isLoading ? 'opacity-0' : 'opacity-100'}`}>
-        <div className="container mx-auto px-4 py-8">
-          <h1 className="text-4xl font-bold mb-6">
-            {t('welcome')}
-          </h1>
-          {/* Rest van je content */}
-        </div>
+        {/* Components */}
       </div>
     </>
   );
