@@ -96,7 +96,7 @@ export default function Dropdown({ trigger, items, variant = 'default', classNam
           {trigger}
         </Button>
         <div
-          className={`absolute top-full left-0 w-full mt-1 bg-white dark:bg-[var(--color-bg-deep)] border border-[var(--color-border)] rounded-md shadow-lg transition-all duration-300 z-50 overflow-hidden ${
+          className={`absolute top-full left-0 w-full mt-1 bg-[var(--color-bg-deep)] border border-[var(--color-border)] rounded-md shadow-lg transition-all duration-300 z-50 overflow-hidden ${
             isOpen 
               ? 'opacity-100 visible translate-y-0' 
               : 'opacity-0 invisible -translate-y-2'
@@ -136,7 +136,7 @@ export default function Dropdown({ trigger, items, variant = 'default', classNam
       <div
         className={`invisible group-hover/dropdown:visible opacity-0 group-hover/dropdown:opacity-100 absolute ${
           variant === 'hosting' ? '-translate-x-1/2 left-1/2 w-80' : 'left-0 w-48'
-        } mt-2 bg-white dark:bg-[var(--color-bg-deep)] rounded-lg shadow-lg py-2 z-50 border border-[var(--color-border)] transition-all duration-300`}
+        } mt-2 bg-[var(--color-bg-deep)] rounded-lg shadow-lg py-2 z-50 border border-[var(--color-border)] transition-all duration-300`}
       >
         {items.map((item, index) => (
           <div key={index}>
