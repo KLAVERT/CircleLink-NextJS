@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Preloader from '@/components/Preloader/Preloader';
+import GameHostingHero from './_components/GameHostingHero';
 
 export default function HomePage() {
   const [isLoading, setIsLoading] = useState(true);
@@ -28,7 +29,7 @@ export default function HomePage() {
     <>
       {isLoading && <Preloader />}
       <div className={`transition-opacity duration-1000 ${isLoading ? 'opacity-0' : 'opacity-100'}`}>
-        {/* Components */}
+        <GameHostingHero />
       </div>
     </>
   );
