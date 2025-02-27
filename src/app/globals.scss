@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import '../styles/animations.scss';
 
 :root {
   // Achtergronden
@@ -73,6 +74,32 @@
   --color-senary:         #5A9ADE; // Heldere blauw tint (accent voor focus en hover)
 }
 
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--accent);
+  border-radius: 5px;
+  border: 2px solid var(--background);
+  transition: background 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--highlight);
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--accent) var(--background);
+}
+
 body {
   background-color: var(--color-bg-primary);
   color: var(--color-text-primary);
@@ -80,25 +107,6 @@ body {
   position: relative; /* Zorg ervoor dat position: relative is voor betere scroll behavior */
   min-height: 100vh; /* Volledige viewport height */
   scroll-behavior: smooth; /* Soepele scroll */
-}
-
-/* Animaties voor transformaties, niet voor kleuren */
-.animated-transform {
-  transition: transform 0.3s ease;
-}
-
-.animated-opacity {
-  transition: opacity 0.3s ease;
-}
-
-/* Overgangseffecten voor UI elementen, niet voor thema-kleurovergangen */
-button, a, .dropdown {
-  transition: background-color 0.3s ease, transform 0.3s ease, opacity 0.3s ease;
-}
-
-/* Hover effecten zonder transitie van tekst kleur */
-.hover-effect:hover {
-  background-color: var(--color-quinary);
 }
 
 /* Ensure navbar is always on top with enhanced styling */
@@ -111,51 +119,4 @@ nav {
 .shadow-lg {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1), 
               0 2px 4px var(--color-shadow);
-}
-
-/* Animation when navbar changes state */
-nav.translate-y-0 {
-  animation-duration: 0.3s;
-  animation-timing-function: ease-out;
-}
-
-nav.bg-\[var\(--color-tertiary\)\] {
-  animation-name: navbarEnter;
-}
-
-@keyframes navbarEnter {
-  0% {
-    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
-    transform: translateY(-2px);
-  }
-  100% {
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1), 0 2px 4px var(--color-shadow);
-    transform: translateY(0);
-  }
-}
-
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-/* Animatie voor subtiele zijwaartse beweging van SVG's */
-@keyframes sideToSide {
-  0% {
-    transform: translateX(-5px);
-  }
-  50% {
-    transform: translateX(5px);
-  }
-  100% {
-    transform: translateX(-5px);
-  }
-}
-
-.animate-sideToSide {
-  animation: sideToSide 6s ease-in-out infinite;
 }

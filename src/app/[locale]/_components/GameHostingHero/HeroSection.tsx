@@ -265,8 +265,20 @@ const HeroSection = () => {
               alt={t('serverIllustrationAlt')}
               width={600}
               height={600}
-              className="w-[420px] sm:w-[480px] md:w-[560px] lg:w-[600px] h-auto animate-sideToSide transition-transform duration-300 hover:scale-105"
+              className="w-[420px] sm:w-[480px] md:w-[560px] lg:w-[600px] h-auto transition-transform duration-300 hover:scale-105 server-illustration"
+              loading="eager"
               priority
+              fetchPriority="high"
+              style={{
+                contentVisibility: 'auto',
+              }}
+              onLoad={() => {
+                // Voeg de animatie toe nadat de afbeelding is geladen om de LCP te verbeteren
+                const img = document.querySelector('.server-illustration') as HTMLElement;
+                if (img) {
+                  img.classList.add('animate-sideToSide');
+                }
+              }}
             />
           </div>
         </div>

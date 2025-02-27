@@ -1,0 +1,103 @@
+/**
+ * CircleLink - Animation Styles
+ * 
+ * Dit bestand bevat alle animatie-gerelateerde stijlen voor de CircleLink website.
+ * Gescheiden van globals.scss voor betere organisatie en herbruikbaarheid.
+ */
+
+/* Basis animatie klassen */
+.animated-transform {
+  transition: transform 0.3s ease;
+}
+
+.animated-opacity {
+  transition: opacity 0.3s ease;
+}
+
+/* Overgangseffecten voor UI elementen */
+button, a, .dropdown {
+  transition: background-color 0.3s ease, transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Hover effecten */
+.hover-effect:hover {
+  background-color: var(--color-quinary);
+}
+
+/* Navbar animaties */
+nav.translate-y-0 {
+  animation-duration: 0.3s;
+  animation-timing-function: ease-out;
+}
+
+nav.bg-\[var\(--color-tertiary\)\] {
+  animation-name: navbarEnter;
+}
+
+/* Keyframe animaties */
+@keyframes navbarEnter {
+  0% {
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  }
+  100% {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1), 0 2px 4px var(--color-shadow);
+  }
+}
+
+/* SVG animaties */
+@keyframes sideToSide {
+  0% {
+    transform: translateX(-5px);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  100% {
+    transform: translateX(-5px);
+  }
+}
+
+.animate-sideToSide {
+  animation: sideToSide 6s ease-in-out infinite;
+}
+
+/* Loading en transitie animaties */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.animate-spin {
+  animation: spin 1s linear infinite;
+}
+
+.animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Page transition animatie */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.page-transition-enter {
+  animation: fadeIn 0.3s ease-out forwards;
+} 
