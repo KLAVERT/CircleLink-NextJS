@@ -23,5 +23,68 @@
     "webHostingDescription": "Erhalte leistungsstarke Webserver, um deine eigenen Websites zu betreiben.",
     "discordHosting": "Discord-Hosting",
     "discordHostingDescription": "Erhalte leistungsstarkes Discord-Hosting für Discord-Entwickler."
+  },
+  "gameHosting": {
+    "tagline": "#1 Gameserver-Hosting",
+    "heroTitle1": "Professionelles",
+    "heroTitle2": "Game-Hosting",
+    "heroTitle3": "für deinen Server",
+    "heroDescription": "Zuverlässiges, schnelles und günstiges Gameserver-Hosting mit 24/7-Support und einfacher Konfiguration. Starte deinen eigenen Gameserver in wenigen Minuten!",
+    "viewPricing": "Preise anzeigen",
+    "supportedGames": "Unterstützte Spiele",
+    "serverIllustrationAlt": "Server-Hosting-Illustration",
+    "uptime": "Betriebszeit",
+    "support": "Support",
+    "gameMods": "Spielmods",
+    
+    "web": {
+      "tagline": "#1 Webhosting-Anbieter",
+      "heroTitle1": "Zuverlässiges",
+      "heroTitle2": "Webhosting",
+      "heroTitle3": "für deine Website",
+      "heroDescription": "Blitzschnelles Webhosting mit 99,9% Betriebszeit, kostenlosen SSL-Zertifikaten und täglichen Backups. Perfekt für WordPress, E-Commerce und persönliche Websites.",
+      "viewPricing": "Webhosting anzeigen",
+      "features": "Web-Funktionen"
+    },
+    
+    "discord": {
+      "tagline": "#1 Discord-Bot-Hosting",
+      "heroTitle1": "Leistungsstarkes",
+      "heroTitle2": "Discord-Hosting",
+      "heroTitle3": "für deine Bots",
+      "heroDescription": "24/7 Online-Discord-Bot-Hosting mit hoher Betriebszeit, fortschrittlichem Monitoring und einfacher Einrichtung. Ideal für Server-Administratoren und Entwickler.",
+      "viewPricing": "Bot-Hosting anzeigen",
+      "features": "Bot-Funktionen"
+    }
+  },
+  "features": {
+    "sectionTitle": {
+      "part1": "Warum unsere",
+      "part2": "Hosting-Dienste wählen"
+    },
+    "instantSetup": {
+      "title": "Sofortige Einrichtung",
+      "description": "Dein Server ist innerhalb von Minuten einsatzbereit. Starte sofort ohne Wartezeiten."
+    },
+    "ddosProtection": {
+      "title": "DDoS-Schutz",
+      "description": "Fortschrittliche Sicherheit zum Schutz deines Servers vor Angriffen und zur Gewährleistung einer stabilen Spielerfahrung."
+    },
+    "easyManagement": {
+      "title": "Einfache Verwaltung",
+      "description": "Intuitives Kontrollpanel für vollständige Kontrolle über deinen Server, Mods und Einstellungen - keine technischen Kenntnisse erforderlich."
+    },
+    "premiumHardware": {
+      "title": "Premium-Hardware",
+      "description": "Hochwertige Server mit SSD-Speicher und neuesten Prozessoren für optimale Leistung ohne Verzögerungen."
+    },
+    "modSupport": {
+      "title": "Mod-Unterstützung",
+      "description": "Installiere deine Lieblings-Mods mit einem Klick aus unserer umfangreichen Bibliothek für ein personalisiertes Spielerlebnis."
+    },
+    "support": {
+      "title": "24/7-Support",
+      "description": "Unsere Experten stehen jederzeit bereit, um bei technischen Fragen oder Problemen zu helfen, Tag und Nacht."
+    }
   }
 }

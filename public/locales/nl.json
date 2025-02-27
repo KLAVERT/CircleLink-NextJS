@@ -23,5 +23,68 @@
     "webHostingDescription": "Krijg krachtige webservers om je eigen sites te runnen.",
     "discordHosting": "Discord Hosting",
     "discordHostingDescription": "Krijg krachtige Discord hosting voor Discord ontwikkelaars."
+  },
+  "gameHosting": {
+    "tagline": "#1 Game Server Hosting",
+    "heroTitle1": "Professionele",
+    "heroTitle2": "Game Hosting",
+    "heroTitle3": "voor jouw server",
+    "heroDescription": "Betrouwbare, snelle en betaalbare game server hosting met 24/7 support en eenvoudige configuratie. Start binnen enkele minuten jouw eigen gameserver!",
+    "viewPricing": "Bekijk Prijzen",
+    "supportedGames": "Ondersteunde Games",
+    "serverIllustrationAlt": "Server Hosting Illustratie",
+    "uptime": "Uptime",
+    "support": "Support",
+    "gameMods": "Game Mods",
+    
+    "web": {
+      "tagline": "#1 Web Hosting Provider",
+      "heroTitle1": "Betrouwbare",
+      "heroTitle2": "Web Hosting",
+      "heroTitle3": "voor jouw website",
+      "heroDescription": "Supersnelle webhosting met 99,9% uptime, gratis SSL en dagelijkse backups. Perfect voor WordPress, webshops en persoonlijke sites.",
+      "viewPricing": "Bekijk Web Hosting",
+      "features": "Web Features"
+    },
+    
+    "discord": {
+      "tagline": "#1 Discord Bot Hosting",
+      "heroTitle1": "Krachtige",
+      "heroTitle2": "Discord Hosting",
+      "heroTitle3": "voor jouw bots",
+      "heroDescription": "24/7 online Discord bot hosting met hoge uptime, geavanceerde monitoring en eenvoudige installatie. Ideaal voor server beheerders en developers.",
+      "viewPricing": "Bekijk Bot Hosting",
+      "features": "Bot Features"
+    }
+  },
+  "features": {
+    "sectionTitle": {
+      "part1": "Waarom kiezen voor onze",
+      "part2": "Hosting Diensten"
+    },
+    "instantSetup": {
+      "title": "Instant Setup",
+      "description": "Je server is binnen enkele minuten klaar voor gebruik. Direct spelen zonder wachttijden."
+    },
+    "ddosProtection": {
+      "title": "DDoS Bescherming",
+      "description": "Geavanceerde beveiliging om je server te beschermen tegen aanvallen en te zorgen voor een stabiele speelervaring."
+    },
+    "easyManagement": {
+      "title": "Eenvoudig Beheer",
+      "description": "Intuïtief controlepaneel voor volledige controle over je server, mods en instellingen - geen technische kennis vereist."
+    },
+    "premiumHardware": {
+      "title": "Premium Hardware",
+      "description": "Hoogwaardige servers met SSD opslag en de nieuwste processoren voor optimale prestaties zonder lag."
+    },
+    "modSupport": {
+      "title": "Mod Support",
+      "description": "Installeer je favoriete mods met één klik vanuit onze uitgebreide bibliotheek, voor een gepersonaliseerde spelervaring."
+    },
+    "support": {
+      "title": "24/7 Support",
+      "description": "Onze experts staan altijd voor je klaar om te helpen bij technische vragen of problemen, dag en nacht."
+    }
   }
 } 

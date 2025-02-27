@@ -6,7 +6,7 @@ interface ButtonProps {
   children: ReactNode;
   onClick?: () => void;
   disabled?: boolean;
-  variant?: 'primary' | 'secondary' | 'ghost' | 'success' | 'blue' | 'error';
+  variant?: 'primary' | 'secondary' | 'ghost' | 'success' | 'blue' | 'error' | 'outline';
   fullWidth?: boolean;
   className?: string;
   type?: 'button' | 'submit' | 'reset';
@@ -27,15 +27,16 @@ export default function Button({
   href,
   target,
 }: ButtonProps) {
-  const baseStyles = 'flex items-center justify-center gap-2 px-4 py-2 rounded-md transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed';
+  const baseStyles = 'flex items-center justify-center gap-2 px-4 py-2 rounded-md disabled:opacity-50 disabled:cursor-not-allowed';
   
   const variants = {
     primary: 'bg-[var(--color-primary)] text-[var(--color-text-primary)] hover:bg-[var(--color-secondary)] border border-[var(--color-border)]',
     secondary: 'bg-[var(--color-secondary)] text-[var(--color-text-primary)] hover:bg-[var(--color-tertiary)]',
     ghost: 'bg-transparent hover:bg-[var(--color-bg-surface)] text-[var(--color-text-primary)]',
     success: 'bg-[var(--color-success)] hover:bg-[var(--color-success)] text-white',
-    blue: 'bg-[var(--color-quaternary)] hover:bg-[var(--color-quinary)] text-white dark:bg-[var(--color-quaternary)] dark:hover:bg-[var(--color-quinary)]',
+    blue: 'bg-[var(--color-quinary)] hover:bg-[var(--color-senary)] text-white',
     error: 'bg-[var(--color-error)] hover:bg-[var(--color-error)] text-white',
+    outline: 'bg-transparent border border-[var(--color-quinary)] text-[var(--color-text-primary)] hover:bg-[var(--color-quinary)]/10',
   };
 
   const commonProps = {

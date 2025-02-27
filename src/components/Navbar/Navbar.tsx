@@ -17,6 +17,7 @@ export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isMobileHostingOpen, setIsMobileHostingOpen] = useState(false);
   const [mounted, setMounted] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const { resolvedTheme } = useTheme();
   const t = useTranslations('navigation');
   const locale = useLocale();
@@ -27,15 +28,30 @@ export default function Navbar() {
 
   useEffect(() => {
     if (isMenuOpen) {
-      document.documentElement.style.overflow = 'hidden';
+      document.body.style.overflow = 'hidden';
     } else {
-      document.documentElement.style.overflow = '';
+      document.body.style.overflow = '';
     }
     
     return () => {
-      document.documentElement.style.overflow = '';
+      document.body.style.overflow = '';
     };
   }, [isMenuOpen]);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const isScrolled = window.scrollY > 10;
+      if (isScrolled !== scrolled) {
+        setScrolled(isScrolled);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [scrolled]);
 
   const hostingOptions = [
     {
@@ -64,11 +80,15 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className="fixed top-0 left-0 right-0 bg-[var(--color-primary)] z-10000">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10000">
-        <div className="flex items-center justify-between h-16 z-10000">
+    <nav className={`fixed top-0 left-0 right-0 ${
+      scrolled 
+        ? 'bg-[var(--color-tertiary)] shadow-lg translate-y-0' 
+        : 'bg-[var(--color-primary)] translate-y-0'
+    } transition-all duration-300 ease-in-out z-50`}>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-16">
           {/* Left: Logo */}
-          <div className="flex-shrink-0 lg:pr-8 z-10000">
+          <div className="flex-shrink-0 lg:pr-8">
             <Link href={`/${locale}`}>
               {!mounted ? (
                 <Image
@@ -104,7 +124,7 @@ export default function Navbar() {
           {/* Center: Navigation Links */}
           <div className="hidden min-[1101px]:flex items-center justify-center space-x-8 lg:flex-1 lg:px-12">
             <Dropdown
-              trigger="Hosting"
+              trigger={t('hosting')}
               items={hostingOptions}
               variant="hosting"
             />
@@ -112,7 +132,7 @@ export default function Navbar() {
               <Link
                 key={href}
                 href={href}
-                className="text-[var(--color-text-primary)] hover:text-[var(--color-quinary)] transition-colors"
+                className="text-[var(--color-text-primary)] hover:text-[var(--color-quinary)]"
               >
                 {label}
               </Link>
@@ -131,7 +151,12 @@ export default function Navbar() {
           {/* Mobile Menu Button */}
           <Button
             variant="ghost"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            onClick={() => {
+              setIsMenuOpen(!isMenuOpen);
+              if (isMenuOpen) {
+                document.body.style.overflow = '';
+              }
+            }}
             className="min-[1101px]:hidden"
             ariaLabel={isMenuOpen ? 'Close menu' : 'Open menu'}
           >
@@ -156,22 +181,22 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       <div
-        className={`min-[1101px]:hidden transition-all duration-300 ease-in-out ${
+        className={`min-[1101px]:hidden transition-transform transition-opacity duration-300 ${
           isMenuOpen
             ? 'max-h-screen opacity-100 visible'
             : 'max-h-0 opacity-0 invisible'
         }`}
       >
-        <div className="px-4 pt-2 pb-3 space-y-1 border-t border-gray-200 dark:border-gray-700 bg-[var(--color-primary)]">
+        <div className={`px-4 pt-2 pb-3 space-y-1 border-t border-gray-200 dark:border-gray-700 ${scrolled ? 'bg-[var(--color-tertiary)]' : 'bg-[var(--color-primary)]'}`}>
           {/* Mobile Hosting Dropdown */}
           <div className="block px-3 py-2">
             <button
               onClick={() => setIsMobileHostingOpen(!isMobileHostingOpen)}
-              className="flex items-center justify-between w-full text-[var(--color-text-primary)] hover:text-[var(--color-quinary)] transition-colors"
+              className="flex items-center justify-between w-full text-[var(--color-text-primary)] hover:text-[var(--color-quinary)]"
             >
-              <span>Hosting</span>
+              <span>{t('hosting')}</span>
               <svg
-                className={`w-4 h-4 transition-transform ${isMobileHostingOpen ? 'rotate-180' : ''}`}
+                className={`w-4 h-4 ${isMobileHostingOpen ? 'rotate-180' : ''}`}
                 fill="none"
                 strokeLinecap="round"
                 strokeLinejoin="round"

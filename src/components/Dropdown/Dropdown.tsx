@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import Link from 'next/link';
 import Button from '../Button/Button';
 import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
@@ -26,26 +26,53 @@ interface DropdownProps {
 
 export default function Dropdown({ trigger, items, variant = 'default', className = '', width }: DropdownProps) {
   const [isOpen, setIsOpen] = useState(false);
+  const [isHovering, setIsHovering] = useState(false);
+  const dropdownRef = useRef<HTMLDivElement>(null);
+  const timeoutRef = useRef<NodeJS.Timeout | null>(null);
+
+  // Handle hover state with delay for better UX
+  const handleMouseEnter = () => {
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current);
+      timeoutRef.current = null;
+    }
+    setIsHovering(true);
+  };
+
+  const handleMouseLeave = () => {
+    timeoutRef.current = setTimeout(() => {
+      setIsHovering(false);
+    }, 100); // Small delay to prevent menu from closing when moving between elements
+  };
+
+  // Clean up timeout on unmount
+  useEffect(() => {
+    return () => {
+      if (timeoutRef.current) {
+        clearTimeout(timeoutRef.current);
+      }
+    };
+  }, []);
 
   const renderHostingItem = (item: DropdownItem) => (
     <Link
       href={item.href || '#'}
       className="block px-4 py-3 group/item"
     >
-      <div className="flex items-center space-x-4 relative group-hover/item:bg-[var(--color-quinary)] rounded-md transition-all duration-300 p-2 -mx-2">
+      <div className="flex items-center space-x-4 relative group-hover/item:bg-[var(--color-quinary)] rounded-md transition-transform duration-300 p-2 -mx-2">
         {item.icon && (
           <div className="flex-shrink-0 flex items-center justify-center w-12 h-12">
-            <FontAwesomeIcon icon={item.icon} className="text-4xl text-[var(--color-text-primary)] group-hover/item:text-white transition-colors duration-300" />
+            <FontAwesomeIcon icon={item.icon} className="text-4xl text-[var(--color-text-primary)] group-hover/item:text-white" />
           </div>
         )}
         <div className="flex flex-col">
           {item.title && (
-            <div className="font-medium text-[var(--color-text-primary)] group-hover/item:text-white transition-colors duration-300">
+            <div className="font-medium text-[var(--color-text-primary)] group-hover/item:text-white">
               {item.title}
             </div>
           )}
           {item.description && (
-            <p className="text-sm text-[var(--color-text-subtle)] group-hover/item:text-white transition-colors duration-300">
+            <p className="text-sm text-[var(--color-text-subtle)] group-hover/item:text-white">
               {item.description}
             </p>
           )}
@@ -61,7 +88,7 @@ export default function Dropdown({ trigger, items, variant = 'default', classNam
         setIsOpen(false);
       }}
       disabled={item.isSelected}
-      className={`w-full px-4 py-2 text-left transition-colors duration-300 ${
+      className={`w-full px-4 py-2 text-left ${
         item.isSelected
           ? 'bg-[var(--color-quinary)] text-white cursor-default'
           : 'text-[var(--color-text-primary)] hover:bg-[var(--color-quinary)] hover:text-white'
@@ -77,7 +104,7 @@ export default function Dropdown({ trigger, items, variant = 'default', classNam
         item.onClick?.();
         setIsOpen(false);
       }}
-      className="w-full px-4 py-2 text-left text-[var(--color-text-primary)] hover:bg-[var(--color-quinary)] hover:text-white transition-colors duration-300"
+      className="w-full px-4 py-2 text-left text-[var(--color-text-primary)] hover:bg-[var(--color-quinary)] hover:text-white"
     >
       {item.content}
     </button>
@@ -96,7 +123,7 @@ export default function Dropdown({ trigger, items, variant = 'default', classNam
           {trigger}
         </Button>
         <div
-          className={`absolute top-full left-0 w-full mt-1 bg-[var(--color-bg-deep)] border border-[var(--color-border)] rounded-md shadow-lg transition-all duration-300 z-50 overflow-hidden ${
+          className={`absolute top-full left-0 w-full mt-1 bg-[var(--color-bg-deep)] border border-[var(--color-border)] rounded-md shadow-lg transition-opacity transition-transform duration-300 z-50 overflow-hidden ${
             isOpen 
               ? 'opacity-100 visible translate-y-0' 
               : 'opacity-0 invisible -translate-y-2'
@@ -113,14 +140,20 @@ export default function Dropdown({ trigger, items, variant = 'default', classNam
   }
 
   return (
-    <div className={`group/dropdown relative inline-block ${className}`}>
+    <div 
+      className={`relative inline-block ${className}`}
+      ref={dropdownRef}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+    >
       <button
-        className={`flex items-center text-[var(--color-text-primary)] group-hover/dropdown:text-[var(--color-quinary)] transition-colors duration-300`}
+        className={`flex items-center text-[var(--color-text-primary)] py-2 px-1 ${isHovering ? 'text-[var(--color-quinary)]' : ''}`}
+        aria-expanded={isHovering}
       >
         {trigger}
         {variant !== 'hosting' && (
           <svg
-            className="ml-2 h-4 w-4 transition-colors duration-300"
+            className="ml-2 h-4 w-4"
             fill="none"
             strokeLinecap="round"
             strokeLinejoin="round"
@@ -134,10 +167,13 @@ export default function Dropdown({ trigger, items, variant = 'default', classNam
       </button>
 
       <div
-        className={`invisible group-hover/dropdown:visible opacity-0 group-hover/dropdown:opacity-100 absolute ${
+        className={`absolute ${
           variant === 'hosting' ? '-translate-x-1/2 left-1/2 w-80' : 'left-0 w-48'
-        } mt-2 bg-[var(--color-bg-deep)] rounded-lg shadow-lg py-2 z-50 border border-[var(--color-border)] transition-all duration-300`}
+        } mt-0 pt-2 pb-2 bg-[var(--color-bg-deep)] rounded-lg shadow-lg z-50 border border-[var(--color-border)] transition-opacity transition-transform duration-300
+        ${isHovering ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible -translate-y-2 pointer-events-none'}`}
       >
+        <div className="absolute w-full h-4 -top-4 bg-transparent"></div>
+        
         {items.map((item, index) => (
           <div key={index}>
             {variant === 'hosting' ? renderHostingItem(item) : renderDefaultItem(item)}

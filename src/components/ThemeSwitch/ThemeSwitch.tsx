@@ -17,7 +17,7 @@ export default function ThemeSwitch() {
 
   return (
     <button
-      className="relative w-[48px] h-6 rounded-full bg-gray-200 dark:bg-gray-800 transition-colors duration-300 cursor-pointer"
+      className="relative w-[48px] h-6 rounded-full bg-gray-200 dark:bg-gray-800 cursor-pointer"
       onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}
       aria-label={`Switch to ${theme === 'light' ? 'dark' : 'light'} mode`}
     >
