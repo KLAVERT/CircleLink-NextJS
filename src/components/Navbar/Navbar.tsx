@@ -6,6 +6,7 @@ import Link from 'next/link';
 import { useLocale, useTranslations } from 'next-intl';
 import LanguageSwitcher from '../LanguageSwitcher/LanguageSwitcher';
 import ThemeSwitch from '../ThemeSwitch/ThemeSwitch';
+import PanelDropdown from '../PanelDropdown/PanelDropdown';
 import Button from '../Button/Button';
 import Dropdown from '../Dropdown/Dropdown';
 import { useTheme } from 'next-themes';
@@ -145,7 +146,8 @@ export default function Navbar() {
             <div className="w-px h-6 bg-gray-200 dark:bg-gray-700" />
             <ThemeSwitch />
             <div className="w-px h-6 bg-gray-200 dark:bg-gray-700" />
-            <Button variant="secondary" href="https://panel.circlelink.eu/">Panel login</Button>
+            {/* <Button variant="secondary" href="https://panel.circlelink.eu/">Panel login</Button> */}
+            <PanelDropdown />
           </div>
 
           {/* Mobile Menu Button */}
@@ -242,10 +244,8 @@ export default function Navbar() {
             <div className="flex justify-center">
               <ThemeSwitch />
             </div>
-            <div className="w-full">
-              <Button variant="secondary" href="https://panel.circlelink.eu/" fullWidth>
-                {t("panelLogin")}
-              </Button>
+            <div className="flex justify-center">
+              <PanelDropdown />
             </div>
           </div>
         </div>
