@@ -123,7 +123,7 @@ export default function Dropdown({ trigger, items, variant = 'default', classNam
           {trigger}
         </Button>
         <div
-          className={`absolute top-full left-0 w-full mt-1 bg-[var(--color-bg-deep)] border border-[var(--color-border)] rounded-md shadow-lg transition-opacity transition-transform duration-300 z-50 overflow-hidden ${
+          className={`absolute top-full left-0 w-full mt-1 bg-[var(--color-bg-primary)] border border-[var(--color-border)] rounded-md shadow-lg transition-opacity transition-transform duration-300 z-50 overflow-hidden ${
             isOpen 
               ? 'opacity-100 visible translate-y-0' 
               : 'opacity-0 invisible -translate-y-2'
@@ -169,7 +169,7 @@ export default function Dropdown({ trigger, items, variant = 'default', classNam
       <div
         className={`absolute ${
           variant === 'hosting' ? '-translate-x-1/2 left-1/2 w-80' : 'left-0 w-48'
-        } mt-0 pt-2 pb-2 bg-[var(--color-bg-deep)] rounded-lg shadow-lg z-50 border border-[var(--color-border)] transition-opacity transition-transform duration-300
+        } mt-0 pt-2 pb-2 bg-[var(--color-bg-primary)] rounded-lg shadow-lg z-50 border border-[var(--color-border)] transition-opacity transition-transform duration-300
         ${isHovering ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible -translate-y-2 pointer-events-none'}`}
       >
         <div className="absolute w-full h-4 -top-4 bg-transparent"></div>

@@ -1,11 +1,23 @@
 'use client';
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import FeatureCard from './FeatureCard';
 import { useTranslations } from 'next-intl';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const FeaturesSection = () => {
   const t = useTranslations('features');
+  const [animationReady, setAnimationReady] = useState(false);
+  
+  // Wacht tot na de preloader voordat animaties beginnen
+  useEffect(() => {
+    // Iets langere vertraging voor features omdat deze later in beeld komen
+    const timer = setTimeout(() => {
+      setAnimationReady(true);
+    }, 600);
+    
+    return () => clearTimeout(timer);
+  }, []);
   
   // Feature data with translation keys
   const features = [
@@ -58,23 +70,50 @@ const FeaturesSection = () => {
 
   return (
     <div className="container mx-auto px-4 py-24 md:py-32 mt-12">
-      {/* Section title styled like in the image */}
-      <div className="text-center mb-16">
-        <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text-primary)] dark:text-[var(--color-text-primary)]">
-          {t('sectionTitle.part1')} <span className="text-[var(--color-quinary)] dark:text-[var(--color-quinary)]">{t('sectionTitle.part2')}</span>
-        </h2>
-      </div>
-      
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {features.map((feature, index) => (
-          <FeatureCard 
-            key={index}
-            title={feature.title}
-            description={feature.description}
-            icon={feature.icon}
-          />
-        ))}
-      </div>
+      <AnimatePresence>
+        {animationReady && (
+          <>
+            {/* Section title met verbeterde animatie */}
+            <motion.div 
+              className="text-center mb-16"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text-primary)] dark:text-[var(--color-text-primary)]">
+                {t('sectionTitle.part1')} <span className="text-[var(--color-quinary)] dark:text-[var(--color-quinary)]">{t('sectionTitle.part2')}</span>
+              </h2>
+            </motion.div>
+            
+            {/* Features grid met staggered animation */}
+            <motion.div 
+              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+            >
+              {features.map((feature, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 15 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ 
+                    duration: 0.6, 
+                    delay: 0.4 + index * 0.1,
+                    ease: "easeOut"
+                  }}
+                >
+                  <FeatureCard 
+                    title={feature.title}
+                    description={feature.description}
+                    icon={feature.icon}
+                  />
+                </motion.div>
+              ))}
+            </motion.div>
+          </>
+        )}
+      </AnimatePresence>
     </div>
   );
 };

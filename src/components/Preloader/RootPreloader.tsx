@@ -37,7 +37,7 @@ export default function RootPreloader() {
 
   return (
     <div 
-      className={`fixed inset-0 bg-[var(--color-bg-deep)] flex items-center justify-center z-[9999] transition-opacity duration-500 ${
+      className={`fixed inset-0 bg-[var(--color-bg-primary)] flex items-center justify-center z-[9999] transition-opacity duration-500 ${
         isLoading ? 'opacity-100' : 'opacity-0 pointer-events-none'
       }`}
     >
