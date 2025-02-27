@@ -1,0 +1,90 @@
+{
+  "common": {
+    "welcome": "Benvenuto",
+    "about": "Chi siamo",
+    "contact": "Contattaci"
+  },
+  "error": {
+    "404": {
+      "title": "404 - Pagina non trovata",
+      "description": "La pagina che stai cercando non esiste.",
+      "backHome": "Torna alla home"
+    }
+  },
+  "navigation": {
+    "home": "Home",
+    "hosting": "Hosting",
+    "help": "Aiuto",
+    "contact": "Contattaci",
+    "panelLogin": "Accedi al pannello",
+    "gameHosting": "Hosting giochi",
+    "gameHostingDescription": "Ospitato con Pelican Panel per la migliore esperienza utente.",
+    "webHosting": "Web Hosting",
+    "webHostingDescription": "Ottieni potenti server web per gestire i tuoi siti.",
+    "discordHosting": "Hosting Discord",
+    "discordHostingDescription": "Ottieni un hosting potente per gli sviluppatori di Discord."
+  },
+  "gameHosting": {
+    "tagline": "#1 Hosting di server di giochi",
+    "heroTitle1": "Professionale",
+    "heroTitle2": "Hosting giochi",
+    "heroTitle3": "per il tuo server",
+    "heroDescription": "Hosting di server di giochi affidabile, veloce e conveniente con supporto 24/7 e configurazione semplice. Avvia il tuo server di gioco in pochi minuti!",
+    "viewPricing": "Vedi i prezzi",
+    "supportedGames": "Giochi supportati",
+    "serverIllustrationAlt": "Illustrazione dell'hosting del server",
+    "uptime": "Uptime",
+    "support": "Supporto",
+    "gameMods": "Mod di gioco supportati",
+    
+    "web": {
+      "tagline": "#1 Provider di Web Hosting",
+      "heroTitle1": "Affidabile",
+      "heroTitle2": "Web Hosting",
+      "heroTitle3": "per il tuo sito web",
+      "heroDescription": "Web hosting velocissimo con il 99,9% di uptime, certificati SSL gratuiti inclusi e backup giornalieri. Perfetto per WordPress, e-commerce e siti personali.",
+      "viewPricing": "Vedi il Web Hosting",
+      "features": "Funzionalità web"
+    },
+    
+    "discord": {
+      "tagline": "#1 Hosting di bot per Discord",
+      "heroTitle1": "Potente",
+      "heroTitle2": "Hosting Discord",
+      "heroTitle3": "per i tuoi bot",
+      "heroDescription": "Hosting di bot per Discord sempre online 24/7, con elevata uptime, monitoraggio avanzato e configurazione semplice. Ideale per amministratori di server e sviluppatori.",
+      "viewPricing": "Vedi Hosting Bot",
+      "features": "Funzionalità bot"
+    }
+  },
+  "features": {
+    "sectionTitle": {
+      "part1": "Perché scegliere i nostri",
+      "part2": "servizi di hosting"
+    },
+    "instantSetup": {
+      "title": "Installazione immediata",
+      "description": "Il tuo server è pronto all'uso in pochi minuti. Gioca subito senza attese."
+    },
+    "ddosProtection": {
+      "title": "Protezione DDoS",
+      "description": "Sicurezza avanzata per proteggere il tuo server dagli attacchi e garantire un'esperienza di gioco stabile."
+    },
+    "easyManagement": {
+      "title": "Gestione semplice",
+      "description": "Pannello di controllo intuitivo per il pieno controllo del tuo server, mod e impostazioni, senza bisogno di conoscenze tecniche."
+    },
+    "premiumHardware": {
+      "title": "Hardware premium",
+      "description": "Server di alta qualità con archiviazione SSD e i processori più recenti per prestazioni ottimali senza lag."
+    },
+    "modSupport": {
+      "title": "Supporto per mod",
+      "description": "Installa i tuoi mod preferiti con un solo clic dalla nostra ampia libreria, per un'esperienza di gioco personalizzata."
+    },
+    "support": {
+      "title": "Supporto 24/7",
+      "description": "I nostri esperti sono sempre disponibili per aiutarti con domande tecniche o problemi, 24 ore su 24."
+    }
+  }
+}

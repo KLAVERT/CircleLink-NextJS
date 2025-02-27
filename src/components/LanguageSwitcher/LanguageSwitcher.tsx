@@ -7,26 +7,30 @@ import Dropdown from '../Dropdown/Dropdown';
 
 // Voeg hier nieuwe talen toe
 const LANGUAGES = {
-  nl: {
-    name: 'Nederlands',
-    flag: '/svg/country/nl-flag.svg'
+  de: {
+    name: 'Deutsch',
+    flag: '/svg/country/de-flag.svg'
   },
   en: {
     name: 'English',
     flag: '/svg/country/gb-flag.svg'
   },
-  de: {
-    name: 'Deutsch',
-    flag: '/svg/country/de-flag.svg'
+  es: {
+    name: 'Español',
+    flag: '/svg/country/es-flag.svg'
   },
   fr: {
     name: 'Français',
     flag: '/svg/country/fr-flag.svg'
   },
-  es: {
-    name: 'Español',
-    flag: '/svg/country/es-flag.svg'
+  it: {
+    name: 'Italiano',
+    flag: '/svg/country/it-flag.svg'
   },
+  nl: {
+    name: 'Nederlands',
+    flag: '/svg/country/nl-flag.svg'
+  }
 } as const;
 
 export default function LanguageSwitcher() {
