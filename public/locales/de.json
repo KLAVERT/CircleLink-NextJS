@@ -15,11 +15,11 @@
     "home": "Startseite",
     "hosting": "Hosting",
     "help": "Hilfe",
-    "contact": "Kontaktiere uns",
+    "contact": "Kontakt",
     "panelLogin": "Panel-Login",
-    "gameHosting": "Game-Hosting",
+    "gameHosting": "Gamehosting",
     "gameHostingDescription": "Gehostet mit Pelican Panel für die beste Benutzererfahrung.",
-    "webHosting": "Web-Hosting",
+    "webHosting": "Webhosting",
     "webHostingDescription": "Erhalte leistungsstarke Webserver, um deine eigenen Websites zu betreiben.",
     "discordHosting": "Discord-Hosting",
     "discordHostingDescription": "Erhalte leistungsstarkes Discord-Hosting für Discord-Entwickler."
@@ -27,13 +27,13 @@
   "gameHosting": {
     "tagline": "#1 Gameserver-Hosting",
     "heroTitle1": "Professionelles",
-    "heroTitle2": "Game-Hosting",
+    "heroTitle2": "Gamehosting",
     "heroTitle3": "für deinen Server",
     "heroDescription": "Zuverlässiges, schnelles und günstiges Gameserver-Hosting mit 24/7-Support und einfacher Konfiguration. Starte deinen eigenen Gameserver in wenigen Minuten!",
     "viewPricing": "Preise anzeigen",
     "supportedGames": "Unterstützte Spiele",
     "serverIllustrationAlt": "Server-Hosting-Illustration",
-    "uptime": "Betriebszeit",
+    "uptime": "Uptime",
     "support": "Support",
     "gameMods": "Spielmods",
     
@@ -42,7 +42,7 @@
       "heroTitle1": "Zuverlässiges",
       "heroTitle2": "Webhosting",
       "heroTitle3": "für deine Website",
-      "heroDescription": "Blitzschnelles Webhosting mit 99,9% Betriebszeit, kostenlosen SSL-Zertifikaten und täglichen Backups. Perfekt für WordPress, E-Commerce und persönliche Websites.",
+      "heroDescription": "Blitzschnelles Webhosting mit 99,9% Uptime, kostenlosen SSL-Zertifikaten und täglichen Backups. Perfekt für WordPress, E-Commerce und persönliche Websites.",
       "viewPricing": "Webhosting anzeigen",
       "features": "Web-Funktionen"
     },
@@ -52,7 +52,7 @@
       "heroTitle1": "Leistungsstarkes",
       "heroTitle2": "Discord-Hosting",
       "heroTitle3": "für deine Bots",
-      "heroDescription": "24/7 Online-Discord-Bot-Hosting mit hoher Betriebszeit, fortschrittlichem Monitoring und einfacher Einrichtung. Ideal für Server-Administratoren und Entwickler.",
+      "heroDescription": "24/7 Online-Discord-Bot-Hosting mit hoher Uptime, fortschrittlichem Monitoring und einfacher Einrichtung. Ideal für Server-Administratoren und Entwickler.",
       "viewPricing": "Bot-Hosting anzeigen",
       "features": "Bot-Funktionen"
     }

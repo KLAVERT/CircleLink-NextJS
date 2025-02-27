@@ -6,7 +6,7 @@
   },
   "error": {
     "404": {
-      "title": "404 - Page non trouvée",
+      "title": "404 - Page introuvable",
       "description": "La page que vous recherchez n'existe pas.",
       "backHome": "Retour à l'accueil"
     }
@@ -16,7 +16,7 @@
     "hosting": "Hébergement",
     "help": "Aide",
     "contact": "Contactez-nous",
-    "panelLogin": "Connexion au panneau",
+    "panelLogin": "Connexion au panel",
     "gameHosting": "Hébergement de jeux",
     "gameHostingDescription": "Hébergé avec Pelican Panel pour la meilleure expérience utilisateur.",
     "webHosting": "Hébergement Web",
@@ -25,13 +25,13 @@
     "discordHostingDescription": "Obtenez un hébergement Discord puissant pour les développeurs Discord."
   },
   "gameHosting": {
-    "tagline": "#1 Hébergement de Serveur de Jeu",
+    "tagline": "#1 Hébergement de Serveurs de Jeux",
     "heroTitle1": "Hébergement",
     "heroTitle2": "Professionnel",
     "heroTitle3": "pour votre serveur",
-    "heroDescription": "Hébergement de serveur de jeu fiable, rapide et abordable avec assistance 24/7 et configuration facile. Démarrez votre propre serveur de jeu en quelques minutes !",
+    "heroDescription": "Hébergement de serveurs de jeux fiable, rapide et abordable avec assistance 24/7 et configuration facile. Démarrez votre propre serveur de jeu en quelques minutes !",
     "viewPricing": "Voir les prix",
-    "supportedGames": "Jeux supportés",
+    "supportedGames": "Jeux compatibles",
     "serverIllustrationAlt": "Illustration d'hébergement de serveur",
     "uptime": "Disponibilité",
     "support": "Assistance",
@@ -40,51 +40,51 @@
     "web": {
       "tagline": "#1 Fournisseur d'Hébergement Web",
       "heroTitle1": "Hébergement",
-      "heroTitle2": "Web Fiable",
+      "heroTitle2": "Web fiable",
       "heroTitle3": "pour votre site",
       "heroDescription": "Hébergement web ultra-rapide avec 99,9% de disponibilité, certificats SSL gratuits et sauvegardes quotidiennes. Parfait pour WordPress, e-commerce et sites personnels.",
-      "viewPricing": "Voir l'Hébergement Web",
-      "features": "Fonctionnalités Web"
+      "viewPricing": "Voir l'hébergement web",
+      "features": "Fonctionnalités web"
     },
     
     "discord": {
-      "tagline": "#1 Hébergement de Bot Discord",
+      "tagline": "#1 Hébergement de Bots Discord",
       "heroTitle1": "Hébergement",
-      "heroTitle2": "Discord Puissant",
+      "heroTitle2": "Discord puissant",
       "heroTitle3": "pour vos bots",
-      "heroDescription": "Hébergement de bot Discord 24/7 avec haute disponibilité, surveillance avancée et configuration facile. Idéal pour les administrateurs de serveur et les développeurs.",
-      "viewPricing": "Voir l'Hébergement de Bot",
-      "features": "Fonctionnalités de Bot"
+      "heroDescription": "Hébergement de bots Discord 24/7 avec haute disponibilité, surveillance avancée et configuration facile. Idéal pour les administrateurs de serveurs et les développeurs.",
+      "viewPricing": "Voir l'hébergement de bots",
+      "features": "Fonctionnalités des bots"
     }
   },
   "features": {
     "sectionTitle": {
       "part1": "Pourquoi choisir nos",
-      "part2": "Services d'Hébergement"
+      "part2": "services d'hébergement"
     },
     "instantSetup": {
-      "title": "Configuration Instantanée",
+      "title": "Configuration instantanée",
       "description": "Votre serveur est prêt à l'emploi en quelques minutes. Commencez à jouer immédiatement sans attendre."
     },
     "ddosProtection": {
       "title": "Protection DDoS",
-      "description": "Sécurité avancée pour protéger votre serveur contre les attaques et assurer une expérience de jeu stable."
+      "description": "Sécurité avancée pour protéger votre serveur contre les attaques et garantir une expérience de jeu stable."
     },
     "easyManagement": {
-      "title": "Gestion Facile",
+      "title": "Gestion facile",
       "description": "Panneau de contrôle intuitif pour un contrôle total sur votre serveur, mods et paramètres - aucune connaissance technique requise."
     },
     "premiumHardware": {
-      "title": "Matériel Premium",
-      "description": "Serveurs de haute qualité avec stockage SSD et processeurs de dernière génération pour des performances optimales sans lag."
+      "title": "Matériel haut de gamme",
+      "description": "Serveurs de haute qualité avec stockage SSD et processeurs de dernière génération pour des performances optimales sans latence."
     },
     "modSupport": {
-      "title": "Support de Mods",
+      "title": "Compatibilité avec les mods",
       "description": "Installez vos mods préférés en un clic depuis notre bibliothèque étendue, pour une expérience de jeu personnalisée."
     },
     "support": {
       "title": "Support 24/7",
-      "description": "Nos experts sont toujours prêts à vous aider pour toutes questions techniques ou problèmes, jour et nuit."
+      "description": "Nos experts sont toujours prêts à vous aider pour toute question technique ou problème, jour et nuit."
     }
   }
 }

@@ -8,7 +8,7 @@
     "404": {
       "title": "404 - Page Not Found",
       "description": "The page you are looking for does not exist.",
-      "backHome": "Back to Home"
+      "backHome": "Back to home"
     }
   },
   "navigation": {
@@ -16,13 +16,13 @@
     "hosting": "Hosting",
     "help": "Help",
     "contact": "Contact us",
-    "panelLogin": "Panel Login",
-    "gameHosting": "Game Hosting",
-    "gameHostingDescription": "Hosted With Pelican Panel For The Best User Experience.",
-    "webHosting": "Web Hosting",
-    "webHostingDescription": "Get Powerful Web Servers To Run You're Own Sites.",
-    "discordHosting": "Discord Hosting",
-    "discordHostingDescription": "Get Powerful, Discord Hosting For Discord Developers."
+    "panelLogin": "Panel login",
+    "gameHosting": "Game hosting",
+    "gameHostingDescription": "Hosted with Pelican Panel for the best user experience.",
+    "webHosting": "Web hosting",
+    "webHostingDescription": "Get powerful web servers to run your own sites.",
+    "discordHosting": "Discord hosting",
+    "discordHostingDescription": "Get powerful Discord hosting for Discord developers."
   },
   "gameHosting": {
     "tagline": "#1 Game Server Hosting",
@@ -30,21 +30,21 @@
     "heroTitle2": "Game Hosting",
     "heroTitle3": "for your server",
     "heroDescription": "Reliable, fast, and affordable game server hosting with 24/7 support and easy configuration. Start your own game server in minutes!",
-    "viewPricing": "View Pricing",
-    "supportedGames": "Supported Games",
-    "serverIllustrationAlt": "Server Hosting Illustration",
+    "viewPricing": "View pricing",
+    "supportedGames": "Supported games",
+    "serverIllustrationAlt": "Server hosting illustration",
     "uptime": "Uptime",
     "support": "Support",
-    "gameMods": "Game Mods",
+    "gameMods": "Game mods",
     
     "web": {
       "tagline": "#1 Web Hosting Provider",
       "heroTitle1": "Reliable",
       "heroTitle2": "Web Hosting",
       "heroTitle3": "for your website",
-      "heroDescription": "Lightning-fast web hosting with 99.9% uptime, free SSL certificates and daily backups. Perfect for WordPress, e-commerce and personal sites.",
-      "viewPricing": "View Web Hosting",
-      "features": "Web Features"
+      "heroDescription": "Lightning-fast web hosting with 99.9% uptime, free SSL certificates, and daily backups. Perfect for WordPress, e-commerce, and personal sites.",
+      "viewPricing": "View web hosting",
+      "features": "Web features"
     },
     
     "discord": {
@@ -52,39 +52,39 @@
       "heroTitle1": "Powerful",
       "heroTitle2": "Discord Hosting",
       "heroTitle3": "for your bots",
-      "heroDescription": "24/7 online Discord bot hosting with high uptime, advanced monitoring and easy setup. Ideal for server administrators and developers.",
-      "viewPricing": "View Bot Hosting",
-      "features": "Bot Features"
+      "heroDescription": "24/7 online Discord bot hosting with high uptime, advanced monitoring, and easy setup. Ideal for server administrators and developers.",
+      "viewPricing": "View bot hosting",
+      "features": "Bot features"
     }
   },
   "features": {
     "sectionTitle": {
       "part1": "Why choose our",
-      "part2": "Hosting Services"
+      "part2": "hosting services"
     },
     "instantSetup": {
-      "title": "Instant Setup",
+      "title": "Instant setup",
       "description": "Your server is ready to use within minutes. Start playing immediately without waiting."
     },
     "ddosProtection": {
-      "title": "DDoS Protection",
+      "title": "DDoS protection",
       "description": "Advanced security to protect your server against attacks and ensure a stable gaming experience."
     },
     "easyManagement": {
-      "title": "Easy Management",
+      "title": "Easy management",
       "description": "Intuitive control panel for complete control over your server, mods, and settings - no technical knowledge required."
     },
     "premiumHardware": {
-      "title": "Premium Hardware",
+      "title": "Premium hardware",
       "description": "High-quality servers with SSD storage and the latest processors for optimal performance without lag."
     },
     "modSupport": {
-      "title": "Mod Support",
+      "title": "Mod support",
       "description": "Install your favorite mods with one click from our extensive library, for a personalized gaming experience."
     },
     "support": {
-      "title": "24/7 Support",
+      "title": "24/7 support",
       "description": "Our experts are always ready to help with technical questions or issues, day and night."
     }
   }
-} 
+}

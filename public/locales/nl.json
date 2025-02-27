@@ -2,7 +2,7 @@
   "common": {
     "welcome": "Welkom",
     "about": "Over ons",
-    "contact": "Contact"
+    "contact": "Neem contact op"
   },
   "error": {
     "404": {
@@ -15,14 +15,14 @@
     "home": "Home",
     "hosting": "Hosting",
     "help": "Help",
-    "contact": "Contact ons",
-    "panelLogin": "Panel Login",
+    "contact": "Neem contact op",
+    "panelLogin": "Inloggen op het panel",
     "gameHosting": "Game Hosting",
     "gameHostingDescription": "Gehost met Pelican Panel voor de beste gebruikerservaring.",
-    "webHosting": "Web Hosting",
-    "webHostingDescription": "Krijg krachtige webservers om je eigen sites te runnen.",
+    "webHosting": "Webhosting",
+    "webHostingDescription": "Krijg krachtige webservers om je eigen sites te beheren.",
     "discordHosting": "Discord Hosting",
-    "discordHostingDescription": "Krijg krachtige Discord hosting voor Discord ontwikkelaars."
+    "discordHostingDescription": "Krijg krachtige Discord-hosting voor Discord-ontwikkelaars."
   },
   "gameHosting": {
     "tagline": "#1 Game Server Hosting",
@@ -30,21 +30,21 @@
     "heroTitle2": "Game Hosting",
     "heroTitle3": "voor jouw server",
     "heroDescription": "Betrouwbare, snelle en betaalbare game server hosting met 24/7 support en eenvoudige configuratie. Start binnen enkele minuten jouw eigen gameserver!",
-    "viewPricing": "Bekijk Prijzen",
-    "supportedGames": "Ondersteunde Games",
-    "serverIllustrationAlt": "Server Hosting Illustratie",
+    "viewPricing": "Bekijk prijzen",
+    "supportedGames": "Ondersteunde spellen",
+    "serverIllustrationAlt": "Illustratie van serverhosting",
     "uptime": "Uptime",
     "support": "Support",
     "gameMods": "Game Mods",
     
     "web": {
-      "tagline": "#1 Web Hosting Provider",
+      "tagline": "#1 Webhosting Provider",
       "heroTitle1": "Betrouwbare",
-      "heroTitle2": "Web Hosting",
+      "heroTitle2": "Webhosting",
       "heroTitle3": "voor jouw website",
-      "heroDescription": "Supersnelle webhosting met 99,9% uptime, gratis SSL en dagelijkse backups. Perfect voor WordPress, webshops en persoonlijke sites.",
-      "viewPricing": "Bekijk Web Hosting",
-      "features": "Web Features"
+      "heroDescription": "Supersnelle webhosting met 99,9% uptime, gratis SSL en dagelijkse back-ups. Perfect voor WordPress, webshops en persoonlijke sites.",
+      "viewPricing": "Bekijk webhosting",
+      "features": "Webfuncties"
     },
     
     "discord": {
@@ -52,39 +52,39 @@
       "heroTitle1": "Krachtige",
       "heroTitle2": "Discord Hosting",
       "heroTitle3": "voor jouw bots",
-      "heroDescription": "24/7 online Discord bot hosting met hoge uptime, geavanceerde monitoring en eenvoudige installatie. Ideaal voor server beheerders en developers.",
-      "viewPricing": "Bekijk Bot Hosting",
-      "features": "Bot Features"
+      "heroDescription": "24/7 online Discord bot hosting met hoge uptime, geavanceerde monitoring en eenvoudige installatie. Ideaal voor serverbeheerders en ontwikkelaars.",
+      "viewPricing": "Bekijk bot hosting",
+      "features": "Botfuncties"
     }
   },
   "features": {
     "sectionTitle": {
       "part1": "Waarom kiezen voor onze",
-      "part2": "Hosting Diensten"
+      "part2": "hostingdiensten"
     },
     "instantSetup": {
-      "title": "Instant Setup",
+      "title": "Directe installatie",
       "description": "Je server is binnen enkele minuten klaar voor gebruik. Direct spelen zonder wachttijden."
     },
     "ddosProtection": {
-      "title": "DDoS Bescherming",
+      "title": "DDoS-bescherming",
       "description": "Geavanceerde beveiliging om je server te beschermen tegen aanvallen en te zorgen voor een stabiele speelervaring."
     },
     "easyManagement": {
-      "title": "Eenvoudig Beheer",
+      "title": "Eenvoudig beheer",
       "description": "Intuïtief controlepaneel voor volledige controle over je server, mods en instellingen - geen technische kennis vereist."
     },
     "premiumHardware": {
-      "title": "Premium Hardware",
-      "description": "Hoogwaardige servers met SSD opslag en de nieuwste processoren voor optimale prestaties zonder lag."
+      "title": "Premium hardware",
+      "description": "Hoogwaardige servers met SSD-opslag en de nieuwste processoren voor optimale prestaties zonder lag."
     },
     "modSupport": {
-      "title": "Mod Support",
+      "title": "Ondersteuning voor mods",
       "description": "Installeer je favoriete mods met één klik vanuit onze uitgebreide bibliotheek, voor een gepersonaliseerde spelervaring."
     },
     "support": {
-      "title": "24/7 Support",
+      "title": "24/7 support",
       "description": "Onze experts staan altijd voor je klaar om te helpen bij technische vragen of problemen, dag en nacht."
     }
   }
-} 
+}

@@ -6,7 +6,7 @@
   },
   "error": {
     "404": {
-      "title": "404 - Página No Encontrada",
+      "title": "404 - Página no encontrada",
       "description": "La página que buscas no existe.",
       "backHome": "Volver al inicio"
     }
@@ -16,7 +16,7 @@
     "hosting": "Alojamiento",
     "help": "Ayuda",
     "contact": "Contáctanos",
-    "panelLogin": "Inicio de sesión en el panel",
+    "panelLogin": "Acceso al panel",
     "gameHosting": "Alojamiento de juegos",
     "gameHostingDescription": "Alojado con Pelican Panel para la mejor experiencia de usuario.",
     "webHosting": "Alojamiento web",
@@ -43,8 +43,8 @@
       "heroTitle2": "Web Confiable",
       "heroTitle3": "para tu sitio web",
       "heroDescription": "Alojamiento web ultra rápido con 99,9% de tiempo de actividad, certificados SSL gratuitos y copias de seguridad diarias. Perfecto para WordPress, comercio electrónico y sitios personales.",
-      "viewPricing": "Ver Alojamiento Web",
-      "features": "Características Web"
+      "viewPricing": "Ver alojamiento web",
+      "features": "Características web"
     },
     
     "discord": {
@@ -53,33 +53,33 @@
       "heroTitle2": "Potente para Discord",
       "heroTitle3": "para tus bots",
       "heroDescription": "Alojamiento de bots de Discord 24/7 con alto tiempo de actividad, monitoreo avanzado y configuración sencilla. Ideal para administradores de servidores y desarrolladores.",
-      "viewPricing": "Ver Alojamiento de Bots",
-      "features": "Características de Bots"
+      "viewPricing": "Ver alojamiento de bots",
+      "features": "Características de bots"
     }
   },
   "features": {
     "sectionTitle": {
       "part1": "Por qué elegir nuestros",
-      "part2": "Servicios de Alojamiento"
+      "part2": "servicios de alojamiento"
     },
     "instantSetup": {
-      "title": "Configuración Instantánea",
+      "title": "Configuración instantánea",
       "description": "Tu servidor está listo para usar en minutos. Empieza a jugar inmediatamente sin esperas."
     },
     "ddosProtection": {
       "title": "Protección DDoS",
-      "description": "Seguridad avanzada para proteger tu servidor contra ataques y garantizar una experiencia de juego estable."
+      "description": "Protección avanzada contra ataques para garantizar una experiencia de juego estable."
     },
     "easyManagement": {
-      "title": "Gestión Sencilla",
+      "title": "Gestión sencilla",
       "description": "Panel de control intuitivo para un control completo sobre tu servidor, mods y configuraciones - no se requieren conocimientos técnicos."
     },
     "premiumHardware": {
-      "title": "Hardware Premium",
+      "title": "Hardware premium",
       "description": "Servidores de alta calidad con almacenamiento SSD y los procesadores más recientes para un rendimiento óptimo sin retardo."
     },
     "modSupport": {
-      "title": "Soporte para Mods",
+      "title": "Compatibilidad con mods",
       "description": "Instala tus mods favoritos con un clic desde nuestra extensa biblioteca, para una experiencia de juego personalizada."
     },
     "support": {
