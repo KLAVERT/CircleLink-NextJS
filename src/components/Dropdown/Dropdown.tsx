@@ -14,6 +14,7 @@ interface DropdownItem {
   onClick?: () => void;
   content?: React.ReactNode;
   isSelected?: boolean;
+  name?: string;
 }
 
 interface DropdownProps {
@@ -22,9 +23,19 @@ interface DropdownProps {
   variant?: 'default' | 'hosting' | 'language';
   className?: string;
   width?: string;
+  useButtonUI?: boolean;
+  buttonVariant?: 'primary' | 'secondary' | 'ghost';
 }
 
-export default function Dropdown({ trigger, items, variant = 'default', className = '', width }: DropdownProps) {
+export default function Dropdown({
+  trigger,
+  items,
+  variant = 'default',
+  className = '',
+  width,
+  useButtonUI = false,
+  buttonVariant = 'secondary'
+}: DropdownProps) {
   const [isOpen, setIsOpen] = useState(false);
   const [isHovering, setIsHovering] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
@@ -98,32 +109,52 @@ export default function Dropdown({ trigger, items, variant = 'default', classNam
     </button>
   );
 
-  const renderDefaultItem = (item: DropdownItem) => (
-    <button
-      onClick={() => {
-        item.onClick?.();
-        setIsOpen(false);
-      }}
-      className="w-full px-4 py-2 text-left text-[var(--color-text-primary)] hover:bg-[var(--color-quinary)] hover:text-white"
-    >
-      {item.content}
-    </button>
-  );
-
-  if (variant === 'language') {
+  const renderDefaultItem = (item: DropdownItem) => {
+    // If the item has an href, render as a Link
+    if (item.href) {
+      return (
+        <Link
+          href={item.href}
+          className="block w-full px-4 py-2 text-left text-[var(--color-text-primary)] hover:bg-[var(--color-quinary)] hover:text-white"
+        >
+          {item.content || item.title || item.name || 'Unknown'}
+        </Link>
+      );
+    }
+    
+    // Otherwise render as a button
     return (
-      <div className="relative inline-block" style={{ width: width || '180px' }}>
+      <button
+        onClick={() => {
+          item.onClick?.();
+          setIsOpen(false);
+        }}
+        className="w-full px-4 py-2 text-left text-[var(--color-text-primary)] hover:bg-[var(--color-quinary)] hover:text-white"
+      >
+        {item.content || item.title || item.name || 'Unknown'}
+      </button>
+    );
+  };
+
+  // Language variant or any variant with useButtonUI=true
+  if (variant === 'language' || useButtonUI) {
+    return (
+      <div className="relative inline-block" style={{ width: width || (variant === 'language' ? '180px' : 'auto') }}>
         <Button
-          variant="secondary"
+          variant={buttonVariant}
           onClick={() => setIsOpen(!isOpen)}
-          fullWidth
-          ariaLabel={isOpen ? 'Close language menu' : 'Open language menu'}
-          className="justify-between"
+          fullWidth={variant === 'language'}
+          ariaLabel={isOpen ? 'Close dropdown menu' : 'Open dropdown menu'}
+          className={`justify-between ${variant !== 'language' && 'inline-flex items-center'}`}
         >
           {trigger}
         </Button>
         <div
-          className={`absolute top-full left-0 w-full mt-1 bg-[var(--color-bg-primary)] border border-[var(--color-border)] rounded-md shadow-lg transition-opacity transition-transform duration-300 z-50 overflow-hidden ${
+          className={`absolute ${
+            variant === 'language' ? 'top-full left-0 w-full' : 
+            variant === 'hosting' ? 'top-full -translate-x-1/2 left-1/2 w-80' : 
+            'top-full left-0 w-48'
+          } mt-1 bg-[var(--color-bg-primary)] border border-[var(--color-border)] rounded-md shadow-lg transition-opacity transition-transform duration-300 z-50 overflow-hidden ${
             isOpen 
               ? 'opacity-100 visible translate-y-0' 
               : 'opacity-0 invisible -translate-y-2'
@@ -131,7 +162,11 @@ export default function Dropdown({ trigger, items, variant = 'default', classNam
         >
           {items.map((item, index) => (
             <div key={index}>
-              {renderLanguageItem(item)}
+              {variant === 'hosting' 
+                ? renderHostingItem(item) 
+                : variant === 'language' 
+                  ? renderLanguageItem(item) 
+                  : renderDefaultItem(item)}
             </div>
           ))}
         </div>
@@ -139,6 +174,7 @@ export default function Dropdown({ trigger, items, variant = 'default', classNam
     );
   }
 
+  // Standard hover-based dropdown for default and hosting variants
   return (
     <div 
       className={`relative inline-block ${className}`}
@@ -151,19 +187,6 @@ export default function Dropdown({ trigger, items, variant = 'default', classNam
         aria-expanded={isHovering}
       >
         {trigger}
-        {variant !== 'hosting' && (
-          <svg
-            className="ml-2 h-4 w-4"
-            fill="none"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="2"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path d="M19 9l-7 7-7-7" />
-          </svg>
-        )}
       </button>
 
       <div

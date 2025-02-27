@@ -6,7 +6,6 @@ import Link from 'next/link';
 import { useLocale, useTranslations } from 'next-intl';
 import LanguageSwitcher from '../LanguageSwitcher/LanguageSwitcher';
 import ThemeSwitch from '../ThemeSwitch/ThemeSwitch';
-import PanelDropdown from '../PanelDropdown/PanelDropdown';
 import Button from '../Button/Button';
 import Dropdown from '../Dropdown/Dropdown';
 import { useTheme } from 'next-themes';
@@ -74,6 +73,21 @@ export default function Navbar() {
       href: '/discord'
     }
   ];
+
+  const panelOptions = [
+    {
+      name: 'Gaming Panel',
+      href: 'https://panel.circlelink.eu'
+    },
+    {
+      name: 'Web Hosting Panel',
+      href: 'https://nl.web1.circlelink.eu'
+    },
+    {
+      name: 'Php My Admin',
+      href: 'https://phpmyadmin.circlelink.eu'
+    }
+  ]
 
   const navItems = [
     { label: t('help'), href: `/${locale}#skills` },
@@ -147,7 +161,13 @@ export default function Navbar() {
             <ThemeSwitch />
             <div className="w-px h-6 bg-gray-200 dark:bg-gray-700" />
             {/* <Button variant="secondary" href="https://panel.circlelink.eu/">Panel login</Button> */}
-            <PanelDropdown />
+            <Dropdown
+              trigger={'panels'}
+              items={panelOptions}
+              variant="default"
+              useButtonUI={true}
+              buttonVariant="secondary"
+            />
           </div>
 
           {/* Mobile Menu Button */}
@@ -245,7 +265,13 @@ export default function Navbar() {
               <ThemeSwitch />
             </div>
             <div className="flex justify-center">
-              <PanelDropdown />
+              <Dropdown
+                trigger={'panels'}
+                items={panelOptions}
+                variant="default"
+                useButtonUI={true}
+                buttonVariant="secondary"
+              />
             </div>
           </div>
         </div>

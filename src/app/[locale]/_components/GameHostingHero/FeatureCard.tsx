@@ -10,7 +10,7 @@ interface FeatureCardProps {
   index?: number;
 }
 
-const FeatureCard = ({ title, description, icon, index = 0 }: FeatureCardProps) => {
+const FeatureCard = ({ title, description, icon }: FeatureCardProps) => {
   return (
     <motion.div 
       className="bg-[var(--color-bg-primary)] dark:bg-[var(--color-bg-primary)] p-6 rounded-lg shadow-sm transition-all duration-300 group"
