@@ -30,6 +30,10 @@ const LANGUAGES = {
   nl: {
     name: 'Nederlands',
     flag: '/svg/country/nl-flag.svg'
+  },
+  pt: {
+    name: 'Português',
+    flag: '/svg/country/pt-flag.svg'
   }
 } as const;
 

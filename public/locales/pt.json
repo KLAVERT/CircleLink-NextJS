@@ -1,0 +1,90 @@
+{
+  "common": {
+    "welcome": "Bem-vindo",
+    "about": "Sobre nós",
+    "contact": "Entre em contato"
+  },
+  "error": {
+    "404": {
+      "title": "404 - Página não encontrada",
+      "description": "A página que você está procurando não existe.",
+      "backHome": "Voltar para a página inicial"
+    }
+  },
+  "navigation": {
+    "home": "Início",
+    "hosting": "Hospedagem",
+    "help": "Ajuda",
+    "contact": "Entre em contato",
+    "panelLogin": "Entrar no painel",
+    "gameHosting": "Hospedagem de jogos",
+    "gameHostingDescription": "Hospedado com Pelican Panel para a melhor experiência do usuário.",
+    "webHosting": "Hospedagem Web",
+    "webHostingDescription": "Obtenha servidores web poderosos para gerenciar seus sites.",
+    "discordHosting": "Hospedagem no Discord",
+    "discordHostingDescription": "Tenha uma hospedagem poderosa para desenvolvedores do Discord."
+  },
+  "gameHosting": {
+    "tagline": "#1 Hospedagem de servidores de jogos",
+    "heroTitle1": "Profissional",
+    "heroTitle2": "Hospedagem de jogos",
+    "heroTitle3": "para o seu servidor",
+    "heroDescription": "Hospedagem de servidores de jogos confiável, rápida e acessível, com suporte 24/7 e configuração simples. Inicie seu próprio servidor de jogo em minutos!",
+    "viewPricing": "Ver preços",
+    "supportedGames": "Jogos compatíveis",
+    "serverIllustrationAlt": "Ilustração da hospedagem de servidores",
+    "uptime": "Disponibilidade",
+    "support": "Suporte",
+    "gameMods": "Mods de jogos compatíveis",
+    
+    "web": {
+      "tagline": "#1 Provedor de Hospedagem Web",
+      "heroTitle1": "Confiável",
+      "heroTitle2": "Hospedagem Web",
+      "heroTitle3": "para o seu site",
+      "heroDescription": "Hospedagem web ultrarrápida com 99,9% de disponibilidade, certificados SSL gratuitos e backups diários. Perfeito para WordPress, lojas virtuais e sites pessoais.",
+      "viewPricing": "Ver hospedagem web",
+      "features": "Recursos web"
+    },
+    
+    "discord": {
+      "tagline": "#1 Hospedagem de bots no Discord",
+      "heroTitle1": "Poderosa",
+      "heroTitle2": "Hospedagem no Discord",
+      "heroTitle3": "para seus bots",
+      "heroDescription": "Hospedagem de bots no Discord sempre online 24/7, com alta disponibilidade, monitoramento avançado e configuração simples. Ideal para administradores de servidores e desenvolvedores.",
+      "viewPricing": "Ver hospedagem de bots",
+      "features": "Funcionalidades do bot"
+    }
+  },
+  "features": {
+    "sectionTitle": {
+      "part1": "Por que escolher nossos",
+      "part2": "serviços de hospedagem"
+    },
+    "instantSetup": {
+      "title": "Configuração imediata",
+      "description": "Seu servidor estará pronto para uso em minutos. Jogue sem esperas."
+    },
+    "ddosProtection": {
+      "title": "Proteção contra DDoS",
+      "description": "Segurança avançada para proteger seu servidor contra ataques e garantir uma experiência de jogo estável."
+    },
+    "easyManagement": {
+      "title": "Gerenciamento fácil",
+      "description": "Painel de controle intuitivo para total controle do seu servidor, mods e configurações – sem necessidade de conhecimentos técnicos."
+    },
+    "premiumHardware": {
+      "title": "Hardware premium",
+      "description": "Servidores de alta qualidade com armazenamento SSD e os processadores mais recentes para desempenho ideal sem lag."
+    },
+    "modSupport": {
+      "title": "Suporte a mods",
+      "description": "Instale seus mods favoritos com um clique a partir de nossa biblioteca completa para uma experiência de jogo personalizada."
+    },
+    "support": {
+      "title": "Suporte 24/7",
+      "description": "Nossos especialistas estão sempre disponíveis para ajudá-lo com dúvidas técnicas ou problemas, 24 horas por dia."
+    }
+  }
+}
