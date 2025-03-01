@@ -67,6 +67,16 @@ const config: NextConfig = {
       punycode: false,
     };
 
+    if (!config.module) {
+      config.module = { rules: [] };
+    }
+
+    const rules = config.module.rules as Array<{ test: RegExp; use: string[] }>;
+    rules.push({
+      test: /\.svg$/,
+      use: ['@svgr/webpack'],
+    });
+
     return config;
   },
   poweredByHeader: false,

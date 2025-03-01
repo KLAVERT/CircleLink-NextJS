@@ -1,26 +1,25 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import Image from 'next/image';
 import Button from '@/components/Button/Button';
 import { useTranslations } from 'next-intl';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGamepad, faGlobe } from '@fortawesome/free-solid-svg-icons';
 import { faDiscord } from '@fortawesome/free-brands-svg-icons';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import Slider from '@/components/Slider/Slider';
 import AnimatedBackground from './AnimatedBackground';
+import ServerKastGuy from '@/assets/svg/mainpage/server-kast-guy.svg';
 
 const HeroSection = () => {
   const t = useTranslations('gameHosting');
   const [animationReady, setAnimationReady] = useState(false);
 
-  // Wacht tot na de preloader voordat animaties beginnen
   useEffect(() => {
-    // Korte vertraging om te zorgen dat animaties starten ná preloader
+    // Start animations after a short delay
     const timer = setTimeout(() => {
       setAnimationReady(true);
-    }, 300);
+    }, 100);
     
     return () => clearTimeout(timer);
   }, []);
@@ -151,27 +150,17 @@ const HeroSection = () => {
           
           {/* Right column - SVG remains the same but with animation */}
           <div className="w-full md:w-1/2 flex flex-col items-center mt-12 md:mt-0">
-            <AnimatePresence>
-              {animationReady && (
-                <motion.div 
-                  className="relative w-full flex justify-center"
-                  initial={{ y: 30, opacity: 0 }}
-                  animate={{ y: 0, opacity: 1 }}
-                  transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
-                >
-                  <Image 
-                    src="/svg/mainpage/server-kast-guy.svg"
-                    alt={t('serverIllustrationAlt')}
-                    width={600}
-                    height={600}
-                    className="w-[420px] sm:w-[480px] md:w-[560px] lg:w-[600px] h-auto animate-float"
-                    loading="eager"
-                    priority
-                    fetchPriority="high"
-                  />
-                </motion.div>
-              )}
-            </AnimatePresence>
+            <motion.div 
+              className="relative w-full flex justify-center"
+              initial={{ y: 30, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
+            >
+              <ServerKastGuy 
+                className={`w-[420px] sm:w-[480px] md:w-[560px] lg:w-[600px] h-auto ${animationReady ? 'animate-float' : ''}`}
+                aria-label={t('serverIllustrationAlt')}
+              />
+            </motion.div>
           </div>
         </div>
       </div>

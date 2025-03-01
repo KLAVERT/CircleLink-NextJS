@@ -3,6 +3,7 @@ import { useTranslations } from 'next-intl';
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
 import AnimatedBackground from './AnimatedBackground';
+import Link from 'next/link';
 
 const FAQSection = () => {
   const t = useTranslations();
@@ -51,9 +52,12 @@ const FAQSection = () => {
                 transition={{ duration: 0.5, delay: 0.4 }}
               >
                 {t('faq.subtitle.text')}{' '}
-                <a href="/contact" className="text-[var(--color-link)] hover:underline">
+                <Link 
+                  href="/contact" 
+                  className="text-[var(--color-link)] hover:underline"
+                >
                   {t('faq.subtitle.link')}
-                </a>
+                </Link>
               </motion.p>
             </div>
           </motion.div>
