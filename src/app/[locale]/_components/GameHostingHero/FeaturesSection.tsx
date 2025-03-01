@@ -1,33 +1,21 @@
 'use client';
 
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef } from 'react';
 import FeatureCard from './FeatureCard';
 import { useTranslations } from 'next-intl';
-import { motion, useInView, useAnimation } from 'framer-motion';
+import { motion, useInView, useAnimation, AnimatePresence } from 'framer-motion';
 
 const FeaturesSection = () => {
   const t = useTranslations('features');
   const controls = useAnimation();
   const ref = useRef(null);
   const isInView = useInView(ref, { once: false, amount: 0.3 });
-  const [animationsEnabled, setAnimationsEnabled] = useState(false);
   
-  // Stel animaties uit om LCP te prioriteren
   useEffect(() => {
-    // Wacht met animaties tot na LCP
-    const timer = setTimeout(() => {
-      setAnimationsEnabled(true);
-    }, 1000);
-    
-    return () => clearTimeout(timer);
-  }, []);
-  
-  // Start animaties alleen als in view EN nadat de timer is voltooid
-  useEffect(() => {
-    if (isInView && animationsEnabled) {
+    if (isInView) {
       controls.start('visible');
     }
-  }, [isInView, animationsEnabled, controls]);
+  }, [isInView, controls]);
   
   // Feature data with translation keys and categories
   const features = [
@@ -88,90 +76,76 @@ const FeaturesSection = () => {
   const titleVariants = {
     hidden: { 
       opacity: 0,
-      y: -20, // Verminderde y-waarde voor soepelere animatie
-      filter: 'blur(5px)' // Minder blur voor betere prestaties
+      y: -30,
+      scale: 0.95,
+      filter: 'blur(8px)'
     },
     visible: {
       opacity: 1,
       y: 0,
+      scale: 1,
       filter: 'blur(0px)',
       transition: {
-        duration: 0.5, // Kortere duur
-        ease: "easeOut"
+        duration: 0.8,
+        ease: [0.22, 1, 0.36, 1]
       }
     }
   };
   
-  // Grid container animatie met verbeterde prestaties
+  // Grid container animatie
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
       transition: {
-        delayChildren: 0.2, // Kortere vertraging
-        staggerChildren: 0.08 // Snellere stagger
+        delayChildren: 0.3,
+        staggerChildren: 0.1
       }
     }
   };
 
   return (
-    <div className="container mx-auto px-4 py-24 md:py-32 mt-8" ref={ref}>
-      {/* Statische fallback tijdens laden voor betere LCP prestaties */}
-      {!animationsEnabled && (
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text-primary)] dark:text-[var(--color-text-primary)]">
-            {t('sectionTitle.part1')} <span className="text-[var(--color-quinary)] dark:text-[var(--color-quinary)]">{t('sectionTitle.part2')}</span>
-          </h2>
-        </div>
-      )}
-      
+    <div className="container mx-auto px-4 py-24 md:py-32 mt-12" ref={ref}>
       {/* Section title met nieuwe animatie */}
-      {animationsEnabled && (
-        <motion.div 
-          className="text-center mb-16"
-          variants={titleVariants}
-          initial="hidden"
-          animate={controls}
-        >
-          <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text-primary)] dark:text-[var(--color-text-primary)]">
-            {t('sectionTitle.part1')} <span className="text-[var(--color-quinary)] dark:text-[var(--color-quinary)]">{t('sectionTitle.part2')}</span>
-          </h2>
-        </motion.div>
-      )}
+      <motion.div 
+        className="text-center mb-16"
+        variants={titleVariants}
+        initial="hidden"
+        animate={controls}
+      >
+        <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text-primary)] dark:text-[var(--color-text-primary)]">
+          {t('sectionTitle.part1')} <span className="text-[var(--color-quinary)] dark:text-[var(--color-quinary)]">{t('sectionTitle.part2')}</span>
+        </h2>
+      </motion.div>
       
-      {/* Features grid met verbeterde animaties */}
+      {/* Features grid met nieuwe animaties */}
       <motion.div 
         className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
         variants={containerVariants}
         initial="hidden"
         animate={controls}
       >
-        {features.map((feature, index) => (
-          <motion.div
-            key={`${feature.title}-${index}`}
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={controls}
-            variants={{
-              hidden: { opacity: 0, scale: 0.9 },
-              visible: { 
-                opacity: 1, 
-                scale: 1,
-                transition: {
-                  duration: 0.3,
-                  delay: index * 0.08,
-                  ease: "easeOut"
-                }
-              }
-            }}
-          >
-            <FeatureCard 
-              title={feature.title}
-              description={feature.description}
-              icon={feature.icon}
-              index={index}
-            />
-          </motion.div>
-        ))}
+        <AnimatePresence>
+          {features.map((feature, index) => (
+            <motion.div
+              key={`${feature.title}-${index}`}
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{
+                duration: 0.5,
+                delay: index * 0.1,
+                ease: [0.43, 0.13, 0.23, 0.96]
+              }}
+            >
+              <FeatureCard 
+                title={feature.title}
+                description={feature.description}
+                icon={feature.icon}
+                index={index}
+              />
+            </motion.div>
+          ))}
+        </AnimatePresence>
       </motion.div>
     </div>
   );

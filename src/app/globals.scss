@@ -120,32 +120,3 @@ nav {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1), 
               0 2px 4px var(--color-shadow);
 }
-
-/* Performance optimalisaties */
-img, picture, video, canvas, svg {
-  display: block;
-  max-width: 100%;
-  height: auto;
-}
-
-/* Voorkom layout shifts */
-img[data-loaded="true"] {
-  opacity: 1;
-  transition: opacity 0.2s ease-in-out;
-}
-
-img:not([data-loaded="true"]) {
-  opacity: 0;
-}
-
-/* Hardware acceleratie voor animaties */
-.animate-hardware {
-  transform: translateZ(0);
-  backface-visibility: hidden;
-  perspective: 1000px;
-}
-
-/* Voorkom FOUT (Flash of Unstyled Text) */
-html {
-  font-display: swap;
-}

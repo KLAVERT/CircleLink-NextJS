@@ -55,7 +55,6 @@ export default function LanguageSwitcher() {
           alt={`${LANGUAGES[currentLocale as keyof typeof LANGUAGES].name} flag`}
           width={20}
           height={15}
-          style={{ width: '20px', height: '15px' }}
           className="object-cover"
         />
       </span>
@@ -74,7 +73,6 @@ export default function LanguageSwitcher() {
           alt={`${name} flag`} 
           width={20} 
           height={15}
-          style={{ width: '20px', height: '15px' }}
           className="object-cover flex-shrink-0"
         />
         <span className="text-sm truncate">{name}</span>
