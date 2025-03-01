@@ -86,5 +86,24 @@
       "title": "24/7 support",
       "description": "Our experts are always ready to help with technical questions or issues, day and night."
     }
+  },
+  "faq": {
+    "title": "Frequently asked questions",
+    "subtitle": {
+      "text": "Don't see what you're looking for?",
+      "link": "Shoot us a message!"
+    },
+    "ddr3": {
+      "question": "Why does CircleLink have DDR3 ram as a option to choose from?",
+      "answer": "The answer is really simple. We want to make our server accessible for every user on the market. Also the budget users. By giving everyone the option to choose between DDR3 or DDR4 ram, budget users can choose our DDR3 ram option. In most cases DDR3 ram is fast enough to start with and is a bit cheaper than DDR4 ram. Check what the best option is in your case or contact our support. They are happy to help you to choose the best option for you!"
+    },
+    "palican": {
+      "question": "Why does CircleLink use Palican panel?",
+      "answer": "Palican panel is a more advanced panel and can be used for every game server you want. Palican has some newer features that pterodactyl hasn't and is more up to date. Because of that we prefer Palican above Pterodactyl. In case you want back to the OG pterodactyl you could get a VPS or Dedicated server and install it yourself. Our support team would be happy to help you through the installation!"
+    },
+    "webhosting": {
+      "question": "What version of PHP and MySQL do I get with Web Hosting when I use CircleLink?",
+      "answer": "Web Hosting comes with PHP 8.x, 7.x, 5.6 and the latest versions of MySQL 5.6. These are a key requirement for Magento, CMS-Drupal and OpenCart websites and anyone running multiple WordPress websites."
+    }
   }
 }

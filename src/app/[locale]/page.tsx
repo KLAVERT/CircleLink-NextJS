@@ -2,7 +2,9 @@
 
 import { useState, useEffect } from 'react';
 import Preloader from '@/components/Preloader/Preloader';
-import GameHostingHero from './_components/GameHostingHero';
+import HeroSection from './_components/HeroSection';
+import FeaturesSection from './_components/FeaturesSection';
+import FAQSection from './_components/FAQSection';
 
 export default function HomePage() {
   const [isLoading, setIsLoading] = useState(true);
@@ -26,11 +28,13 @@ export default function HomePage() {
   }, []);
 
   return (
-    <>
+    <main>
       {isLoading && <Preloader />}
       <div className={`transition-opacity duration-1000 ${isLoading ? 'opacity-0' : 'opacity-100'}`}>
-        <GameHostingHero />
+        <HeroSection />
+        <FeaturesSection />
+        <FAQSection />
       </div>
-    </>
+    </main>
   );
 } 

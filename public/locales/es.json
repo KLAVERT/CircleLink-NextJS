@@ -86,5 +86,24 @@
       "title": "Soporte 24/7",
       "description": "Nuestros expertos están siempre listos para ayudar con preguntas técnicas o problemas, día y noche."
     }
+  },
+  "faq": {
+    "title": "Preguntas frecuentes",
+    "subtitle": {
+      "text": "¿No encuentras lo que buscas?",
+      "link": "¡Envíanos un mensaje!"
+    },
+    "ddr3": {
+      "question": "¿Por qué CircleLink ofrece RAM DDR3 como opción?",
+      "answer": "La respuesta es muy simple. Queremos hacer que nuestro servidor sea accesible para todos los usuarios del mercado, incluidos los usuarios con presupuesto limitado. Al dar a todos la opción de elegir entre RAM DDR3 o DDR4, los usuarios con presupuesto limitado pueden elegir nuestra opción DDR3. En la mayoría de los casos, la RAM DDR3 es lo suficientemente rápida para empezar y es un poco más económica que la DDR4. Comprueba cuál es la mejor opción en tu caso o contacta con nuestro soporte. ¡Estarán encantados de ayudarte a elegir la mejor opción!"
+    },
+    "palican": {
+      "question": "¿Por qué CircleLink utiliza el panel Palican?",
+      "answer": "El panel Palican es un panel más avanzado que se puede utilizar para cualquier servidor de juegos. Palican tiene algunas características más nuevas que Pterodactyl no tiene y está más actualizado. Por eso preferimos Palican sobre Pterodactyl. Si deseas volver al Pterodactyl original, puedes obtener un VPS o un servidor dedicado e instalarlo tú mismo. ¡Nuestro equipo de soporte estará encantado de ayudarte con la instalación!"
+    },
+    "webhosting": {
+      "question": "¿Qué versión de PHP y MySQL obtengo con el Hosting Web cuando uso CircleLink?",
+      "answer": "El Hosting Web viene con PHP 8.x, 7.x, 5.6 y las últimas versiones de MySQL 5.6. Estos son requisitos clave para sitios web de Magento, CMS-Drupal y OpenCart y para cualquiera que administre múltiples sitios WordPress."
+    }
   }
 }

@@ -9,6 +9,7 @@ import { faGamepad, faGlobe } from '@fortawesome/free-solid-svg-icons';
 import { faDiscord } from '@fortawesome/free-brands-svg-icons';
 import { motion, AnimatePresence } from 'framer-motion';
 import Slider from '@/components/Slider/Slider';
+import AnimatedBackground from './AnimatedBackground';
 
 const HeroSection = () => {
   const t = useTranslations('gameHosting');
@@ -136,53 +137,45 @@ const HeroSection = () => {
   ));
 
   return (
-    <div className="container mx-auto py-20 md:py-28 lg:py-32 px-4">
-      <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8 lg:gap-12">
-        {/* Left column - Text content that changes */}
-        <div className="w-full md:w-1/2 space-y-6 relative">
-          <Slider 
-            slides={slideContent}
-            autoPlayInterval={10000}
-            showIndicators={true}
-          />
-        </div>
-        
-        {/* Right column - SVG remains the same but with animation */}
-        <div className="w-full md:w-1/2 flex flex-col items-center mt-12 md:mt-0">
-          <AnimatePresence>
-            {animationReady && (
-              <motion.div 
-                className="relative w-full flex justify-center"
-                initial={{ y: 30, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
-              >
-                <motion.div
-                  animate={{ y: [0, -15, 0] }}
-                  transition={{ 
-                    duration: 4, 
-                    repeat: Infinity, 
-                    repeatType: "reverse", 
-                    ease: "easeInOut" 
-                  }}
+    <AnimatedBackground variant="primary" className="py-20 md:py-28 lg:py-32">
+      <div className="container mx-auto px-4">
+        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8 lg:gap-12">
+          {/* Left column - Text content that changes */}
+          <div className="w-full md:w-1/2 space-y-6 relative">
+            <Slider 
+              slides={slideContent}
+              autoPlayInterval={10000}
+              showIndicators={true}
+            />
+          </div>
+          
+          {/* Right column - SVG remains the same but with animation */}
+          <div className="w-full md:w-1/2 flex flex-col items-center mt-12 md:mt-0">
+            <AnimatePresence>
+              {animationReady && (
+                <motion.div 
+                  className="relative w-full flex justify-center"
+                  initial={{ y: 30, opacity: 0 }}
+                  animate={{ y: 0, opacity: 1 }}
+                  transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
                 >
                   <Image 
                     src="/svg/mainpage/server-kast-guy.svg"
                     alt={t('serverIllustrationAlt')}
                     width={600}
                     height={600}
-                    className="w-[420px] sm:w-[480px] md:w-[560px] lg:w-[600px] h-auto"
+                    className="w-[420px] sm:w-[480px] md:w-[560px] lg:w-[600px] h-auto animate-float"
                     loading="eager"
                     priority
                     fetchPriority="high"
                   />
                 </motion.div>
-              </motion.div>
-            )}
-          </AnimatePresence>
+              )}
+            </AnimatePresence>
+          </div>
         </div>
       </div>
-    </div>
+    </AnimatedBackground>
   );
 };
 

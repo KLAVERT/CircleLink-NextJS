@@ -11,25 +11,28 @@ interface FeatureCardProps {
 }
 
 const FeatureCard = ({ title, description, icon, index = 0 }: FeatureCardProps) => {
-  // Nieuwe card animatie variants
+  // Card animatie variants
   const cardVariants = {
     hidden: { 
       opacity: 0,
       y: 50,
-      rotateX: 15
+      rotateX: 15,
+      scale: 0.95
     },
     visible: (i: number) => ({ 
       opacity: 1,
       y: 0,
       rotateX: 0,
+      scale: 1,
       transition: { 
         delay: i * 0.15,
         duration: 0.6,
-        ease: [0.22, 1, 0.36, 1] // Custom cubic bezier voor een vloeiende animatie
+        ease: [0.22, 1, 0.36, 1]
       }
     }),
     hover: {
-      scale: 1.05,
+      scale: 1.02,
+      y: -5,
       transition: { 
         type: "spring", 
         stiffness: 400, 
@@ -61,7 +64,7 @@ const FeatureCard = ({ title, description, icon, index = 0 }: FeatureCardProps) 
     },
     hover: { 
       scale: 1.2, 
-      rotate: 5, 
+      rotate: 5,
       transition: { 
         type: "spring", 
         stiffness: 300, 

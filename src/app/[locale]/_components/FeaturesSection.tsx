@@ -4,6 +4,7 @@ import React, { useEffect, useRef } from 'react';
 import FeatureCard from './FeatureCard';
 import { useTranslations } from 'next-intl';
 import { motion, useInView, useAnimation, AnimatePresence } from 'framer-motion';
+import AnimatedBackground from './AnimatedBackground';
 
 const FeaturesSection = () => {
   const t = useTranslations('features');
@@ -105,49 +106,51 @@ const FeaturesSection = () => {
   };
 
   return (
-    <div className="container mx-auto px-4 py-24 md:py-32 mt-12" ref={ref}>
-      {/* Section title met nieuwe animatie */}
-      <motion.div 
-        className="text-center mb-16"
-        variants={titleVariants}
-        initial="hidden"
-        animate={controls}
-      >
-        <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text-primary)] dark:text-[var(--color-text-primary)]">
-          {t('sectionTitle.part1')} <span className="text-[var(--color-quinary)] dark:text-[var(--color-quinary)]">{t('sectionTitle.part2')}</span>
-        </h2>
-      </motion.div>
-      
-      {/* Features grid met nieuwe animaties */}
-      <motion.div 
-        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-        variants={containerVariants}
-        initial="hidden"
-        animate={controls}
-      >
-        <AnimatePresence>
-          {features.map((feature, index) => (
-            <motion.div
-              key={`${feature.title}-${index}`}
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{
-                duration: 0.5,
-                delay: index * 0.1,
-                ease: [0.43, 0.13, 0.23, 0.96]
-              }}
-            >
-              <FeatureCard 
-                title={feature.title}
-                description={feature.description}
-                icon={feature.icon}
-                index={index}
-              />
-            </motion.div>
-          ))}
-        </AnimatePresence>
-      </motion.div>
-    </div>
+    <AnimatedBackground variant="secondary" className="py-24 md:py-32 mt-12">
+      <div className="container mx-auto px-4" ref={ref}>
+        {/* Section title met nieuwe animatie */}
+        <motion.div 
+          className="text-center mb-16"
+          variants={titleVariants}
+          initial="hidden"
+          animate={controls}
+        >
+          <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text-primary)] dark:text-[var(--color-text-primary)]">
+            {t('sectionTitle.part1')} <span className="text-[var(--color-quinary)] dark:text-[var(--color-quinary)]">{t('sectionTitle.part2')}</span>
+          </h2>
+        </motion.div>
+        
+        {/* Features grid met nieuwe animaties */}
+        <motion.div 
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          variants={containerVariants}
+          initial="hidden"
+          animate={controls}
+        >
+          <AnimatePresence>
+            {features.map((feature, index) => (
+              <motion.div
+                key={`${feature.title}-${index}`}
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{
+                  duration: 0.5,
+                  delay: index * 0.1,
+                  ease: [0.43, 0.13, 0.23, 0.96]
+                }}
+              >
+                <FeatureCard 
+                  title={feature.title}
+                  description={feature.description}
+                  icon={feature.icon}
+                  index={index}
+                />
+              </motion.div>
+            ))}
+          </AnimatePresence>
+        </motion.div>
+      </div>
+    </AnimatedBackground>
   );
 };
 

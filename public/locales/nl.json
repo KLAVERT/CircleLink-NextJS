@@ -86,5 +86,24 @@
       "title": "24/7 support",
       "description": "Onze experts staan altijd voor je klaar om te helpen bij technische vragen of problemen, dag en nacht."
     }
+  },
+  "faq": {
+    "title": "Veelgestelde vragen",
+    "subtitle": {
+      "text": "Niet gevonden wat je zoekt?",
+      "link": "Stuur ons een bericht!"
+    },
+    "ddr3": {
+      "question": "Waarom biedt CircleLink DDR3-geheugen als optie aan?",
+      "answer": "Het antwoord is heel simpel. We willen onze server toegankelijk maken voor elke gebruiker op de markt, inclusief budgetgebruikers. Door iedereen de keuze te geven tussen DDR3- of DDR4-geheugen, kunnen budgetgebruikers kiezen voor onze DDR3-optie. In de meeste gevallen is DDR3-geheugen snel genoeg om mee te beginnen en is het wat goedkoper dan DDR4. Bekijk wat de beste optie is in jouw geval of neem contact op met onze support. Ze helpen je graag bij het kiezen van de beste optie!"
+    },
+    "palican": {
+      "question": "Waarom gebruikt CircleLink het Palican panel?",
+      "answer": "Het Palican panel is een geavanceerder panel dat gebruikt kan worden voor elke gameserver die je wilt. Palican heeft enkele nieuwere functies die pterodactyl niet heeft en is meer up-to-date. Daarom geven we de voorkeur aan Palican boven Pterodactyl. Als je terug wilt naar de originele pterodactyl, kun je een VPS of Dedicated server nemen en het zelf installeren. Ons support team helpt je graag bij de installatie!"
+    },
+    "webhosting": {
+      "question": "Welke versie van PHP en MySQL krijg ik bij Webhosting als ik CircleLink gebruik?",
+      "answer": "Webhosting komt met PHP 8.x, 7.x, 5.6 en de nieuwste versies van MySQL 5.6. Dit zijn belangrijke vereisten voor Magento, CMS-Drupal en OpenCart websites en iedereen die meerdere WordPress websites beheert."
+    }
   }
 }
