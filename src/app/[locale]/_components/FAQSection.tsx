@@ -32,8 +32,8 @@ const FAQSection = () => {
           {/* Left Column */}
           <motion.div 
             className="lg:col-span-5"
-            initial={{ opacity: 0, x: -50 }}
-            animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
+            initial={{ opacity: 0, y: 20 }}
+            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
             <div className="sticky top-24">
@@ -46,7 +46,7 @@ const FAQSection = () => {
                 {t('faq.title')}
               </motion.h2>
               <motion.p 
-                className="text-[var(--color-text-subtle)]"
+                className="text-[var(--color-text-primary)]"
                 initial={{ opacity: 0, y: 20 }}
                 animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                 transition={{ duration: 0.5, delay: 0.4 }}
@@ -62,15 +62,19 @@ const FAQSection = () => {
             </div>
           </motion.div>
           
-          {/* Right Column */}
+          {/* Right Column - Restored subtle horizontal animation */}
           <motion.div 
-            className="lg:col-span-7"
-            initial={{ opacity: 0, x: 50 }}
-            animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }}
-            transition={{ duration: 0.5, delay: 0.5 }}
+            className="lg:col-span-7 overflow-hidden"
             ref={sectionRef}
           >
-            <FAQ faqs={faqs} />
+            <motion.div
+              className="w-full"
+              initial={{ opacity: 0, x: 30 }}
+              animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 30 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+            >
+              <FAQ faqs={faqs} />
+            </motion.div>
           </motion.div>
         </div>
       </div>
