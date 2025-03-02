@@ -2,6 +2,7 @@ import "../globals.scss";
 import { NextIntlClientProvider } from 'next-intl';
 import { notFound } from 'next/navigation';
 import Navbar from '@/components/Navbar/Navbar';
+import Footer from '@/components/Footer/Footer';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -37,6 +38,7 @@ export default async function LocaleLayout({ children, params }: LocaleLayoutPro
       <main className="pt-16">
         {children}
       </main>
+      <Footer />
     </NextIntlClientProvider>
   );
 }

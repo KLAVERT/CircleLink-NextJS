@@ -179,5 +179,19 @@
       "question": "Quale versione di PHP e MySQL ottengo con il Web Hosting quando uso CircleLink?",
       "answer": "Il Web Hosting viene fornito con PHP 8.x, 7.x, 5.6 e le ultime versioni di MySQL 5.6. Questi sono requisiti fondamentali per i siti web Magento, CMS-Drupal e OpenCart e per chiunque gestisca più siti WordPress."
     }
+  },
+  "footer": {
+    "quickLinks": "Link Rapidi",
+    "onlineStatus": "Stato Online",
+    "shopping": "Negozio",
+    "gameHosting": "Hosting di Giochi",
+    "websiteHosting": "Hosting di Siti Web",
+    "discordHosting": "Hosting Discord",
+    "panels": "Pannelli",
+    "gamingPanel": "Pannello di Gioco",
+    "webPanel": "Pannello Web",
+    "billingPanel": "Pannello di Fatturazione",
+    "contact": "Contatti",
+    "allRightsReserved": "Tutti i Diritti Riservati"
   }
 }

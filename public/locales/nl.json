@@ -179,5 +179,19 @@
       "question": "Welke versie van PHP en MySQL krijg ik bij Webhosting als ik CircleLink gebruik?",
       "answer": "Webhosting komt met PHP 8.x, 7.x, 5.6 en de nieuwste versies van MySQL 5.6. Dit zijn belangrijke vereisten voor Magento, CMS-Drupal en OpenCart websites en iedereen die meerdere WordPress websites beheert."
     }
+  },
+  "footer": {
+    "quickLinks": "Snelle Links",
+    "onlineStatus": "Online Status",
+    "shopping": "Webshop",
+    "gameHosting": "Game Hosting",
+    "websiteHosting": "Website Hosting",
+    "discordHosting": "Discord Hosting",
+    "panels": "Panels",
+    "gamingPanel": "Gaming Panel",
+    "webPanel": "Web Panel",
+    "billingPanel": "Facturatie Panel",
+    "contact": "Contact",
+    "allRightsReserved": "Alle Rechten Voorbehouden"
   }
 }
