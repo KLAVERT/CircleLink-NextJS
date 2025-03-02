@@ -75,7 +75,7 @@ const FAQ = ({ faqs }: FAQProps) => {
 
   return (
     <motion.div 
-      className="space-y-4"
+      className="grid grid-cols-1 gap-6 w-full"
       variants={containerVariants}
       initial="hidden"
       animate="visible"
@@ -87,9 +87,7 @@ const FAQ = ({ faqs }: FAQProps) => {
             itemRefs.current[index] = el;
           }}
           variants={itemVariants}
-          className="bg-[var(--color-tertiary)] rounded-lg shadow-sm relative overflow-hidden hover:shadow-md transition-all duration-300"
-          whileHover={{ scale: 1.01 }}
-          whileTap={{ scale: 0.99 }}
+          className="relative overflow-hidden border-b border-[var(--color-border)] last:border-b-0 min-w-0 w-full"
         >
           <motion.div 
             className="absolute left-0 top-0 bottom-0 w-1 bg-[var(--color-text-primary)]"
@@ -99,28 +97,26 @@ const FAQ = ({ faqs }: FAQProps) => {
           />
           <button
             onClick={() => handleToggle(index)}
-            className="w-full text-left p-4 pl-6 focus:outline-none focus:bg-[var(--color-tertiary)] transition-colors duration-300"
+            className="w-full text-left p-4 pl-6 focus:outline-none transition-colors duration-300 grid grid-cols-[1fr,auto] gap-4 items-center"
           >
-            <div className="flex justify-between items-center">
-              <span className="text-[var(--color-text-primary)] font-medium">{faq.question}</span>
-              <motion.span
-                animate={{ 
-                  rotate: openIndex === index ? 180 : 0,
-                  color: openIndex === index ? 'var(--color-accent-cool)' : 'var(--color-text-subtle)'
-                }}
-                transition={{ duration: 0.3, ease: "easeInOut" }}
-              >
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path 
-                    d="M6 9L12 15L18 9" 
-                    stroke="currentColor" 
-                    strokeWidth="2" 
-                    strokeLinecap="round" 
-                    strokeLinejoin="round"
-                  />
-                </svg>
-              </motion.span>
-            </div>
+            <span className="text-[var(--color-text-primary)] font-medium">{faq.question}</span>
+            <motion.span
+              animate={{ 
+                rotate: openIndex === index ? 180 : 0,
+                color: openIndex === index ? 'var(--color-accent-cool)' : 'var(--color-text-subtle)'
+              }}
+              transition={{ duration: 0.3, ease: "easeInOut" }}
+            >
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path 
+                  d="M6 9L12 15L18 9" 
+                  stroke="currentColor" 
+                  strokeWidth="2" 
+                  strokeLinecap="round" 
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </motion.span>
           </button>
           <AnimatePresence initial={false}>
             {openIndex === index && (
