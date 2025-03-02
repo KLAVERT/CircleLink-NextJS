@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
 import { FaGamepad, FaGlobe, FaDiscord, FaCheck } from 'react-icons/fa';
 import { useTranslations } from 'next-intl';
@@ -16,7 +16,6 @@ interface HostingOption {
 
 const HostingOptionsSection = () => {
   const t = useTranslations();
-  const [hoveredOption, setHoveredOption] = useState<string | null>(null);
 
   const hostingOptions: HostingOption[] = [
     {

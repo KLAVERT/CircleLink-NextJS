@@ -3,7 +3,6 @@
 import { useState, useRef, useEffect } from 'react';
 import Link from 'next/link';
 import Button from '../Button/Button';
-import { IconType } from 'react-icons';
 
 interface DropdownItem {
   title?: string;
