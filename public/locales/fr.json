@@ -87,6 +87,40 @@
       "description": "Nos experts sont toujours prêts à vous aider pour toute question technique ou problème, jour et nuit."
     }
   },
+  "pelicanPanel": {
+    "title": "Pelican Panel",
+    "subtitle": "Gestion de serveurs de jeux de nouvelle génération",
+    "description": "Pelican Panel est notre interface de contrôle avancée qui facilite plus que jamais la gestion de vos serveurs de jeux. Avec une conception intuitive et des fonctionnalités puissantes, vous aurez un contrôle total sur votre expérience de jeu.",
+    "features": {
+      "title": "Fonctionnalités du panneau",
+      "userFriendly": {
+        "title": "Interface conviviale",
+        "description": "Tableau de bord facile à naviguer avec toutes vos informations de serveur en un coup d'œil."
+      },
+      "oneClickInstall": {
+        "title": "Installations en un clic",
+        "description": "Installez des jeux, des mods et des plugins en un seul clic depuis notre vaste bibliothèque."
+      },
+      "fileManager": {
+        "title": "Gestionnaire de fichiers avancé",
+        "description": "Éditez, téléchargez et gérez vos fichiers de serveur directement depuis votre navigateur."
+      },
+      "backups": {
+        "title": "Sauvegardes automatisées",
+        "description": "Planifiez des sauvegardes régulières pour protéger votre progression de jeu et vos configurations."
+      },
+      "monitoring": {
+        "title": "Surveillance en temps réel",
+        "description": "Suivez les performances du serveur, le nombre de joueurs et l'utilisation des ressources en direct."
+      },
+      "scheduling": {
+        "title": "Planification des tâches",
+        "description": "Définissez des redémarrages automatiques, des mises à jour et des tâches de maintenance selon votre calendrier préféré."
+      }
+    },
+    "ctaText": "Découvrez le meilleur panneau de l'industrie",
+    "ctaButton": "En savoir plus sur Pelican Panel"
+  },
   "faq": {
     "title": "Questions fréquemment posées",
     "subtitle": {

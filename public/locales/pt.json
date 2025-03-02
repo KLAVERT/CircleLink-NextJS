@@ -87,6 +87,40 @@
       "description": "Nossos especialistas estão sempre disponíveis para ajudá-lo com dúvidas técnicas ou problemas, 24 horas por dia."
     }
   },
+  "pelicanPanel": {
+    "title": "Pelican Panel",
+    "subtitle": "Gerenciamento de servidores de jogos de próxima geração",
+    "description": "O Pelican Panel é nossa interface de controle avançada que torna o gerenciamento dos seus servidores de jogos mais fácil do que nunca. Com um design intuitivo e recursos poderosos, você terá controle total sobre sua experiência de jogo.",
+    "features": {
+      "title": "Recursos do painel",
+      "userFriendly": {
+        "title": "Interface amigável",
+        "description": "Painel fácil de navegar com todas as informações do seu servidor disponíveis de relance."
+      },
+      "oneClickInstall": {
+        "title": "Instalações com um clique",
+        "description": "Instale jogos, mods e plugins com um único clique a partir de nossa extensa biblioteca."
+      },
+      "fileManager": {
+        "title": "Gerenciador de arquivos avançado",
+        "description": "Edite, carregue e gerencie os arquivos do seu servidor diretamente do seu navegador."
+      },
+      "backups": {
+        "title": "Backups automatizados",
+        "description": "Programe backups regulares para proteger seu progresso no jogo e configurações."
+      },
+      "monitoring": {
+        "title": "Monitoramento em tempo real",
+        "description": "Acompanhe o desempenho do servidor, contagem de jogadores e uso de recursos ao vivo."
+      },
+      "scheduling": {
+        "title": "Agendamento de tarefas",
+        "description": "Configure reinicializações automáticas, atualizações e tarefas de manutenção no seu horário preferido."
+      }
+    },
+    "ctaText": "Experimente o melhor painel do setor",
+    "ctaButton": "Saiba mais sobre o Pelican Panel"
+  },
   "faq": {
     "title": "Perguntas frequentes",
     "subtitle": {

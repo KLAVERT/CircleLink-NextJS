@@ -87,6 +87,40 @@
       "description": "Unsere Experten stehen jederzeit bereit, um bei technischen Fragen oder Problemen zu helfen, Tag und Nacht."
     }
   },
+  "pelicanPanel": {
+    "title": "Pelican Panel",
+    "subtitle": "Spieleserver-Verwaltung der nächsten Generation",
+    "description": "Das Pelican Panel ist unsere fortschrittliche Steuerungsoberfläche, die die Verwaltung deiner Spieleserver einfacher als je zuvor macht. Mit einem intuitiven Design und leistungsstarken Funktionen hast du die vollständige Kontrolle über dein Spielerlebnis.",
+    "features": {
+      "title": "Panel-Funktionen",
+      "userFriendly": {
+        "title": "Benutzerfreundliche Oberfläche",
+        "description": "Leicht zu navigierendes Dashboard mit allen Serverinformationen auf einen Blick."
+      },
+      "oneClickInstall": {
+        "title": "Ein-Klick-Installationen",
+        "description": "Installiere Spiele, Mods und Plugins mit einem einzigen Klick aus unserer umfangreichen Bibliothek."
+      },
+      "fileManager": {
+        "title": "Erweiterter Dateimanager",
+        "description": "Bearbeite, lade hoch und verwalte deine Serverdateien direkt aus deinem Browser."
+      },
+      "backups": {
+        "title": "Automatisierte Backups",
+        "description": "Plane regelmäßige Backups, um deinen Spielfortschritt und deine Konfigurationen zu schützen."
+      },
+      "monitoring": {
+        "title": "Echtzeit-Überwachung",
+        "description": "Verfolge Serverleistung, Spieleranzahl und Ressourcennutzung live."
+      },
+      "scheduling": {
+        "title": "Aufgabenplanung",
+        "description": "Stelle automatische Neustarts, Updates und Wartungsaufgaben nach deinem bevorzugten Zeitplan ein."
+      }
+    },
+    "ctaText": "Erlebe das beste Panel der Branche",
+    "ctaButton": "Mehr über Pelican Panel erfahren"
+  },
   "faq": {
     "title": "Häufig gestellte Fragen",
     "subtitle": {

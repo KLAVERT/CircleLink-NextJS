@@ -87,6 +87,40 @@
       "description": "Onze experts staan altijd voor je klaar om te helpen bij technische vragen of problemen, dag en nacht."
     }
   },
+  "pelicanPanel": {
+    "title": "Pelican Panel",
+    "subtitle": "Next-generation gameserver beheer",
+    "description": "Pelican Panel is onze geavanceerde besturingsinterface die het beheren van je gameservers eenvoudiger maakt dan ooit. Met een intuïtief ontwerp en krachtige functies heb je volledige controle over je game-ervaring.",
+    "features": {
+      "title": "Panel functies",
+      "userFriendly": {
+        "title": "Gebruiksvriendelijke interface",
+        "description": "Gemakkelijk te navigeren dashboard met al je serverinformatie in één oogopslag."
+      },
+      "oneClickInstall": {
+        "title": "One-click installaties",
+        "description": "Installeer games, mods en plugins met één klik vanuit onze uitgebreide bibliotheek."
+      },
+      "fileManager": {
+        "title": "Geavanceerde bestandsbeheerder",
+        "description": "Bewerk, upload en beheer je serverbestanden rechtstreeks vanuit je browser."
+      },
+      "backups": {
+        "title": "Geautomatiseerde backups",
+        "description": "Plan regelmatige backups om je gamevoortgang en configuraties te beschermen."
+      },
+      "monitoring": {
+        "title": "Realtime monitoring",
+        "description": "Volg serverprestaties, spelersaantal en resourcegebruik live."
+      },
+      "scheduling": {
+        "title": "Taakplanning",
+        "description": "Stel automatische herstarts, updates en onderhoudstaken in op je gewenste schema."
+      }
+    },
+    "ctaText": "Ervaar het beste panel in de industrie",
+    "ctaButton": "Meer informatie over Pelican Panel"
+  },
   "faq": {
     "title": "Veelgestelde vragen",
     "subtitle": {

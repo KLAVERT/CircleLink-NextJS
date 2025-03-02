@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import Preloader from '@/components/Preloader/Preloader';
 import HeroSection from './_components/HeroSection';
 import FeaturesSection from './_components/FeaturesSection';
+import PelicanPanelSection from './_components/PelicanPanelSection';
 import FAQSection from './_components/FAQSection';
 
 export default function HomePage() {
@@ -33,6 +34,7 @@ export default function HomePage() {
       <div className={`transition-opacity duration-1000 ${isLoading ? 'opacity-0' : 'opacity-100'}`}>
         <HeroSection />
         <FeaturesSection />
+        <PelicanPanelSection />
         <FAQSection />
       </div>
     </main>
