@@ -43,7 +43,7 @@
       "heroTitle2": "Web Hosting",
       "heroTitle3": "for your website",
       "heroDescription": "Lightning-fast web hosting with 99.9% uptime, free SSL certificates, and daily backups. Perfect for WordPress, e-commerce, and personal sites.",
-      "viewPricing": "View web hosting",
+      "viewPricing": "View pricing",
       "features": "Web features"
     },
     
@@ -53,7 +53,7 @@
       "heroTitle2": "Discord Hosting",
       "heroTitle3": "for your bots",
       "heroDescription": "24/7 online Discord bot hosting with high uptime, advanced monitoring, and easy setup. Ideal for server administrators and developers.",
-      "viewPricing": "View bot hosting",
+      "viewPricing": "View pricing",
       "features": "Bot features"
     }
   },

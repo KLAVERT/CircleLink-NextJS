@@ -43,7 +43,7 @@
       "heroTitle2": "Webhosting",
       "heroTitle3": "für deine Website",
       "heroDescription": "Blitzschnelles Webhosting mit 99,9% Uptime, kostenlosen SSL-Zertifikaten und täglichen Backups. Perfekt für WordPress, E-Commerce und persönliche Websites.",
-      "viewPricing": "Webhosting anzeigen",
+      "viewPricing": "Preise anzeigen",
       "features": "Web-Funktionen"
     },
     
@@ -53,7 +53,7 @@
       "heroTitle2": "Discord-Hosting",
       "heroTitle3": "für deine Bots",
       "heroDescription": "24/7 Online-Discord-Bot-Hosting mit hoher Uptime, fortschrittlichem Monitoring und einfacher Einrichtung. Ideal für Server-Administratoren und Entwickler.",
-      "viewPricing": "Bot-Hosting anzeigen",
+      "viewPricing": "Preise anzeigen",
       "features": "Bot-Funktionen"
     }
   },

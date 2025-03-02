@@ -43,7 +43,7 @@
       "heroTitle2": "Hospedagem Web",
       "heroTitle3": "para o seu site",
       "heroDescription": "Hospedagem web ultrarrápida com 99,9% de disponibilidade, certificados SSL gratuitos e backups diários. Perfeito para WordPress, lojas virtuais e sites pessoais.",
-      "viewPricing": "Ver hospedagem web",
+      "viewPricing": "Ver preços",
       "features": "Recursos web"
     },
     
@@ -53,7 +53,7 @@
       "heroTitle2": "Hospedagem no Discord",
       "heroTitle3": "para seus bots",
       "heroDescription": "Hospedagem de bots no Discord sempre online 24/7, com alta disponibilidade, monitoramento avançado e configuração simples. Ideal para administradores de servidores e desenvolvedores.",
-      "viewPricing": "Ver hospedagem de bots",
+      "viewPricing": "Ver preços",
       "features": "Funcionalidades do bot"
     }
   },
