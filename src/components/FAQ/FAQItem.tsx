@@ -18,7 +18,7 @@ const FAQItem = ({ question, answer, isOpen, onToggle }: FAQItemProps) => {
         <span className="text-[var(--color-text-primary)] font-medium">{question}</span>
         <motion.span
           animate={{ rotate: isOpen ? 180 : 0 }}
-          transition={{ duration: 0.3 }}
+          transition={{ duration: 0.6 }}
           className="text-[var(--color-text-subtle)]"
         >
           ▼
@@ -30,7 +30,7 @@ const FAQItem = ({ question, answer, isOpen, onToggle }: FAQItemProps) => {
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
-            transition={{ duration: 0.3 }}
+            transition={{ duration: 0.9 }}
             className="overflow-hidden"
           >
             <p className="p-6 text-[var(--color-text-subtle)] bg-[var(--color-bg-surface)]">

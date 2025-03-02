@@ -165,26 +165,18 @@ const Footer = () => {
           <motion.div variants={itemVariants}>
             <h3 className="text-lg font-semibold mb-4 text-[var(--color-text-primary)]">{t('footer.contact')}</h3>
             <ul className="space-y-2">
-              <motion.li 
-                className="flex items-center gap-2"
-                whileHover={{ x: 5 }}
-                transition={{ type: "spring", stiffness: 300, damping: 20 }}
-              >
+              <li className="flex items-center gap-2">
                 <FaEnvelope className="text-[var(--color-text-subtle)]" />
                 <FooterLink href="mailto:Support@Circlelink.Eu">
                   Support@Circlelink.Eu
                 </FooterLink>
-              </motion.li>
-              <motion.li 
-                className="flex items-center gap-2"
-                whileHover={{ x: 5 }}
-                transition={{ type: "spring", stiffness: 300, damping: 20 }}
-              >
+              </li>
+              <li className="flex items-center gap-2">
                 <FaEnvelope className="text-[var(--color-text-subtle)]" />
                 <FooterLink href="mailto:Info@Circlelink.Eu">
                   Info@Circlelink.Eu
                 </FooterLink>
-              </motion.li>
+              </li>
               <motion.li 
                 className="flex items-center gap-2"
                 whileHover={{ x: 5 }}

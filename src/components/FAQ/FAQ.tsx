@@ -41,7 +41,7 @@ const FAQ = ({ faqs }: FAQProps) => {
         variants={containerVariants}
         initial={{ opacity: 0 }}
         animate="visible"
-        transition={{ duration: 0.3 }}
+        transition={{ duration: 0.9 }}
       >
         {faqs.map((faq, index) => (
           <div
@@ -60,7 +60,7 @@ const FAQ = ({ faqs }: FAQProps) => {
               <span className="text-[var(--color-text-primary)] font-medium pr-4">{faq.question}</span>
               <span className="text-[var(--color-text-subtle)] flex-shrink-0">
                 <svg 
-                  style={{ transform: openIndex === index ? 'rotate(180deg)' : 'rotate(0deg)', transition: 'transform 0.3s ease-in-out' }}
+                  style={{ transform: openIndex === index ? 'rotate(180deg)' : 'rotate(0deg)', transition: 'transform 0.6s ease-in-out' }}
                   width="24" 
                   height="24" 
                   viewBox="0 0 24 24" 
@@ -79,10 +79,11 @@ const FAQ = ({ faqs }: FAQProps) => {
             </button>
             
             <div 
-              className="overflow-hidden transition-all duration-300 ease-in-out"
+              className="overflow-hidden transition-all duration-600 ease-in-out"
               style={{ 
                 maxHeight: openIndex === index ? '1000px' : '0px',
-                opacity: openIndex === index ? 1 : 0
+                opacity: openIndex === index ? 1 : 0,
+                transition: 'max-height 0.6s ease-in-out, opacity 0.6s ease-in-out'
               }}
             >
               <div className="p-4 pt-0 pl-6">
