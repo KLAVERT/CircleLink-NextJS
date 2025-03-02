@@ -24,6 +24,46 @@
     "discordHosting": "Discord-Hosting",
     "discordHostingDescription": "Erhalte leistungsstarkes Discord-Hosting für Discord-Entwickler."
   },
+  "hosting": {
+    "sectionTitle": "UNSERE HOSTING-DIENSTE",
+    "sectionSubtitle": "Eine passende Lösung für jedes Projekt!",
+    "perMonth": "p/M",
+    "included": "Inbegriffen",
+    "viewMore": "MEHR ANZEIGEN",
+    "gameHosting": {
+      "title": "GAME HOSTING",
+      "description": "Spiele mit deinen Freunden auf deinem eigenen Server! Wir bieten Hosting für mehr als 30 verschiedene Spiele zu einem günstigen Preis!",
+      "features": {
+        "ddosProtection": "DDoS-Schutz",
+        "userFriendlyPanel": "Benutzerfreundliches Panel",
+        "fullAccess": "Voller Zugriff",
+        "optimizedServers": "Optimierte Server",
+        "instantSetup": "Sofortige Einrichtung"
+      }
+    },
+    "webHosting": {
+      "title": "WEB HOSTING",
+      "description": "Möchtest du deine eigene Website erstellen? Mit diesem Paket erhältst du nützliche Funktionen, um deine eigene Website einfach und schnell zu erstellen.",
+      "features": {
+        "ddosProtection": "DDoS-Schutz",
+        "directAdmin": "Direct-Admin",
+        "dnsManagement": "DNS-Verwaltung",
+        "oneClickInstalls": "Ein-Klick-Installationen",
+        "sslCertificates": "SSL-Zertifikate"
+      }
+    },
+    "discordHosting": {
+      "title": "DISCORD HOSTING",
+      "description": "Verwalte deine eigenen Discord-Bots mit unseren optimierten Hosting-Lösungen für eine reibungslose Benutzererfahrung.",
+      "features": {
+        "ddosProtection": "DDoS-Schutz",
+        "easySetup": "Einfache Einrichtung",
+        "nodeSupport": "Node.js-Unterstützung",
+        "databaseIntegration": "Datenbankintegration",
+        "uptime": "24/7 Verfügbarkeit"
+      }
+    }
+  },
   "gameHosting": {
     "tagline": "#1 Gameserver-Hosting",
     "heroTitle1": "Professionelles",

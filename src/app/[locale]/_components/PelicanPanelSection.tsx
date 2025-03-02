@@ -4,7 +4,6 @@ import React, { useRef } from 'react';
 import { useTranslations } from 'next-intl';
 import { motion, useInView } from 'framer-motion';
 import AnimatedBackground from './AnimatedBackground';
-import Button from '@/components/Button/Button';
 import Image from 'next/image';
 
 // Feature item component met animatie

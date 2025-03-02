@@ -6,6 +6,7 @@ import HeroSection from './_components/HeroSection';
 import FeaturesSection from './_components/FeaturesSection';
 import PelicanPanelSection from './_components/PelicanPanelSection';
 import FAQSection from './_components/FAQSection';
+import HostingOptionsSection from './_components/HostingOptionsSection';
 
 export default function HomePage() {
   const [isLoading, setIsLoading] = useState(true);
@@ -35,6 +36,7 @@ export default function HomePage() {
         <HeroSection />
         <FeaturesSection />
         <PelicanPanelSection />
+        <HostingOptionsSection />
         <FAQSection />
       </div>
     </main>

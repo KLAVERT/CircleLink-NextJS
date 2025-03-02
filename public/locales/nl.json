@@ -24,6 +24,46 @@
     "discordHosting": "Discord Hosting",
     "discordHostingDescription": "Krijg krachtige Discord-hosting voor Discord-ontwikkelaars."
   },
+  "hosting": {
+    "sectionTitle": "ONZE HOSTING DIENSTEN",
+    "sectionSubtitle": "Voor ieder project een passende oplossing!",
+    "perMonth": "p/m",
+    "included": "Inbegrepen",
+    "viewMore": "BEKIJK MEER",
+    "gameHosting": {
+      "title": "GAME HOSTING",
+      "description": "Speel met je vrienden op een eigen server! Wij bieden voor meer dan 30 verschillende games een hosting aan voor een lage prijs!",
+      "features": {
+        "ddosProtection": "DDoS bescherming",
+        "userFriendlyPanel": "Gebruiksvriendelijk paneel",
+        "fullAccess": "Volledige toegang",
+        "optimizedServers": "Geoptimaliseerde servers",
+        "instantSetup": "Instant setup"
+      }
+    },
+    "webHosting": {
+      "title": "WEB HOSTING",
+      "description": "Je eigen website maken? Met dit pakket krijg je handige functies om je eigen site makkelijk en snel te maken.",
+      "features": {
+        "ddosProtection": "DDoS bescherming",
+        "directAdmin": "Direct-Admin",
+        "dnsManagement": "DNS Beheer",
+        "oneClickInstalls": "One-click installaties",
+        "sslCertificates": "SSL certificaten"
+      }
+    },
+    "discordHosting": {
+      "title": "DISCORD HOSTING",
+      "description": "Beheer je eigen Discord bots met onze geoptimaliseerde hosting oplossingen voor een soepele gebruikerservaring.",
+      "features": {
+        "ddosProtection": "DDoS bescherming",
+        "easySetup": "Eenvoudige installatie",
+        "nodeSupport": "Node.js ondersteuning",
+        "databaseIntegration": "Database integratie",
+        "uptime": "24/7 uptime"
+      }
+    }
+  },
   "gameHosting": {
     "tagline": "#1 Game Server Hosting",
     "heroTitle1": "Professionele",

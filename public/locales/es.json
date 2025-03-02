@@ -24,6 +24,46 @@
     "discordHosting": "Alojamiento de Discord",
     "discordHostingDescription": "Obtén un alojamiento de Discord potente para desarrolladores de Discord."
   },
+  "hosting": {
+    "sectionTitle": "NUESTROS SERVICIOS DE ALOJAMIENTO",
+    "sectionSubtitle": "¡Una solución adecuada para cada proyecto!",
+    "perMonth": "al mes",
+    "included": "Incluido",
+    "viewMore": "VER MÁS",
+    "gameHosting": {
+      "title": "ALOJAMIENTO DE JUEGOS",
+      "description": "¡Juega con tus amigos en tu propio servidor! ¡Ofrecemos alojamiento para más de 30 juegos diferentes a un precio bajo!",
+      "features": {
+        "ddosProtection": "Protección DDoS",
+        "userFriendlyPanel": "Panel fácil de usar",
+        "fullAccess": "Acceso completo",
+        "optimizedServers": "Servidores optimizados",
+        "instantSetup": "Configuración instantánea"
+      }
+    },
+    "webHosting": {
+      "title": "ALOJAMIENTO WEB",
+      "description": "¿Quieres crear tu propio sitio web? Con este paquete, obtienes funciones útiles para crear tu propio sitio de manera fácil y rápida.",
+      "features": {
+        "ddosProtection": "Protección DDoS",
+        "directAdmin": "Direct-Admin",
+        "dnsManagement": "Gestión de DNS",
+        "oneClickInstalls": "Instalaciones con un clic",
+        "sslCertificates": "Certificados SSL"
+      }
+    },
+    "discordHosting": {
+      "title": "ALOJAMIENTO DE DISCORD",
+      "description": "Gestiona tus propios bots de Discord con nuestras soluciones de alojamiento optimizadas para una experiencia de usuario fluida.",
+      "features": {
+        "ddosProtection": "Protección DDoS",
+        "easySetup": "Configuración sencilla",
+        "nodeSupport": "Soporte para Node.js",
+        "databaseIntegration": "Integración de base de datos",
+        "uptime": "Disponibilidad 24/7"
+      }
+    }
+  },
   "gameHosting": {
     "tagline": "#1 Alojamiento de Servidores de Juegos",
     "heroTitle1": "Alojamiento",

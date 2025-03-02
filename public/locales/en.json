@@ -24,6 +24,46 @@
     "discordHosting": "Discord hosting",
     "discordHostingDescription": "Get powerful Discord hosting for Discord developers."
   },
+  "hosting": {
+    "sectionTitle": "OUR HOSTING SERVICES",
+    "sectionSubtitle": "A suitable solution for every project!",
+    "perMonth": "p/m",
+    "included": "Included",
+    "viewMore": "VIEW MORE",
+    "gameHosting": {
+      "title": "GAME HOSTING",
+      "description": "Play with your friends on your own server! We offer hosting for more than 30 different games at a low price!",
+      "features": {
+        "ddosProtection": "DDoS protection",
+        "userFriendlyPanel": "User-friendly panel",
+        "fullAccess": "Full access",
+        "optimizedServers": "Optimized servers",
+        "instantSetup": "Instant setup"
+      }
+    },
+    "webHosting": {
+      "title": "WEB HOSTING",
+      "description": "Want to create your own website? With this package, you get useful features to create your own site easily and quickly.",
+      "features": {
+        "ddosProtection": "DDoS protection",
+        "directAdmin": "Direct-Admin",
+        "dnsManagement": "DNS Management",
+        "oneClickInstalls": "One-click installations",
+        "sslCertificates": "SSL certificates"
+      }
+    },
+    "discordHosting": {
+      "title": "DISCORD HOSTING",
+      "description": "Manage your own Discord bots with our optimized hosting solutions for a smooth user experience.",
+      "features": {
+        "ddosProtection": "DDoS protection",
+        "easySetup": "Easy setup",
+        "nodeSupport": "Node.js support",
+        "databaseIntegration": "Database integration",
+        "uptime": "24/7 uptime"
+      }
+    }
+  },
   "gameHosting": {
     "tagline": "#1 Game Server Hosting",
     "heroTitle1": "Professional",
