@@ -3,9 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import Button from '@/components/Button/Button';
 import { useTranslations } from 'next-intl';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGamepad, faGlobe } from '@fortawesome/free-solid-svg-icons';
-import { faDiscord } from '@fortawesome/free-brands-svg-icons';
+import { FaGamepad, FaGlobe, FaDiscord } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 import Slider from '@/components/Slider/Slider';
 import AnimatedBackground from './AnimatedBackground';
@@ -41,7 +39,7 @@ const HeroSection = () => {
         text: t('supportedGames'),
         href: '/hosting/games'
       },
-      icon: faGamepad
+      icon: <FaGamepad />
     },
     {
       type: 'web',
@@ -58,7 +56,7 @@ const HeroSection = () => {
         text: t('web.features'),
         href: '/hosting/web-features'
       },
-      icon: faGlobe
+      icon: <FaGlobe />
     },
     {
       type: 'discord',
@@ -75,7 +73,7 @@ const HeroSection = () => {
         text: t('discord.features'),
         href: '/hosting/discord-features'
       },
-      icon: faDiscord
+      icon: <FaDiscord />
     }
   ];
 
@@ -121,7 +119,7 @@ const HeroSection = () => {
           href={slide.primaryButton.href}
         >
           <div className="flex items-center gap-2">
-            <FontAwesomeIcon icon={slide.icon} className="h-4 w-4" />
+            <span className="text-lg">{slide.icon}</span>
             <span>{slide.primaryButton.text}</span>
           </div>
         </Button>

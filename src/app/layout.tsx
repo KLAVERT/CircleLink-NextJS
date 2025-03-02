@@ -2,12 +2,6 @@ import "./globals.scss";
 import { ThemeProvider } from 'next-themes';
 import { Metadata } from 'next';
 import RootPreloader from '@/components/Preloader/RootPreloader';
-import '@/lib/fontawesome';
-import { config } from '@fortawesome/fontawesome-svg-core';
-import '@fortawesome/fontawesome-svg-core/styles.css';
-
-// Tell Font Awesome to skip adding CSS automatically since we imported it above
-config.autoAddCss = false;
 
 export const metadata: Metadata = {
   title: 'Circlelink - VOF',

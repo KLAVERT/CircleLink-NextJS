@@ -9,9 +9,8 @@ import ThemeSwitch from '../ThemeSwitch/ThemeSwitch';
 import Button from '../Button/Button';
 import Dropdown from '../Dropdown/Dropdown';
 import { useTheme } from 'next-themes';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGamepad, faMicrochip } from '@fortawesome/free-solid-svg-icons';
-import { faDiscord } from '@fortawesome/free-brands-svg-icons';
+import { FaGamepad, FaMicrochip } from 'react-icons/fa';
+import { FaDiscord } from 'react-icons/fa';
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -57,19 +56,19 @@ export default function Navbar() {
     {
       title: t('gameHosting'),
       description: t("gameHostingDescription"),
-      icon: faGamepad,
+      icon: <FaGamepad />,
       href: '/games'
     },
     {
       title: t('webHosting'),
       description: t("webHostingDescription"),
-      icon: faMicrochip,
+      icon: <FaMicrochip />,
       href: '/web'
     },
     {
       title: t('discordHosting'),
       description: t("discordHostingDescription"),
-      icon: faDiscord,
+      icon: <FaDiscord />,
       href: '/discord'
     }
   ];
@@ -237,7 +236,7 @@ export default function Navbar() {
                   className="block pl-4 py-2"
                 >
                   <div className="flex items-center space-x-3">
-                    <FontAwesomeIcon icon={item.icon} className="text-2xl text-[var(--color-text-primary)]" />
+                    <span className="text-2xl text-[var(--color-text-primary)]">{item.icon}</span>
                     <div>
                       <div className="text-[var(--color-text-primary)]">{item.title}</div>
                       <p className="text-sm text-[var(--color-text-subtle)]">{item.description}</p>
