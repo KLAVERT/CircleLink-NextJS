@@ -142,12 +142,12 @@ const PelicanPanelSection = () => {
 
   return (
     <AnimatedBackground variant="tertiary" className="py-24 md:py-32">
-      <div className="container mx-auto px-4" ref={sectionRef}>
+      <div ref={sectionRef} className="container mx-auto px-4">
         <motion.div
           variants={containerVariants}
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
-          className="max-w-7xl mx-auto"
+          className="max-w-6xl mx-auto"
         >
           {/* Section Header */}
           <motion.div variants={titleVariants} className="text-center mb-16">
@@ -159,50 +159,52 @@ const PelicanPanelSection = () => {
             </p>
           </motion.div>
 
-          {/* Main Content - Toon beide panelen onder elkaar */}
-          <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+          {/* Main Content */}
+          <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-start">
             {/* Left Column - Panels */}
             <motion.div
               variants={imageVariants}
-              className="flex flex-col space-y-8"
+              className="lg:col-span-7 grid grid-cols-1 gap-6"
             >
               {/* Eerste panel - Dashboard */}
-              <div className="bg-[var(--color-card-bg)] dark:bg-[var(--color-card-bg)] rounded-xl shadow-xl h-[400px] w-full border border-[var(--color-border)] dark:border-[var(--color-border)] flex flex-col overflow-hidden">
-                <div className="flex-shrink-0 h-10 bg-[var(--color-bg-secondary)] dark:bg-[var(--color-bg-secondary)] flex items-center px-4 border-b border-[var(--color-border)]">
+              <div className="bg-[var(--color-card-bg)] dark:bg-[var(--color-card-bg)] rounded-xl shadow-xl w-full border border-[var(--color-border)] dark:border-[var(--color-border)] flex flex-col overflow-hidden">
+                <div className="flex-shrink-0 h-12 bg-[var(--color-bg-secondary)] dark:bg-[var(--color-bg-secondary)] flex items-center px-4 border-b border-[var(--color-border)]">
                   <div className="flex space-x-2">
                     <div className="w-3 h-3 rounded-full bg-red-500"></div>
                     <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
                     <div className="w-3 h-3 rounded-full bg-green-500"></div>
                   </div>
-                  <div className="flex-1 text-center text-sm text-[var(--color-text-primary)] dark:text-[var(--color-text-primary)]">Pelican Panel - Dashboard</div>
+                  <div className="flex-1 text-center text-sm font-medium text-[var(--color-text-primary)] dark:text-[var(--color-text-primary)]">Pelican Panel - Dashboard</div>
                 </div>
-                <div className="flex-grow relative bg-black">
+                <div className="relative">
                   <Image 
                     src="/pngs/mainpage/dashboard.png" 
                     alt="Server Dashboard" 
-                    fill
-                    style={{ objectFit: 'contain', objectPosition: 'top' }}
+                    width={800}
+                    height={450}
+                    className="w-full h-auto"
                     priority
                   />
                 </div>
               </div>
 
               {/* Tweede panel - File Editor */}
-              <div className="bg-[var(--color-card-bg)] dark:bg-[var(--color-card-bg)] rounded-xl shadow-xl h-[400px] w-full border border-[var(--color-border)] dark:border-[var(--color-border)] flex flex-col overflow-hidden">
-                <div className="flex-shrink-0 h-10 bg-[var(--color-bg-secondary)] dark:bg-[var(--color-bg-secondary)] flex items-center px-4 border-b border-[var(--color-border)]">
+              <div className="bg-[var(--color-card-bg)] dark:bg-[var(--color-card-bg)] rounded-xl shadow-xl w-full border border-[var(--color-border)] dark:border-[var(--color-border)] flex flex-col overflow-hidden">
+                <div className="flex-shrink-0 h-12 bg-[var(--color-bg-secondary)] dark:bg-[var(--color-bg-secondary)] flex items-center px-4 border-b border-[var(--color-border)]">
                   <div className="flex space-x-2">
                     <div className="w-3 h-3 rounded-full bg-red-500"></div>
                     <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
                     <div className="w-3 h-3 rounded-full bg-green-500"></div>
                   </div>
-                  <div className="flex-1 text-center text-sm text-[var(--color-text-primary)] dark:text-[var(--color-text-primary)]">Pelican Panel - File Editor</div>
+                  <div className="flex-1 text-center text-sm font-medium text-[var(--color-text-primary)] dark:text-[var(--color-text-primary)]">Pelican Panel - File Editor</div>
                 </div>
-                <div className="flex-grow relative bg-black">
+                <div className="relative">
                   <Image 
                     src="/pngs/mainpage/filemanage.png" 
                     alt="File Editor" 
-                    fill
-                    style={{ objectFit: 'contain', objectPosition: 'top' }}
+                    width={800}
+                    height={450}
+                    className="w-full h-auto"
                     priority
                   />
                 </div>
@@ -210,7 +212,7 @@ const PelicanPanelSection = () => {
             </motion.div>
 
             {/* Right Column - Features List */}
-            <div>
+            <div className="lg:col-span-5 flex flex-col">
               <motion.h3 
                 variants={titleVariants} 
                 className="text-2xl font-bold text-[var(--color-text-primary)] dark:text-[var(--color-text-primary)] mb-6"
@@ -233,14 +235,8 @@ const PelicanPanelSection = () => {
               {/* Call to Action Button */}
               <motion.div 
                 variants={titleVariants}
-                className="mt-10"
+                className="mt-10 text-center lg:text-left"
               >
-                <p className="text-[var(--color-text-subtle)] dark:text-[var(--color-text-subtle)] mb-4">
-                  {t('ctaText')}
-                </p>
-                <Button variant="primary" href="/pelican-panel">
-                  {t('ctaButton')}
-                </Button>
               </motion.div>
             </div>
           </div>
