@@ -2,7 +2,7 @@
   "common": {
     "welcome": "Welkom",
     "about": "Over ons",
-    "contact": "Neem contact op"
+    "contact": "contact"
   },
   "error": {
     "404": {

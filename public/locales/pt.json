@@ -2,7 +2,7 @@
   "common": {
     "welcome": "Bem-vindo",
     "about": "Sobre nós",
-    "contact": "Entre em contato"
+    "contact": "contato"
   },
   "error": {
     "404": {
