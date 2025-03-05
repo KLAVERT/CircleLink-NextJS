@@ -27,7 +27,7 @@ const FooterLink: React.FC<FooterLinkProps> = ({ href, children, external = fals
         href={href} 
         target="_blank" 
         rel="noopener noreferrer" 
-        className="text-[var(--color-text-subtle)] hover:text-[var(--color-text-primary)] transition-colors duration-200 inline-block"
+        className="text-[var(--color-text-primary)] hover:text-[var(--color-text-primary)] transition-colors duration-200 inline-block"
         {...animationProps}
       >
         {children}
@@ -42,7 +42,7 @@ const FooterLink: React.FC<FooterLinkProps> = ({ href, children, external = fals
     >
       <Link 
         href={href} 
-        className="text-[var(--color-text-subtle)] hover:text-[var(--color-text-primary)] transition-colors duration-200"
+        className="text-[var(--color-text-primary)] hover:text-[var(--color-text-primary)] transition-colors duration-200"
       >
         {children}
       </Link>
@@ -166,13 +166,13 @@ const Footer = () => {
             <h3 className="text-lg font-semibold mb-4 text-[var(--color-text-primary)]">{t('footer.contact')}</h3>
             <ul className="space-y-2">
               <li className="flex items-center gap-2">
-                <FaEnvelope className="text-[var(--color-text-subtle)]" />
+                <FaEnvelope className="text-[var(--color-text-primary)]" />
                 <FooterLink href="mailto:Support@Circlelink.Eu">
                   Support@Circlelink.Eu
                 </FooterLink>
               </li>
               <li className="flex items-center gap-2">
-                <FaEnvelope className="text-[var(--color-text-subtle)]" />
+                <FaEnvelope className="text-[var(--color-text-primary)]" />
                 <FooterLink href="mailto:Info@Circlelink.Eu">
                   Info@Circlelink.Eu
                 </FooterLink>
@@ -182,16 +182,16 @@ const Footer = () => {
                 whileHover={{ x: 5 }}
                 transition={{ type: "spring", stiffness: 300, damping: 20 }}
               >
-                <FaPhone className="text-[var(--color-text-subtle)]" />
-                <span className="text-[var(--color-text-subtle)]">KvK: 94372594</span>
+                <FaPhone className="text-[var(--color-text-primary)]" />
+                <span className="text-[var(--color-text-primary)]">KvK: 94372594</span>
               </motion.li>
               <motion.li 
                 className="flex items-center gap-2"
                 whileHover={{ x: 5 }}
                 transition={{ type: "spring", stiffness: 300, damping: 20 }}
               >
-                <FaBuilding className="text-[var(--color-text-subtle)]" />
-                <span className="text-[var(--color-text-subtle)]">VAT: NL866753795B01</span>
+                <FaBuilding className="text-[var(--color-text-primary)]" />
+                <span className="text-[var(--color-text-primary)]">VAT: NL866753795B01</span>
               </motion.li>
             </ul>
           </motion.div>
@@ -224,7 +224,7 @@ const Footer = () => {
             
             {/* Center copyright */}
             <motion.div 
-              className="text-center text-sm text-[var(--color-text-subtle)]"
+              className="text-center text-sm text-[var(--color-text-primary)]"
               initial={{ y: 10, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.5, delay: 0.2 }}
