@@ -4,7 +4,7 @@ import React, { useEffect, useRef } from 'react';
 import FeatureCard from './FeatureCard';
 import { useTranslations } from 'next-intl';
 import { motion, useInView, useAnimation, AnimatePresence } from 'framer-motion';
-import AnimatedBackground from './AnimatedBackground';
+import AnimatedBackground from '@/components/AnimatedBackground/AnimatedBackground';
 
 const FeaturesSection = () => {
   const t = useTranslations('features');

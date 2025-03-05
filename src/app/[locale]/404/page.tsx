@@ -1,27 +1,32 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
-import Link from 'next/link';
 import { useLocale } from 'next-intl';
+import Button from '@/components/Button/Button';
+import AnimatedBackground from '@/components/AnimatedBackground/AnimatedBackground';
 
 export default function NotFoundPage() {
   const t = useTranslations('error');
   const locale = useLocale();
 
   return (
-    <div className="fixed inset-0 flex flex-col items-center justify-center bg-[var(--background)]">
-      <h1 className="text-4xl font-bold mb-4">
-        {t('404.title')}
-      </h1>
-      <p className="text-lg mb-8">
-        {t('404.description')}
-      </p>
-      <Link 
-        href={`/${locale}`}
-        className="px-6 py-3 bg-[var(--highlight)] text-white rounded-lg hover:opacity-90 transition-opacity"
-      >
-        {t('404.backHome')}
-      </Link>
-    </div>
+    <AnimatedBackground variant="primary" className="min-h-screen">
+      <div className="min-h-screen flex items-center justify-center">
+        <div className="text-center px-4">
+          <h1 className="text-4xl font-bold mb-4">
+            {t('404.title')}
+          </h1>
+          <p className="text-lg mb-8">
+            {t('404.description')}
+          </p>
+          <Button 
+            href={`/${locale}`}
+            variant="primary"
+          >
+            {t('404.backHome')}
+          </Button>
+        </div>
+      </div>
+    </AnimatedBackground>
   );
 } 

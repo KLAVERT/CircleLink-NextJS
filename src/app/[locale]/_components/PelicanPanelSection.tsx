@@ -3,7 +3,7 @@
 import React, { useRef } from 'react';
 import { useTranslations } from 'next-intl';
 import { motion, useInView } from 'framer-motion';
-import AnimatedBackground from './AnimatedBackground';
+import AnimatedBackground from '@/components/AnimatedBackground/AnimatedBackground';
 import Image from 'next/image';
 
 // Feature item component met animatie

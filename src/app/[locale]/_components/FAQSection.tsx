@@ -2,7 +2,7 @@ import FAQ from '@/components/FAQ/FAQ';
 import { useTranslations } from 'next-intl';
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
-import AnimatedBackground from './AnimatedBackground';
+import AnimatedBackground from '@/components/AnimatedBackground/AnimatedBackground';
 import Link from 'next/link';
 
 const FAQSection = () => {

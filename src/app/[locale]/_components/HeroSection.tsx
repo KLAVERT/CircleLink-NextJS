@@ -6,7 +6,7 @@ import { useTranslations } from 'next-intl';
 import { FaGamepad, FaGlobe, FaDiscord } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 import Slider from '@/components/Slider/Slider';
-import AnimatedBackground from './AnimatedBackground';
+import AnimatedBackground from '@/components/AnimatedBackground/AnimatedBackground';
 import ServerKastGuy from '@/assets/svg/mainpage/server-kast-guy.svg';
 
 const HeroSection = () => {
