@@ -1,6 +1,13 @@
 'use client';
 
-export default function games() {
+import InfoSection from './_components/InfoSection';
+import PackagesSection from './_components/PackagesSection';
 
-  return;
+export default function DiscordPage() {
+  return (
+    <main className="min-h-screen">
+      <InfoSection />
+      <PackagesSection />
+    </main>
+  );
 } 
