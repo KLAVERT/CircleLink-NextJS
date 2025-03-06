@@ -2,9 +2,8 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaDiscord, FaServer, FaShieldAlt, FaClock, FaDatabase } from 'react-icons/fa';
-import { MdAccessTime, MdDashboard } from 'react-icons/md';
-import { IoCloudUpload } from 'react-icons/io5';
+import { FaDiscord, FaServer, FaClock, FaDatabase } from 'react-icons/fa';
+import { MdDashboard } from 'react-icons/md';
 import { HiCheck } from 'react-icons/hi';
 
 interface Feature {
