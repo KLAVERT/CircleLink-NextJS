@@ -1,9 +1,60 @@
 'use client';
 
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import { useTranslations } from 'next-intl';
-import { motion, useInView } from 'framer-motion';
+import { motion, useInView, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
+
+// Modal Component
+const ImageModal = ({ isOpen, onClose, imageSrc, title }: { isOpen: boolean; onClose: () => void; imageSrc: string; title: string }) => {
+  return (
+    <AnimatePresence>
+      {isOpen && (
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-80 p-4 backdrop-blur-sm"
+          onClick={onClose}
+        >
+          <motion.div
+            initial={{ scale: 0.9, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            exit={{ scale: 0.9, opacity: 0 }}
+            transition={{ type: "spring", damping: 20 }}
+            className="relative max-w-7xl w-full bg-[var(--color-card-bg)] rounded-xl overflow-hidden border-2 border-[var(--color-border)] shadow-2xl"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="h-12 bg-[var(--color-bg-secondary)] flex items-center px-4 border-b-2 border-[var(--color-border)]">
+              <div className="flex space-x-2">
+                <motion.div 
+                  whileHover={{ scale: 1.1 }}
+                  className="w-3 h-3 rounded-full bg-red-500 cursor-pointer hover:ring-2 hover:ring-red-300 transition-all" 
+                  onClick={onClose}
+                ></motion.div>
+                <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
+                <div className="w-3 h-3 rounded-full bg-green-500"></div>
+              </div>
+              <div className="flex-1 text-center text-sm font-medium text-[var(--color-text-primary)]">
+                {title}
+              </div>
+            </div>
+            <div className="relative bg-[var(--color-bg-surface)] p-4">
+              <Image
+                src={imageSrc}
+                alt={title}
+                width={1600}
+                height={900}
+                className="w-full h-auto rounded-lg shadow-lg"
+                priority
+              />
+            </div>
+          </motion.div>
+        </motion.div>
+      )}
+    </AnimatePresence>
+  );
+};
 
 // Feature item component met animatie
 interface PanelFeatureItemProps {
@@ -37,6 +88,8 @@ const PanelFeatureItem = ({ title, description, iconSrc, index = 0 }: PanelFeatu
       initial="hidden"
       animate={isInView ? "visible" : "hidden"}
       custom={index}
+      whileHover={{ scale: 1.02 }}
+      whileTap={{ scale: 0.98 }}
       className="flex p-4 rounded-xl hover:bg-[var(--color-bg-secondary)] dark:hover:bg-[var(--color-bg-secondary)] transition-colors duration-300"
     >
       <div className="flex-shrink-0 mr-4">
@@ -66,6 +119,7 @@ const PelicanPanelSection = () => {
   const t = useTranslations('pelicanPanel');
   const sectionRef = useRef(null);
   const isInView = useInView(sectionRef, { once: true, amount: 0.1 });
+  const [selectedImage, setSelectedImage] = useState<{ src: string; title: string } | null>(null);
 
   const panelFeatures = [
     {
@@ -140,6 +194,12 @@ const PelicanPanelSection = () => {
 
   return (
     <div className="py-24 md:py-32 relative overflow-hidden">
+      <ImageModal
+        isOpen={!!selectedImage}
+        onClose={() => setSelectedImage(null)}
+        imageSrc={selectedImage?.src || ''}
+        title={selectedImage?.title || ''}
+      />
       <div className="hidden lg:block absolute inset-0 w-full h-full opacity-20">
         <Image
           src="/images/jpg/mainpage/sons_of_the_forest.jpg"
@@ -175,7 +235,17 @@ const PelicanPanelSection = () => {
               className="lg:col-span-7 grid grid-cols-1 gap-6"
             >
               {/* Eerste panel - Dashboard */}
-              <div className="bg-[var(--color-card-bg)] dark:bg-[var(--color-card-bg)] rounded-xl shadow-xl w-full border border-[var(--color-border)] dark:border-[var(--color-border)] flex flex-col overflow-hidden">
+              <motion.div
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+                className="bg-[var(--color-card-bg)] dark:bg-[var(--color-card-bg)] rounded-xl shadow-xl w-full border border-[var(--color-border)] dark:border-[var(--color-border)] flex flex-col overflow-hidden lg:cursor-pointer"
+                onClick={(e) => {
+                  // Only trigger on desktop
+                  if (window.innerWidth >= 1024) {
+                    setSelectedImage({ src: '/pngs/mainpage/dashboard.png', title: 'Pelican Panel - Dashboard' });
+                  }
+                }}
+              >
                 <div className="flex-shrink-0 h-12 bg-[var(--color-bg-secondary)] dark:bg-[var(--color-bg-secondary)] flex items-center px-4 border-b border-[var(--color-border)]">
                   <div className="flex space-x-2">
                     <div className="w-3 h-3 rounded-full bg-red-500"></div>
@@ -194,10 +264,20 @@ const PelicanPanelSection = () => {
                     priority
                   />
                 </div>
-              </div>
+              </motion.div>
 
               {/* Tweede panel - File Editor */}
-              <div className="bg-[var(--color-card-bg)] dark:bg-[var(--color-card-bg)] rounded-xl shadow-xl w-full border border-[var(--color-border)] dark:border-[var(--color-border)] flex flex-col overflow-hidden">
+              <motion.div
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+                className="bg-[var(--color-card-bg)] dark:bg-[var(--color-card-bg)] rounded-xl shadow-xl w-full border border-[var(--color-border)] dark:border-[var(--color-border)] flex flex-col overflow-hidden lg:cursor-pointer"
+                onClick={(e) => {
+                  // Only trigger on desktop
+                  if (window.innerWidth >= 1024) {
+                    setSelectedImage({ src: '/pngs/mainpage/filemanage.png', title: 'Pelican Panel - File Editor' });
+                  }
+                }}
+              >
                 <div className="flex-shrink-0 h-12 bg-[var(--color-bg-secondary)] dark:bg-[var(--color-bg-secondary)] flex items-center px-4 border-b border-[var(--color-border)]">
                   <div className="flex space-x-2">
                     <div className="w-3 h-3 rounded-full bg-red-500"></div>
@@ -216,7 +296,7 @@ const PelicanPanelSection = () => {
                     priority
                   />
                 </div>
-              </div>
+              </motion.div>
             </motion.div>
 
             {/* Right Column - Features List */}

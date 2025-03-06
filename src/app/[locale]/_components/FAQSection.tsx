@@ -34,12 +34,12 @@ const FAQSection = () => {
   ];
 
   return (
-    <AnimatedBackground variant="tertiary" className="min-h-[100vh] md:h-screen flex items-center justify-center">
-      <div className="container mx-auto px-4">
+    <AnimatedBackground variant="tertiary" className="min-h-[100vh] md:h-screen flex items-center justify-center py-16 md:py-0">
+      <div className="container mx-auto px-4 py-8 md:py-0">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
           {/* Left Column */}
           <motion.div 
-            className="lg:col-span-5"
+            className="lg:col-span-5 px-2 md:px-0"
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
             transition={{ duration: 0.5, delay: 0.2 }}
