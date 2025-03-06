@@ -35,7 +35,7 @@ export default async function LocaleLayout({ children, params }: LocaleLayoutPro
   return (
     <NextIntlClientProvider locale={locale} messages={messages}>
       <Navbar />
-      <main className="pt-16">
+      <main>
         {children}
       </main>
       <Footer />

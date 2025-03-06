@@ -94,7 +94,7 @@ const FeatureCard = ({ title, description, icon, index = 0 }: FeatureCardProps) 
 
   return (
     <motion.div 
-      className="bg-[var(--color-bg-primary)] dark:bg-[var(--color-bg-primary)] p-6 rounded-lg shadow-sm relative overflow-hidden"
+      className="bg-[var(--color-bg-primary)] dark:bg-[var(--color-bg-primary)] p-6 rounded-lg shadow-sm relative overflow-hidden h-full flex flex-col"
       variants={cardVariants}
       initial="hidden"
       animate="visible"
@@ -112,7 +112,7 @@ const FeatureCard = ({ title, description, icon, index = 0 }: FeatureCardProps) 
       />
 
       <motion.div 
-        className="w-14 h-14 bg-[var(--color-secondary)] dark:bg-[var(--color-quaternary)] rounded-2xl flex items-center justify-center mb-5 relative z-10"
+        className="w-14 h-14 bg-[var(--color-secondary)] dark:bg-[var(--color-quaternary)] rounded-2xl flex items-center justify-center mb-4 relative z-10"
         variants={iconVariants}
       >
         <svg xmlns="http://www.w3.org/2000/svg" className="h-7 w-7 text-[var(--color-senary)] dark:text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -129,7 +129,7 @@ const FeatureCard = ({ title, description, icon, index = 0 }: FeatureCardProps) 
       </motion.h3>
       
       <motion.p 
-        className="text-[var(--color-text-primary)] dark:text-[var(--color-text-primary)] relative z-10"
+        className="text-[var(--color-text-primary)] dark:text-[var(--color-text-primary)] relative z-10 flex-grow"
         variants={textVariants}
         custom={index + 0.5}
       >

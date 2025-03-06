@@ -100,10 +100,10 @@ const HostingOptionsSection = () => {
   };
 
   return (
-    <section className="py-16" style={{ backgroundColor: 'var(--color-tertiary)' }}>
-      <div className="container mx-auto px-4">
+    <section className="min-h-[100vh] md:h-screen flex items-center justify-center py-16 md:py-0" style={{ backgroundColor: 'var(--color-tertiary)' }}>
+      <div className="container mx-auto px-4 flex flex-col items-center">
         <motion.div 
-          className="text-center mb-12"
+          className="text-center mb-12 max-w-3xl"
           initial={{ opacity: 0, y: -10 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -116,7 +116,7 @@ const HostingOptionsSection = () => {
         </motion.div>
 
         <motion.div 
-          className="grid grid-cols-1 md:grid-cols-3 gap-8"
+          className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full max-w-6xl mx-auto"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
@@ -125,7 +125,7 @@ const HostingOptionsSection = () => {
           {hostingOptions.map((option) => (
             <motion.div
               key={option.id}
-              className="bg-[var(--color-bg-primary)] text-white rounded-lg shadow-lg overflow-hidden"
+              className="bg-[var(--color-bg-primary)] rounded-lg shadow-lg overflow-hidden flex flex-col h-full"
               variants={itemVariants}
               whileHover={{ 
                 scale: 1.03,
@@ -133,9 +133,9 @@ const HostingOptionsSection = () => {
                 transition: { duration: 0.2 }
               }}
             >
-              <div className="p-6">
+              <div className="p-6 flex flex-col flex-grow">
                 <motion.div 
-                  className="flex flex-col items-center text-center mb-6"
+                  className="flex flex-col items-center text-center"
                   initial={{ opacity: 0, scale: 0.9 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.3, delay: 0.1 }}
@@ -152,34 +152,30 @@ const HostingOptionsSection = () => {
                   {t(option.descriptionKey)}
                 </p>
                 
-                <div className="space-y-3">
+                <div className="space-y-3 flex-grow">
                   <p className="font-semibold text-[var(--color-text-primary)]">{t('hosting.included')}:</p>
                   {option.featuresKeys.map((featureKey, index) => (
                     <motion.div 
                       key={index} 
-                      className="flex items-center"
+                      className="flex items-center gap-2"
                       variants={featureVariants}
                       initial="hidden"
                       whileInView="visible"
                       viewport={{ once: true }}
                       transition={{ delay: 0.1 * index }}
                     >
-                      <FaCheck className="text-green-500 mr-2 flex-shrink-0" />
+                      <FaCheck className="text-green-500 flex-shrink-0" />
                       <span className="text-[var(--color-text-primary)]">{t(featureKey)}</span>
                     </motion.div>
                   ))}
                 </div>
               </div>
               
-              <div className="px-6 pb-6 pt-2">
+              <div className="p-6 mt-auto border-t border-[var(--color-border)]">
                 <motion.button 
-                  className="w-full py-3 bg-blue-600 text-white font-bold rounded-md"
-                  whileHover={{ 
-                    backgroundColor: "rgb(37, 99, 235)",
-                    scale: 1.02
-                  }}
+                  className="w-full py-3 bg-[var(--color-quinary)] text-white font-bold rounded-md hover:bg-[var(--color-senary)] focus:outline-none focus:ring-2 focus:ring-[var(--color-quinary)] focus:ring-opacity-50 transition-colors duration-200"
+                  whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
-                  transition={{ duration: 0.2 }}
                 >
                   {t('hosting.viewMore')}
                 </motion.button>

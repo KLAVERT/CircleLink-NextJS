@@ -106,23 +106,23 @@ const FeaturesSection = () => {
   };
 
   return (
-    <AnimatedBackground variant="secondary" className="py-24 md:py-32 mt-12">
-      <div className="container mx-auto px-4" ref={ref}>
+    <AnimatedBackground variant="secondary" className="min-h-[100vh] md:h-screen flex items-center justify-center py-24 md:py-0">
+      <div className="container mx-auto px-4 flex flex-col items-center" ref={ref}>
         {/* Section title met nieuwe animatie */}
         <motion.div 
-          className="text-center mb-16"
+          className="text-center mb-16 max-w-3xl"
           variants={titleVariants}
           initial="hidden"
           animate={controls}
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text-primary)] dark:text-[var(--color-text-primary)]">
+          <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text-primary)] dark:text-[var(--color-text-primary)] mb-4">
             {t('sectionTitle.part1')} <span className="text-[var(--color-quinary)] dark:text-[var(--color-quinary)]">{t('sectionTitle.part2')}</span>
           </h2>
         </motion.div>
         
         {/* Features grid met nieuwe animaties */}
         <motion.div 
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-6xl"
           variants={containerVariants}
           initial="hidden"
           animate={controls}
@@ -131,6 +131,7 @@ const FeaturesSection = () => {
             {features.map((feature, index) => (
               <motion.div
                 key={`${feature.title}-${index}`}
+                className="h-full"
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{

@@ -102,7 +102,7 @@ export default function PackagesSection() {
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {packages.map((pkg, index) => (
+          {packages.map((pkg) => (
             <motion.div
               key={pkg.name}
               className={`relative rounded-xl p-8 bg-white border-2 shadow-lg transition-all ${

@@ -89,7 +89,7 @@ const HeroSection = () => {
         {slide.tagline}
       </motion.p>
       <motion.div 
-        className="space-y-1"
+        className="space-y-1 min-h-[180px]"
         initial={{ opacity: 0, y: 20 }}
         animate={animationReady ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
         transition={{ duration: 0.6, delay: 0.2 }}
@@ -134,8 +134,8 @@ const HeroSection = () => {
   ));
 
   return (
-    <AnimatedBackground variant="primary" className="py-20 md:py-28 lg:py-32">
-      <div className="container mx-auto px-4">
+    <AnimatedBackground variant="primary" className="absolute top-0 left-0 right-0 min-h-screen flex items-center justify-center">
+      <div className="container mx-auto px-4 pt-20 md:pt-0 overflow-hidden">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8 lg:gap-12">
           {/* Left column - Text content that changes */}
           <div className="w-full md:w-1/2 space-y-6 relative">
@@ -147,15 +147,15 @@ const HeroSection = () => {
           </div>
           
           {/* Right column - SVG remains the same but with animation */}
-          <div className="w-full md:w-1/2 flex flex-col items-center mt-12 md:mt-0">
+          <div className="w-full md:w-1/2 flex flex-col items-center mt-12 md:mt-0 max-w-full">
             <motion.div 
-              className="relative w-full flex justify-center"
+              className="relative w-full flex justify-center px-4"
               initial={{ y: 30, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
             >
               <ServerKastGuy 
-                className={`w-[420px] sm:w-[480px] md:w-[560px] lg:w-[600px] h-auto ${animationReady ? 'animate-float' : ''}`}
+                className={`w-full max-w-[420px] sm:max-w-[480px] md:max-w-[560px] lg:max-w-[600px] h-auto ${animationReady ? 'animate-float' : ''}`}
                 aria-label={t('serverIllustrationAlt')}
               />
             </motion.div>

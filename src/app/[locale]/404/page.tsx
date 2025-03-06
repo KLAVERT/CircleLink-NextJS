@@ -10,7 +10,7 @@ export default function NotFoundPage() {
   const locale = useLocale();
 
   return (
-    <AnimatedBackground variant="primary" className="min-h-screen">
+    <AnimatedBackground variant="primary" className="absolute top-0 left-0 right-0 min-h-screen">
       <div className="min-h-screen flex items-center justify-center">
         <div className="text-center px-4">
           <h1 className="text-4xl font-bold mb-4">

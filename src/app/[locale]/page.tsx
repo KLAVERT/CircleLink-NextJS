@@ -30,9 +30,9 @@ export default function HomePage() {
   }, []);
 
   return (
-    <main>
+    <main className="flex flex-col items-center w-full">
       {isLoading && <Preloader />}
-      <div className={`transition-opacity duration-1000 ${isLoading ? 'opacity-0' : 'opacity-100'}`}>
+      <div className={`w-full transition-opacity duration-1000 ${isLoading ? 'opacity-0' : 'opacity-100'}`}>
         <HeroSection />
         <FeaturesSection />
         <PelicanPanelSection />

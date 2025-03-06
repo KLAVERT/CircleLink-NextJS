@@ -14,19 +14,6 @@ const FAQ = ({ faqs }: FAQProps) => {
 
   const handleToggle = (index: number) => {
     setOpenIndex(openIndex === index ? null : index);
-    
-    // Scroll naar het geopende item met een vloeiende animatie
-    if (openIndex !== index && itemRefs.current[index]) {
-      const yOffset = -100;
-      const element = itemRefs.current[index];
-      const y = element?.getBoundingClientRect().top ?? 0;
-      const scrollTarget = y + window.pageYOffset + yOffset;
-
-      window.scrollTo({
-        top: scrollTarget,
-        behavior: 'smooth'
-      });
-    }
   };
 
   // Simplified animation variants

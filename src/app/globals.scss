@@ -9,71 +9,71 @@
   --color-bg-primary:     #F8F8F8;  // Primaire achtergrond (lichtgrijs)
   --color-bg-surface:     #F0F0F0;  // Oppervlakte/kaart achtergrond
   // Randen en scheidingen
-  --color-border:         #E0E0E0;  // Randkleur
-  --color-divider:        #D0D0D0;  // Scheidingslijnen
+  --color-border:         #D0D0D0;  // Randkleur (verbeterd contrast)
+  --color-divider:        #C0C0C0;  // Scheidingslijnen (verbeterd contrast)
   // Tekst
-  --color-text-subtle:    #777777;  // Subtiele tekst (bijv. secundaire info)
-  --color-text-primary:   #333333;  // Primaire tekstkleur
-  --color-text-dark:      #1A1A1A;  // Donkere tekstkleur
+  --color-text-subtle:    #666666;  // Subtiele tekst (verbeterd contrast)
+  --color-text-primary:   #222222;  // Primaire tekstkleur (verbeterd contrast)
+  --color-text-dark:      #0F0F0F;  // Donkere tekstkleur (verbeterd contrast)
   // Actie & Accenten
-  --color-success:        #1DB954;  // Accept/Success (groen)
-  --color-error:          #D72638;  // Delete/Error (rood)
-  --color-accent-cool:    #4054B2;  // Koel accent
-  --color-accent-elegant: #5B2A86;  // Elegant accent
-  --color-accent-warm:    #C49F0F;  // Warm accent/hervorming
+  --color-success:        #1A9F47;  // Accept/Success (verbeterd contrast)
+  --color-error:          #C72030;  // Delete/Error (verbeterd contrast)
+  --color-accent-cool:    #3846A0;  // Koel accent (verbeterd contrast)
+  --color-accent-elegant: #4F2575;  // Elegant accent (verbeterd contrast)
+  --color-accent-warm:    #B38F0E;  // Warm accent/hervorming (verbeterd contrast)
   // Extra accenten
-  --color-link:           #3498DB;  // Linkkleur
-  --color-info:           #17A2B8;  // Informatie
-  --color-warning:        #E67E22;  // Waarschuwing
-  --color-muted:          #8C8C8C;  // Voor minder prominente teksten
-  --color-focus:          #80BDFF;  // Focus/highlight
+  --color-link:           #0066CC;  // Linkkleur (verbeterd contrast)
+  --color-info:           #0E8C9E;  // Informatie (verbeterd contrast)
+  --color-warning:        #D86F19;  // Waarschuwing (verbeterd contrast)
+  --color-muted:          #6F6F6F;  // Voor minder prominente teksten (verbeterd contrast)
+  --color-focus:          #4A8CD8;  // Focus/highlight (verbeterd contrast)
   // Overlays & schaduwen
-  --color-shadow:         #00000020;  // Lichte schaduw (subtiel)
-  --color-overlay:        #00000030;  // Zachte overlay
-  --color-highlight:      #F39C12;  // Extra highlight (accentueert belangrijke elementen)
+  --color-shadow:         #00000030;  // Lichte schaduw (verbeterd contrast)
+  --color-overlay:        #00000045;  // Zachte overlay (verbeterd contrast)
+  --color-highlight:      #E07D00;  // Extra highlight (verbeterd contrast)
   //main colors
-  --color-primary:        #E0F2FF; // Zeer licht blauw (subtiele achtergrond)
-  --color-secondary:      #B3DAFF; // Licht blauw (basisaccent)
-  --color-tertiary:       #80C1FF; // Middellicht blauw (voor subtiele overlays)
-  --color-quaternary:     #4DA8FF; // Frisse lichtblauwe accentkleur (voor buttons of links)
-  --color-quinary:        #1A90FF; // Stevige blauwaccent (voor actieve elementen)
-  --color-senary:         #0066CC; // Donker blauw (voor nadruk en contrast)
+  --color-primary:        #D5EEFF;  // Zeer licht blauw (verbeterd contrast)
+  --color-secondary:      #99CCFF;  // Licht blauw (verbeterd contrast)
+  --color-tertiary:       #66B0FF;  // Middellicht blauw (verbeterd contrast)
+  --color-quaternary:     #3399FF;  // Frisse lichtblauwe accentkleur (verbeterd contrast)
+  --color-quinary:        #0077E6;  // Stevige blauwaccent (verbeterd contrast)
+  --color-senary:         #0055AA;  // Donker blauw (verbeterd contrast)
 }
 
 .dark {
-  --color-bg-deep:        #1f1f1f;  // Diepste achtergrond
-  --color-bg-primary:     #08051f;  // Primaire achtergrond
-  --color-bg-surface:     #333333;  // Oppervlakte/kaart achtergrond
+  --color-bg-deep:        #121212;  // Diepste achtergrond (verbeterd contrast)
+  --color-bg-primary:     #1A1A2E;  // Primaire achtergrond (verbeterd contrast)
+  --color-bg-surface:     #2A2A3A;  // Oppervlakte/kaart achtergrond (verbeterd contrast)
   // Randen en scheidingen
-  --color-border:         #3A3A3A;  // Randkleur
-  --color-divider:        #444444;  // Scheidingslijnen
+  --color-border:         #454545;  // Randkleur (verbeterd contrast)
+  --color-divider:        #555555;  // Scheidingslijnen (verbeterd contrast)
   // Tekst
-  --color-text-subtle:    #B3B3B3;  // Subtiele tekst (bijv. secundaire info)
-  --color-text-primary:   #EAEAEA;  // Primaire tekstkleur
+  --color-text-subtle:    #CCCCCC;  // Subtiele tekst (verbeterd contrast)
+  --color-text-primary:   #F0F0F0;  // Primaire tekstkleur (verbeterd contrast)
   --color-text-dark:      #1A1A1A;  // Donkere tekstkleur
   // Actie & Accenten
-  --color-success:        #1DB954;  // Accept/Success (groen)
-  --color-error:          #D72638;  // Delete/Error (rood)
-  --color-accent-cool:    #4054B2;  // Koel accent
-  --color-accent-elegant: #5B2A86;  // Elegant accent
-  --color-accent-warm:    #C49F0F;  // Warm accent/hervorming
+  --color-success:        #25CC64;  // Accept/Success (verbeterd contrast)
+  --color-error:          #FF3A4E;  // Delete/Error (verbeterd contrast)
+  --color-accent-cool:    #5266D3;  // Koel accent (verbeterd contrast)
+  --color-accent-elegant: #7438AB;  // Elegant accent (verbeterd contrast)
+  --color-accent-warm:    #EBCC35;  // Warm accent/hervorming (verbeterd contrast)
   // Extra accenten
-  --color-link:           #3498DB;  // Linkkleur
-  --color-info:           #17A2B8;  // Informatie
-  --color-warning:        #E67E22;  // Waarschuwing
-  --color-muted:          #6C757D;  // Voor minder prominente teksten
-  --color-focus:          #80BDFF;  // Focus/highlight
+  --color-link:           #4DA8FF;  // Linkkleur (verbeterd contrast)
+  --color-info:           #25C4DE;  // Informatie (verbeterd contrast)
+  --color-warning:        #FF922B;  // Waarschuwing (verbeterd contrast)
+  --color-muted:          #A0A0A0;  // Voor minder prominente teksten (verbeterd contrast)
+  --color-focus:          #99CCFF;  // Focus/highlight (verbeterd contrast)
   // Overlays & schaduwen
-  --color-shadow:         #00000080;  // Semi-transparante schaduw
-  --color-overlay:        #000000CC;  // Donkere overlay (bijv. modal achtergrond)
-  --color-highlight:      #F39C12;  // Extra highlight (accentueert belangrijke elementen)
+  --color-shadow:         #00000099;  // Semi-transparante schaduw (verbeterd contrast)
+  --color-overlay:        #000000DD;  // Donkere overlay (verbeterd contrast)
+  --color-highlight:      #FFAB3D;  // Extra highlight (verbeterd contrast)
   //main colors
-  --color-primary:        #0B132B; // Zeer donker blauw (achtergrondaccent)
-  --color-secondary:      #1C2541; // Donker blauw (basisaccent)
-  --color-tertiary:       #2A3F5B; // Middel donker blauw (subtiele highlights)
-  --color-quaternary:     #3A5C7C; // Verfijnd blauw (voor actieve elementen)
-  --color-quinary:        #4A7AB0; // Lichter blauw (voor interactieaccenten)
-  --color-senary:         #5A9ADE; // Heldere blauw tint (accent voor focus en hover)
+  --color-primary:        #0C1530;  // Zeer donker blauw (verbeterd contrast)
+  --color-secondary:      #1D2845;  // Donker blauw (verbeterd contrast)
+  --color-tertiary:       #2D416A;  // Middel donker blauw (verbeterd contrast)
+  --color-quaternary:     #3D66A2;  // Verfijnd blauw (verbeterd contrast)
+  --color-quinary:        #5080C0;  // Lichter blauw (verbeterd contrast)
+  --color-senary:         #70A0E0;  // Heldere blauw tint (verbeterd contrast)
 }
 
 /* Custom Scrollbar */

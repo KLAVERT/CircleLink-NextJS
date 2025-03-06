@@ -178,6 +178,14 @@
     "webhosting": {
       "question": "Quale versione di PHP e MySQL ottengo con il Web Hosting quando uso CircleLink?",
       "answer": "Il Web Hosting viene fornito con PHP 8.x, 7.x, 5.6 e le ultime versioni di MySQL 5.6. Questi sono requisiti fondamentali per i siti web Magento, CMS-Drupal e OpenCart e per chiunque gestisca più siti WordPress."
+    },
+    "locations": {
+      "question": "Dove sono situati i vostri server?",
+      "answer": "I nostri server sono strategicamente collocati in vari datacenter in Nederland. Le nostre sedi principali si trovano in Utrecht & Hardewijk"
+    },
+    "payment": {
+      "question": "Quali metodi di pagamento accettate?",
+      "answer": "Offriamo vari metodi di pagamento per la tua comodità. Puoi pagare con iDEAL, PayPal, carta di credito (Visa/Mastercard). Per i clienti business, è anche possibile pagare tramite fattura. Tutti i pagamenti vengono elaborati in modo sicuro e riceverai immediata conferma del tuo pagamento."
     }
   },
   "footer": {

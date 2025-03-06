@@ -21,7 +21,7 @@ const Slider: React.FC<SliderProps> = ({
   showIndicators = true,
   className = '',
   slideClassName = '',
-  indicatorsClassName = 'flex justify-center mt-8',
+  indicatorsClassName = 'absolute bottom-0 left-0 right-0 flex justify-center pb-8',
   indicatorClassName = 'h-3 rounded-full transition-all duration-300 bg-[var(--color-divider)] hover:bg-[var(--color-tertiary)] w-3',
   activeIndicatorClassName = 'bg-[var(--color-quinary)] w-12',
   renderIndicator,
@@ -142,7 +142,7 @@ const Slider: React.FC<SliderProps> = ({
   };
 
   return (
-    <div className={className}>
+    <div className={`${className} relative`}>
       <div 
         className="relative overflow-hidden select-none"
         onTouchStart={handleTouchStart}
@@ -163,7 +163,7 @@ const Slider: React.FC<SliderProps> = ({
             animate="center"
             exit="exit"
             transition={{ duration: 0.5, ease: "easeInOut" }}
-            className={slideClassName}
+            className={`${slideClassName} pb-16`}
           >
             {slides[activeSlide]}
           </motion.div>

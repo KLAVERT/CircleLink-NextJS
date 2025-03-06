@@ -8,7 +8,7 @@ import Link from 'next/link';
 const FAQSection = () => {
   const t = useTranslations();
   const sectionRef = useRef(null);
-  const isInView = useInView(sectionRef, { once: true, margin: "-100px" });
+  const isInView = useInView(sectionRef, { once: true });
 
   const faqs = [
     {
@@ -22,11 +22,19 @@ const FAQSection = () => {
     {
       question: t('faq.webhosting.question'),
       answer: t('faq.webhosting.answer')
+    },
+    {
+      question: t('faq.locations.question'),
+      answer: t('faq.locations.answer')
+    },
+    {
+      question: t('faq.payment.question'),
+      answer: t('faq.payment.answer')
     }
   ];
 
   return (
-    <AnimatedBackground variant="tertiary" className="py-20">
+    <AnimatedBackground variant="tertiary" className="min-h-[100vh] md:h-screen flex items-center justify-center">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
           {/* Left Column */}
