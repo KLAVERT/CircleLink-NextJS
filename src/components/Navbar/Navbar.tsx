@@ -39,17 +39,13 @@ export default function Navbar() {
 
   useEffect(() => {
     const handleScroll = () => {
-      console.log('Scrolling', window.scrollY);
       if (window.scrollY > 0) {
-        console.log('Setting scrolled to true');
         setScrolled(true);
       } else {
-        console.log('Setting scrolled to false');
         setScrolled(false);
       }
     };
 
-    console.log('Adding scroll listener');
     window.addEventListener('scroll', handleScroll);
     handleScroll(); // Check initial position
     
@@ -57,8 +53,6 @@ export default function Navbar() {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
-
-  console.log('Scrolled state:', scrolled);
 
   const hostingOptions = [
     {

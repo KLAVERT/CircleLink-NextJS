@@ -3,7 +3,6 @@
 import React, { useRef } from 'react';
 import { useTranslations } from 'next-intl';
 import { motion, useInView } from 'framer-motion';
-import AnimatedBackground from '@/components/AnimatedBackground/AnimatedBackground';
 import Image from 'next/image';
 
 // Feature item component met animatie
@@ -140,8 +139,18 @@ const PelicanPanelSection = () => {
   };
 
   return (
-    <AnimatedBackground variant="tertiary" className="py-24 md:py-32">
-      <div ref={sectionRef} className="container mx-auto px-4">
+    <div className="py-24 md:py-32 relative overflow-hidden">
+      <div className="hidden lg:block absolute inset-0 w-full h-full opacity-20">
+        <Image
+          src="/images/jpg/mainpage/sons_of_the_forest.jpg"
+          alt="Background"
+          fill
+          style={{ objectFit: 'cover', objectPosition: 'center' }}
+          className="w-full h-full"
+          priority
+        />
+      </div>
+      <div ref={sectionRef} className="container mx-auto px-4 relative z-10">
         <motion.div
           variants={containerVariants}
           initial="hidden"
@@ -241,7 +250,7 @@ const PelicanPanelSection = () => {
           </div>
         </motion.div>
       </div>
-    </AnimatedBackground>
+    </div>
   );
 };
 
