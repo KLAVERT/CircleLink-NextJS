@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { FaDiscord, FaServer, FaClock, FaDatabase } from 'react-icons/fa';
 import { MdDashboard } from 'react-icons/md';
@@ -89,89 +89,13 @@ interface DiscordCharacter {
   duration: number;
 }
 
-const discordCharacterPaths: DiscordCharacter[] = [
-  {
-    path: '/svg/discord/discord.svg',
-    size: Math.random() * 60 + 40,
-    startPosition: {
-      x: `${Math.random() * 100}%`,
-      y: `${Math.random() * 100}%`
-    },
-    endPosition: {
-      x: `${Math.random() * 100}%`,
-      y: `${Math.random() * 100}%`
-    },
-    delay: Math.random() * 3,
-    duration: Math.random() * 15 + 20
-  },
-  {
-    path: '/svg/discord/icons8-discord-bot.svg',
-    size: Math.random() * 50 + 30,
-    startPosition: {
-      x: `${Math.random() * 100}%`,
-      y: `${Math.random() * 100}%`
-    },
-    endPosition: {
-      x: `${Math.random() * 100}%`,
-      y: `${Math.random() * 100}%`
-    },
-    delay: Math.random() * 3 + 2,
-    duration: Math.random() * 15 + 20
-  },
-  {
-    path: '/svg/discord/early-supporter.svg',
-    size: Math.random() * 55 + 35,
-    startPosition: {
-      x: `${Math.random() * 100}%`,
-      y: `${Math.random() * 100}%`
-    },
-    endPosition: {
-      x: `${Math.random() * 100}%`,
-      y: `${Math.random() * 100}%`
-    },
-    delay: Math.random() * 3 + 4,
-    duration: Math.random() * 15 + 20
-  },
-  {
-    path: '/svg/discord/active-developer.svg',
-    size: Math.random() * 45 + 25,
-    startPosition: {
-      x: `${Math.random() * 100}%`,
-      y: `${Math.random() * 100}%`
-    },
-    endPosition: {
-      x: `${Math.random() * 100}%`,
-      y: `${Math.random() * 100}%`
-    },
-    delay: Math.random() * 3 + 6,
-    duration: Math.random() * 15 + 20
-  },
-  {
-    path: '/svg/discord/nitro.svg',
-    size: Math.random() * 50 + 30,
-    startPosition: {
-      x: `${Math.random() * 100}%`,
-      y: `${Math.random() * 100}%`
-    },
-    endPosition: {
-      x: `${Math.random() * 100}%`,
-      y: `${Math.random() * 100}%`
-    },
-    delay: Math.random() * 3 + 8,
-    duration: Math.random() * 15 + 20
-  }
-].map((char, i) => ({
-  ...char,
-  delay: i * 2 + Math.random() * 3,
-  duration: Math.random() * 15 + 20
-}));
-
-const messageBlips = Array.from({ length: 8 }, (_, i) => ({
-  width: Math.random() * 120 + 80,
-  left: `${Math.random() * 80}%`,
-  delay: i * 0.6,
-  duration: Math.random() * 4 + 5
-}));
+const discordPaths = [
+  '/svg/discord/discord.svg',
+  '/svg/discord/icons8-discord-bot.svg',
+  '/svg/discord/early-supporter.svg',
+  '/svg/discord/active-developer.svg',
+  '/svg/discord/nitro.svg'
+];
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -270,6 +194,38 @@ const checkmarkVariants = {
 };
 
 const InfoSection = () => {
+  const [discordCharacters, setDiscordCharacters] = useState<DiscordCharacter[]>([]);
+  const [messageBlips, setMessageBlips] = useState<any[]>([]);
+
+  useEffect(() => {
+    // Generate random values for characters on the client side
+    const characters = discordPaths.map((path, i) => ({
+      path,
+      size: Math.random() * (i === 0 ? 60 : 50) + (i === 0 ? 40 : 30),
+      startPosition: {
+        x: `${Math.random() * 100}%`,
+        y: `${Math.random() * 100}%`
+      },
+      endPosition: {
+        x: `${Math.random() * 100}%`,
+        y: `${Math.random() * 100}%`
+      },
+      delay: i * 2 + Math.random() * 3,
+      duration: Math.random() * 15 + 20
+    }));
+
+    // Generate random values for message blips
+    const blips = Array.from({ length: 8 }, (_, i) => ({
+      width: Math.random() * 120 + 80,
+      left: `${Math.random() * 80}%`,
+      top: `${Math.random() * 70 + 15}%`,
+      delay: i * 0.6,
+      duration: Math.random() * 4 + 5
+    }));
+
+    setDiscordCharacters(characters);
+    setMessageBlips(blips);
+  }, []);
 
   return (
     <section className="min-h-[100vh] md:h-screen relative bg-[var(--color-primary)] overflow-hidden">
@@ -282,7 +238,7 @@ const InfoSection = () => {
           transition={{ duration: 1 }}
         >
           {/* Floating Discord Characters */}
-          {discordCharacterPaths.map((item, i) => (
+          {discordCharacters.map((item, i) => (
             <motion.div
               key={i}
               className="absolute select-none pointer-events-none"
@@ -325,7 +281,7 @@ const InfoSection = () => {
               style={{
                 width: blip.width,
                 left: blip.left,
-                top: `${Math.random() * 70 + 15}%`
+                top: blip.top
               }}
               initial={{ scale: 0, opacity: 0 }}
               animate={{
