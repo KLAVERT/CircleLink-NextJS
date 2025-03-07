@@ -4,6 +4,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import FeatureCard from '@/components/FeatureCard/FeatureCard';
 import type { Feature } from '@/components/FeatureCard/FeatureCard';
+import { useTranslations } from 'next-intl';
 
 interface Package {
   name: string;
@@ -23,25 +24,25 @@ const packages: Package[] = [
   {
     name: "Starter",
     price: "€1.50,-",
-    description: "Perfect voor kleine communities die net beginnen",
+    description: "packages.starter.description",
     features: [
-      { text: "Tot 100 leden", included: true },
-      { text: "Basis hosting", included: true },
-      { text: "Email support", included: true },
-      { text: "Custom bot", included: false },
-      { text: "Premium features", included: false },
+      { text: "packages.starter.features.members", included: true },
+      { text: "packages.starter.features.hosting", included: true },
+      { text: "packages.starter.features.support", included: true },
+      { text: "packages.starter.features.bot", included: false },
+      { text: "packages.starter.features.premium", included: false },
     ],
   },
   {
     name: "Professional",
     price: "€2.42,-",
-    description: "Ideaal voor groeiende communities",
+    description: "packages.professional.description",
     features: [
-      { text: "Tot 500 leden", included: true },
-      { text: "Premium hosting", included: true },
-      { text: "24/7 support", included: true },
-      { text: "Custom bot", included: true },
-      { text: "Premium features", included: true },
+      { text: "packages.professional.features.members", included: true },
+      { text: "packages.professional.features.hosting", included: true },
+      { text: "packages.professional.features.support", included: true },
+      { text: "packages.professional.features.bot", included: true },
+      { text: "packages.professional.features.premium", included: true },
     ],
     recommended: true,
     mostChosen: true,
@@ -49,14 +50,14 @@ const packages: Package[] = [
   {
     name: "Enterprise",
     price: "€3.93,-",
-    description: "Voor grote communities met speciale behoeften",
+    description: "packages.enterprise.description",
     features: [
-      { text: "Onbeperkt leden", included: true },
-      { text: "Enterprise hosting", included: true },
-      { text: "Prioriteit support", included: true },
-      { text: "Custom bot", included: true },
-      { text: "Premium features", included: true },
-      { text: "Dedicated support", included: true },
+      { text: "packages.enterprise.features.members", included: true },
+      { text: "packages.enterprise.features.hosting", included: true },
+      { text: "packages.enterprise.features.support", included: true },
+      { text: "packages.enterprise.features.bot", included: true },
+      { text: "packages.enterprise.features.premium", included: true },
+      { text: "packages.enterprise.features.dedicated", included: true },
     ],
   },
 ];
@@ -86,6 +87,8 @@ const cardVariants = {
 };
 
 export default function PackagesSection() {
+  const t = useTranslations('discord');
+
   return (
     <section className="py-24 px-4 md:px-8 bg-[var(--color-primary)]">
       <motion.div 
@@ -97,31 +100,31 @@ export default function PackagesSection() {
       >
         <motion.div variants={cardVariants} className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-[var(--color-text-primary)]">
-            Kies Je Perfecte Pakket
+            {t('packages.title')}
           </h2>
           <p className="text-lg text-[var(--color-text-subtle)] max-w-2xl mx-auto">
-            Selecteer het pakket dat het beste bij jouw behoeften past. Elk pakket is ontworpen om je Discord community optimaal te ondersteunen.
+            {t('packages.subtitle')}
           </p>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {packages.map((pkg) => {
             const features: Feature[] = pkg.features.map(feature => ({
-              text: feature.text,
+              text: t(feature.text),
               status: feature.included ? 'included' : 'excluded'
             }));
 
             return (
               <FeatureCard
                 key={pkg.name}
-                title={pkg.name}
+                title={t(`packages.${pkg.name.toLowerCase()}.name`)}
                 price={pkg.price}
-                description={pkg.description}
+                description={t(pkg.description)}
                 features={features}
                 style="gradient"
-                buttonText={`Selecteer ${pkg.name}`}
+                buttonText={t('packages.selectButton', { name: t(`packages.${pkg.name.toLowerCase()}.name`) })}
                 recommended={pkg.recommended}
-                recommendedText="Aanbevolen"
+                recommendedText={t('packages.recommended')}
                 href="#contact"
               />
             );

@@ -1,0 +1,45 @@
+{
+  "discord": {
+    "packages": {
+      "title": "Choose Your Perfect Package",
+      "subtitle": "Select the package that best suits your needs. Each package is designed to optimally support your Discord community.",
+      "recommended": "Recommended",
+      "mostChosen": "Most Popular",
+      "selectButton": "Select {name}",
+      "starter": {
+        "name": "Starter",
+        "description": "Perfect for small communities just getting started",
+        "features": {
+          "members": "Up to 100 members",
+          "hosting": "Basic hosting",
+          "support": "Email support",
+          "bot": "Custom bot",
+          "premium": "Premium features"
+        }
+      },
+      "professional": {
+        "name": "Professional",
+        "description": "Ideal for growing communities",
+        "features": {
+          "members": "Up to 500 members",
+          "hosting": "Premium hosting",
+          "support": "24/7 support",
+          "bot": "Custom bot",
+          "premium": "Premium features"
+        }
+      },
+      "enterprise": {
+        "name": "Enterprise",
+        "description": "For large communities with special needs",
+        "features": {
+          "members": "Unlimited members",
+          "hosting": "Enterprise hosting",
+          "support": "Priority support",
+          "bot": "Custom bot",
+          "premium": "Premium features",
+          "dedicated": "Dedicated support"
+        }
+      }
+    }
+  }
+} 

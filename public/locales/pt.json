@@ -202,5 +202,48 @@
     "billingPanel": "Painel de Faturamento",
     "contact": "Contato",
     "allRightsReserved": "Todos os Direitos Reservados"
+  },
+  "discord": {
+    "packages": {
+      "title": "Escolha Seu Pacote Perfeito",
+      "subtitle": "Selecione o pacote que melhor atende às suas necessidades. Cada pacote foi projetado para suportar de forma ideal sua comunidade Discord.",
+      "recommended": "Recomendado",
+      "mostChosen": "Mais Popular",
+      "selectButton": "Selecionar {name}",
+      "starter": {
+        "name": "Iniciante",
+        "description": "Perfeito para pequenas comunidades que estão começando",
+        "features": {
+          "members": "Até 100 membros",
+          "hosting": "Hospedagem básica",
+          "support": "Suporte por email",
+          "bot": "Bot personalizado",
+          "premium": "Recursos premium"
+        }
+      },
+      "professional": {
+        "name": "Profissional",
+        "description": "Ideal para comunidades em crescimento",
+        "features": {
+          "members": "Até 500 membros",
+          "hosting": "Hospedagem premium",
+          "support": "Suporte 24/7",
+          "bot": "Bot personalizado",
+          "premium": "Recursos premium"
+        }
+      },
+      "enterprise": {
+        "name": "Empresarial",
+        "description": "Para grandes comunidades com necessidades especiais",
+        "features": {
+          "members": "Membros ilimitados",
+          "hosting": "Hospedagem empresarial",
+          "support": "Suporte prioritário",
+          "bot": "Bot personalizado",
+          "premium": "Recursos premium",
+          "dedicated": "Suporte dedicado"
+        }
+      }
+    }
   }
 }
