@@ -6,7 +6,7 @@ interface ButtonProps {
   children: ReactNode;
   onClick?: () => void;
   disabled?: boolean;
-  variant?: 'primary' | 'secondary' | 'ghost' | 'success' | 'blue' | 'error' | 'outline';
+  variant?: 'primary' | 'secondary' | 'ghost' | 'success' | 'blue' | 'error' | 'outline' | 'white';
   fullWidth?: boolean;
   className?: string;
   type?: 'button' | 'submit' | 'reset';
@@ -37,6 +37,7 @@ export default function Button({
     blue: 'bg-[var(--color-quinary)] hover:bg-[var(--color-senary)] text-white',
     error: 'bg-[var(--color-error)] hover:bg-[var(--color-error)] text-white',
     outline: 'bg-transparent border border-[var(--color-quinary)] text-[var(--color-text-primary)] hover:bg-[var(--color-quinary)]/10',
+    white: 'bg-white text-[var(--color-accent-cool)] hover:bg-[var(--color-bg-surface)]'
   };
 
   const commonProps = {

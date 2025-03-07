@@ -37,12 +37,12 @@ const cardStyles: Record<CardStyle, string> = {
   dark: 'bg-[var(--color-bg-surface)] text-white'
 };
 
-const buttonVariants: Record<CardStyle, 'primary' | 'secondary' | 'ghost' | 'success' | 'blue' | 'error' | 'outline'> = {
+const buttonVariants: Record<CardStyle, 'primary' | 'secondary' | 'ghost' | 'success' | 'blue' | 'error' | 'outline' | 'white'> = {
   default: 'blue',
-  minimal: 'primary',
-  gradient: 'ghost',
-  bordered: 'outline',
-  dark: 'primary'
+  minimal: 'blue',
+  gradient: 'white',
+  bordered: 'blue',
+  dark: 'blue'
 };
 
 const FeatureCard: React.FC<FeatureCardProps> = ({
@@ -87,7 +87,7 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
 
   return (
     <motion.div
-      className={`rounded-lg overflow-hidden flex flex-col h-full relative ${cardStyles[style]} ${recommended ? 'border-2 border-[var(--color-accent-cool)]' : ''}`}
+      className={`rounded-lg overflow-visible flex flex-col h-full relative ${cardStyles[style]} ${recommended ? 'border-2 border-[var(--color-accent-cool)]' : ''}`}
       variants={cardVariants}
       initial="hidden"
       animate="visible"
@@ -97,11 +97,11 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
       }}
     >
       {recommended && (
-        <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-[var(--color-accent-cool)] text-white px-4 py-1 rounded-full text-sm font-semibold z-10">
+        <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-[var(--color-accent-cool)] text-white px-4 py-1 rounded-full text-sm font-semibold shadow-md">
           {recommendedText}
         </div>
       )}
-      <div className="p-6 flex flex-col flex-grow">
+      <div className="p-6 pt-8 flex flex-col flex-grow overflow-hidden">
         <div className="flex flex-col items-center text-center mb-6">
           {imagePath ? (
             <div className="relative w-16 h-16 mb-4">
