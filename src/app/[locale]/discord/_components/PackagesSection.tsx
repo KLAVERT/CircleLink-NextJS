@@ -20,7 +20,7 @@ interface Package {
 const packages: Package[] = [
   {
     name: "Starter",
-    price: "€1,-",
+    price: "€1.50,-",
     description: "Perfect voor kleine communities die net beginnen",
     features: [
       { text: "Tot 100 leden", included: true },
@@ -32,7 +32,7 @@ const packages: Package[] = [
   },
   {
     name: "Professional",
-    price: "2,-",
+    price: "€2.42,-",
     description: "Ideaal voor groeiende communities",
     features: [
       { text: "Tot 500 leden", included: true },
@@ -45,7 +45,7 @@ const packages: Package[] = [
   },
   {
     name: "Enterprise",
-    price: "€3,-",
+    price: "€3.93,-",
     description: "Voor grote communities met speciale behoeften",
     features: [
       { text: "Onbeperkt leden", included: true },

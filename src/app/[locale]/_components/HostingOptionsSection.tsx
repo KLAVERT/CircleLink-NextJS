@@ -49,13 +49,13 @@ const HostingOptionsSection = () => {
         'hosting.webHosting.features.oneClickInstalls',
         'hosting.webHosting.features.sslCertificates'
       ],
-      style: 'bordered'
+      style: 'dark'
     },
     {
       id: 'discord-hosting',
       titleKey: 'hosting.discordHosting.title',
       icon: <FaDiscord />,
-      price: '€2,49',
+      price: '€1,50',
       descriptionKey: 'hosting.discordHosting.description',
       featuresKeys: [
         'hosting.discordHosting.features.ddosProtection',
@@ -64,7 +64,7 @@ const HostingOptionsSection = () => {
         'hosting.discordHosting.features.databaseIntegration',
         'hosting.discordHosting.features.uptime'
       ],
-      style: 'dark'
+      style: 'bordered'
     }
   ];
 
