@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { FaCheck, FaTimes } from 'react-icons/fa';
 import Image from 'next/image';
+import Button from '../Button/Button';
 
 export type CardStyle = 'default' | 'minimal' | 'gradient' | 'bordered' | 'dark';
 export type FeatureStatus = 'included' | 'excluded' | 'none';
@@ -23,6 +24,9 @@ interface FeatureCardProps {
   buttonText?: string;
   onButtonClick?: () => void;
   priceSubtext?: string;
+  recommended?: boolean;
+  recommendedText?: string;
+  href?: string;
 }
 
 const cardStyles: Record<CardStyle, string> = {
@@ -33,12 +37,12 @@ const cardStyles: Record<CardStyle, string> = {
   dark: 'bg-[var(--color-bg-surface)] text-white'
 };
 
-const buttonStyles: Record<CardStyle, string> = {
-  default: 'bg-[var(--color-quinary)] hover:bg-[var(--color-senary)] text-white',
-  minimal: 'bg-[var(--color-accent-cool)] hover:bg-[var(--color-accent-elegant)] text-white',
-  gradient: 'bg-white text-[var(--color-accent-cool)] hover:bg-[var(--color-bg-surface)]',
-  bordered: 'bg-[var(--color-accent-cool)] hover:bg-[var(--color-accent-elegant)] text-white',
-  dark: 'bg-[var(--color-accent-warm)] hover:bg-[var(--color-warning)] text-white'
+const buttonVariants: Record<CardStyle, 'primary' | 'secondary' | 'ghost' | 'success' | 'blue' | 'error' | 'outline'> = {
+  default: 'blue',
+  minimal: 'primary',
+  gradient: 'ghost',
+  bordered: 'outline',
+  dark: 'primary'
 };
 
 const FeatureCard: React.FC<FeatureCardProps> = ({
@@ -50,9 +54,12 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
   icon,
   imagePath,
   imageAlt,
-  buttonText = 'View More',
+  buttonText,
   onButtonClick,
-  priceSubtext = 'per month'
+  priceSubtext,
+  recommended = false,
+  recommendedText = 'Aanbevolen',
+  href
 }) => {
   // Animation variants
   const cardVariants = {
@@ -80,7 +87,7 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
 
   return (
     <motion.div
-      className={`rounded-lg overflow-hidden flex flex-col h-full ${cardStyles[style]}`}
+      className={`rounded-lg overflow-hidden flex flex-col h-full relative ${cardStyles[style]} ${recommended ? 'border-2 border-[var(--color-accent-cool)]' : ''}`}
       variants={cardVariants}
       initial="hidden"
       animate="visible"
@@ -89,6 +96,11 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
         transition: { duration: 0.2 }
       }}
     >
+      {recommended && (
+        <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-[var(--color-accent-cool)] text-white px-4 py-1 rounded-full text-sm font-semibold z-10">
+          {recommendedText}
+        </div>
+      )}
       <div className="p-6 flex flex-col flex-grow">
         <div className="flex flex-col items-center text-center mb-6">
           {imagePath ? (
@@ -143,14 +155,14 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
       </div>
 
       <div className="p-6 mt-auto border-t border-[var(--color-border)]">
-        <motion.button
-          className={`w-full py-3 font-bold rounded-md transition-colors duration-200 ${buttonStyles[style]}`}
+        <Button
+          variant={buttonVariants[style]}
           onClick={onButtonClick}
-          whileHover={{ scale: 1.02 }}
-          whileTap={{ scale: 0.98 }}
+          fullWidth
+          href={href}
         >
           {buttonText}
-        </motion.button>
+        </Button>
       </div>
     </motion.div>
   );

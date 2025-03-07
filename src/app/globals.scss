@@ -38,6 +38,8 @@
   --color-quaternary:     #3399FF;  // Frisse lichtblauwe accentkleur (verbeterd contrast)
   --color-quinary:        #0077E6;  // Stevige blauwaccent (verbeterd contrast)
   --color-senary:         #0055AA;  // Donker blauw (verbeterd contrast)
+  --color-button-text: #FFFFFF;  // Text color for buttons
+  --color-button-hover: #0066CC;  // Hover color for buttons
 }
 
 .dark {
@@ -74,6 +76,8 @@
   --color-quaternary:     #3D66A2;  // Verfijnd blauw (verbeterd contrast)
   --color-quinary:        #5080C0;  // Lichter blauw (verbeterd contrast)
   --color-senary:         #70A0E0;  // Heldere blauw tint (verbeterd contrast)
+  --color-button-text: #FFFFFF;  // Text color for buttons in dark mode
+  --color-button-hover: #4DA8FF;  // Hover color for buttons in dark mode
 }
 
 /* Custom Scrollbar */

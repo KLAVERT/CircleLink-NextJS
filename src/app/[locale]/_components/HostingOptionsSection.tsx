@@ -80,7 +80,7 @@ const HostingOptionsSection = () => {
   };
 
   return (
-    <section className="min-h-[100vh] md:h-screen flex items-center justify-center py-16 md:py-0" style={{ backgroundColor: 'var(--color-tertiary)' }}>
+    <section className="min-h-[100vh] min-h-[800px] py-16 flex items-center justify-center" style={{ backgroundColor: 'var(--color-tertiary)' }}>
       <div className="container mx-auto px-4 flex flex-col items-center">
         <motion.div 
           className="text-center mb-12 max-w-3xl"
