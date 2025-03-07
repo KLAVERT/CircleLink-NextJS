@@ -60,9 +60,9 @@ const cardVariants = {
 
 export default function FeaturesGrid() {
   return (
-    <section className="py-16 px-4 md:px-8 bg-[var(--color-tertiary)]">
+    <section className="py-4 px-4 md:px-8 bg-[var(--color-tertiary)]">
       <motion.div 
-        className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
+        className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4"
         variants={containerVariants}
         initial="hidden"
         whileInView="visible"
@@ -71,15 +71,15 @@ export default function FeaturesGrid() {
         {features.map((feature, index) => (
           <motion.div
             key={index}
-            className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow"
+            className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow text-center flex flex-col justify-center"
             variants={cardVariants}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            <div className="text-[var(--color-text-primary)] mb-4">
+            <div className="text-[var(--color-text-primary)] mb-2 flex justify-center">
               {feature.icon}
             </div>
-            <h3 className="text-xl font-bold mb-2 text-[var(--color-text-primary)]">
+            <h3 className="text-xl font-bold mb-1 text-[var(--color-text-primary)]">
               {feature.title}
             </h3>
             <p className="text-[var(--color-text-primary)]">

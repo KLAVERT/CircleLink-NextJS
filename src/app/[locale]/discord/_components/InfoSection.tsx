@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import { FaDiscord, FaServer, FaClock, FaDatabase } from 'react-icons/fa';
 import { MdDashboard } from 'react-icons/md';
 import { HiCheck } from 'react-icons/hi';
+import Image from 'next/image';
 
 interface Feature {
   icon: React.ReactNode;
@@ -35,29 +36,142 @@ const features: Feature[] = [
   }
 ];
 
-const glowPositions = [
-  { left: '10%', top: '20%' },
-  { left: '60%', top: '40%' },
-  { left: '80%', top: '70%' }
+const blobShapes = [
+  {
+    color: '#5865F2', // Discord Blurple
+    size: 600,
+    initialPosition: { x: '20%', y: '30%' },
+    animation: { x: 100, y: -50, duration: 20 }
+  },
+  {
+    color: '#57F287', // Discord Green
+    size: 500,
+    initialPosition: { x: '70%', y: '60%' },
+    animation: { x: -80, y: 60, duration: 18 }
+  },
+  {
+    color: '#FEE75C', // Discord Yellow
+    size: 400,
+    initialPosition: { x: '80%', y: '20%' },
+    animation: { x: -60, y: 80, duration: 15 }
+  }
 ];
 
-const particlePositions = [
-  { left: '15%', top: '20%' },
-  { left: '25%', top: '40%' },
-  { left: '35%', top: '60%' },
-  { left: '45%', top: '80%' },
-  { left: '55%', top: '30%' },
-  { left: '65%', top: '50%' },
-  { left: '75%', top: '70%' },
-  { left: '85%', top: '25%' },
-  { left: '95%', top: '45%' },
-  { left: '5%', top: '65%' },
-  { left: '20%', top: '85%' },
-  { left: '40%', top: '15%' },
-  { left: '60%', top: '35%' },
-  { left: '80%', top: '55%' },
-  { left: '90%', top: '75%' }
-];
+const floatingShapes = Array.from({ length: 15 }, (_, i) => ({
+  type: Math.random() > 0.5 ? 'circle' : 'square',
+  size: Math.random() * 40 + 20,
+  left: `${Math.random() * 100}%`,
+  top: `${Math.random() * 100}%`,
+  rotation: Math.random() * 360,
+  duration: Math.random() * 20 + 20,
+  delay: Math.random() * 10,
+  direction: Math.random() > 0.5 ? 1 : -1
+}));
+
+const wavePoints = Array.from({ length: 8 }, (_, i) => ({
+  height: Math.random() * 60 + 20,
+  speed: Math.random() * 2 + 1,
+  delay: i * 0.2
+}));
+
+interface DiscordCharacter {
+  path: string;
+  size: number;
+  startPosition: {
+    x: string;
+    y: string;
+  };
+  endPosition: {
+    x: string;
+    y: string;
+  };
+  delay: number;
+  duration: number;
+}
+
+const discordCharacterPaths: DiscordCharacter[] = [
+  {
+    path: '/svg/discord/discord.svg',
+    size: Math.random() * 60 + 40,
+    startPosition: {
+      x: `${Math.random() * 100}%`,
+      y: `${Math.random() * 100}%`
+    },
+    endPosition: {
+      x: `${Math.random() * 100}%`,
+      y: `${Math.random() * 100}%`
+    },
+    delay: Math.random() * 3,
+    duration: Math.random() * 15 + 20
+  },
+  {
+    path: '/svg/discord/icons8-discord-bot.svg',
+    size: Math.random() * 50 + 30,
+    startPosition: {
+      x: `${Math.random() * 100}%`,
+      y: `${Math.random() * 100}%`
+    },
+    endPosition: {
+      x: `${Math.random() * 100}%`,
+      y: `${Math.random() * 100}%`
+    },
+    delay: Math.random() * 3 + 2,
+    duration: Math.random() * 15 + 20
+  },
+  {
+    path: '/svg/discord/early-supporter.svg',
+    size: Math.random() * 55 + 35,
+    startPosition: {
+      x: `${Math.random() * 100}%`,
+      y: `${Math.random() * 100}%`
+    },
+    endPosition: {
+      x: `${Math.random() * 100}%`,
+      y: `${Math.random() * 100}%`
+    },
+    delay: Math.random() * 3 + 4,
+    duration: Math.random() * 15 + 20
+  },
+  {
+    path: '/svg/discord/active-developer.svg',
+    size: Math.random() * 45 + 25,
+    startPosition: {
+      x: `${Math.random() * 100}%`,
+      y: `${Math.random() * 100}%`
+    },
+    endPosition: {
+      x: `${Math.random() * 100}%`,
+      y: `${Math.random() * 100}%`
+    },
+    delay: Math.random() * 3 + 6,
+    duration: Math.random() * 15 + 20
+  },
+  {
+    path: '/svg/discord/nitro.svg',
+    size: Math.random() * 50 + 30,
+    startPosition: {
+      x: `${Math.random() * 100}%`,
+      y: `${Math.random() * 100}%`
+    },
+    endPosition: {
+      x: `${Math.random() * 100}%`,
+      y: `${Math.random() * 100}%`
+    },
+    delay: Math.random() * 3 + 8,
+    duration: Math.random() * 15 + 20
+  }
+].map((char, i) => ({
+  ...char,
+  delay: i * 2 + Math.random() * 3,
+  duration: Math.random() * 15 + 20
+}));
+
+const messageBlips = Array.from({ length: 8 }, (_, i) => ({
+  width: Math.random() * 120 + 80,
+  left: `${Math.random() * 80}%`,
+  delay: i * 0.6,
+  duration: Math.random() * 4 + 5
+}));
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -158,7 +272,7 @@ const checkmarkVariants = {
 const InfoSection = () => {
 
   return (
-    <section className="relative bg-[var(--color-primary)] overflow-hidden">
+    <section className="min-h-[100vh] md:h-screen relative bg-[var(--color-primary)] overflow-hidden">
       {/* Animated Background */}
       <div className="absolute inset-0 overflow-hidden">
         <motion.div
@@ -167,94 +281,105 @@ const InfoSection = () => {
           animate={{ opacity: 1 }}
           transition={{ duration: 1 }}
         >
-          {/* Discord-style Grid */}
+          {/* Floating Discord Characters */}
+          {discordCharacterPaths.map((item, i) => (
+            <motion.div
+              key={i}
+              className="absolute select-none pointer-events-none"
+              style={{
+                width: `${item.size}px`,
+                height: `${item.size}px`,
+                left: item.startPosition.x,
+                top: item.startPosition.y
+              }}
+              initial={{ opacity: 0, scale: 0 }}
+              animate={{
+                opacity: [0, 1, 1, 0],
+                scale: [0.3, 1, 1, 0.3],
+                x: [0, 100, -100, 0],
+                y: [0, -100, 100, 0],
+                rotate: [0, 10, -10, 0]
+              }}
+              transition={{
+                duration: item.duration,
+                repeat: Infinity,
+                delay: item.delay,
+                ease: "easeInOut"
+              }}
+            >
+              <Image
+                src={item.path}
+                alt="Discord character"
+                width={item.size}
+                height={item.size}
+                className="w-full h-full"
+              />
+            </motion.div>
+          ))}
+
+          {/* Message Blips */}
+          {messageBlips.map((blip, i) => (
+            <motion.div
+              key={i}
+              className="absolute h-12 rounded-xl bg-[#5865F2] opacity-5"
+              style={{
+                width: blip.width,
+                left: blip.left,
+                top: `${Math.random() * 70 + 15}%`
+              }}
+              initial={{ scale: 0, opacity: 0 }}
+              animate={{
+                scale: [0, 1, 1, 0],
+                opacity: [0, 0.05, 0.05, 0],
+                x: [0, 40, 40, 80]
+              }}
+              transition={{
+                duration: blip.duration,
+                repeat: Infinity,
+                delay: blip.delay,
+                ease: "easeInOut"
+              }}
+            />
+          ))}
+
+          {/* Discord Grid Overlay */}
           <div 
             className="absolute inset-0" 
             style={{
               backgroundImage: `
-                linear-gradient(var(--color-quinary) 1px, transparent 1px),
-                linear-gradient(90deg, var(--color-quinary) 1px, transparent 1px)
+                linear-gradient(to right, rgba(88, 101, 242, 0.03) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(88, 101, 242, 0.03) 1px, transparent 1px)
               `,
-              backgroundSize: '20px 20px',
-              opacity: 0.05,
-              transform: 'perspective(1000px) rotateX(60deg) scale(2)',
+              backgroundSize: '50px 50px',
+              opacity: 0.5
             }}
           />
 
-          {/* Discord-style Glow Effects */}
-          {glowPositions.map((pos, i) => (
-            <motion.div
-              key={i}
-              className="absolute rounded-full bg-[var(--color-quinary)] blur-[120px]"
-              style={{
-                width: '600px',
-                height: '600px',
-                left: pos.left,
-                top: pos.top,
-                opacity: 0.1,
-              }}
-              animate={{
-                x: [0, 20, 0],
-                y: [0, 20, 0],
-                scale: [1, 1.1, 1],
-                opacity: [0.1, 0.15, 0.1],
-              }}
-              transition={{
-                duration: 15 + i * 5,
-                repeat: Infinity,
-                ease: "easeInOut",
-                delay: i * 2,
-              }}
-            />
-          ))}
-
-          {/* Discord-style Particles */}
-          {particlePositions.map((pos, i) => (
-            <motion.div
-              key={i}
-              className="absolute w-0.5 h-0.5 bg-[var(--color-quinary)] rounded-full"
-              style={{
-                left: pos.left,
-                top: pos.top,
-                opacity: 0.2,
-              }}
-              animate={{
-                y: [0, -800],
-                opacity: [0.2, 0],
-              }}
-              transition={{
-                duration: 8 + i,
-                repeat: Infinity,
-                ease: "linear",
-                delay: i * 0.5,
-              }}
-            />
-          ))}
-
-          {/* Discord-style Gradient Overlay */}
-          <motion.div 
-            className="absolute inset-0 bg-gradient-to-b from-[var(--color-primary)] via-transparent to-[var(--color-tertiary)]"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 0.8 }}
-            transition={{ duration: 2 }}
+          {/* Discord-style Gradient */}
+          <div 
+            className="absolute inset-0"
+            style={{
+              background: 'radial-gradient(circle at 50% 50%, rgba(88, 101, 242, 0.15) 0%, rgba(88, 101, 242, 0) 70%)',
+              mixBlendMode: 'screen'
+            }}
           />
         </motion.div>
       </div>
 
       {/* Content */}
-      <div className="relative z-10">
+      <div className="relative z-10 min-h-screen flex flex-col justify-center">
         {/* Hero Section */}
         <motion.div 
-          className="py-24 px-4 md:px-8"
+          className="pb-4 px-4 md:px-8"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
           variants={containerVariants}
         >
-          <motion.div className="max-w-4xl mx-auto">
+          <motion.div className="max-w-3xl mx-auto">
             <motion.div variants={titleVariants}>
               <motion.span 
-                className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[var(--color-quinary)] text-white text-sm font-semibold mb-6"
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[var(--color-quinary)] text-white text-sm font-semibold mb-4"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
@@ -264,14 +389,14 @@ const InfoSection = () => {
             </motion.div>
             
             <motion.h1 
-              className="text-4xl md:text-5xl font-bold mb-6 text-[var(--color-text-primary)]"
+              className="text-4xl md:text-5xl font-bold mb-4 text-[var(--color-text-primary)]"
               variants={titleVariants}
             >
               Discord Hosting On A Next Level.
             </motion.h1>
 
             <motion.div variants={containerVariants}>
-              <ul className="space-y-4">
+              <ul className="space-y-3">
                 {[
                   "Immediate access thanks to our system. Instantly online",
                   "No contract - no minimum terms",
@@ -306,7 +431,7 @@ const InfoSection = () => {
 
         {/* Features Grid */}
         <motion.div 
-          className="py-16 px-4 md:px-8"
+          className="pt-8 px-4 md:px-8"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
