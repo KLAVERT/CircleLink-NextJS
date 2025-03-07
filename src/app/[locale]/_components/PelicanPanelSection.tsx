@@ -239,8 +239,7 @@ const PelicanPanelSection = () => {
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
                 className="bg-[var(--color-card-bg)] dark:bg-[var(--color-card-bg)] rounded-xl shadow-xl w-full border border-[var(--color-border)] dark:border-[var(--color-border)] flex flex-col overflow-hidden lg:cursor-pointer"
-                onClick={(e) => {
-                  // Only trigger on desktop
+                onClick={() => {
                   if (window.innerWidth >= 1024) {
                     setSelectedImage({ src: '/pngs/mainpage/dashboard.png', title: 'Pelican Panel - Dashboard' });
                   }
@@ -271,8 +270,7 @@ const PelicanPanelSection = () => {
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
                 className="bg-[var(--color-card-bg)] dark:bg-[var(--color-card-bg)] rounded-xl shadow-xl w-full border border-[var(--color-border)] dark:border-[var(--color-border)] flex flex-col overflow-hidden lg:cursor-pointer"
-                onClick={(e) => {
-                  // Only trigger on desktop
+                onClick={() => {
                   if (window.innerWidth >= 1024) {
                     setSelectedImage({ src: '/pngs/mainpage/filemanage.png', title: 'Pelican Panel - File Editor' });
                   }
