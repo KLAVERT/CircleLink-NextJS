@@ -36,44 +36,6 @@ const features: Feature[] = [
   }
 ];
 
-const blobShapes = [
-  {
-    color: '#5865F2', // Discord Blurple
-    size: 600,
-    initialPosition: { x: '20%', y: '30%' },
-    animation: { x: 100, y: -50, duration: 20 }
-  },
-  {
-    color: '#57F287', // Discord Green
-    size: 500,
-    initialPosition: { x: '70%', y: '60%' },
-    animation: { x: -80, y: 60, duration: 18 }
-  },
-  {
-    color: '#FEE75C', // Discord Yellow
-    size: 400,
-    initialPosition: { x: '80%', y: '20%' },
-    animation: { x: -60, y: 80, duration: 15 }
-  }
-];
-
-const floatingShapes = Array.from({ length: 15 }, (_, i) => ({
-  type: Math.random() > 0.5 ? 'circle' : 'square',
-  size: Math.random() * 40 + 20,
-  left: `${Math.random() * 100}%`,
-  top: `${Math.random() * 100}%`,
-  rotation: Math.random() * 360,
-  duration: Math.random() * 20 + 20,
-  delay: Math.random() * 10,
-  direction: Math.random() > 0.5 ? 1 : -1
-}));
-
-const wavePoints = Array.from({ length: 8 }, (_, i) => ({
-  height: Math.random() * 60 + 20,
-  speed: Math.random() * 2 + 1,
-  delay: i * 0.2
-}));
-
 interface DiscordCharacter {
   path: string;
   size: number;
@@ -85,6 +47,14 @@ interface DiscordCharacter {
     x: string;
     y: string;
   };
+  delay: number;
+  duration: number;
+}
+
+interface MessageBlip {
+  width: number;
+  left: string;
+  top: string;
   delay: number;
   duration: number;
 }
@@ -195,7 +165,7 @@ const checkmarkVariants = {
 
 const InfoSection = () => {
   const [discordCharacters, setDiscordCharacters] = useState<DiscordCharacter[]>([]);
-  const [messageBlips, setMessageBlips] = useState<any[]>([]);
+  const [messageBlips, setMessageBlips] = useState<MessageBlip[]>([]);
 
   useEffect(() => {
     // Generate random values for characters on the client side
@@ -215,7 +185,7 @@ const InfoSection = () => {
     }));
 
     // Generate random values for message blips
-    const blips = Array.from({ length: 8 }, (_, i) => ({
+    const blips: MessageBlip[] = Array.from({ length: 8 }, (_, i) => ({
       width: Math.random() * 120 + 80,
       left: `${Math.random() * 80}%`,
       top: `${Math.random() * 70 + 15}%`,
