@@ -167,14 +167,14 @@ const Footer = () => {
             <ul className="space-y-2">
               <li className="flex items-center gap-2">
                 <FaEnvelope className="text-[var(--color-text-primary)]" />
-                <FooterLink href="mailto:Support@Circlelink.Eu">
-                  Support@Circlelink.Eu
+                <FooterLink href="mailto:support@circlelink.eu">
+                  support@circlelink.eu
                 </FooterLink>
               </li>
               <li className="flex items-center gap-2">
                 <FaEnvelope className="text-[var(--color-text-primary)]" />
-                <FooterLink href="mailto:Info@Circlelink.Eu">
-                  Info@Circlelink.Eu
+                <FooterLink href="mailto:info@circlelink.eu">
+                  info@circlelink.eu
                 </FooterLink>
               </li>
               <motion.li 
