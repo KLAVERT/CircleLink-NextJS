@@ -186,9 +186,8 @@ const HeroSection = () => {
                 className={`w-full h-auto ${isMobile ? 'max-w-[300px]' : 'max-w-[600px]'} ${animationReady && !isMobile ? 'animate-float' : ''}`}
               >
                 {isMobile ? (
-                  <ServerKastGuySmaller
-                    aria-label={t('serverIllustrationAlt')}
-                  />
+                  <>
+                  </>
                 ) : (
                   <ServerKastGuy 
                     aria-label={t('serverIllustrationAlt')}
