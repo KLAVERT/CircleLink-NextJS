@@ -220,8 +220,8 @@
           "premium": "Funzionalità premium"
         }
       },
-      "professional": {
-        "name": "Professionale",
+      "developer": {
+        "name": "Developer",
         "description": "Ideale per comunità in crescita",
         "features": {
           "members": "Fino a 500 membri",
@@ -231,8 +231,8 @@
           "premium": "Funzionalità premium"
         }
       },
-      "enterprise": {
-        "name": "Enterprise",
+      "professional": {
+        "name": "Professional",
         "description": "Per grandi comunità con esigenze speciali",
         "features": {
           "members": "Membri illimitati",
@@ -241,6 +241,18 @@
           "bot": "Bot personalizzato",
           "premium": "Funzionalità premium",
           "dedicated": "Supporto dedicato"
+        }
+      },
+      "enterprise": {
+        "name": "Enterprise",
+        "description": "Per le più grandi comunità di bot developers",
+        "features": {
+          "members": "???",
+          "hosting": "???",
+          "support": "???",
+          "bot": "???",
+          "premium": "???",
+          "dedicated": "???"
         }
       }
     }

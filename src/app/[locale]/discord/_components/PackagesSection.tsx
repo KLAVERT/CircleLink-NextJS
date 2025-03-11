@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 import FeatureCard from '@/components/FeatureCard/FeatureCard';
 import type { Feature } from '@/components/FeatureCard/FeatureCard';
 import { useTranslations } from 'next-intl';
-
+import { FaDiscord } from 'react-icons/fa';
 interface Package {
   name: string;
   price: string;
@@ -34,8 +34,22 @@ const packages: Package[] = [
     ],
   },
   {
-    name: "Professional",
+    name: "Developer",
     price: "€2.42,-",
+    description: "packages.developer.description",
+    features: [
+      { text: "packages.developer.features.members", included: true },
+      { text: "packages.developer.features.hosting", included: true },
+      { text: "packages.developer.features.support", included: true },
+      { text: "packages.developer.features.bot", included: true },
+      { text: "packages.developer.features.premium", included: true },
+    ],
+    recommended: true,
+    mostChosen: true,
+  },
+  {
+    name: "Professional",
+    price: "€3.93,-",
     description: "packages.professional.description",
     features: [
       { text: "packages.professional.features.members", included: true },
@@ -43,13 +57,12 @@ const packages: Package[] = [
       { text: "packages.professional.features.support", included: true },
       { text: "packages.professional.features.bot", included: true },
       { text: "packages.professional.features.premium", included: true },
+      { text: "packages.professional.features.dedicated", included: true },
     ],
-    recommended: true,
-    mostChosen: true,
   },
   {
     name: "Enterprise",
-    price: "€3.93,-",
+    price: "???",
     description: "packages.enterprise.description",
     features: [
       { text: "packages.enterprise.features.members", included: true },
@@ -108,7 +121,7 @@ export default function PackagesSection() {
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {packages.map((pkg) => {
+          {packages.slice(0, -1).map((pkg) => {
             const features: Feature[] = pkg.features.map(feature => ({
               text: t(feature.text),
               status: feature.included ? 'included' : 'excluded'
@@ -117,6 +130,7 @@ export default function PackagesSection() {
             return (
               <FeatureCard
                 key={pkg.name}
+                icon={<FaDiscord />}
                 title={t(`packages.${pkg.name.toLowerCase()}.name`)}
                 price={pkg.price}
                 description={t(pkg.description)}
@@ -129,6 +143,26 @@ export default function PackagesSection() {
               />
             );
           })}
+        </div>
+        
+        {/* Enterprise package centered */}
+        <div className="mt-8 flex justify-center">
+          <div className="w-full max-w-md">
+            <FeatureCard
+              key={packages[3].name}
+              icon={<FaDiscord />}
+              title={t(`packages.${packages[3].name.toLowerCase()}.name`)}
+              price={packages[3].price}
+              description={t(packages[3].description)}
+              features={packages[3].features.map(feature => ({
+                text: t(feature.text),
+                status: feature.included ? 'included' : 'excluded'
+              }))}
+              style="gradient"
+              buttonText={t('packages.selectButton', { name: t(`packages.${packages[3].name.toLowerCase()}.name`) })}
+              href="#contact"
+            />
+          </div>
         </div>
       </motion.div>
     </section>
