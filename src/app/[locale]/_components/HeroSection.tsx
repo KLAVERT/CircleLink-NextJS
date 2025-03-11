@@ -10,9 +10,14 @@ import AnimatedBackground from '@/components/AnimatedBackground/AnimatedBackgrou
 import dynamic from 'next/dynamic';
 import { useMediaQuery } from '@/hooks/useMediaQuery';
 
-// Dynamically import the SVG component
+// Dynamically import the SVG components
 const ServerKastGuy = dynamic(() => import('@/assets/svg/mainpage/server-kast-guy.svg'), {
   loading: () => <div className="w-full h-[300px] bg-[var(--color-bg-secondary)] animate-pulse rounded-lg" />,
+  ssr: false
+});
+
+const ServerKastGuySmaller = dynamic(() => import('@/assets/svg/mainpage/server-kast-guy-smaller.svg'), {
+  loading: () => <div className="w-full h-[200px] bg-[var(--color-bg-secondary)] animate-pulse rounded-lg" />,
   ssr: false
 });
 
@@ -20,7 +25,7 @@ const HeroSection = () => {
   const t = useTranslations('gameHosting');
   const [animationReady, setAnimationReady] = useState(false);
   const shouldReduceMotion = useReducedMotion();
-  const isMobile = useMediaQuery('(max-width: 768px)');
+  const isMobile = useMediaQuery('(max-width: 1024px)');
 
   useEffect(() => {
     // Kortere delay op mobiel
@@ -180,9 +185,15 @@ const HeroSection = () => {
               <div 
                 className={`w-full h-auto ${isMobile ? 'max-w-[300px]' : 'max-w-[600px]'} ${animationReady && !isMobile ? 'animate-float' : ''}`}
               >
-                <ServerKastGuy 
-                  aria-label={t('serverIllustrationAlt')}
-                />
+                {isMobile ? (
+                  <ServerKastGuySmaller
+                    aria-label={t('serverIllustrationAlt')}
+                  />
+                ) : (
+                  <ServerKastGuy 
+                    aria-label={t('serverIllustrationAlt')}
+                  />
+                )}
               </div>
             </motion.div>
           </div>
