@@ -1,26 +1,35 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import Button from '@/components/Button/Button';
 import { useTranslations } from 'next-intl';
 import { FaGamepad, FaGlobe, FaDiscord } from 'react-icons/fa';
-import { motion } from 'framer-motion';
+import { motion, useReducedMotion } from 'framer-motion';
 import Slider from '@/components/Slider/Slider';
 import AnimatedBackground from '@/components/AnimatedBackground/AnimatedBackground';
-import ServerKastGuy from '@/assets/svg/mainpage/server-kast-guy.svg';
+import dynamic from 'next/dynamic';
+import { useMediaQuery } from '@/hooks/useMediaQuery';
+
+// Dynamically import the SVG component
+const ServerKastGuy = dynamic(() => import('@/assets/svg/mainpage/server-kast-guy.svg'), {
+  loading: () => <div className="w-full h-[300px] bg-[var(--color-bg-secondary)] animate-pulse rounded-lg" />,
+  ssr: false
+});
 
 const HeroSection = () => {
   const t = useTranslations('gameHosting');
   const [animationReady, setAnimationReady] = useState(false);
+  const shouldReduceMotion = useReducedMotion();
+  const isMobile = useMediaQuery('(max-width: 768px)');
 
   useEffect(() => {
-    // Start animations after a short delay
+    // Kortere delay op mobiel
     const timer = setTimeout(() => {
       setAnimationReady(true);
-    }, 100);
+    }, isMobile ? 0 : 100);
     
     return () => clearTimeout(timer);
-  }, []);
+  }, [isMobile]);
 
   // Content voor elk type hosting
   const slides = [
@@ -133,6 +142,22 @@ const HeroSection = () => {
     </div>
   ));
 
+  // Simplified animations for mobile
+  const getAnimationProps = useCallback(() => {
+    if (isMobile || shouldReduceMotion) {
+      return {
+        initial: { opacity: 0 },
+        animate: { opacity: 1 },
+        transition: { duration: 0.3 }
+      };
+    }
+    return {
+      initial: { y: 30, opacity: 0 },
+      animate: { y: 0, opacity: 1 },
+      transition: { duration: 0.8, delay: 0.3, ease: "easeOut" }
+    };
+  }, [isMobile, shouldReduceMotion]);
+
   return (
     <AnimatedBackground variant="primary" className="absolute top-0 left-0 right-0 min-h-screen flex items-center justify-center">
       <div className="container mx-auto px-4 pt-20 md:pt-0 overflow-hidden">
@@ -146,18 +171,19 @@ const HeroSection = () => {
             />
           </div>
           
-          {/* Right column - SVG remains the same but with animation */}
+          {/* Right column - SVG with optimized loading */}
           <div className="w-full md:w-1/2 flex flex-col items-center mt-12 md:mt-0 max-w-full">
             <motion.div 
               className="relative w-full flex justify-center px-4"
-              initial={{ y: 30, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
+              {...getAnimationProps()}
             >
-              <ServerKastGuy 
-                className={`w-full max-w-[420px] sm:max-w-[480px] md:max-w-[560px] lg:max-w-[600px] h-auto ${animationReady ? 'animate-float' : ''}`}
-                aria-label={t('serverIllustrationAlt')}
-              />
+              <div 
+                className={`w-full h-auto ${isMobile ? 'max-w-[300px]' : 'max-w-[600px]'} ${animationReady && !isMobile ? 'animate-float' : ''}`}
+              >
+                <ServerKastGuy 
+                  aria-label={t('serverIllustrationAlt')}
+                />
+              </div>
             </motion.div>
           </div>
         </div>
