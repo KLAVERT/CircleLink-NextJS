@@ -16,10 +16,10 @@ const ServerKastGuy = dynamic(() => import('@/assets/svg/mainpage/server-kast-gu
   ssr: false
 });
 
-const ServerKastGuySmaller = dynamic(() => import('@/assets/svg/mainpage/server-kast-guy-smaller.svg'), {
-  loading: () => <div className="w-full h-[200px] bg-[var(--color-bg-secondary)] animate-pulse rounded-lg" />,
-  ssr: false
-});
+// const ServerKastGuySmaller = dynamic(() => import('@/assets/svg/mainpage/server-kast-guy-smaller.svg'), {
+//   loading: () => <div className="w-full h-[200px] bg-[var(--color-bg-secondary)] animate-pulse rounded-lg" />,
+//   ssr: false
+// });
 
 const HeroSection = () => {
   const t = useTranslations('gameHosting');
