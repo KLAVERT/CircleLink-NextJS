@@ -198,7 +198,7 @@ const InfoSection = () => {
   }, []);
 
   return (
-    <section className="min-h-[100vh] md:h-screen relative bg-[var(--color-primary)] overflow-hidden">
+    <section className="min-h-[100vh] md:h-screen relative bg-[var(--color-primary)] overflow-hidden pt-20 md:pt-24">
       {/* Animated Background */}
       <div className="absolute inset-0 overflow-hidden">
         <motion.div

@@ -103,7 +103,7 @@ export default function PackagesSection() {
   const t = useTranslations('discord');
 
   return (
-    <section className="py-24 px-4 md:px-8 bg-[var(--color-primary)]">
+    <section className="py-12 px-4 md:px-8 bg-[var(--color-tertiary)] mt-20 md:mt-32">
       <motion.div 
         className="max-w-7xl mx-auto"
         initial="hidden"
