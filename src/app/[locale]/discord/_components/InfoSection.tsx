@@ -357,14 +357,14 @@ const InfoSection = () => {
 
         {/* Features Grid */}
         <motion.div 
-          className="pt-8 px-4 md:px-8"
+          className="pt-8 px-4 md:px-8 pb-16 md:pb-20"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
           variants={containerVariants}
         >
           <motion.div 
-            className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
+            className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8"
           >
             {features.map((feature, index) => (
               <motion.div
