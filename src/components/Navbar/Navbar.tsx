@@ -97,7 +97,7 @@ export default function Navbar() {
 
   return (
     <nav className={`fixed top-0 left-0 right-0 ${
-      scrolled 
+      scrolled || isMenuOpen
         ? 'bg-[var(--color-tertiary)] shadow-lg' 
         : 'bg-transparent'
     } transition-colors duration-300 z-50`}>
@@ -210,7 +210,7 @@ export default function Navbar() {
             : 'max-h-0 opacity-0 invisible'
         }`}
       >
-        <div className={`px-4 pt-2 pb-3 space-y-1 border-t border-gray-200 dark:border-gray-700 ${scrolled ? 'bg-[var(--color-tertiary)]' : 'bg-transparent'}`}>
+        <div className={`px-4 pt-2 pb-3 space-y-1 border-t border-gray-200 dark:border-gray-700 bg-[var(--color-tertiary)]`}>
           {/* Mobile Hosting Dropdown */}
           <div className="block px-3 py-2">
             <button
