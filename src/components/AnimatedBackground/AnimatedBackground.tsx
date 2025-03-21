@@ -1,4 +1,4 @@
-import React, { useMemo } from 'react';
+import React, { useMemo, useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 
 interface AnimatedBackgroundProps {
@@ -12,6 +12,23 @@ const AnimatedBackground: React.FC<AnimatedBackgroundProps> = ({
   children,
   className = ''
 }) => {
+  // Detecteer of het een mobiel apparaat is
+  const [isMobile, setIsMobile] = useState(false);
+  
+  useEffect(() => {
+    // Check voor mobiel apparaat op basis van schermgrootte én user agent voor iOS
+    const checkMobile = () => {
+      const isMobileBySize = window.innerWidth < 768;
+      const isIOS = /iPhone|iPad|iPod/i.test(navigator.userAgent);
+      setIsMobile(isMobileBySize || isIOS);
+    };
+    
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
   // Bepaal de kleuren op basis van de variant
   const getColors = () => {
     switch (variant) {
@@ -48,17 +65,20 @@ const AnimatedBackground: React.FC<AnimatedBackgroundProps> = ({
     return directions[index % directions.length];
   };
 
-  // Genereer stabiele particle data
+  // Genereer stabiele particle data met minder particles voor mobiel
   const particles = useMemo(() => {
-    return Array.from({ length: 80 }).map((_, i) => ({
+    // Minder particles voor mobiel
+    const particleCount = isMobile ? 15 : 80;
+    
+    return Array.from({ length: particleCount }).map((_, i) => ({
       size: 1.5 + (i % 6),
       xStart: (i * 11) % 100,
       yStart: (i * 13) % 100,
-      duration: 8 + (i % 20),
+      duration: isMobile ? 12 + (i % 10) : 8 + (i % 20), // Langzamere animatie op mobiel
       xDirection: getRandomDirection(i),
       yDirection: getRandomDirection(i + 1),
     }));
-  }, []);
+  }, [isMobile]);
 
   return (
     <div 
@@ -70,8 +90,8 @@ const AnimatedBackground: React.FC<AnimatedBackgroundProps> = ({
     >
       {colors.showAnimation && (
         <div className="absolute inset-0 overflow-hidden">
-          {/* Large floating blobs */}
-          {[...Array(3)].map((_, i) => (
+          {/* Large floating blobs - minder en eenvoudiger voor mobiel */}
+          {[...Array(isMobile ? 1 : 3)].map((_, i) => (
             <motion.div
               key={`blob-${i}`}
               className="absolute"
@@ -83,19 +103,23 @@ const AnimatedBackground: React.FC<AnimatedBackgroundProps> = ({
                   : i === 1 
                   ? `radial-gradient(circle, ${colors.secondary}30 0%, transparent 70%)`
                   : `radial-gradient(circle, ${colors.accent}30 0%, transparent 70%)`,
-                filter: 'blur(60px)',
+                filter: isMobile ? 'blur(40px)' : 'blur(60px)',
                 opacity: colors.opacity,
                 mixBlendMode: 'soft-light',
-                transform: 'translate3d(0,0,0)',
+                willChange: 'transform',
               }}
               animate={{
-                x: [`${-20 + i * 40}%`, `${-15 + i * 40}%`, `${-20 + i * 40}%`],
-                y: [`${-20 + i * 40}%`, `${-25 + i * 40}%`, `${-20 + i * 40}%`],
-                scale: [0.8, 1.1, 0.8],
-                rotate: [0, i % 2 === 0 ? 180 : -180, 0],
+                x: isMobile 
+                  ? [`${-10 + i * 20}%`, `${-5 + i * 20}%`, `${-10 + i * 20}%`]
+                  : [`${-20 + i * 40}%`, `${-15 + i * 40}%`, `${-20 + i * 40}%`],
+                y: isMobile
+                  ? [`${-10 + i * 20}%`, `${-15 + i * 20}%`, `${-10 + i * 20}%`]
+                  : [`${-20 + i * 40}%`, `${-25 + i * 40}%`, `${-20 + i * 40}%`],
+                scale: isMobile ? [0.9, 1.0, 0.9] : [0.8, 1.1, 0.8],
+                rotate: isMobile ? 0 : [0, i % 2 === 0 ? 180 : -180, 0],
               }}
               transition={{
-                duration: 20 + i * 5,
+                duration: isMobile ? 15 : 20 + i * 5,
                 repeat: Infinity,
                 ease: "easeInOut",
                 times: [0, 0.5, 1],
@@ -103,7 +127,7 @@ const AnimatedBackground: React.FC<AnimatedBackgroundProps> = ({
             />
           ))}
 
-          {/* Animated particles */}
+          {/* Animated particles - geoptimaliseerd voor mobiel */}
           <div className="absolute inset-0 overflow-hidden">
             {particles.map((particle, i) => (
               <motion.div
@@ -119,13 +143,13 @@ const AnimatedBackground: React.FC<AnimatedBackgroundProps> = ({
                     : colors.accent,
                   left: `${particle.xStart}%`,
                   top: `${particle.yStart}%`,
-                  transform: 'translate3d(0,0,0)',
+                  willChange: 'transform, opacity',
                 }}
                 animate={{
                   y: [0, particle.yDirection, 0],
                   x: [0, particle.xDirection, 0],
                   opacity: [0, 0.7, 0],
-                  scale: [1, 1.5, 1],
+                  scale: isMobile ? [1, 1.2, 1] : [1, 1.5, 1],
                 }}
                 transition={{
                   duration: particle.duration,
