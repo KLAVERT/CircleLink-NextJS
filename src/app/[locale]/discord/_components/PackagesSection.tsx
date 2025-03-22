@@ -106,7 +106,7 @@ export default function PackagesSection() {
 
   return (
     <BtwProvider>
-      <section className="py-12 px-4 md:px-8 bg-[var(--color-tertiary)] mt-20 md:mt-32">
+      <section className="py-12 px-4 md:px-8 bg-[var(--color-tertiary)]">
         <motion.div 
           className="max-w-7xl mx-auto"
           initial="hidden"

@@ -198,7 +198,7 @@ const InfoSection = () => {
   }, []);
 
   return (
-    <section className="min-h-[100vh] md:h-screen relative bg-[var(--color-primary)] overflow-hidden pt-20 md:pt-24">
+    <section className="min-h-[100vh] relative bg-[var(--color-primary)] overflow-hidden pt-20 md:pt-24 pb-16 md:pb-24">
       {/* Animated Background */}
       <div className="absolute inset-0 overflow-hidden">
         <motion.div
@@ -293,7 +293,7 @@ const InfoSection = () => {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 min-h-screen flex flex-col justify-center">
+      <div className="relative z-10 flex flex-col justify-center">
         {/* Hero Section */}
         <motion.div 
           className="pb-4 px-4 md:px-8"
@@ -357,19 +357,19 @@ const InfoSection = () => {
 
         {/* Features Grid */}
         <motion.div 
-          className="pt-8 px-4 md:px-8 pb-16 md:pb-20"
+          className="pt-12 px-4 md:px-8 pb-16 md:pb-20"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
           variants={containerVariants}
         >
           <motion.div 
-            className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8"
+            className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-6"
           >
             {features.map((feature, index) => (
               <motion.div
                 key={index}
-                className="bg-white/90 backdrop-blur-sm rounded-xl p-6 shadow-lg cursor-pointer hover:shadow-xl transition-shadow duration-300"
+                className="bg-white/90 backdrop-blur-sm rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300"
                 variants={cardVariants}
                 initial="hidden"
                 animate="visible"
