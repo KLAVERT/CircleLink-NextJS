@@ -166,6 +166,7 @@ const checkmarkVariants = {
 const InfoSection = () => {
   const [discordCharacters, setDiscordCharacters] = useState<DiscordCharacter[]>([]);
   const [messageBlips, setMessageBlips] = useState<MessageBlip[]>([]);
+  const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
     // Generate random values for characters on the client side
@@ -195,7 +196,17 @@ const InfoSection = () => {
 
     setDiscordCharacters(characters);
     setMessageBlips(blips);
+    
+    // Set loaded state after a short delay to ensure animations are prepared
+    setTimeout(() => {
+      setIsLoaded(true);
+    }, 100);
   }, []);
+
+  // Don't render the component until it's fully loaded and ready
+  if (!isLoaded) {
+    return null;
+  }
 
   return (
     <section className="min-h-[100vh] relative bg-[var(--color-primary)] overflow-hidden pt-20 md:pt-24 pb-16 md:pb-24">
