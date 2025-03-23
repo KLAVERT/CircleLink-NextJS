@@ -50,13 +50,15 @@ export default function LanguageSwitcher() {
   const trigger = (
     <>
       <span className="flex items-center">
-        <Image
-          src={LANGUAGES[currentLocale as keyof typeof LANGUAGES].flag}
-          alt={`${LANGUAGES[currentLocale as keyof typeof LANGUAGES].name} flag`}
-          width={20}
-          height={15}
-          className="object-cover"
-        />
+        <div className="w-6 h-4 relative">
+          <Image
+            src={LANGUAGES[currentLocale as keyof typeof LANGUAGES].flag}
+            alt={`${LANGUAGES[currentLocale as keyof typeof LANGUAGES].name} flag`}
+            fill
+            sizes="24px"
+            className="object-contain"
+          />
+        </div>
       </span>
       <span className="flex-1 ml-2 text-sm">
         {LANGUAGES[currentLocale as keyof typeof LANGUAGES].name}
@@ -68,13 +70,15 @@ export default function LanguageSwitcher() {
   const items = Object.entries(LANGUAGES).map(([code, {name, flag}]) => ({
     content: (
       <div className="flex items-center gap-2 w-full">
-        <Image 
-          src={flag} 
-          alt={`${name} flag`} 
-          width={20} 
-          height={15}
-          className="object-cover flex-shrink-0"
-        />
+        <div className="w-6 h-4 relative flex-shrink-0">
+          <Image 
+            src={flag} 
+            alt={`${name} flag`} 
+            fill
+            sizes="24px"
+            className="object-contain"
+          />
+        </div>
         <span className="text-sm truncate">{name}</span>
       </div>
     ),

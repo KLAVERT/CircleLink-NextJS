@@ -28,9 +28,9 @@ export default function GamesPage() {
   }, []);
 
   return (
-    <main className="min-h-screen">
+    <main>
       {isLoading && <Preloader />}
-      <div className={`w-full transition-opacity duration-1000 ${isLoading ? 'opacity-0' : 'opacity-100'}`}>
+      <div className={`${isLoading ? 'opacity-0' : 'opacity-100'} transition-opacity duration-1000`}>
         <GameHeroSection />
         <GameGridSection />
         <FAQSection />

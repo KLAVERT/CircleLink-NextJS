@@ -18,6 +18,8 @@ interface Game {
   popularity: number; // 1-10
   description: string;
   price: number;
+  backgroundImage?: string;
+  backgroundWidth?: string;
 }
 
 const GameGridSection = () => {
@@ -36,7 +38,9 @@ const GameGridSection = () => {
       slug: '/games/minecraft',
       popularity: 10,
       description: t('gameDescriptions.minecraft'),
-      price: 0.80
+      price: 0.80,
+      backgroundImage: '/images/webp/games/backgrounds/minecraft-wallpaper.webp',
+      backgroundWidth: 'w-2/3'
     },
     {
       id: 'rust',
@@ -46,7 +50,9 @@ const GameGridSection = () => {
       slug: '/games/rust',
       popularity: 9,
       description: t('gameDescriptions.rust'),
-      price: 8.00
+      price: 8.00,
+      backgroundImage: '/images/webp/games/backgrounds/rust-wallpaper.webp',
+      backgroundWidth: 'w-2/3'
     },
     {
       id: 'ark',
@@ -57,7 +63,9 @@ const GameGridSection = () => {
       slug: '/games/ark',
       popularity: 8,
       description: t('gameDescriptions.ark'),
-      price: 7.50
+      price: 7.50,
+      backgroundImage: '/images/webp/games/backgrounds/ark-wallpaper.webp',
+      backgroundWidth: 'w-2/3'
     },
     {
       id: 'palworld',
@@ -67,7 +75,9 @@ const GameGridSection = () => {
       slug: '/games/palworld',
       popularity: 9,
       description: t('gameDescriptions.palworld'),
-      price: 6.00
+      price: 6.00,
+      backgroundImage: '/images/webp/games/backgrounds/palworld-wallpaper.webp',
+      backgroundWidth: 'w-2/3'
     },
     {
       id: 'satisfactory',
@@ -77,7 +87,9 @@ const GameGridSection = () => {
       slug: '/games/satisfactory',
       popularity: 7,
       description: t('gameDescriptions.satisfactory'),
-      price: 6.50
+      price: 6.50,
+      backgroundImage: '/images/webp/games/backgrounds/satisfactory-wallpaper.webp',
+      backgroundWidth: 'w-2/3'
     },
     {
       id: 'sotf',
@@ -87,7 +99,9 @@ const GameGridSection = () => {
       slug: '/games/sotf',
       popularity: 7,
       description: t('gameDescriptions.sotf'),
-      price: 7.00
+      price: 7.00,
+      backgroundImage: '/images/webp/games/backgrounds/sotf-wallpaper.webp',
+      backgroundWidth: 'w-2/3'
     },
     {
       id: 'fivem',
@@ -97,7 +111,9 @@ const GameGridSection = () => {
       slug: '/games/fivem',
       popularity: 8,
       description: t('gameDescriptions.fivem'),
-      price: 9.50
+      price: 9.50,
+      backgroundImage: '/images/webp/games/backgrounds/fivem-wallpaper.webp',
+      backgroundWidth: 'w-2/3'
     },
     {
       id: 'gmod',
@@ -107,7 +123,9 @@ const GameGridSection = () => {
       slug: '/games/gmod',
       popularity: 7,
       description: t('gameDescriptions.gmod'),
-      price: 4.50
+      price: 4.50,
+      backgroundImage: '/images/webp/games/backgrounds/gmod-wallpaper.webp',
+      backgroundWidth: 'w-2/3'
     },
     {
       id: 'theforest',
@@ -117,7 +135,9 @@ const GameGridSection = () => {
       slug: '/games/theforest',
       popularity: 6,
       description: t('gameDescriptions.theforest'),
-      price: 5.50
+      price: 5.50,
+      backgroundImage: '/images/webp/games/backgrounds/theforest-wallpaper.webp',
+      backgroundWidth: 'w-2/3'
     }
   ];
 
@@ -150,7 +170,7 @@ const GameGridSection = () => {
   };
 
   return (
-    <section id="game-list" className="py-16 md:py-24 bg-[var(--color-tertiary)]">
+    <section id="game-list" className="bg-[var(--color-tertiary)] py-16 md:py-24 border-t border-[var(--color-border)]">
       <div className="container mx-auto px-4">
         <div className="max-w-7xl mx-auto">
           {/* Section header */}
@@ -213,6 +233,8 @@ const GameGridSection = () => {
                   price={game.price}
                   image={game.image}
                   slug={game.slug}
+                  backgroundImage={game.backgroundImage}
+                  backgroundWidth={game.backgroundWidth}
                 />
               ))
             ) : (

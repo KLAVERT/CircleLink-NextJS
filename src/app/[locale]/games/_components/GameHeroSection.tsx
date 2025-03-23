@@ -66,7 +66,7 @@ const GameHeroSection = () => {
   ];
 
   return (
-    <section className="pt-24 pb-16 md:pt-32 md:pb-24 relative overflow-hidden bg-[var(--color-primary)]">
+    <section className="bg-[var(--color-primary)] pt-24 pb-16 md:pt-32 md:pb-24">
       {/* Background grid pattern */}
       <div className="absolute inset-0 z-0">
         <div 
@@ -91,7 +91,7 @@ const GameHeroSection = () => {
         />
       </div>
 
-      <div className="container mx-auto px-4 relative z-10">
+      <div className="relative z-10 container mx-auto px-4">
         <motion.div
           variants={containerVariants}
           initial="hidden"
@@ -128,7 +128,7 @@ const GameHeroSection = () => {
             >
               <Button 
                 variant="primary" 
-                href="/hosting/pricing/game"
+                href="#game-list"
               >
                 <div className="flex items-center gap-2">
                   <FaServer className="w-4 h-4" />
@@ -147,12 +147,12 @@ const GameHeroSection = () => {
             </motion.div>
           </div>
 
-          {/* Featured games */}
+          {/* Featured games - visible on all devices */}
           <motion.div
             variants={itemVariants}
-            className="mt-12"
+            className="mt-8 mb-16"
           >
-            <h2 className="text-2xl md:text-3xl font-bold text-center mb-8 text-[var(--color-text-primary)]">
+            <h2 className="text-2xl md:text-3xl font-bold text-center mb-6 text-[var(--color-text-primary)]">
               {t('heroSection.featuredTitle') || 'Popular Game Servers'}
             </h2>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
@@ -172,6 +172,8 @@ const GameHeroSection = () => {
                       src={game.image}
                       alt={game.name}
                       fill
+                      priority={game.name === 'Rust' || index < 2}
+                      sizes="(max-width: 768px) 50vw, 25vw"
                       style={{ objectFit: 'cover' }}
                       className="group-hover:scale-110 transition-transform duration-500"
                     />

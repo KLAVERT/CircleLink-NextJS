@@ -113,7 +113,7 @@ export default function Navbar() {
                   width={56}
                   height={56}
                   className="w-auto h-10"
-                  priority
+                  sizes="56px"
                 />
               ) : resolvedTheme === 'dark' ? (
                 <Image
@@ -123,6 +123,7 @@ export default function Navbar() {
                   height={56}
                   className="w-auto h-10"
                   priority
+                  sizes="56px"
                 />
               ) : (
                 <Image
@@ -131,7 +132,7 @@ export default function Navbar() {
                   width={56}
                   height={56}
                   className="w-auto h-10"
-                  priority
+                  sizes="56px"
                 />
               )}
             </Link>
