@@ -14,7 +14,7 @@ const ImageModal = ({ isOpen, onClose, imageSrc, title }: { isOpen: boolean; onC
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-80 p-4 backdrop-blur-sm"
+          className="fixed inset-0 z-[9999] flex items-center justify-center bg-black bg-opacity-80 p-4 backdrop-blur-sm"
           onClick={onClose}
         >
           <motion.div
@@ -25,7 +25,7 @@ const ImageModal = ({ isOpen, onClose, imageSrc, title }: { isOpen: boolean; onC
             className="relative max-w-7xl w-full bg-[var(--color-card-bg)] rounded-xl overflow-hidden border-2 border-[var(--color-border)] shadow-2xl"
             onClick={(e) => e.stopPropagation()}
           >
-            <div className="h-12 bg-[var(--color-bg-secondary)] flex items-center px-4 border-b-2 border-[var(--color-border)]">
+            <div className="h-12 bg-[var(--color-bg-secondary)] flex items-center px-4 border-b-2 border-[var(--color-border)] relative z-[9999]">
               <div className="flex space-x-2">
                 <motion.div 
                   whileHover={{ scale: 1.1 }}
@@ -241,7 +241,7 @@ const PelicanPanelSection = () => {
                 className="bg-[var(--color-card-bg)] dark:bg-[var(--color-card-bg)] rounded-xl shadow-xl w-full border border-[var(--color-border)] dark:border-[var(--color-border)] flex flex-col overflow-hidden lg:cursor-pointer"
                 onClick={() => {
                   if (window.innerWidth >= 1024) {
-                    setSelectedImage({ src: '/pngs/mainpage/dashboard.png', title: 'Pelican Panel - Dashboard' });
+                    setSelectedImage({ src: '/images/jpg/mainpage/dashboard.jpg', title: 'Pelican Panel - Dashboard' });
                   }
                 }}
               >
@@ -255,7 +255,7 @@ const PelicanPanelSection = () => {
                 </div>
                 <div className="relative">
                   <Image 
-                    src="/pngs/mainpage/dashboard.png" 
+                    src="/images/jpg/mainpage/dashboard.jpg" 
                     alt="Server Dashboard" 
                     width={800}
                     height={450}
@@ -272,7 +272,7 @@ const PelicanPanelSection = () => {
                 className="bg-[var(--color-card-bg)] dark:bg-[var(--color-card-bg)] rounded-xl shadow-xl w-full border border-[var(--color-border)] dark:border-[var(--color-border)] flex flex-col overflow-hidden lg:cursor-pointer"
                 onClick={() => {
                   if (window.innerWidth >= 1024) {
-                    setSelectedImage({ src: '/pngs/mainpage/filemanage.png', title: 'Pelican Panel - File Editor' });
+                    setSelectedImage({ src: '/images/jpg/mainpage/filemanage.jpg', title: 'Pelican Panel - File Editor' });
                   }
                 }}
               >
@@ -286,7 +286,7 @@ const PelicanPanelSection = () => {
                 </div>
                 <div className="relative">
                   <Image 
-                    src="/pngs/mainpage/filemanage.png" 
+                    src="/images/jpg/mainpage/filemanage.jpg" 
                     alt="File Editor" 
                     width={800}
                     height={450}

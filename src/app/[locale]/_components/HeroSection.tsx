@@ -28,13 +28,9 @@ const HeroSection = () => {
   const isMobile = useMediaQuery('(max-width: 1024px)');
 
   useEffect(() => {
-    // Kortere delay op mobiel
-    const timer = setTimeout(() => {
-      setAnimationReady(true);
-    }, isMobile ? 0 : 100);
-    
-    return () => clearTimeout(timer);
-  }, [isMobile]);
+    // Set animation ready immediately to prevent title delay
+    setAnimationReady(true);
+  }, []);
 
   // Content voor elk type hosting
   const slides = [
@@ -102,18 +98,14 @@ const HeroSection = () => {
       >
         {slide.tagline}
       </motion.p>
-      <motion.div 
-        className="space-y-1 min-h-[180px]"
-        initial={{ opacity: 0, y: 20 }}
-        animate={animationReady ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-        transition={{ duration: 0.6, delay: 0.2 }}
-      >
+      <div className="space-y-1 min-h-[180px]">
+        {/* Render title immediately without motion wrapper to improve LCP */}
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold">
           <span className="text-[var(--color-text-primary)] dark:text-[var(--color-text-primary)]">{slide.heroTitle1} </span>
           <span className="text-[var(--color-quinary)] dark:text-[var(--color-quinary)]">{slide.heroTitle2} </span>
           <span className="text-[var(--color-text-primary)] dark:text-[var(--color-text-primary)]">{slide.heroTitle3}</span>
         </h1>
-      </motion.div>
+      </div>
       <motion.p 
         className="text-[var(--color-text-subtle)] dark:text-[var(--color-text-subtle)] text-lg max-w-2xl"
         initial={{ opacity: 0 }}
