@@ -6,35 +6,13 @@ import { FaDiscord, FaServer, FaClock, FaDatabase } from 'react-icons/fa';
 import { MdDashboard } from 'react-icons/md';
 import { HiCheck } from 'react-icons/hi';
 import Image from 'next/image';
+import { useTranslations } from 'next-intl';
 
 interface Feature {
   icon: React.ReactNode;
   title: string;
   description: string;
 }
-
-const features: Feature[] = [
-  {
-    icon: <FaServer className="w-8 h-8" />,
-    title: 'Hosted On Pelican',
-    description: 'Switch to another server/bot quickly and flexibly'
-  },
-  {
-    icon: <FaClock className="w-8 h-8" />,
-    title: 'Immediately Online',
-    description: 'Your server is available in under 3 minutes'
-  },
-  {
-    icon: <MdDashboard className="w-8 h-8" />,
-    title: 'Live console',
-    description: 'Track events and logs in real time through the web interface'
-  },
-  {
-    icon: <FaDatabase className="w-8 h-8" />,
-    title: 'Backup Storage Space',
-    description: 'Create 2 backups for your bot!'
-  }
-];
 
 interface DiscordCharacter {
   path: string;
@@ -164,9 +142,19 @@ const checkmarkVariants = {
 };
 
 const InfoSection = () => {
+  const t = useTranslations('discord.info');
   const [discordCharacters, setDiscordCharacters] = useState<DiscordCharacter[]>([]);
   const [messageBlips, setMessageBlips] = useState<MessageBlip[]>([]);
   const [isLoaded, setIsLoaded] = useState(false);
+
+  // Get features from translations
+  const featureIcons = [<FaServer className="w-8 h-8" />, <FaClock className="w-8 h-8" />, <MdDashboard className="w-8 h-8" />, <FaDatabase className="w-8 h-8" />];
+  
+  const features: Feature[] = t.raw('cards').map((card: any, index: number) => ({
+    icon: featureIcons[index],
+    title: card.title,
+    description: card.description
+  }));
 
   useEffect(() => {
     // Generate random values for characters on the client side
@@ -321,7 +309,7 @@ const InfoSection = () => {
                 whileTap={{ scale: 0.95 }}
               >
                 <FaDiscord className="w-4 h-4" />
-                DISCORD HOSTING
+                {t('badge')}
               </motion.span>
             </motion.div>
             
@@ -329,18 +317,12 @@ const InfoSection = () => {
               className="text-4xl md:text-5xl font-bold mb-4 text-[var(--color-text-primary)]"
               variants={titleVariants}
             >
-              Discord Hosting On A Next Level.
+              {t('title')}
             </motion.h1>
 
             <motion.div variants={containerVariants}>
               <ul className="space-y-3">
-                {[
-                  "Immediate access thanks to our system. Instantly online",
-                  "No contract - no minimum terms",
-                  "Easy management of all services on a single account",
-                  "Full cost control through our payment system",
-                  "Hosted with pelican panel"
-                ].map((feature, index) => (
+                {t.raw('features').map((feature: string, index: number) => (
                   <motion.li 
                     key={index}
                     className="flex items-center gap-3 text-lg text-[var(--color-text-primary)] group"
