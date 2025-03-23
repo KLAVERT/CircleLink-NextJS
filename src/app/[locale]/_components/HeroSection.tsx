@@ -15,11 +15,19 @@ const HeroSection = () => {
   const [animationReady, setAnimationReady] = useState(false);
   const shouldReduceMotion = useReducedMotion();
   const isMobile = useMediaQuery('(max-width: 1024px)');
+  const [shouldRenderImage, setShouldRenderImage] = useState(false);
 
   useEffect(() => {
     // Set animation ready immediately to prevent title delay
     setAnimationReady(true);
-  }, []);
+    
+    // Only render the image on non-mobile devices
+    if (!isMobile) {
+      setShouldRenderImage(true);
+    } else {
+      setShouldRenderImage(false);
+    }
+  }, [isMobile]);
 
   // Content voor elk type hosting
   const slides = [
@@ -166,13 +174,12 @@ const HeroSection = () => {
               <div 
                 className={`w-full h-auto ${isMobile ? 'max-w-[300px]' : 'max-w-[600px]'} ${animationReady && !isMobile ? 'animate-float' : ''}`}
               >
-                {!isMobile && (
+                {shouldRenderImage && (
                   <Image
                     src="/images/webp/mainpage/server-kast-guy.webp"
                     alt={t('serverIllustrationAlt')}
                     width={600}
                     height={600}
-                    priority
                     className="w-full h-auto"
                   />
                 )}

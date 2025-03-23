@@ -106,34 +106,30 @@ export default function Navbar() {
           {/* Left: Logo */}
           <div className="flex-shrink-0 lg:pr-8">
             <Link href={`/${locale}`}>
-              {!mounted ? (
-                <Image
-                  src="/svg/logo.svg"
-                  alt="Circlelink"
-                  width={56}
-                  height={56}
-                  className="w-auto h-10"
-                  sizes="56px"
-                />
-              ) : resolvedTheme === 'dark' ? (
-                <Image
-                  src="/svg/logo-w.svg"
-                  alt="Circlelink"
-                  width={56}
-                  height={56}
-                  className="w-auto h-10"
-                  priority
-                  sizes="56px"
-                />
+              {mounted ? (
+                resolvedTheme === 'dark' ? (
+                  <Image
+                    src="/svg/logo-w.svg"
+                    alt="Circlelink"
+                    width={56}
+                    height={56}
+                    className="w-auto h-10"
+                    priority
+                    sizes="56px"
+                  />
+                ) : (
+                  <Image
+                    src="/svg/logo.svg"
+                    alt="Circlelink"
+                    width={56}
+                    height={56}
+                    className="w-auto h-10"
+                    sizes="56px"
+                    priority
+                  />
+                )
               ) : (
-                <Image
-                  src="/svg/logo.svg"
-                  alt="Circlelink"
-                  width={56}
-                  height={56}
-                  className="w-auto h-10"
-                  sizes="56px"
-                />
+                <div className="w-auto h-10" aria-hidden="true" />
               )}
             </Link>
           </div>
