@@ -7,19 +7,8 @@ import { FaGamepad, FaGlobe, FaDiscord } from 'react-icons/fa';
 import { motion, useReducedMotion } from 'framer-motion';
 import Slider from '@/components/Slider/Slider';
 import AnimatedBackground from '@/components/AnimatedBackground/AnimatedBackground';
-import dynamic from 'next/dynamic';
+import Image from 'next/image';
 import { useMediaQuery } from '@/hooks/useMediaQuery';
-
-// Dynamically import the SVG components
-const ServerKastGuy = dynamic(() => import('@/assets/svg/mainpage/server-kast-guy.svg'), {
-  loading: () => <div className="w-full h-[300px] bg-[var(--color-bg-secondary)] animate-pulse rounded-lg" />,
-  ssr: false
-});
-
-// const ServerKastGuySmaller = dynamic(() => import('@/assets/svg/mainpage/server-kast-guy-smaller.svg'), {
-//   loading: () => <div className="w-full h-[200px] bg-[var(--color-bg-secondary)] animate-pulse rounded-lg" />,
-//   ssr: false
-// });
 
 const HeroSection = () => {
   const t = useTranslations('gameHosting');
@@ -168,7 +157,7 @@ const HeroSection = () => {
             />
           </div>
           
-          {/* Right column - SVG with optimized loading */}
+          {/* Right column - Image */}
           <div className="w-full md:w-1/2 flex flex-col items-center mt-12 md:mt-0 max-w-full">
             <motion.div 
               className="relative w-full flex justify-center px-4"
@@ -177,12 +166,14 @@ const HeroSection = () => {
               <div 
                 className={`w-full h-auto ${isMobile ? 'max-w-[300px]' : 'max-w-[600px]'} ${animationReady && !isMobile ? 'animate-float' : ''}`}
               >
-                {isMobile ? (
-                  <>
-                  </>
-                ) : (
-                  <ServerKastGuy 
-                    aria-label={t('serverIllustrationAlt')}
+                {!isMobile && (
+                  <Image
+                    src="/images/webp/mainpage/server-kast-guy.webp"
+                    alt={t('serverIllustrationAlt')}
+                    width={600}
+                    height={600}
+                    priority
+                    className="w-full h-auto"
                   />
                 )}
               </div>
