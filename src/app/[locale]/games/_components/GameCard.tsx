@@ -8,7 +8,7 @@ import Link from 'next/link';
 import { FaCheck } from 'react-icons/fa';
 
 interface GameCardProps {
-  id: string;
+  id?: string;
   name: string;
   edition?: string;
   description: string;
@@ -17,7 +17,7 @@ interface GameCardProps {
   slug: string;
 }
 
-const GameCard = ({ id, name, edition, description, price, image, slug }: GameCardProps) => {
+const GameCard = ({ name, edition, description, price, image, slug }: GameCardProps) => {
   const t = useTranslations('games');
 
   return (

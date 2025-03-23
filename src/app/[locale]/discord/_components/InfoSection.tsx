@@ -148,9 +148,14 @@ const InfoSection = () => {
   const [isLoaded, setIsLoaded] = useState(false);
 
   // Get features from translations
-  const featureIcons = [<FaServer className="w-8 h-8" />, <FaClock className="w-8 h-8" />, <MdDashboard className="w-8 h-8" />, <FaDatabase className="w-8 h-8" />];
+  const featureIcons = [
+    <FaServer key="server-icon" className="w-8 h-8" />, 
+    <FaClock key="clock-icon" className="w-8 h-8" />, 
+    <MdDashboard key="dashboard-icon" className="w-8 h-8" />, 
+    <FaDatabase key="database-icon" className="w-8 h-8" />
+  ];
   
-  const features: Feature[] = t.raw('cards').map((card: any, index: number) => ({
+  const features: Feature[] = t.raw('cards').map((card: Record<string, string>, index: number) => ({
     icon: featureIcons[index],
     title: card.title,
     description: card.description

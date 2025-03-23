@@ -218,7 +218,6 @@ const GameGridSection = () => {
               filteredGames.map((game) => (
                 <GameCard
                   key={game.id}
-                  id={game.id}
                   name={game.name}
                   edition={game.edition}
                   description={game.description}
