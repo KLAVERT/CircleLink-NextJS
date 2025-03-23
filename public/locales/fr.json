@@ -285,5 +285,37 @@
         }
       }
     }
+  },
+  "games": {
+    "heroSection": {
+      "badge": "HÉBERGEMENT DE JEUX",
+      "title1": "Serveurs de Jeux",
+      "title2": "Simplifiés",
+      "description": "Hébergez votre serveur de jeu préféré avec CircleLink. Configuration facile, matériel puissant et contrôle total sur votre expérience de jeu.",
+      "primaryButton": "Commencer",
+      "secondaryButton": "Voir Tous les Jeux",
+      "featuredTitle": "Serveurs de Jeux Populaires",
+      "viewDetails": "Voir les détails"
+    },
+    "gameGrid": {
+      "title": "Tous les Serveurs de Jeux Disponibles",
+      "description": "Parcourez notre sélection de serveurs de jeux. Nous prenons en charge une large gamme de jeux populaires avec des options d'hébergement personnalisables.",
+      "searchPlaceholder": "Rechercher un jeu...",
+      "filters": {
+        "all": "Tous les Jeux",
+        "survival": "Survie",
+        "simulation": "Simulation",
+        "sandbox": "Bac à Sable",
+        "fpsRpg": "FPS/RPG"
+      },
+      "noResults": "Aucun jeu trouvé correspondant à vos critères de recherche."
+    },
+    "gameCard": {
+      "from": "À partir de",
+      "unlimitedSlots": "Slots illimités",
+      "protection": "protection",
+      "panel": "panneau",
+      "viewPackages": "Voir les forfaits"
+    }
   }
 }

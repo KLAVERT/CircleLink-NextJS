@@ -285,5 +285,37 @@
         }
       }
     }
+  },
+  "games": {
+    "heroSection": {
+      "badge": "GAME HOSTING",
+      "title1": "Game Servers",
+      "title2": "Gemaakt Eenvoudig",
+      "description": "Host je favoriete gameserver met CircleLink. Eenvoudige setup, krachtige hardware en volledige controle over je game-ervaring.",
+      "primaryButton": "Begin Nu",
+      "secondaryButton": "Bekijk Alle Games",
+      "featuredTitle": "Populaire Game Servers",
+      "viewDetails": "Bekijk details"
+    },
+    "gameGrid": {
+      "title": "Alle Beschikbare Game Servers",
+      "description": "Bekijk ons aanbod van gameservers. We ondersteunen een breed scala aan populaire games met aanpasbare hosting-opties.",
+      "searchPlaceholder": "Zoek naar een game...",
+      "filters": {
+        "all": "Alle Games",
+        "survival": "Survival",
+        "simulation": "Simulatie",
+        "sandbox": "Sandbox",
+        "fpsRpg": "FPS/RPG"
+      },
+      "noResults": "Geen games gevonden die voldoen aan je zoekcriteria."
+    },
+    "gameCard": {
+      "from": "Vanaf",
+      "unlimitedSlots": "Oneindige slots",
+      "protection": "protectie",
+      "panel": "paneel",
+      "viewPackages": "Bekijk pakketten"
+    }
   }
 }

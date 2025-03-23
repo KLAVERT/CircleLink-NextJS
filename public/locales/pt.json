@@ -286,5 +286,37 @@
         }
       }
     }
+  },
+  "games": {
+    "heroSection": {
+      "badge": "HOSPEDAGEM DE JOGOS",
+      "title1": "Servidores de Jogos",
+      "title2": "Simplificados",
+      "description": "Hospede seu servidor de jogo favorito com CircleLink. Configuração fácil, hardware potente e controle total sobre sua experiência de jogo.",
+      "primaryButton": "Começar Agora",
+      "secondaryButton": "Ver Todos os Jogos",
+      "featuredTitle": "Servidores de Jogos Populares",
+      "viewDetails": "Ver detalhes"
+    },
+    "gameGrid": {
+      "title": "Todos os Servidores de Jogos Disponíveis",
+      "description": "Navegue pela nossa seleção de servidores de jogos. Oferecemos suporte a uma ampla variedade de jogos populares com opções de hospedagem personalizáveis.",
+      "searchPlaceholder": "Procurar um jogo...",
+      "filters": {
+        "all": "Todos os Jogos",
+        "survival": "Sobrevivência",
+        "simulation": "Simulação",
+        "sandbox": "Mundo Aberto",
+        "fpsRpg": "FPS/RPG"
+      },
+      "noResults": "Nenhum jogo encontrado que corresponda aos seus critérios de pesquisa."
+    },
+    "gameCard": {
+      "from": "A partir de",
+      "unlimitedSlots": "Slots ilimitados",
+      "protection": "proteção",
+      "panel": "painel",
+      "viewPackages": "Ver pacotes"
+    }
   }
 }

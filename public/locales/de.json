@@ -285,5 +285,37 @@
         }
       }
     }
+  },
+  "games": {
+    "heroSection": {
+      "badge": "GAME HOSTING",
+      "title1": "Game Server",
+      "title2": "Leicht Gemacht",
+      "description": "Hosten Sie Ihren Lieblings-Gameserver mit CircleLink. Einfache Einrichtung, leistungsstarke Hardware und volle Kontrolle über Ihr Spielerlebnis.",
+      "primaryButton": "Jetzt Starten",
+      "secondaryButton": "Alle Spiele Anzeigen",
+      "featuredTitle": "Beliebte Game Server",
+      "viewDetails": "Details anzeigen"
+    },
+    "gameGrid": {
+      "title": "Alle Verfügbaren Game Server",
+      "description": "Durchsuchen Sie unsere Auswahl an Gameservern. Wir unterstützen eine breite Palette beliebter Spiele mit anpassbaren Hosting-Optionen.",
+      "searchPlaceholder": "Nach einem Spiel suchen...",
+      "filters": {
+        "all": "Alle Spiele",
+        "survival": "Survival",
+        "simulation": "Simulation",
+        "sandbox": "Sandbox",
+        "fpsRpg": "FPS/RPG"
+      },
+      "noResults": "Keine Spiele gefunden, die Ihren Suchkriterien entsprechen."
+    },
+    "gameCard": {
+      "from": "Ab",
+      "unlimitedSlots": "Unbegrenzte Slots",
+      "protection": "Schutz",
+      "panel": "Panel",
+      "viewPackages": "Pakete ansehen"
+    }
   }
 }
