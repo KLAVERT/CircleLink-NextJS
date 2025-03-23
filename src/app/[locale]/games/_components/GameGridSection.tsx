@@ -178,8 +178,16 @@ const GameGridSection = () => {
   };
 
   return (
-    <section id="game-list" className="bg-[var(--color-tertiary)] py-16 md:py-24 border-t border-[var(--color-border)]">
-      <div className="container mx-auto px-4">
+    <section id="game-list" className="bg-[var(--color-tertiary)] py-16 md:py-24 border-t border-[var(--color-border)] relative">
+      {/* Explicit background styling to override any grid pattern */}
+      <div 
+        className="absolute inset-0 z-0" 
+        style={{
+          background: 'var(--color-tertiary)',
+          backgroundImage: 'none' // Explicitly override any grid pattern
+        }}
+      />
+      <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-7xl mx-auto">
           {/* Section header */}
           <div className="text-center mb-12 pointer-events-auto">

@@ -50,7 +50,7 @@ const AnimatedBackground: React.FC<AnimatedBackgroundProps> = ({
           primary: 'var(--color-secondary)',
           secondary: 'var(--color-primary)',
           accent: 'var(--color-tertiary)',
-          background: 'linear-gradient(180deg, var(--color-primary) 0%, var(--color-primary) 95%, var(--color-tertiary) 100%)',
+          background: 'var(--color-primary)',
           opacity: '0.30',
           showAnimation: true
         };
@@ -91,7 +91,7 @@ const AnimatedBackground: React.FC<AnimatedBackgroundProps> = ({
       {colors.showAnimation && (
         <div className="absolute inset-0 overflow-hidden">
           {/* Large floating blobs - minder en eenvoudiger voor mobiel */}
-          {[...Array(isMobile ? 1 : 3)].map((_, i) => (
+          {[0, 1, 2].map(i => (
             <motion.div
               key={`blob-${i}`}
               className="absolute"

@@ -66,21 +66,9 @@ const GameHeroSection = () => {
   ];
 
   return (
-    <section className="bg-[var(--color-primary)] pt-24 pb-16 md:pt-32 md:pb-24">
-      {/* Background grid pattern */}
+    <section className="bg-[var(--color-primary)] pt-24 pb-16 md:pt-32 md:pb-24 relative">
+      {/* Background with gradient only */}
       <div className="absolute inset-0 z-0">
-        <div 
-          className="absolute inset-0" 
-          style={{
-            backgroundImage: `
-              linear-gradient(to right, rgba(88, 101, 242, 0.03) 1px, transparent 1px),
-              linear-gradient(to bottom, rgba(88, 101, 242, 0.03) 1px, transparent 1px)
-            `,
-            backgroundSize: '50px 50px',
-            opacity: 0.5
-          }}
-        />
-
         {/* Gradient overlay */}
         <div 
           className="absolute inset-0"
