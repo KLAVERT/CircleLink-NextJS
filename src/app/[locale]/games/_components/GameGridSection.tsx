@@ -3,10 +3,9 @@
 import React, { useState, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
 import { motion } from 'framer-motion';
-import { FaSearch, FaFilter } from 'react-icons/fa';
+import { FaSearch } from 'react-icons/fa';
 import GameCard from './GameCard';
-
-type GameCategory = 'all' | 'survival' | 'simulation' | 'sandbox' | 'fpsRpg';
+import GameFilter, { GameCategory } from './GameFilter';
 
 interface Game {
   id: string;
@@ -157,9 +156,18 @@ const GameGridSection = () => {
     return matchesSearch && matchesCategory;
   });
 
+  // Handle filter change with logging
+  const handleFilterChange = (category: GameCategory) => {
+    console.log('Filter changing from', activeFilter, 'to', category);
+    setActiveFilter(category);
+  };
+
   useEffect(() => {
     setIsLoaded(true);
-  }, []);
+    
+    // Log every time activeFilter changes
+    console.log('Active filter changed to:', activeFilter);
+  }, [activeFilter]);
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -174,7 +182,7 @@ const GameGridSection = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-7xl mx-auto">
           {/* Section header */}
-          <div className="text-center mb-12">
+          <div className="text-center mb-12 pointer-events-auto">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-[var(--color-text-primary)]">
               {t('gameGrid.title') || 'All Available Game Servers'}
             </h2>
@@ -183,9 +191,9 @@ const GameGridSection = () => {
             </p>
           </div>
 
-          {/* Search and filter */}
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4 mb-8">
-            <div className="relative w-full md:w-96">
+          {/* Search and filter with improved pointer-events */}
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4 mb-8 relative z-30 pointer-events-auto">
+            <div className="relative w-full md:w-96 pointer-events-auto">
               <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                 <FaSearch className="text-[var(--color-text-subtle)]" />
               </div>
@@ -198,30 +206,22 @@ const GameGridSection = () => {
               />
             </div>
 
-            <div className="flex items-center gap-2 overflow-x-auto pb-2 w-full md:w-auto">
-              <FaFilter className="text-[var(--color-text-subtle)] mr-2 flex-shrink-0" />
-              {categories.map((category) => (
-                <button
-                  key={category.id}
-                  className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors whitespace-nowrap ${
-                    activeFilter === category.id
-                      ? 'bg-[var(--color-quinary)] text-white'
-                      : 'bg-[var(--color-bg-surface)] text-[var(--color-text-primary)] hover:bg-[var(--color-bg-secondary)]'
-                  }`}
-                  onClick={() => setActiveFilter(category.id as GameCategory)}
-                >
-                  {category.label}
-                </button>
-              ))}
+            {/* Using the new GameFilter component with improved pointer-events */}
+            <div className="w-full md:w-auto relative z-50 pointer-events-auto">
+              <GameFilter 
+                activeFilter={activeFilter}
+                setActiveFilter={handleFilterChange}
+                categories={categories}
+              />
             </div>
           </div>
 
-          {/* Game list */}
+          {/* Game list with lower z-index to prevent overlap with filters */}
           <motion.div
             variants={containerVariants}
             initial="hidden"
             animate={isLoaded ? "visible" : "hidden"}
-            className="space-y-6"
+            className="space-y-6 relative z-10"
           >
             {filteredGames.length > 0 ? (
               filteredGames.map((game) => (
