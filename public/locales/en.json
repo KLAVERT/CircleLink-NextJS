@@ -203,6 +203,35 @@
     "allRightsReserved": "All Rights Reserved"
   },
   "discord": {
+    "info": {
+      "title": "Discord Hosting On A Next Level.",
+      "badge": "DISCORD HOSTING",
+      "features": [
+        "Immediate access thanks to our system. Instantly online",
+        "No contract - no minimum terms",
+        "Easy management of all services on a single account",
+        "Full cost control through our payment system",
+        "Hosted with pelican panel"
+      ],
+      "cards": [
+        {
+          "title": "Hosted On Pelican",
+          "description": "Switch to another server/bot quickly and flexibly"
+        },
+        {
+          "title": "Immediately Online",
+          "description": "Your server is available in under 3 minutes"
+        },
+        {
+          "title": "Live console",
+          "description": "Track events and logs in real time through the web interface"
+        },
+        {
+          "title": "Backup Storage Space",
+          "description": "Create 2 backups for your bot!"
+        }
+      ]
+    },
     "packages": {
       "title": "Choose Your Perfect Package",
       "subtitle": "Select the package that best suits your needs. Each package is designed to optimally support your Discord community.",

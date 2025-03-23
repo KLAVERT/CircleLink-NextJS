@@ -203,6 +203,35 @@
     "allRightsReserved": "Tutti i Diritti Riservati"
   },
   "discord": {
+    "info": {
+      "title": "Hosting Discord a un Nuovo Livello.",
+      "badge": "HOSTING DISCORD",
+      "features": [
+        "Accesso immediato grazie al nostro sistema. Subito online",
+        "Nessun contratto - nessun termine minimo",
+        "Gestione semplice di tutti i servizi su un unico account",
+        "Controllo totale dei costi attraverso il nostro sistema di pagamento",
+        "Ospitato con pannello Pelican"
+      ],
+      "cards": [
+        {
+          "title": "Ospitato Su Pelican",
+          "description": "Passa a un altro server/bot in modo rapido e flessibile"
+        },
+        {
+          "title": "Immediatamente Online",
+          "description": "Il tuo server è disponibile in meno di 3 minuti"
+        },
+        {
+          "title": "Console Live",
+          "description": "Traccia eventi e log in tempo reale attraverso l'interfaccia web"
+        },
+        {
+          "title": "Spazio di Archiviazione Backup",
+          "description": "Crea 2 backup per il tuo bot!"
+        }
+      ]
+    },
     "packages": {
       "title": "Scegli il Tuo Pacchetto Perfetto",
       "subtitle": "Seleziona il pacchetto più adatto alle tue esigenze. Ogni pacchetto è progettato per supportare in modo ottimale la tua comunità Discord.",

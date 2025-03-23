@@ -203,6 +203,35 @@
     "allRightsReserved": "Todos los Derechos Reservados"
   },
   "discord": {
+    "info": {
+      "title": "Alojamiento de Discord en un Nuevo Nivel.",
+      "badge": "ALOJAMIENTO DISCORD",
+      "features": [
+        "Acceso inmediato gracias a nuestro sistema. Instantáneamente en línea",
+        "Sin contrato - sin términos mínimos",
+        "Gestión sencilla de todos los servicios en una sola cuenta",
+        "Control total de costes a través de nuestro sistema de pago",
+        "Alojado con panel Pelican"
+      ],
+      "cards": [
+        {
+          "title": "Alojado en Pelican",
+          "description": "Cambie a otro servidor/bot de forma rápida y flexible"
+        },
+        {
+          "title": "Inmediatamente en Línea",
+          "description": "Tu servidor está disponible en menos de 3 minutos"
+        },
+        {
+          "title": "Consola en Vivo",
+          "description": "Sigue eventos y registros en tiempo real a través de la interfaz web"
+        },
+        {
+          "title": "Espacio de Almacenamiento de Copias",
+          "description": "¡Crea 2 copias de seguridad para tu bot!"
+        }
+      ]
+    },
     "packages": {
       "title": "Elige tu Paquete Perfecto",
       "subtitle": "Selecciona el paquete que mejor se adapte a tus necesidades. Cada paquete está diseñado para dar soporte óptimo a tu comunidad de Discord.",

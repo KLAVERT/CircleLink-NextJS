@@ -203,6 +203,35 @@
     "allRightsReserved": "Tous Droits Réservés"
   },
   "discord": {
+    "info": {
+      "title": "Hébergement Discord à un Nouveau Niveau.",
+      "badge": "HÉBERGEMENT DISCORD",
+      "features": [
+        "Accès immédiat grâce à notre système. Instantanément en ligne",
+        "Pas de contrat - pas de durée minimale",
+        "Gestion facile de tous les services sur un seul compte",
+        "Contrôle total des coûts grâce à notre système de paiement",
+        "Hébergé avec le panneau Pelican"
+      ],
+      "cards": [
+        {
+          "title": "Hébergé Sur Pelican",
+          "description": "Passez à un autre serveur/bot rapidement et avec flexibilité"
+        },
+        {
+          "title": "Immédiatement En Ligne",
+          "description": "Votre serveur est disponible en moins de 3 minutes"
+        },
+        {
+          "title": "Console En Direct",
+          "description": "Suivez les événements et les journaux en temps réel via l'interface web"
+        },
+        {
+          "title": "Espace de Stockage de Sauvegarde",
+          "description": "Créez 2 sauvegardes pour votre bot!"
+        }
+      ]
+    },
     "packages": {
       "title": "Choisissez Votre Forfait Parfait",
       "subtitle": "Sélectionnez le forfait qui correspond le mieux à vos besoins. Chaque forfait est conçu pour soutenir de manière optimale votre communauté Discord.",

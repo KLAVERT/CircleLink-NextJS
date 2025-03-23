@@ -203,6 +203,35 @@
     "allRightsReserved": "Alle Rechten Voorbehouden"
   },
   "discord": {
+    "info": {
+      "title": "Discord Hosting Op Een Nieuw Niveau.",
+      "badge": "DISCORD HOSTING",
+      "features": [
+        "Directe toegang dankzij ons systeem. Meteen online",
+        "Geen contract - geen minimale termijn",
+        "Eenvoudig beheer van alle diensten op één account",
+        "Volledige kostencontrole via ons betaalsysteem",
+        "Gehost met pelican panel"
+      ],
+      "cards": [
+        {
+          "title": "Gehost Op Pelican",
+          "description": "Schakel snel en flexibel naar een andere server/bot"
+        },
+        {
+          "title": "Direct Online",
+          "description": "Je server is binnen 3 minuten beschikbaar"
+        },
+        {
+          "title": "Live console",
+          "description": "Volg gebeurtenissen en logs in realtime via de webinterface"
+        },
+        {
+          "title": "Backup Opslagruimte",
+          "description": "Maak 2 backups voor je bot!"
+        }
+      ]
+    },
     "packages": {
       "title": "Kies Je Perfecte Pakket",
       "subtitle": "Selecteer het pakket dat het beste bij jouw behoeften past. Elk pakket is ontworpen om je Discord community optimaal te ondersteunen.",
