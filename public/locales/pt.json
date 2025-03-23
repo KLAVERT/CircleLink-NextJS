@@ -317,6 +317,17 @@
       "protection": "proteção",
       "panel": "painel",
       "viewPackages": "Ver pacotes"
+    },
+    "gameDescriptions": {
+      "minecraft": "Expressar sua criatividade em um servidor Minecraft, sozinho ou com amigos? Inicie seu servidor hoje com a CircleLink!",
+      "rust": "Sobreviva no mundo áspero de Rust, onde cada jogador é um potencial inimigo. Construa sua base, forme alianças e lute para sobreviver.",
+      "ark": "Lute para sobreviver em um mundo cheio de dinossauros e criaturas pré-históricas. Domestique dinossauros, construa bases e explore uma vasta ilha.",
+      "palworld": "Mergulhe em Palworld, o inovador jogo que leva aventureiros a um mundo onde sobrevivência, construção e captura de Pals são centrais.",
+      "satisfactory": "Construa fábricas massivas, automatize linhas de produção e explore um misterioso planeta alienígena neste jogo de construção de fábricas em primeira pessoa.",
+      "sotf": "Sobreviva aos horrores de uma ilha misteriosa cheia de mutantes canibais. Construa, lute e explore neste aterrorizante jogo de sobrevivência e horror.",
+      "fivem": "Crie sua própria experiência GTA com FiveM, a plataforma que possibilita executar servidores de RPG personalizados no mundo de GTA V.",
+      "gmod": "Um jogo sandbox com possibilidades infinitas. Crie seus próprios tipos de jogo, construa estruturas e experimente com as propriedades físicas.",
+      "theforest": "Sobreviva após um acidente de avião em uma península arborizada cheia de tribos canibais. Construa, explore e defenda-se contra os perigos da floresta."
     }
   }
 }

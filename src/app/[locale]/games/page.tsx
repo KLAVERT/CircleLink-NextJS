@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import Preloader from '@/components/Preloader/Preloader';
 import GameHeroSection from './_components/GameHeroSection';
 import GameGridSection from './_components/GameGridSection';
+import FAQSection from './_components/FAQSection';
 
 export default function GamesPage() {
   const [isLoading, setIsLoading] = useState(true);
@@ -32,7 +33,7 @@ export default function GamesPage() {
       <div className={`w-full transition-opacity duration-1000 ${isLoading ? 'opacity-0' : 'opacity-100'}`}>
         <GameHeroSection />
         <GameGridSection />
-        {/* Add more sections here as they are developed */}
+        <FAQSection />
       </div>
     </main>
   );

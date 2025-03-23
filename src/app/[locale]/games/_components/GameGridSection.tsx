@@ -31,22 +31,21 @@ const GameGridSection = () => {
     {
       id: 'minecraft',
       name: 'Minecraft',
-      edition: 'Java Edition',
       category: ['sandbox', 'survival'],
-      image: '/images/jpg/games/minecraft.jpg',
+      image: '/images/webp/games/logos/minecraft.webp',
       slug: '/games/minecraft',
       popularity: 10,
-      description: 'De creativiteit uitwerken op een minecraft server, alleen of met vrienden? Start je server vandaag bij CircleLink!',
+      description: t('gameDescriptions.minecraft'),
       price: 0.80
     },
     {
       id: 'rust',
       name: 'Rust',
       category: ['survival', 'fpsRpg'],
-      image: '/images/jpg/games/rust.jpg',
+      image: '/images/webp/games/logos/rust.webp',
       slug: '/games/rust',
       popularity: 9,
-      description: 'Overleef in de harde wereld van Rust, waar elke speler een potentiële vijand is. Bouw je basis, vorm allianties en vecht om te overleven.',
+      description: t('gameDescriptions.rust'),
       price: 8.00
     },
     {
@@ -54,80 +53,70 @@ const GameGridSection = () => {
       name: 'ARK',
       edition: 'Survival Evolved',
       category: ['survival', 'sandbox'],
-      image: '/images/jpg/games/ark.jpg',
+      image: '/images/webp/games/logos/ark.webp',
       slug: '/games/ark',
       popularity: 8,
-      description: 'Strijd om te overleven in een wereld vol dinosaurussen en prehistorische wezens. Tem dino\'s, bouw bases en verken een enorm eiland.',
+      description: t('gameDescriptions.ark'),
       price: 7.50
     },
     {
       id: 'palworld',
       name: 'Palworld',
       category: ['survival', 'sandbox'],
-      image: '/images/jpg/games/palworld.jpg',
+      image: '/images/webp/games/logos/palworld.webp',
       slug: '/games/palworld',
       popularity: 9,
-      description: 'Duik in Palworld, de grensverleggende game die avonturiers meeneemt naar een wereld waar overleven, bouwen en het vangen van Pals centraal staan.',
+      description: t('gameDescriptions.palworld'),
       price: 6.00
     },
     {
       id: 'satisfactory',
       name: 'Satisfactory',
       category: ['simulation', 'sandbox'],
-      image: '/images/jpg/games/satisfactory.jpg',
+      image: '/images/webp/games/logos/satisfactory.webp',
       slug: '/games/satisfactory',
       popularity: 7,
-      description: 'Bouw enorme fabrieken, automatiseer productielijnen en verken een mysterieuze buitenaardse planeet in deze first-person factory-building game.',
+      description: t('gameDescriptions.satisfactory'),
       price: 6.50
-    },
-    {
-      id: 'factorio',
-      name: 'Factorio',
-      category: ['simulation', 'sandbox'],
-      image: '/images/jpg/games/factorio.jpg',
-      slug: '/games/factorio',
-      popularity: 8,
-      description: 'Creëer complexe automatiseringssystemen en bouw een gigantische fabriek in deze verslavende simulatiegame waar efficiëntie alles is.',
-      price: 5.00
     },
     {
       id: 'sotf',
       name: 'Sons of the Forest',
       category: ['survival', 'fpsRpg'],
-      image: '/images/jpg/games/sotf.jpg',
+      image: '/images/webp/games/logos/sotf.webp',
       slug: '/games/sotf',
       popularity: 7,
-      description: 'Overleef de gruwelen van een mysterieus eiland vol kannibalistische mutanten. Bouw, vecht en verken in deze angstaanjagende survival horror game.',
+      description: t('gameDescriptions.sotf'),
       price: 7.00
     },
     {
       id: 'fivem',
       name: 'FiveM',
       category: ['fpsRpg', 'simulation'],
-      image: '/images/jpg/games/fivem.jpg',
+      image: '/images/webp/games/logos/fivem.webp',
       slug: '/games/fivem',
       popularity: 8,
-      description: 'Creëer je eigen GTA-ervaring met FiveM, het platform dat het mogelijk maakt om aangepaste rollenspel-servers te draaien in de wereld van GTA V.',
+      description: t('gameDescriptions.fivem'),
       price: 9.50
     },
     {
       id: 'gmod',
       name: 'Garry\'s Mod',
       category: ['sandbox', 'fpsRpg'],
-      image: '/images/jpg/games/gmod.jpg',
+      image: '/images/webp/games/logos/gmod.webp',
       slug: '/games/gmod',
       popularity: 7,
-      description: 'Een zandbak-game met eindeloze mogelijkheden. Creëer je eigen speltypen, bouw constructies en experimenteer met de natuurkundige eigenschappen.',
+      description: t('gameDescriptions.gmod'),
       price: 4.50
     },
     {
       id: 'theforest',
       name: 'The Forest',
       category: ['survival', 'fpsRpg'],
-      image: '/images/jpg/games/theforest.jpg',
+      image: '/images/webp/games/logos/theforest.webp',
       slug: '/games/theforest',
       popularity: 6,
-      description: 'Overleef na een vliegtuigcrash op een beboste schiereiland vol kannibalistische stammen. Bouw, verken en verdedig jezelf tegen de gevaren van het woud.',
+      description: t('gameDescriptions.theforest'),
       price: 5.50
     }
   ];
@@ -161,7 +150,7 @@ const GameGridSection = () => {
   };
 
   return (
-    <section id="game-list" className="py-16 md:py-24 bg-[var(--color-bg-primary)]">
+    <section id="game-list" className="py-16 md:py-24 bg-[var(--color-tertiary)]">
       <div className="container mx-auto px-4">
         <div className="max-w-7xl mx-auto">
           {/* Section header */}

@@ -312,10 +312,21 @@
     },
     "gameCard": {
       "from": "Vanaf",
-      "unlimitedSlots": "Oneindige slots",
-      "protection": "protectie",
+      "unlimitedSlots": "Onbeperkte slots",
+      "protection": "bescherming",
       "panel": "paneel",
       "viewPackages": "Bekijk pakketten"
+    },
+    "gameDescriptions": {
+      "minecraft": "De creativiteit uitwerken op een minecraft server, alleen of met vrienden? Start je server vandaag bij CircleLink!",
+      "rust": "Overleef in de harde wereld van Rust, waar elke speler een potentiële vijand is. Bouw je basis, vorm allianties en vecht om te overleven.",
+      "ark": "Strijd om te overleven in een wereld vol dinosaurussen en prehistorische wezens. Tem dino's, bouw bases en verken een enorm eiland.",
+      "palworld": "Duik in Palworld, de grensverleggende game die avonturiers meeneemt naar een wereld waar overleven, bouwen en het vangen van Pals centraal staan.",
+      "satisfactory": "Bouw enorme fabrieken, automatiseer productielijnen en verken een mysterieuze buitenaardse planeet in deze first-person factory-building game.",
+      "sotf": "Overleef de gruwelen van een mysterieus eiland vol kannibalistische mutanten. Bouw, vecht en verken in deze angstaanjagende survival horror game.",
+      "fivem": "Creëer je eigen GTA-ervaring met FiveM, het platform dat het mogelijk maakt om aangepaste rollenspel-servers te draaien in de wereld van GTA V.",
+      "gmod": "Een sandbox-game met eindeloze mogelijkheden. Creëer je eigen speltypen, bouw constructies en experimenteer met de natuurkundige eigenschappen.",
+      "theforest": "Overleef na een vliegtuigcrash op een beboste schiereiland vol kannibalistische stammen. Bouw, verken en verdedig jezelf tegen de gevaren van het woud."
     }
   }
 }

@@ -316,6 +316,17 @@
       "protection": "protection",
       "panel": "panel",
       "viewPackages": "View packages"
+    },
+    "gameDescriptions": {
+      "minecraft": "Express your creativity on a Minecraft server, alone or with friends? Start your server today with CircleLink!",
+      "rust": "Survive in the harsh world of Rust, where every player is a potential enemy. Build your base, form alliances, and fight to survive.",
+      "ark": "Fight to survive in a world full of dinosaurs and prehistoric creatures. Tame dinos, build bases, and explore a vast island.",
+      "palworld": "Dive into Palworld, the groundbreaking game that takes adventurers to a world where survival, building, and catching Pals are central.",
+      "satisfactory": "Build massive factories, automate production lines, and explore a mysterious alien planet in this first-person factory-building game.",
+      "sotf": "Survive the horrors of a mysterious island full of cannibalistic mutants. Build, fight, and explore in this terrifying survival horror game.",
+      "fivem": "Create your own GTA experience with FiveM, the platform that makes it possible to run custom roleplay servers in the world of GTA V.",
+      "gmod": "A sandbox game with endless possibilities. Create your own game types, build constructions, and experiment with the physics properties.",
+      "theforest": "Survive after a plane crash on a forested peninsula full of cannibalistic tribes. Build, explore, and defend yourself against the dangers of the forest."
     }
   }
 }
