@@ -19,11 +19,8 @@ const GameFilter: React.FC<GameFilterProps> = ({
   setActiveFilter, 
   categories 
 }) => {
-  // Debug logging
-  console.log('GameFilter rendering with activeFilter:', activeFilter);
   
   const handleFilterClick = (categoryId: string) => {
-    console.log('Filter clicked:', categoryId);
     setActiveFilter(categoryId as GameCategory);
   };
 
