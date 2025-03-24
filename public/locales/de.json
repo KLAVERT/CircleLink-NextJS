@@ -255,7 +255,7 @@
         "features": {
           "members": "Bis zu 500 Mitglieder",
           "hosting": "Premium-Hosting",
-          "support": "24/7-Support",
+          "support": "12/7 Support",
           "bot": "Individueller Bot",
           "premium": "Premium-Funktionen"
         }
@@ -351,6 +351,108 @@
         "online": "24/7 online",
         "instantDelivery": "Sofortige Bereitstellung"
       }
+    },
+    "packages": {
+      "title": "Wählen Sie Ihr ARK-Server-Paket",
+      "subtitle": "Wählen Sie den Server, der am besten zu Ihrem Stamm passt. Alle Pakete beinhalten leistungsstarke Hardware und DDoS-Schutz.",
+      "selectButton": "{name} auswählen",
+      "tatch": {
+        "name": "Tatch",
+        "description": "Perfekt für kleine Stämme, die gerade anfangen",
+        "features": {
+          "8gbddr4": "8GB DDR4 RAM",
+          "3cores": "3 CPU-Kerne",
+          "fullssd": "Voller SSD-Speicher",
+          "pelican": "Pelican Panel",
+          "support": "12/7 Support",
+          "2databases": "2 Datenbanken",
+          "2backup": "2 Backups"
+        }
+      },
+      "wood": {
+        "name": "Wood",
+        "description": "Ideal für mittelgroße Stämme mit Mod-Anforderungen",
+        "features": {
+          "10gbddr4": "10GB DDR4 RAM",
+          "4cores": "4 CPU-Kerne",
+          "fullssd": "Voller SSD-Speicher",
+          "pelican": "Pelican Panel",
+          "support": "12/7 Support",
+          "2databases": "2 Datenbanken",
+          "2backup": "2 Backups"
+        }
+      },
+      "clay": {
+        "name": "Clay",
+        "description": "Verbesserte Leistung für größere Stämme mit mehreren Mods",
+        "features": {
+          "12gbddr4": "12GB DDR4 RAM",
+          "4cores": "4 CPU-Kerne",
+          "fullssd": "Voller SSD-Speicher",
+          "pelican": "Pelican Panel",
+          "support": "12/7 Support",
+          "2databases": "2 Datenbanken",
+          "2backup": "2 Backups"
+        }
+      },
+      "stone": {
+        "name": "Stone",
+        "description": "Unser beliebtestes Paket für etablierte Stämme",
+        "features": {
+          "16gbddr4": "16GB DDR4 RAM",
+          "6cores": "6 CPU-Kerne",
+          "fullssd": "Voller SSD-Speicher",
+          "pelican": "Pelican Panel",
+          "support": "12/7 Support",
+          "2databases": "2 Datenbanken",
+          "2backup": "2 Backups"
+        }
+      },
+      "metal": {
+        "name": "Metal",
+        "description": "Überlegene Leistung für große Stämme mit aufwändigen Mods",
+        "features": {
+          "20gbddr4": "20GB DDR4 RAM",
+          "6cores": "6 CPU-Kerne",
+          "fullssd": "Voller SSD-Speicher",
+          "pelican": "Pelican Panel",
+          "support": "12/7 Support",
+          "2databases": "2 Datenbanken",
+          "2backup": "2 Backups"
+        }
+      },
+      "tek": {
+        "name": "TEK",
+        "description": "Ultimative Leistung für die anspruchsvollsten ARK-Erlebnisse",
+        "features": {
+          "24gbddr4": "24GB DDR4 RAM",
+          "8cores": "8 CPU-Kerne",
+          "fullssd": "Voller SSD-Speicher",
+          "pelican": "Pelican Panel",
+          "support": "12/7 Support",
+          "2databases": "2 Datenbanken",
+          "2backup": "2 Backups"
+        }
+      },
+      "enterprise": {
+        "name": "Enterprise",
+        "description": "Maßgeschneiderte Lösung für professionelle ARK-Communities und Events",
+        "features": {
+          "ram": "Angepasster RAM",
+          "cores": "Angepasste CPU-Kerne",
+          "ssd": "Angepasster SSD-Speicher",
+          "pelican": "Pelican Panel",
+          "support": "12/7 Support",
+          "databases": "Angepasste Datenbanken",
+          "backups": "Angepasste Backups"
+        }
+      }
     }
+  },
+  "Reviews": {
+    "title": "Was unsere Kunden sagen",
+    "poweredBy": "Powered by",
+    "loading": "Bewertungen werden geladen...",
+    "viewMore": "Mehr Bewertungen ansehen"
   }
 }

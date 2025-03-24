@@ -351,6 +351,108 @@
         "online": "24/7 online",
         "instantDelivery": "Instant delivery"
       }
+    },
+    "packages": {
+      "title": "Choose Your ARK Server Package",
+      "subtitle": "Select the server that best fits your tribe's needs. All packages include high-performance hardware and DDoS protection.",
+      "selectButton": "Select {name}",
+      "tatch": {
+        "name": "Tatch",
+        "description": "Perfect for small tribes just getting started",
+        "features": {
+          "8gbddr4": "8GB DDR4 RAM",
+          "3cores": "3 CPU Cores",
+          "fullssd": "Full SSD Storage",
+          "pelican": "Pelican Panel",
+          "support": "12/7 Support",
+          "2databases": "2 Databases",
+          "2backup": "2 Backups"
+        }
+      },
+      "wood": {
+        "name": "Wood",
+        "description": "Ideal for medium-sized tribes with mod requirements",
+        "features": {
+          "10gbddr4": "10GB DDR4 RAM",
+          "4cores": "4 CPU Cores",
+          "fullssd": "Full SSD Storage",
+          "pelican": "Pelican Panel",
+          "support": "12/7 Support",
+          "2databases": "2 Databases",
+          "2backup": "2 Backups"
+        }
+      },
+      "clay": {
+        "name": "Clay",
+        "description": "Enhanced performance for larger tribes with multiple mods",
+        "features": {
+          "12gbddr4": "12GB DDR4 RAM",
+          "4cores": "4 CPU Cores",
+          "fullssd": "Full SSD Storage",
+          "pelican": "Pelican Panel",
+          "support": "Priority Support",
+          "2databases": "2 Databases",
+          "2backup": "2 Backups"
+        }
+      },
+      "stone": {
+        "name": "Stone",
+        "description": "Our most popular package for established tribes",
+        "features": {
+          "16gbddr4": "16GB DDR4 RAM",
+          "6cores": "6 CPU Cores",
+          "fullssd": "Full SSD Storage",
+          "pelican": "Pelican Panel",
+          "support": "Priority Support",
+          "2databases": "2 Databases",
+          "2backup": "2 Backups"
+        }
+      },
+      "metal": {
+        "name": "Metal",
+        "description": "Superior performance for large tribes with heavy mods",
+        "features": {
+          "20gbddr4": "20GB DDR4 RAM",
+          "6cores": "6 CPU Cores",
+          "fullssd": "Full SSD Storage",
+          "pelican": "Pelican Panel",
+          "support": "Priority Support",
+          "2databases": "2 Databases",
+          "2backup": "2 Backups"
+        }
+      },
+      "tek": {
+        "name": "TEK",
+        "description": "Ultimate performance for the most demanding ARK experiences",
+        "features": {
+          "24gbddr4": "24GB DDR4 RAM",
+          "8cores": "8 CPU Cores",
+          "fullssd": "Full SSD Storage",
+          "pelican": "Pelican Panel",
+          "support": "12/7 Support",
+          "2databases": "2 Databases",
+          "2backup": "2 Backups"
+        }
+      },
+      "enterprise": {
+        "name": "Enterprise",
+        "description": "Custom solution for professional ARK communities and events",
+        "features": {
+          "ram": "Custom RAM",
+          "cores": "Custom CPU Cores",
+          "ssd": "Custom SSD Storage",
+          "pelican": "Pelican Panel",
+          "support": "12/7 Support",
+          "databases": "Custom Databases",
+          "backups": "Custom Backups"
+        }
+      }
     }
+  },
+  "Reviews": {
+    "title": "What our customers say",
+    "poweredBy": "Powered by",
+    "loading": "Loading reviews...",
+    "viewMore": "View more reviews"
   }
 }

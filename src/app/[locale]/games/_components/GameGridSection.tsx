@@ -62,7 +62,7 @@ const GameGridSection = () => {
       slug: '/games/ark',
       popularity: 8,
       description: t('gameDescriptions.ark'),
-      price: 7.50,
+      price: 10.00,
       backgroundImage: '/images/webp/games/backgrounds/ark-wallpaper.webp',
       backgroundWidth: 'w-2/3'
     },
@@ -180,7 +180,7 @@ const GameGridSection = () => {
   return (
     <section id="game-list" className="bg-[var(--color-tertiary)] py-16 md:py-24 border-t border-[var(--color-border)] relative">
       {/* Explicit background styling to override any grid pattern */}
-      <div 
+      <div
         className="absolute inset-0 z-0" 
         style={{
           background: 'var(--color-tertiary)',

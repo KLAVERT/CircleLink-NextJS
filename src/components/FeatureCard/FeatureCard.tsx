@@ -24,8 +24,8 @@ interface FeatureCardProps {
   buttonText?: string;
   onButtonClick?: () => void;
   priceSubtext?: string;
-  recommended?: boolean;
-  recommendedText?: string;
+  sub?: boolean;
+  subtext?: string;
   href?: string;
 }
 
@@ -57,8 +57,8 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
   buttonText,
   onButtonClick,
   priceSubtext,
-  recommended = false,
-  recommendedText = 'Aanbevolen',
+  sub = false,
+  subtext,
   href
 }) => {
   // Animation variants
@@ -87,7 +87,7 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
 
   return (
     <motion.div
-      className={`rounded-lg overflow-visible flex flex-col h-full relative ${cardStyles[style]} ${recommended ? 'border-2 border-[var(--color-accent-cool)]' : ''}`}
+      className={`rounded-lg overflow-visible flex flex-col h-full relative ${cardStyles[style]} ${sub ? 'border-2 border-[var(--color-accent-cool)]' : ''}`}
       variants={cardVariants}
       initial="hidden"
       animate="visible"
@@ -96,9 +96,9 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
         transition: { duration: 0.2 }
       }}
     >
-      {recommended && (
+      {sub && (
         <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-[var(--color-accent-cool)] text-white px-4 py-1 rounded-full text-sm font-semibold shadow-md">
-          {recommendedText}
+          {subtext}
         </div>
       )}
       <div className="p-6 pt-8 flex flex-col flex-grow overflow-hidden">

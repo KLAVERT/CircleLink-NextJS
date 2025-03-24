@@ -13,7 +13,8 @@ interface Package {
   price: string;
   description: string;
   features: PackageFeature[];
-  recommended?: boolean;
+  sub?: boolean;
+  subtext?: string;
   mostChosen?: boolean;
 }
 
@@ -46,8 +47,8 @@ const packages: Package[] = [
       { text: "packages.developer.features.bot", included: true },
       { text: "packages.developer.features.premium", included: true },
     ],
-    recommended: true,
-    mostChosen: true,
+    sub: true,
+    subtext: "Most Chosen",
   },
   {
     name: "Professional",
@@ -155,8 +156,8 @@ function PackageCards({ packages }: { packages: Package[] }) {
               features={features}
               style="gradient"
               buttonText={t('packages.selectButton', { name: t(`packages.${pkg.name.toLowerCase()}.name`) })}
-              recommended={pkg.recommended}
-              recommendedText={t('packages.recommended')}
+              sub={pkg.sub}
+              subtext={pkg.subtext}
               href="#contact"
             />
           );

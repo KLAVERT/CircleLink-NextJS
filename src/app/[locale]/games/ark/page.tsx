@@ -3,6 +3,10 @@
 import { useState, useEffect } from 'react';
 import Preloader from '@/components/Preloader/Preloader';
 import HeroSection from './_components/HeroSection';
+import PackageSection from './_components/PackageSection';
+import ReviewSection from './_components/reviewSection';
+import PelicanPanelSection from './_components/PelicanPanelSection';
+import FAQSection from './_components/FAQSection';
 
 export default function ArkPage() {
   const [isLoading, setIsLoading] = useState(true);
@@ -30,7 +34,10 @@ export default function ArkPage() {
       {isLoading && <Preloader />}
       <div className={`w-full transition-opacity duration-1000 ${isLoading ? 'opacity-0' : 'opacity-100'}`}>
         <HeroSection />
-        {/* Add more sections here as needed */}
+        <PackageSection />
+        <ReviewSection />
+        <PelicanPanelSection />
+        <FAQSection />
       </div>
     </main>
   );

@@ -24,7 +24,7 @@ interface BtwProviderProps {
 }
 
 export function BtwProvider({ children, btwPercentage = 21 }: BtwProviderProps) {
-  const [includeBtw, setIncludeBtw] = useState(true);
+  const [includeBtw, setIncludeBtw] = useState(false);
 
   const toggleBtw = () => {
     setIncludeBtw(prev => !prev);

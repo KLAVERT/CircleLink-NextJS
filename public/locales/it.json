@@ -351,6 +351,108 @@
         "online": "Online 24/7",
         "instantDelivery": "Consegna istantanea"
       }
+    },
+    "packages": {
+      "title": "Scegli il Tuo Pacchetto Server ARK",
+      "subtitle": "Seleziona il server che meglio si adatta alle esigenze della tua tribù. Tutti i pacchetti includono hardware ad alte prestazioni e protezione DDoS.",
+      "selectButton": "Seleziona {name}",
+      "tatch": {
+        "name": "Tatch",
+        "description": "Perfetto per piccole tribù che stanno iniziando",
+        "features": {
+          "8gbddr4": "8GB RAM DDR4",
+          "3cores": "3 core CPU",
+          "fullssd": "Archiviazione SSD completa",
+          "pelican": "Pannello Pelican",
+          "support": "Supporto 12/7",
+          "2databases": "2 database",
+          "2backup": "2 backup"
+        }
+      },
+      "wood": {
+        "name": "Wood",
+        "description": "Ideale per tribù di medie dimensioni con requisiti di mod",
+        "features": {
+          "10gbddr4": "10GB RAM DDR4",
+          "4cores": "4 core CPU",
+          "fullssd": "Archiviazione SSD completa",
+          "pelican": "Pannello Pelican",
+          "support": "Supporto 12/7",
+          "2databases": "2 database",
+          "2backup": "2 backup"
+        }
+      },
+      "clay": {
+        "name": "Clay",
+        "description": "Prestazioni migliorate per tribù più grandi con più mod",
+        "features": {
+          "12gbddr4": "12GB RAM DDR4",
+          "4cores": "4 core CPU",
+          "fullssd": "Archiviazione SSD completa",
+          "pelican": "Pannello Pelican",
+          "support": "Supporto 12/7",
+          "2databases": "2 database",
+          "2backup": "2 backup"
+        }
+      },
+      "stone": {
+        "name": "Stone",
+        "description": "Il nostro pacchetto più popolare per tribù consolidate",
+        "features": {
+          "16gbddr4": "16GB RAM DDR4",
+          "6cores": "6 core CPU",
+          "fullssd": "Archiviazione SSD completa",
+          "pelican": "Pannello Pelican",
+          "support": "Supporto 12/7",
+          "2databases": "2 database",
+          "2backup": "2 backup"
+        }
+      },
+      "metal": {
+        "name": "Metal",
+        "description": "Prestazioni superiori per grandi tribù con mod intensive",
+        "features": {
+          "20gbddr4": "20GB RAM DDR4",
+          "6cores": "6 core CPU",
+          "fullssd": "Archiviazione SSD completa",
+          "pelican": "Pannello Pelican",
+          "support": "Supporto 12/7",
+          "2databases": "2 database",
+          "2backup": "2 backup"
+        }
+      },
+      "tek": {
+        "name": "TEK",
+        "description": "Prestazioni definitive per le esperienze ARK più esigenti",
+        "features": {
+          "24gbddr4": "24GB RAM DDR4",
+          "8cores": "8 core CPU",
+          "fullssd": "Archiviazione SSD completa",
+          "pelican": "Pannello Pelican",
+          "support": "Supporto 12/7",
+          "2databases": "2 database",
+          "2backup": "2 backup"
+        }
+      },
+      "enterprise": {
+        "name": "Enterprise",
+        "description": "Soluzione personalizzata per comunità ed eventi ARK professionali",
+        "features": {
+          "ram": "RAM personalizzata",
+          "cores": "Core CPU personalizzati",
+          "ssd": "Archiviazione SSD personalizzata",
+          "pelican": "Pannello Pelican",
+          "support": "Supporto 12/7",
+          "databases": "Database personalizzati",
+          "backups": "Backup personalizzati"
+        }
+      }
     }
+  },
+  "Reviews": {
+    "title": "Cosa dicono i nostri clienti",
+    "poweredBy": "Alimentato da",
+    "loading": "Caricamento recensioni...",
+    "viewMore": "Visualizza altre recensioni"
   }
 }

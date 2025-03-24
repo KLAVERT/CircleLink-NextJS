@@ -351,6 +351,108 @@
         "online": "24/7 online",
         "instantDelivery": "Directe levering"
       }
+    },
+    "packages": {
+      "title": "Kies Je ARK Server Pakket",
+      "subtitle": "Selecteer de server die het beste bij je tribe past. Alle pakketten bevatten krachtige hardware en DDoS-bescherming.",
+      "selectButton": "Selecteer {name}",
+      "tatch": {
+        "name": "Tatch",
+        "description": "Perfect voor kleine tribes die net beginnen",
+        "features": {
+          "8gbddr4": "8GB DDR4 RAM",
+          "3cores": "3 CPU Cores",
+          "fullssd": "Volledige SSD Opslag",
+          "pelican": "Pelican Panel",
+          "support": "12/7 Support",
+          "2databases": "2 Databases",
+          "2backup": "2 Backups"
+        }
+      },
+      "wood": {
+        "name": "Wood",
+        "description": "Ideaal voor middelgrote tribes met mod-vereisten",
+        "features": {
+          "10gbddr4": "10GB DDR4 RAM",
+          "4cores": "4 CPU Cores",
+          "fullssd": "Volledige SSD Opslag",
+          "pelican": "Pelican Panel",
+          "support": "12/7 Support",
+          "2databases": "2 Databases",
+          "2backup": "2 Backups"
+        }
+      },
+      "clay": {
+        "name": "Clay",
+        "description": "Verbeterde prestaties voor grotere tribes met meerdere mods",
+        "features": {
+          "12gbddr4": "12GB DDR4 RAM",
+          "4cores": "4 CPU Cores",
+          "fullssd": "Volledige SSD Opslag",
+          "pelican": "Pelican Panel",
+          "support": "12/7 Support",
+          "2databases": "2 Databases",
+          "2backup": "2 Backups"
+        }
+      },
+      "stone": {
+        "name": "Stone",
+        "description": "Ons meest populaire pakket voor gevestigde tribes",
+        "features": {
+          "16gbddr4": "16GB DDR4 RAM",
+          "6cores": "6 CPU Cores",
+          "fullssd": "Volledige SSD Opslag",
+          "pelican": "Pelican Panel",
+          "support": "12/7 Support",
+          "2databases": "2 Databases",
+          "2backup": "2 Backups"
+        }
+      },
+      "metal": {
+        "name": "Metal",
+        "description": "Superieure prestaties voor grote tribes met zware mods",
+        "features": {
+          "20gbddr4": "20GB DDR4 RAM",
+          "6cores": "6 CPU Cores",
+          "fullssd": "Volledige SSD Opslag",
+          "pelican": "Pelican Panel",
+          "support": "12/7 Support",
+          "2databases": "2 Databases",
+          "2backup": "2 Backups"
+        }
+      },
+      "tek": {
+        "name": "TEK",
+        "description": "Ultieme prestaties voor de meest veeleisende ARK-ervaringen",
+        "features": {
+          "24gbddr4": "24GB DDR4 RAM",
+          "8cores": "8 CPU Cores",
+          "fullssd": "Volledige SSD Opslag",
+          "pelican": "Pelican Panel",
+          "support": "12/7 Support",
+          "2databases": "2 Databases",
+          "2backup": "2 Backups"
+        }
+      },
+      "enterprise": {
+        "name": "Enterprise",
+        "description": "Aangepaste oplossing voor professionele ARK-communities en evenementen",
+        "features": {
+          "ram": "Aangepaste RAM",
+          "cores": "Aangepaste CPU Cores",
+          "ssd": "Aangepaste SSD Opslag",
+          "pelican": "Pelican Panel",
+          "support": "12/7 Support",
+          "databases": "Aangepaste Databases",
+          "backups": "Aangepaste Backups"
+        }
+      }
     }
+  },
+  "Reviews": {
+    "title": "Wat onze klanten zeggen",
+    "poweredBy": "Mogelijk gemaakt door",
+    "loading": "Reviews laden...",
+    "viewMore": "Bekijk meer reviews"
   }
 }
