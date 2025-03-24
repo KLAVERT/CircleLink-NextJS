@@ -328,5 +328,29 @@
       "gmod": "A sandbox game with endless possibilities. Create your own game types, build constructions, and experiment with the physics properties.",
       "theforest": "Survive after a plane crash on a forested peninsula full of cannibalistic tribes. Build, explore, and defend yourself against the dangers of the forest."
     }
+  },
+  "ark": {
+    "hero": {
+      "badge": "GAME HOSTING",
+      "title": "ARK: SURVIVAL EVOLVED",
+      "subtitle": "PREMIUM GAME SERVERS",
+      "description": "Join our ARK community and survive in a world filled with dinosaurs and prehistoric creatures. Build your tribe, tame beasts, and conquer the island with our high-performance ARK server hosting.",
+      "features": {
+        "dedicatedServers": "High-performance dedicated servers",
+        "modInstallation": "One-click mod installation",
+        "uptime": "24/7 online with 99.9% uptime",
+        "ddosProtection": "DDoS protection included"
+      },
+      "buttons": {
+        "getStarted": "Get Started",
+        "viewPlans": "View Plans"
+      },
+      "bottomFeatures": {
+        "ddosProtection": "DDoS protection",
+        "premiumHardware": "Premium hardware",
+        "online": "24/7 online",
+        "instantDelivery": "Instant delivery"
+      }
+    }
   }
 }

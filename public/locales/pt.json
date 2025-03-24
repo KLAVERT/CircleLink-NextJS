@@ -319,15 +319,39 @@
       "viewPackages": "Ver pacotes"
     },
     "gameDescriptions": {
-      "minecraft": "Expressar sua criatividade em um servidor Minecraft, sozinho ou com amigos? Inicie seu servidor hoje com a CircleLink!",
-      "rust": "Sobreviva no mundo áspero de Rust, onde cada jogador é um potencial inimigo. Construa sua base, forme alianças e lute para sobreviver.",
+      "minecraft": "Expressar sua criatividade em um servidor Minecraft, sozinho ou com amigos? Inicie seu servidor hoje com CircleLink!",
+      "rust": "Sobreviva no mundo cruel de Rust, onde cada jogador é um inimigo em potencial. Construa sua base, forme alianças e lute para sobreviver.",
       "ark": "Lute para sobreviver em um mundo cheio de dinossauros e criaturas pré-históricas. Domestique dinossauros, construa bases e explore uma vasta ilha.",
-      "palworld": "Mergulhe em Palworld, o inovador jogo que leva aventureiros a um mundo onde sobrevivência, construção e captura de Pals são centrais.",
+      "palworld": "Mergulhe em Palworld, o jogo revolucionário que leva aventureiros a um mundo onde sobrevivência, construção e captura de Pals são fundamentais.",
       "satisfactory": "Construa fábricas massivas, automatize linhas de produção e explore um misterioso planeta alienígena neste jogo de construção de fábricas em primeira pessoa.",
-      "sotf": "Sobreviva aos horrores de uma ilha misteriosa cheia de mutantes canibais. Construa, lute e explore neste aterrorizante jogo de sobrevivência e horror.",
-      "fivem": "Crie sua própria experiência GTA com FiveM, a plataforma que possibilita executar servidores de RPG personalizados no mundo de GTA V.",
+      "sotf": "Sobreviva aos horrores de uma ilha misteriosa cheia de mutantes canibais. Construa, lute e explore neste aterrorizante jogo de horror e sobrevivência.",
+      "fivem": "Crie sua própria experiência GTA com FiveM, a plataforma que permite executar servidores de RPG personalizados no mundo de GTA V.",
       "gmod": "Um jogo sandbox com possibilidades infinitas. Crie seus próprios tipos de jogo, construa estruturas e experimente com as propriedades físicas.",
       "theforest": "Sobreviva após um acidente de avião em uma península arborizada cheia de tribos canibais. Construa, explore e defenda-se contra os perigos da floresta."
+    }
+  },
+  "ark": {
+    "hero": {
+      "badge": "HOSPEDAGEM DE JOGOS",
+      "title": "ARK: SURVIVAL EVOLVED",
+      "subtitle": "SERVIDORES DE JOGOS PREMIUM",
+      "description": "Junte-se à nossa comunidade ARK e sobreviva em um mundo cheio de dinossauros e criaturas pré-históricas. Construa sua tribo, domestique bestas e conquiste a ilha com nossa hospedagem de servidor ARK de alto desempenho.",
+      "features": {
+        "dedicatedServers": "Servidores dedicados de alto desempenho",
+        "modInstallation": "Instalação de mods com um clique",
+        "uptime": "24/7 online com 99,9% de disponibilidade",
+        "ddosProtection": "Proteção DDoS incluída"
+      },
+      "buttons": {
+        "getStarted": "Começar",
+        "viewPlans": "Ver planos"
+      },
+      "bottomFeatures": {
+        "ddosProtection": "Proteção DDoS",
+        "premiumHardware": "Hardware premium",
+        "online": "24/7 online",
+        "instantDelivery": "Entrega instantânea"
+      }
     }
   }
 }

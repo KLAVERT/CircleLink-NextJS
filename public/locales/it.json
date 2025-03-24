@@ -318,15 +318,39 @@
       "viewPackages": "Visualizza pacchetti"
     },
     "gameDescriptions": {
-      "minecraft": "Esprimi la tua creatività su un server Minecraft, da solo o con gli amici? Avvia il tuo server oggi con CircleLink!",
+      "minecraft": "Esprimere la tua creatività su un server Minecraft, da solo o con gli amici? Avvia il tuo server oggi con CircleLink!",
       "rust": "Sopravvivi nel duro mondo di Rust, dove ogni giocatore è un potenziale nemico. Costruisci la tua base, forma alleanze e combatti per sopravvivere.",
       "ark": "Combatti per sopravvivere in un mondo pieno di dinosauri e creature preistoriche. Addomestica i dinosauri, costruisci basi ed esplora una vasta isola.",
-      "palworld": "Immergiti in Palworld, il rivoluzionario gioco che porta gli avventurieri in un mondo dove la sopravvivenza, la costruzione e la cattura dei Pal sono fondamentali.",
+      "palworld": "Immergiti in Palworld, il gioco rivoluzionario che porta gli avventurieri in un mondo dove la sopravvivenza, la costruzione e la cattura di Pal sono fondamentali.",
       "satisfactory": "Costruisci fabbriche massicce, automatizza le linee di produzione ed esplora un misterioso pianeta alieno in questo gioco di costruzione di fabbriche in prima persona.",
-      "sotf": "Sopravvivi agli orrori di un'isola misteriosa piena di mutanti cannibali. Costruisci, combatti ed esplora in questo terrificante gioco di sopravvivenza e horror.",
-      "fivem": "Crea la tua esperienza GTA con FiveM, la piattaforma che permette di gestire server di gioco di ruolo personalizzati nel mondo di GTA V.",
+      "sotf": "Sopravvivi agli orrori di un'isola misteriosa piena di mutanti cannibali. Costruisci, combatti ed esplora in questo terrificante gioco di sopravvivenza horror.",
+      "fivem": "Crea la tua esperienza GTA con FiveM, la piattaforma che permette di eseguire server di gioco di ruolo personalizzati nel mondo di GTA V.",
       "gmod": "Un gioco sandbox con possibilità infinite. Crea i tuoi tipi di gioco, costruisci strutture e sperimenta con le proprietà fisiche.",
       "theforest": "Sopravvivi dopo un incidente aereo su una penisola boscosa piena di tribù cannibali. Costruisci, esplora e difenditi dai pericoli della foresta."
+    }
+  },
+  "ark": {
+    "hero": {
+      "badge": "HOSTING DI GIOCHI",
+      "title": "ARK: SURVIVAL EVOLVED",
+      "subtitle": "SERVER DI GIOCO PREMIUM",
+      "description": "Unisciti alla nostra comunità ARK e sopravvivi in un mondo pieno di dinosauri e creature preistoriche. Costruisci la tua tribù, addomestica bestie e conquista l'isola con il nostro hosting di server ARK ad alte prestazioni.",
+      "features": {
+        "dedicatedServers": "Server dedicati ad alte prestazioni",
+        "modInstallation": "Installazione mod con un clic",
+        "uptime": "Online 24/7 con disponibilità del 99,9%",
+        "ddosProtection": "Protezione DDoS inclusa"
+      },
+      "buttons": {
+        "getStarted": "Inizia ora",
+        "viewPlans": "Vedi piani"
+      },
+      "bottomFeatures": {
+        "ddosProtection": "Protezione DDoS",
+        "premiumHardware": "Hardware premium",
+        "online": "Online 24/7",
+        "instantDelivery": "Consegna istantanea"
+      }
     }
   }
 }

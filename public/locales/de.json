@@ -324,9 +324,33 @@
       "palworld": "Tauchen Sie ein in Palworld, das bahnbrechende Spiel, das Abenteurer in eine Welt entführt, in der Überleben, Bauen und das Fangen von Pals im Mittelpunkt stehen.",
       "satisfactory": "Bauen Sie riesige Fabriken, automatisieren Sie Produktionslinien und erkunden Sie einen mysteriösen Alienplaneten in diesem First-Person-Fabrikbau-Spiel.",
       "sotf": "Überleben Sie die Schrecken einer mysteriösen Insel voller kannibalischer Mutanten. Bauen, kämpfen und erkunden Sie in diesem erschreckenden Survival-Horror-Spiel.",
-      "fivem": "Gestalten Sie Ihr eigenes GTA-Erlebnis mit FiveM, der Plattform, die es ermöglicht, benutzerdefinierte Rollenspiel-Server in der Welt von GTA V zu betreiben.",
+      "fivem": "Erstellen Sie Ihre eigene GTA-Erfahrung mit FiveM, der Plattform, die es ermöglicht, benutzerdefinierte Rollenspiel-Server in der Welt von GTA V zu betreiben.",
       "gmod": "Ein Sandbox-Spiel mit endlosen Möglichkeiten. Erstellen Sie Ihre eigenen Spieltypen, bauen Sie Konstruktionen und experimentieren Sie mit den physikalischen Eigenschaften.",
       "theforest": "Überleben Sie nach einem Flugzeugabsturz auf einer bewaldeten Halbinsel voller kannibalischer Stämme. Bauen, erkunden und verteidigen Sie sich gegen die Gefahren des Waldes."
+    }
+  },
+  "ark": {
+    "hero": {
+      "badge": "GAME HOSTING",
+      "title": "ARK: SURVIVAL EVOLVED",
+      "subtitle": "PREMIUM GAMESERVER",
+      "description": "Treten Sie unserer ARK-Community bei und überleben Sie in einer Welt voller Dinosaurier und prähistorischer Kreaturen. Bauen Sie Ihren Stamm auf, zähmen Sie Bestien und erobern Sie die Insel mit unserem leistungsstarken ARK-Server-Hosting.",
+      "features": {
+        "dedicatedServers": "Hochleistungs-Dedicated-Server",
+        "modInstallation": "Ein-Klick-Mod-Installation",
+        "uptime": "24/7 online mit 99,9% Verfügbarkeit",
+        "ddosProtection": "DDoS-Schutz inklusive"
+      },
+      "buttons": {
+        "getStarted": "Loslegen",
+        "viewPlans": "Pläne ansehen"
+      },
+      "bottomFeatures": {
+        "ddosProtection": "DDoS-Schutz",
+        "premiumHardware": "Premium Hardware",
+        "online": "24/7 online",
+        "instantDelivery": "Sofortige Bereitstellung"
+      }
     }
   }
 }

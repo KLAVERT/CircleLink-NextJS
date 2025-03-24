@@ -318,15 +318,39 @@
       "viewPackages": "Voir les forfaits"
     },
     "gameDescriptions": {
-      "minecraft": "Exprimez votre créativité sur un serveur Minecraft, seul ou avec des amis ? Démarrez votre serveur aujourd'hui avec CircleLink !",
-      "rust": "Survivez dans le monde impitoyable de Rust, où chaque joueur est un ennemi potentiel. Construisez votre base, formez des alliances et battez-vous pour survivre.",
-      "ark": "Luttez pour survivre dans un monde plein de dinosaures et de créatures préhistoriques. Apprivoisez des dinosaures, construisez des bases et explorez une vaste île.",
-      "palworld": "Plongez dans Palworld, le jeu révolutionnaire qui emmène les aventuriers dans un monde où la survie, la construction et la capture de Pals sont essentielles.",
-      "satisfactory": "Construisez d'immenses usines, automatisez les chaînes de production et explorez une mystérieuse planète extraterrestre dans ce jeu de construction d'usines à la première personne.",
-      "sotf": "Survivez aux horreurs d'une île mystérieuse peuplée de mutants cannibales. Construisez, combattez et explorez dans ce terrifiant jeu de survie et d'horreur.",
-      "fivem": "Créez votre propre expérience GTA avec FiveM, la plateforme qui permet d'exécuter des serveurs de jeu de rôle personnalisés dans le monde de GTA V.",
+      "minecraft": "Exprimez votre créativité sur un serveur Minecraft, seul ou avec des amis. Démarrez votre serveur aujourd'hui avec CircleLink !",
+      "rust": "Survivez dans le monde impitoyable de Rust, où chaque joueur est un ennemi potentiel. Construisez votre base, formez des alliances et luttez pour survivre.",
+      "ark": "Luttez pour survivre dans un monde rempli de dinosaures et de créatures préhistoriques. Apprivoisez des dinos, construisez des bases et explorez une vaste île.",
+      "palworld": "Plongez dans Palworld, le jeu révolutionnaire qui emmène les aventuriers dans un monde où la survie, la construction et la capture de Pals sont au centre de l'attention.",
+      "satisfactory": "Construisez d'immenses usines, automatisez les chaînes de production et explorez une mystérieuse planète extraterrestre dans ce jeu de construction d'usine à la première personne.",
+      "sotf": "Survivez aux horreurs d'une île mystérieuse remplie de mutants cannibales. Construisez, combattez et explorez dans ce jeu d'horreur de survie terrifiant.",
+      "fivem": "Créez votre propre expérience GTA avec FiveM, la plateforme qui permet de gérer des serveurs de jeu de rôle personnalisés dans le monde de GTA V.",
       "gmod": "Un jeu sandbox aux possibilités infinies. Créez vos propres types de jeu, construisez des structures et expérimentez avec les propriétés physiques.",
       "theforest": "Survivez après un accident d'avion sur une péninsule boisée peuplée de tribus cannibales. Construisez, explorez et défendez-vous contre les dangers de la forêt."
+    }
+  },
+  "ark": {
+    "hero": {
+      "badge": "HÉBERGEMENT DE JEUX",
+      "title": "ARK: SURVIVAL EVOLVED",
+      "subtitle": "SERVEURS DE JEU PREMIUM",
+      "description": "Rejoignez notre communauté ARK et survivez dans un monde rempli de dinosaures et de créatures préhistoriques. Construisez votre tribu, apprivoisez des bêtes et conquérez l'île avec notre hébergement de serveur ARK haute performance.",
+      "features": {
+        "dedicatedServers": "Serveurs dédiés haute performance",
+        "modInstallation": "Installation de mods en un clic",
+        "uptime": "En ligne 24/7 avec 99,9% de disponibilité",
+        "ddosProtection": "Protection DDoS incluse"
+      },
+      "buttons": {
+        "getStarted": "Commencer",
+        "viewPlans": "Voir les offres"
+      },
+      "bottomFeatures": {
+        "ddosProtection": "Protection DDoS",
+        "premiumHardware": "Matériel premium",
+        "online": "En ligne 24/7",
+        "instantDelivery": "Livraison instantanée"
+      }
     }
   }
 }

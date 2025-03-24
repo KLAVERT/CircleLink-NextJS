@@ -328,5 +328,29 @@
       "gmod": "Een sandbox-game met eindeloze mogelijkheden. Creëer je eigen speltypen, bouw constructies en experimenteer met de natuurkundige eigenschappen.",
       "theforest": "Overleef na een vliegtuigcrash op een beboste schiereiland vol kannibalistische stammen. Bouw, verken en verdedig jezelf tegen de gevaren van het woud."
     }
+  },
+  "ark": {
+    "hero": {
+      "badge": "GAME HOSTING",
+      "title": "ARK: SURVIVAL EVOLVED",
+      "subtitle": "PREMIUM GAME SERVERS",
+      "description": "Word lid van onze ARK-community en overleef in een wereld vol dinosaurussen en prehistorische wezens. Bouw je stam, tem beesten en verover het eiland met onze hoogwaardige ARK-server hosting.",
+      "features": {
+        "dedicatedServers": "Hoogwaardige dedicated servers",
+        "modInstallation": "Eén-klik mod installatie",
+        "uptime": "24/7 online met 99,9% uptime",
+        "ddosProtection": "DDoS-bescherming inbegrepen"
+      },
+      "buttons": {
+        "getStarted": "Aan de slag",
+        "viewPlans": "Bekijk plannen"
+      },
+      "bottomFeatures": {
+        "ddosProtection": "DDoS-bescherming",
+        "premiumHardware": "Premium hardware",
+        "online": "24/7 online",
+        "instantDelivery": "Directe levering"
+      }
+    }
   }
 }
