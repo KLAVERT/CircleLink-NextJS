@@ -447,6 +447,24 @@
           "backups": "Sauvegardes personnalisées"
         }
       }
+    },
+    "pelicanPanel": {
+      "title": "Panneau de Contrôle du Serveur de Jeu",
+      "subtitle": "Découvrez l'interface d'hébergement de jeu la plus intuitive et puissante, conçue pour les débutants comme pour les utilisateurs avancés.",
+      "featuresTitle": "Quelques-unes de nos fonctionnalités :",
+      "features": {
+        "ftpLogin": "Connexion FTP",
+        "browserFileManagement": "Gestion de fichiers via navigateur",
+        "subuserLogin": "Connexion sous-utilisateur",
+        "createDatabases": "Création de bases de données",
+        "serverBackups": "Sauvegardes de serveur",
+        "consoleInput": "Entrée console",
+        "restartServer": "Redémarrer votre serveur",
+        "scheduledCommand": "Commande programmée",
+        "scheduledPowerAction": "Action d'alimentation programmée",
+        "databaseManagement": "Gestion de base de données"
+      },
+      "buttonText": "En Savoir Plus"
     }
   },
   "Reviews": {

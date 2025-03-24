@@ -447,6 +447,24 @@
           "backups": "Angepasste Backups"
         }
       }
+    },
+    "pelicanPanel": {
+      "title": "Spielserver-Kontrollpanel",
+      "subtitle": "Erleben Sie die intuitivste und leistungsstärkste Spielhosting-Oberfläche, die sowohl für Anfänger als auch für fortgeschrittene Benutzer konzipiert ist.",
+      "featuresTitle": "Einige unserer Funktionen:",
+      "features": {
+        "ftpLogin": "FTP-Login",
+        "browserFileManagement": "Browser-Dateiverwaltung",
+        "subuserLogin": "Unterbenutzer-Login",
+        "createDatabases": "Datenbanken erstellen",
+        "serverBackups": "Server-Backups",
+        "consoleInput": "Konsoleneingabe",
+        "restartServer": "Server neu starten",
+        "scheduledCommand": "Geplante Befehle",
+        "scheduledPowerAction": "Geplante Energieaktionen",
+        "databaseManagement": "Datenbankverwaltung"
+      },
+      "buttonText": "Mehr Erfahren"
     }
   },
   "Reviews": {

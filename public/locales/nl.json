@@ -447,6 +447,24 @@
           "backups": "Aangepaste Backups"
         }
       }
+    },
+    "pelicanPanel": {
+      "title": "Game Server Controlepaneel",
+      "subtitle": "Ervaar de meest intuïtieve en krachtige game hosting interface, ontworpen voor zowel beginners als gevorderde gebruikers.",
+      "featuresTitle": "Enkele van onze functies:",
+      "features": {
+        "ftpLogin": "FTP login",
+        "browserFileManagement": "Browser bestandsbeheer",
+        "subuserLogin": "Subgebruiker login",
+        "createDatabases": "Databases aanmaken",
+        "serverBackups": "Server back-ups",
+        "consoleInput": "Console input",
+        "restartServer": "Herstart je server",
+        "scheduledCommand": "Geplande commando's",
+        "scheduledPowerAction": "Geplande stroomacties",
+        "databaseManagement": "Database beheer"
+      },
+      "buttonText": "Meer Info"
     }
   },
   "Reviews": {

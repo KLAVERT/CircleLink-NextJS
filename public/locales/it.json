@@ -447,6 +447,24 @@
           "backups": "Backup personalizzati"
         }
       }
+    },
+    "pelicanPanel": {
+      "title": "Pannello di Controllo del Server di Gioco",
+      "subtitle": "Scopri l'interfaccia di hosting di gioco più intuitiva e potente, progettata sia per principianti che per utenti avanzati.",
+      "featuresTitle": "Alcune delle nostre funzionalità:",
+      "features": {
+        "ftpLogin": "Accesso FTP",
+        "browserFileManagement": "Gestione file tramite browser",
+        "subuserLogin": "Accesso sub-utente",
+        "createDatabases": "Creazione database",
+        "serverBackups": "Backup del server",
+        "consoleInput": "Input della console",
+        "restartServer": "Riavvia il tuo server",
+        "scheduledCommand": "Comandi programmati",
+        "scheduledPowerAction": "Azioni di alimentazione programmate",
+        "databaseManagement": "Gestione database"
+      },
+      "buttonText": "Scopri di Più"
     }
   },
   "Reviews": {

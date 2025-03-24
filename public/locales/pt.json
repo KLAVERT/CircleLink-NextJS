@@ -448,6 +448,24 @@
           "backups": "Backups personalizados"
         }
       }
+    },
+    "pelicanPanel": {
+      "title": "Painel de Controle de Servidor de Jogos",
+      "subtitle": "Experimente a interface de hospedagem de jogos mais intuitiva e poderosa, projetada tanto para iniciantes quanto para usuários avançados.",
+      "featuresTitle": "Alguns de nossos recursos:",
+      "features": {
+        "ftpLogin": "Login FTP",
+        "browserFileManagement": "Gerenciamento de arquivos pelo navegador",
+        "subuserLogin": "Login de subusuário",
+        "createDatabases": "Criar bancos de dados",
+        "serverBackups": "Backups do servidor",
+        "consoleInput": "Entrada do console",
+        "restartServer": "Reiniciar seu servidor",
+        "scheduledCommand": "Comando programado",
+        "scheduledPowerAction": "Ação de energia programada",
+        "databaseManagement": "Gerenciamento de banco de dados"
+      },
+      "buttonText": "Saiba Mais"
     }
   },
   "Reviews": {

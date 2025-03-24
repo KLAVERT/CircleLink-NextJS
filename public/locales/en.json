@@ -447,6 +447,24 @@
           "backups": "Custom Backups"
         }
       }
+    },
+    "pelicanPanel": {
+      "title": "Game Server Control Panel",
+      "subtitle": "Experience the most intuitive and powerful game hosting interface, designed for both beginners and advanced users.",
+      "featuresTitle": "Some of our features:",
+      "features": {
+        "ftpLogin": "FTP login",
+        "browserFileManagement": "Browser file management",
+        "subuserLogin": "Subuser login",
+        "createDatabases": "Create databases",
+        "serverBackups": "Server backups",
+        "consoleInput": "Console input",
+        "restartServer": "Restart your server",
+        "scheduledCommand": "Scheduled command",
+        "scheduledPowerAction": "Scheduled power action",
+        "databaseManagement": "Database management"
+      },
+      "buttonText": "Learn More"
     }
   },
   "Reviews": {

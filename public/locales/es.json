@@ -447,6 +447,24 @@
           "backups": "Copias de seguridad personalizadas"
         }
       }
+    },
+    "pelicanPanel": {
+      "title": "Panel de Control del Servidor de Juego",
+      "subtitle": "Experimenta la interfaz de alojamiento de juegos más intuitiva y potente, diseñada tanto para principiantes como para usuarios avanzados.",
+      "featuresTitle": "Algunas de nuestras características:",
+      "features": {
+        "ftpLogin": "Inicio de sesión FTP",
+        "browserFileManagement": "Gestión de archivos desde el navegador",
+        "subuserLogin": "Inicio de sesión de subusuario",
+        "createDatabases": "Crear bases de datos",
+        "serverBackups": "Copias de seguridad del servidor",
+        "consoleInput": "Entrada de consola",
+        "restartServer": "Reiniciar tu servidor",
+        "scheduledCommand": "Comandos programados",
+        "scheduledPowerAction": "Acciones de energía programadas",
+        "databaseManagement": "Gestión de bases de datos"
+      },
+      "buttonText": "Más Información"
     }
   },
   "Reviews": {

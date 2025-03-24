@@ -6,20 +6,7 @@ import Image from 'next/image';
 import Button from '../../../../../components/Button/Button';
 
 const PelicanPanelSection = () => {
-  const t = useTranslations('pelicanPanel');
-
-  const features = [
-    'FTP login',
-    'Browser file management',
-    'Subuser login',
-    'Create databases',
-    'Server backups',
-    'Console input',
-    'Restart your server',
-    'Scheduled command',
-    'Scheduled power action',
-    'Database management',
-  ];
+  const t = useTranslations('ark.pelicanPanel');
 
   return (
     <div className="py-16 bg-[var(--color-tertiary)]">
@@ -28,42 +15,101 @@ const PelicanPanelSection = () => {
           <div className="text-center mb-10">
             <h2 className="text-4xl font-extrabold text-[var(--color-text-primary)] mb-4 tracking-tight">
               <span className="text-[var(--color-text-primary)]">
-                Game Server Control Panel
+                {t('title')}
               </span>
             </h2>
             <p className="text-lg text-[var(--color-text-primary)] max-w-2xl mx-auto">
-              Experience the most intuitive and powerful game hosting interface, designed for both beginners and advanced users.
+              {t('subtitle')}
             </p>
           </div>
 
           <div className="flex flex-col lg:flex-row items-start gap-10">
             <div className="lg:w-1/2 space-y-4">
               <h3 className="text-xl font-bold text-[var(--color-text-primary)] mb-4">
-                Some of our features:
+                {t('featuresTitle')}
               </h3>
               
               <div className="grid grid-cols-2 gap-x-8 gap-y-3">
-                {features.slice(0, 5).map((feature, index) => (
-                  <div key={index} className="flex items-center">
-                    <div className="w-6 h-6 rounded-full bg-[var(--color-quaternary)] flex items-center justify-center mr-2 flex-shrink-0">
-                      <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3 text-[var(--color-text-primary)]" viewBox="0 0 20 20" fill="currentColor">
-                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                      </svg>
-                    </div>
-                    <span className="text-[var(--color-text-primary)]">{feature}</span>
+                <div className="flex items-center">
+                  <div className="w-6 h-6 rounded-full bg-[var(--color-quaternary)] flex items-center justify-center mr-2 flex-shrink-0">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3 text-[var(--color-text-primary)]" viewBox="0 0 20 20" fill="currentColor">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
                   </div>
-                ))}
-
-                {features.slice(5, 10).map((feature, index) => (
-                  <div key={index + 5} className="flex items-center">
-                    <div className="w-6 h-6 rounded-full bg-[var(--color-quaternary)] flex items-center justify-center mr-2 flex-shrink-0">
-                      <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3 text-[var(--color-text-primary)]" viewBox="0 0 20 20" fill="currentColor">
-                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                      </svg>
-                    </div>
-                    <span className="text-[var(--color-text-primary)]">{feature}</span>
+                  <span className="text-[var(--color-text-primary)]">{t('features.ftpLogin')}</span>
+                </div>
+                <div className="flex items-center">
+                  <div className="w-6 h-6 rounded-full bg-[var(--color-quaternary)] flex items-center justify-center mr-2 flex-shrink-0">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3 text-[var(--color-text-primary)]" viewBox="0 0 20 20" fill="currentColor">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
                   </div>
-                ))}
+                  <span className="text-[var(--color-text-primary)]">{t('features.browserFileManagement')}</span>
+                </div>
+                <div className="flex items-center">
+                  <div className="w-6 h-6 rounded-full bg-[var(--color-quaternary)] flex items-center justify-center mr-2 flex-shrink-0">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3 text-[var(--color-text-primary)]" viewBox="0 0 20 20" fill="currentColor">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                  </div>
+                  <span className="text-[var(--color-text-primary)]">{t('features.subuserLogin')}</span>
+                </div>
+                <div className="flex items-center">
+                  <div className="w-6 h-6 rounded-full bg-[var(--color-quaternary)] flex items-center justify-center mr-2 flex-shrink-0">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3 text-[var(--color-text-primary)]" viewBox="0 0 20 20" fill="currentColor">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                  </div>
+                  <span className="text-[var(--color-text-primary)]">{t('features.createDatabases')}</span>
+                </div>
+                <div className="flex items-center">
+                  <div className="w-6 h-6 rounded-full bg-[var(--color-quaternary)] flex items-center justify-center mr-2 flex-shrink-0">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3 text-[var(--color-text-primary)]" viewBox="0 0 20 20" fill="currentColor">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                  </div>
+                  <span className="text-[var(--color-text-primary)]">{t('features.serverBackups')}</span>
+                </div>
+                <div className="flex items-center">
+                  <div className="w-6 h-6 rounded-full bg-[var(--color-quaternary)] flex items-center justify-center mr-2 flex-shrink-0">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3 text-[var(--color-text-primary)]" viewBox="0 0 20 20" fill="currentColor">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                  </div>
+                  <span className="text-[var(--color-text-primary)]">{t('features.consoleInput')}</span>
+                </div>
+                <div className="flex items-center">
+                  <div className="w-6 h-6 rounded-full bg-[var(--color-quaternary)] flex items-center justify-center mr-2 flex-shrink-0">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3 text-[var(--color-text-primary)]" viewBox="0 0 20 20" fill="currentColor">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                  </div>
+                  <span className="text-[var(--color-text-primary)]">{t('features.restartServer')}</span>
+                </div>
+                <div className="flex items-center">
+                  <div className="w-6 h-6 rounded-full bg-[var(--color-quaternary)] flex items-center justify-center mr-2 flex-shrink-0">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3 text-[var(--color-text-primary)]" viewBox="0 0 20 20" fill="currentColor">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                  </div>
+                  <span className="text-[var(--color-text-primary)]">{t('features.scheduledCommand')}</span>
+                </div>
+                <div className="flex items-center">
+                  <div className="w-6 h-6 rounded-full bg-[var(--color-quaternary)] flex items-center justify-center mr-2 flex-shrink-0">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3 text-[var(--color-text-primary)]" viewBox="0 0 20 20" fill="currentColor">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                  </div>
+                  <span className="text-[var(--color-text-primary)]">{t('features.scheduledPowerAction')}</span>
+                </div>
+                <div className="flex items-center">
+                  <div className="w-6 h-6 rounded-full bg-[var(--color-quaternary)] flex items-center justify-center mr-2 flex-shrink-0">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3 text-[var(--color-text-primary)]" viewBox="0 0 20 20" fill="currentColor">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                  </div>
+                  <span className="text-[var(--color-text-primary)]">{t('features.databaseManagement')}</span>
+                </div>
               </div>
               
               <div className="pt-6">
@@ -71,7 +117,7 @@ const PelicanPanelSection = () => {
                   variant="blue"
                   href='/#panel'
                 >
-                  Explore Control Panel
+                  {t('buttonText')}
                 </Button>
               </div>
             </div>
