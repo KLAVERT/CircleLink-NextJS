@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import Preloader from '@/components/Preloader/Preloader';
 import HeroSection from './_components/HeroSection';
 import PackageSection from './_components/PackageSection';
-import ReviewSection from './_components/reviewSection';
+import ReviewSection from './_components/ReviewSection';
 import PelicanPanelSection from './_components/PelicanPanelSection';
 import FAQSection from './_components/FAQSection';
 

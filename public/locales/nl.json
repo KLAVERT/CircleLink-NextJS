@@ -467,6 +467,148 @@
       "buttonText": "Meer Info"
     }
   },
+  "rust": {
+    "hero": {
+      "badge": "GAME HOSTING",
+      "title": "RUST",
+      "subtitle": "PREMIUM GAME SERVERS",
+      "description": "Word lid van onze Rust-community en overleef in een harde wereld waar elke speler een potentiële bedreiging vormt. Bouw bases, vorm allianties en verdedig je territorium met onze hoogwaardige Rust serverhosting.",
+      "features": {
+        "dedicatedServers": "Hoogwaardige dedicated servers",
+        "modInstallation": "One-click mod installatie",
+        "uptime": "24/7 online met 99,9% uptime",
+        "ddosProtection": "DDoS-bescherming inbegrepen"
+      },
+      "buttons": {
+        "getStarted": "Aan de slag",
+        "viewPlans": "Bekijk plannen"
+      },
+      "bottomFeatures": {
+        "ddosProtection": "DDoS-bescherming",
+        "premiumHardware": "Premium hardware",
+        "online": "24/7 online",
+        "instantDelivery": "Directe levering"
+      }
+    },
+    "packages": {
+      "title": "Kies Je Rust Server Pakket",
+      "subtitle": "Selecteer de server die het beste bij de behoeften van je clan past. Alle pakketten bevatten hoogwaardige hardware en DDoS-bescherming.",
+      "selectButton": "Selecteer {name}",
+      "ddr": {
+        "ddr4": "DDR4",
+        "ddr3": "DDR3"
+      },
+      "wood": {
+        "name": "Wood",
+        "description": "Ideaal voor middelgrote clans die net beginnen",
+        "features": {
+          "8gbddr4": "8GB DDR4 RAM",
+          "3cores": "3 CPU Cores",
+          "fullssd": "Volledige SSD-opslag",
+          "pelican": "Pelican Panel",
+          "support": "12/7 Ondersteuning",
+          "2databases": "2 Databases",
+          "2backup": "2 Back-ups"
+        }
+      },
+      "stone": {
+        "name": "Stone",
+        "description": "Ons aanbevolen pakket voor groeiende clans",
+        "features": {
+          "10gbddr4": "10GB DDR4 RAM",
+          "4cores": "4 CPU Cores",
+          "fullssd": "Volledige SSD-opslag",
+          "pelican": "Pelican Panel",
+          "support": "12/7 Ondersteuning",
+          "2databases": "2 Databases",
+          "2backup": "2 Back-ups"
+        }
+      },
+      "metal": {
+        "name": "Metal",
+        "description": "Verbeterde prestaties voor grotere clans met meerdere mods",
+        "features": {
+          "12gbddr4": "12GB DDR4 RAM",
+          "4cores": "4 CPU Cores",
+          "fullssd": "Volledige SSD-opslag",
+          "pelican": "Pelican Panel",
+          "support": "Prioriteit Ondersteuning",
+          "2databases": "2 Databases",
+          "2backup": "2 Back-ups"
+        }
+      },
+      "sulfer": {
+        "name": "Sulfur",
+        "description": "Ons meest gekozen pakket voor gevestigde clans",
+        "features": {
+          "16gbddr4": "16GB DDR4 RAM",
+          "6cores": "6 CPU Cores",
+          "fullssd": "Volledige SSD-opslag",
+          "pelican": "Pelican Panel",
+          "support": "Prioriteit Ondersteuning",
+          "2databases": "2 Databases",
+          "2backup": "2 Back-ups"
+        }
+      },
+      "hqm": {
+        "name": "HQM",
+        "description": "Superieure prestaties voor grote clans met zware mods",
+        "features": {
+          "20gbddr4": "20GB DDR4 RAM",
+          "6cores": "6 CPU Cores",
+          "fullssd": "Volledige SSD-opslag",
+          "pelican": "Pelican Panel",
+          "support": "Prioriteit Ondersteuning",
+          "2databases": "2 Databases",
+          "2backup": "2 Back-ups"
+        }
+      },
+      "tech": {
+        "name": "Tech",
+        "description": "Ultieme prestaties voor de meest veeleisende Rust-ervaringen",
+        "features": {
+          "24gbddr4": "24GB DDR4 RAM",
+          "8cores": "8 CPU Cores",
+          "fullssd": "Volledige SSD-opslag",
+          "pelican": "Pelican Panel",
+          "support": "12/7 Ondersteuning",
+          "2databases": "2 Databases",
+          "2backup": "2 Back-ups"
+        }
+      },
+      "enterprise": {
+        "name": "Enterprise",
+        "description": "Aangepaste oplossing voor professionele Rust-communities en evenementen",
+        "features": {
+          "ram": "Aangepaste RAM",
+          "cores": "Aangepaste CPU Cores",
+          "ssd": "Aangepaste SSD-opslag",
+          "pelican": "Pelican Panel",
+          "support": "12/7 Ondersteuning",
+          "databases": "Aangepaste Databases",
+          "backups": "Aangepaste Back-ups"
+        }
+      }
+    },
+    "pelicanPanel": {
+      "title": "Game Server Controlepaneel",
+      "subtitle": "Ervaar de meest intuïtieve en krachtige game hosting-interface, ontworpen voor zowel beginners als gevorderde gebruikers.",
+      "featuresTitle": "Enkele van onze functies:",
+      "features": {
+        "ftpLogin": "FTP-inlog",
+        "browserFileManagement": "Browser bestandsbeheer",
+        "subuserLogin": "Subgebruiker inlog",
+        "createDatabases": "Databases aanmaken",
+        "serverBackups": "Server back-ups",
+        "consoleInput": "Console-invoer",
+        "restartServer": "Herstart je server",
+        "scheduledCommand": "Geplande opdracht",
+        "scheduledPowerAction": "Geplande stroomactie",
+        "databaseManagement": "Database-beheer"
+      },
+      "buttonText": "Meer informatie"
+    }
+  },
   "Reviews": {
     "title": "Wat onze klanten zeggen",
     "poweredBy": "Mogelijk gemaakt door",

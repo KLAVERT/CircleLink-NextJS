@@ -467,6 +467,148 @@
       "buttonText": "Learn More"
     }
   },
+  "rust": {
+    "hero": {
+      "badge": "GAME HOSTING",
+      "title": "RUST",
+      "subtitle": "PREMIUM GAME SERVERS",
+      "description": "Join our Rust community and survive in a harsh world where every player is a potential threat. Build bases, form alliances, and defend your territory with our high-performance Rust server hosting.",
+      "features": {
+        "dedicatedServers": "High-performance dedicated servers",
+        "modInstallation": "One-click mod installation",
+        "uptime": "24/7 online with 99.9% uptime",
+        "ddosProtection": "DDoS protection included"
+      },
+      "buttons": {
+        "getStarted": "Get Started",
+        "viewPlans": "View Plans"
+      },
+      "bottomFeatures": {
+        "ddosProtection": "DDoS protection",
+        "premiumHardware": "Premium hardware",
+        "online": "24/7 online",
+        "instantDelivery": "Instant delivery"
+      }
+    },
+    "packages": {
+      "title": "Choose Your Rust Server Package",
+      "subtitle": "Select the server that best fits your clan's needs. All packages include high-performance hardware and DDoS protection.",
+      "selectButton": "Select {name}",
+      "ddr": {
+        "ddr4": "DDR4",
+        "ddr3": "DDR3"
+      },
+      "wood": {
+        "name": "Wood",
+        "description": "Ideal for medium-sized clans just getting started",
+        "features": {
+          "8gbddr4": "8GB DDR4 RAM",
+          "3cores": "3 CPU Cores",
+          "fullssd": "Full SSD Storage",
+          "pelican": "Pelican Panel",
+          "support": "12/7 Support",
+          "2databases": "2 Databases",
+          "2backup": "2 Backups"
+        }
+      },
+      "stone": {
+        "name": "Stone",
+        "description": "Our recommended package for growing clans",
+        "features": {
+          "10gbddr4": "10GB DDR4 RAM",
+          "4cores": "4 CPU Cores",
+          "fullssd": "Full SSD Storage",
+          "pelican": "Pelican Panel",
+          "support": "12/7 Support",
+          "2databases": "2 Databases",
+          "2backup": "2 Backups"
+        }
+      },
+      "metal": {
+        "name": "Metal",
+        "description": "Enhanced performance for larger clans with multiple mods",
+        "features": {
+          "12gbddr4": "12GB DDR4 RAM",
+          "4cores": "4 CPU Cores",
+          "fullssd": "Full SSD Storage",
+          "pelican": "Pelican Panel",
+          "support": "Priority Support",
+          "2databases": "2 Databases",
+          "2backup": "2 Backups"
+        }
+      },
+      "sulfer": {
+        "name": "Sulfur",
+        "description": "Our most popular package for established clans",
+        "features": {
+          "16gbddr4": "16GB DDR4 RAM",
+          "6cores": "6 CPU Cores",
+          "fullssd": "Full SSD Storage",
+          "pelican": "Pelican Panel",
+          "support": "Priority Support",
+          "2databases": "2 Databases",
+          "2backup": "2 Backups"
+        }
+      },
+      "hqm": {
+        "name": "HQM",
+        "description": "Superior performance for large clans with heavy mods",
+        "features": {
+          "20gbddr4": "20GB DDR4 RAM",
+          "6cores": "6 CPU Cores",
+          "fullssd": "Full SSD Storage",
+          "pelican": "Pelican Panel",
+          "support": "Priority Support",
+          "2databases": "2 Databases",
+          "2backup": "2 Backups"
+        }
+      },
+      "tech": {
+        "name": "Tech",
+        "description": "Ultimate performance for the most demanding Rust experiences",
+        "features": {
+          "24gbddr4": "24GB DDR4 RAM",
+          "8cores": "8 CPU Cores",
+          "fullssd": "Full SSD Storage",
+          "pelican": "Pelican Panel",
+          "support": "12/7 Support",
+          "2databases": "2 Databases",
+          "2backup": "2 Backups"
+        }
+      },
+      "enterprise": {
+        "name": "Enterprise",
+        "description": "Custom solution for professional Rust communities and events",
+        "features": {
+          "ram": "Custom RAM",
+          "cores": "Custom CPU Cores",
+          "ssd": "Custom SSD Storage",
+          "pelican": "Pelican Panel",
+          "support": "12/7 Support",
+          "databases": "Custom Databases",
+          "backups": "Custom Backups"
+        }
+      }
+    },
+    "pelicanPanel": {
+      "title": "Game Server Control Panel",
+      "subtitle": "Experience the most intuitive and powerful game hosting interface, designed for both beginners and advanced users.",
+      "featuresTitle": "Some of our features:",
+      "features": {
+        "ftpLogin": "FTP login",
+        "browserFileManagement": "Browser file management",
+        "subuserLogin": "Subuser login",
+        "createDatabases": "Create databases",
+        "serverBackups": "Server backups",
+        "consoleInput": "Console input",
+        "restartServer": "Restart your server",
+        "scheduledCommand": "Scheduled command",
+        "scheduledPowerAction": "Scheduled power action",
+        "databaseManagement": "Database management"
+      },
+      "buttonText": "Learn More"
+    }
+  },
   "Reviews": {
     "title": "What our customers say",
     "poweredBy": "Powered by",

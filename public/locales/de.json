@@ -472,5 +472,131 @@
     "poweredBy": "Powered by",
     "loading": "Bewertungen werden geladen...",
     "viewMore": "Mehr Bewertungen ansehen"
+  },
+  "rust": {
+    "hero": {
+      "badge": "RUST HOSTING",
+      "title": "RUST Server Hosting",
+      "subtitle": "Die besten RUST Server ab €4,50 pro Monat",
+      "description": "Mit CircleLink erhalten Sie einen hochmodernen RUST-Server mit qualifiziertem 24/7-Kundensupport und einem benutzerfreundlichen Verwaltungssystem.",
+      "features": {
+        "feature1": "Enterprise DDoS-Schutz",
+        "feature2": "Einfaches Kontrollpanel",
+        "feature3": "Premium Hardware",
+        "feature4": "Anpassbare Konfiguration"
+      },
+      "buttons": {
+        "viewPricing": "Preise anzeigen",
+        "contactUs": "Kontaktieren Sie uns"
+      },
+      "bottomFeatures": {
+        "feature1": "Premium Hardware",
+        "feature2": "Server in 2 Min. einsatzbereit",
+        "feature3": "97,5% Kundenzufriedenheit"
+      }
+    },
+    "packages": {
+      "title": "RUST Serverpakete",
+      "subtitle": "Wählen Sie das Paket, das am besten zu Ihren Bedürfnissen passt",
+      "wood": {
+        "title": "Wood",
+        "description": "Für kleine, freundliche Server",
+        "features": {
+          "feature1": "2GB RAM",
+          "feature2": "Keine Spielerbegrenzung",
+          "feature3": "DDoS-Schutz",
+          "feature4": "High-Speed SSD"
+        }
+      },
+      "stone": {
+        "title": "Stone",
+        "description": "Für mittelgroße Server",
+        "features": {
+          "feature1": "4GB RAM",
+          "feature2": "Keine Spielerbegrenzung",
+          "feature3": "DDoS-Schutz",
+          "feature4": "High-Speed SSD"
+        }
+      },
+      "metal": {
+        "title": "Metal",
+        "description": "Für große Server",
+        "features": {
+          "feature1": "8GB RAM",
+          "feature2": "Keine Spielerbegrenzung",
+          "feature3": "DDoS-Schutz",
+          "feature4": "High-Speed SSD"
+        }
+      },
+      "sulfur": {
+        "title": "Sulfur",
+        "description": "Für intensive PvP-Server",
+        "features": {
+          "feature1": "12GB RAM",
+          "feature2": "Keine Spielerbegrenzung",
+          "feature3": "DDoS-Schutz",
+          "feature4": "High-Speed SSD"
+        }
+      },
+      "hqm": {
+        "title": "HQM",
+        "description": "Für große Server mit Mods",
+        "features": {
+          "feature1": "16GB RAM",
+          "feature2": "Keine Spielerbegrenzung",
+          "feature3": "DDoS-Schutz",
+          "feature4": "High-Speed SSD"
+        }
+      },
+      "tech": {
+        "title": "Tech",
+        "description": "Für Events und große Communities",
+        "features": {
+          "feature1": "32GB RAM",
+          "feature2": "Keine Spielerbegrenzung",
+          "feature3": "DDoS-Schutz",
+          "feature4": "High-Speed SSD"
+        }
+      },
+      "enterprise": {
+        "title": "Enterprise",
+        "description": "Für sehr große Communities",
+        "features": {
+          "feature1": "64GB RAM",
+          "feature2": "Keine Spielerbegrenzung",
+          "feature3": "DDoS-Schutz",
+          "feature4": "High-Speed SSD"
+        }
+      }
+    },
+    "pelicanPanel": {
+      "title": "RUST Serversteuerung",
+      "subtitle": "Mit dem Pelican Panel",
+      "description": "Das Pelican Panel ist ein benutzerfreundliches Spielesteuerungspanel, mit dem Sie Ihren Spieleserver mit wenigen Klicks steuern können. Sie können Ihren Server starten, stoppen, neu starten, Mods installieren, Karten wechseln und vieles mehr.",
+      "features": {
+        "feature1": {
+          "title": "Benutzerfreundlich",
+          "description": "Unsere intuitive Oberfläche macht die Serververwaltung extrem einfach."
+        },
+        "feature2": {
+          "title": "Ein-Klick-Mod-Installation",
+          "description": "Installieren Sie Mods mit einem einzigen Klick direkt über das Kontrollpanel."
+        },
+        "feature3": {
+          "title": "Kartenkonfiguration",
+          "description": "Wechseln Sie problemlos die Karte und konfigurieren Sie die Karteneinstellungen."
+        },
+        "feature4": {
+          "title": "Sofortiger Neustart",
+          "description": "Starten Sie Ihren Server mit einem einzigen Klick sofort neu."
+        }
+      },
+      "button": "Mehr Informationen"
+    },
+    "reviews": {
+      "title": "Was unsere Kunden sagen",
+      "subtitle": "RUST Kundenbewertungen",
+      "description": "Unsere Kunden lieben unsere RUST-Server wegen der Stabilität, Leistung und des unglaublichen Supports, den wir bieten."
+    }
   }
 }

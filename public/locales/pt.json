@@ -473,5 +473,131 @@
     "poweredBy": "Desenvolvido por",
     "loading": "Carregando avaliações...",
     "viewMore": "Ver mais avaliações"
+  },
+  "rust": {
+    "hero": {
+      "badge": "RUST HOSTING",
+      "title": "Hospedagem do Servidor RUST",
+      "subtitle": "Os melhores servidores RUST a partir de €4,50 por mês",
+      "description": "Com o CircleLink, você obtém um servidor RUST de última geração com atendimento ao cliente 24/7 qualificado e um sistema de gerenciamento fácil de usar.",
+      "features": {
+        "feature1": "Proteção DDoS empresarial",
+        "feature2": "Painel de controle fácil",
+        "feature3": "Hardware premium",
+        "feature4": "Configuração personalizável"
+      },
+      "buttons": {
+        "viewPricing": "Ver preços",
+        "contactUs": "Contate-nos"
+      },
+      "bottomFeatures": {
+        "feature1": "Hardware premium",
+        "feature2": "Servidor pronto em 2 min",
+        "feature3": "97,5% de satisfação do cliente"
+      }
+    },
+    "packages": {
+      "title": "Pacotes de Servidores RUST",
+      "subtitle": "Escolha o pacote que melhor se adapta às suas necessidades",
+      "wood": {
+        "title": "Wood",
+        "description": "Para pequenos servidores amigáveis",
+        "features": {
+          "feature1": "2GB RAM",
+          "feature2": "Sem limite de jogadores",
+          "feature3": "Proteção DDoS",
+          "feature4": "SSD de alta velocidade"
+        }
+      },
+      "stone": {
+        "title": "Stone",
+        "description": "Para servidores de médio porte",
+        "features": {
+          "feature1": "4GB RAM",
+          "feature2": "Sem limite de jogadores",
+          "feature3": "Proteção DDoS",
+          "feature4": "SSD de alta velocidade"
+        }
+      },
+      "metal": {
+        "title": "Metal",
+        "description": "Para servidores grandes",
+        "features": {
+          "feature1": "8GB RAM",
+          "feature2": "Sem limite de jogadores",
+          "feature3": "Proteção DDoS",
+          "feature4": "SSD de alta velocidade"
+        }
+      },
+      "sulfur": {
+        "title": "Sulfur",
+        "description": "Para servidores PvP intensivos",
+        "features": {
+          "feature1": "12GB RAM",
+          "feature2": "Sem limite de jogadores",
+          "feature3": "Proteção DDoS",
+          "feature4": "SSD de alta velocidade"
+        }
+      },
+      "hqm": {
+        "title": "HQM",
+        "description": "Para servidores grandes com mods",
+        "features": {
+          "feature1": "16GB RAM",
+          "feature2": "Sem limite de jogadores",
+          "feature3": "Proteção DDoS",
+          "feature4": "SSD de alta velocidade"
+        }
+      },
+      "tech": {
+        "title": "Tech",
+        "description": "Para eventos e comunidades grandes",
+        "features": {
+          "feature1": "32GB RAM",
+          "feature2": "Sem limite de jogadores",
+          "feature3": "Proteção DDoS",
+          "feature4": "SSD de alta velocidade"
+        }
+      },
+      "enterprise": {
+        "title": "Enterprise",
+        "description": "Para comunidades muito grandes",
+        "features": {
+          "feature1": "64GB RAM",
+          "feature2": "Sem limite de jogadores",
+          "feature3": "Proteção DDoS",
+          "feature4": "SSD de alta velocidade"
+        }
+      }
+    },
+    "pelicanPanel": {
+      "title": "Controle de Servidor RUST",
+      "subtitle": "Com o Painel Pelican",
+      "description": "O Painel Pelican é um painel de controle de jogo fácil de usar que permite controlar seu servidor de jogo com alguns cliques. Você pode iniciar, parar, reiniciar seu servidor, instalar mods, mudar de mapa e muito mais.",
+      "features": {
+        "feature1": {
+          "title": "Fácil de usar",
+          "description": "Nossa interface intuitiva torna o gerenciamento do servidor extremamente simples."
+        },
+        "feature2": {
+          "title": "Instalação de mods com um clique",
+          "description": "Instale mods com um único clique diretamente do painel de controle."
+        },
+        "feature3": {
+          "title": "Configuração de mapa",
+          "description": "Mude de mapa facilmente e configure as configurações do mapa."
+        },
+        "feature4": {
+          "title": "Reinício instantâneo",
+          "description": "Reinicie seu servidor instantaneamente com um único clique."
+        }
+      },
+      "button": "Mais informações"
+    },
+    "reviews": {
+      "title": "O que nossos clientes dizem",
+      "subtitle": "Testemunhos de clientes RUST",
+      "description": "Nossos clientes amam nossos servidores RUST pela estabilidade, desempenho e suporte incrível que fornecemos."
+    }
   }
 }
