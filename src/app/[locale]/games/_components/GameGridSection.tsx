@@ -49,7 +49,7 @@ const GameGridSection = () => {
       slug: '/games/rust',
       popularity: 9,
       description: t('gameDescriptions.rust'),
-      price: 8.00,
+      price: 7.50,
       backgroundImage: '/images/webp/games/backgrounds/rust-wallpaper.webp',
       backgroundWidth: 'w-2/3'
     },
@@ -74,7 +74,7 @@ const GameGridSection = () => {
       slug: '/games/palworld',
       popularity: 9,
       description: t('gameDescriptions.palworld'),
-      price: 6.00,
+      price: 15.00,
       backgroundImage: '/images/webp/games/backgrounds/palworld-wallpaper.webp',
       backgroundWidth: 'w-2/3'
     },

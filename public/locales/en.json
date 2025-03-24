@@ -609,6 +609,197 @@
       "buttonText": "Learn More"
     }
   },
+  "palworld": {
+    "hero": {
+      "badge": "PALWORLD HOSTING",
+      "title": "Palworld Server Hosting",
+      "subtitle": "The best Palworld servers starting at €4.50 per month",
+      "description": "With CircleLink, you get a cutting-edge Palworld server with qualified 24/7 customer support and an easy-to-use management system.",
+      "features": {
+        "dedicatedServers": "High-performance dedicated servers",
+        "modInstallation": "One-click mod installation",
+        "uptime": "24/7 online with 99.9% uptime",
+        "ddosProtection": "DDoS protection included"
+      },
+      "buttons": {
+        "getStarted": "Get Started",
+        "viewPlans": "View Plans"
+      },
+      "bottomFeatures": {
+        "ddosProtection": "DDoS protection",
+        "premiumHardware": "Premium hardware",
+        "online": "24/7 online",
+        "instantDelivery": "Instant delivery"
+      }
+    },
+    "packages": {
+      "title": "Palworld Server Packages",
+      "subtitle": "Choose the package that best suits your needs",
+      "selectButton": "Select {name}",
+      "leaf": {
+        "title": "Leaf",
+        "name": "Leaf",
+        "description": "For small friendly servers",
+        "features": {
+          "feature1": "2GB RAM",
+          "feature2": "No player limit",
+          "feature3": "DDoS protection",
+          "feature4": "High-speed SSD",
+          "16gbddr4": "16GB DDR4 RAM",
+          "2cores": "2 CPU cores",
+          "fullssd": "Full SSD storage",
+          "pelican": "Pelican panel included",
+          "support": "24/7 Support",
+          "2databases": "2 Databases",
+          "2backup": "2 Backups"
+        }
+      },
+      "stone": {
+        "title": "Stone",
+        "name": "Stone",
+        "description": "For medium-sized servers",
+        "features": {
+          "feature1": "4GB RAM",
+          "feature2": "No player limit",
+          "feature3": "DDoS protection",
+          "feature4": "High-speed SSD",
+          "20gbddr4": "20GB DDR4 RAM",
+          "4cores": "4 CPU cores",
+          "fullssd": "Full SSD storage",
+          "pelican": "Pelican panel included",
+          "support": "24/7 Support",
+          "2databases": "2 Databases",
+          "2backup": "2 Backups"
+        }
+      },
+      "iron": {
+        "title": "Iron",
+        "name": "Iron",
+        "description": "For large servers",
+        "features": {
+          "feature1": "8GB RAM",
+          "feature2": "No player limit",
+          "feature3": "DDoS protection",
+          "feature4": "High-speed SSD",
+          "24gbddr4": "24GB DDR4 RAM",
+          "4cores": "4 CPU cores",
+          "fullssd": "Full SSD storage",
+          "pelican": "Pelican panel included",
+          "support": "24/7 Support",
+          "2databases": "2 Databases",
+          "2backup": "2 Backups"
+        }
+      },
+      "titanium": {
+        "title": "Titanium",
+        "name": "Titanium",
+        "description": "For intensive PvP servers",
+        "features": {
+          "feature1": "12GB RAM",
+          "feature2": "No player limit",
+          "feature3": "DDoS protection",
+          "feature4": "High-speed SSD",
+          "32gbddr4": "32GB DDR4 RAM",
+          "6cores": "6 CPU cores",
+          "fullssd": "Full SSD storage",
+          "pelican": "Pelican panel included",
+          "support": "24/7 Support",
+          "2databases": "2 Databases",
+          "2backup": "2 Backups"
+        }
+      },
+      "ancient": {
+        "title": "Ancient",
+        "name": "Ancient",
+        "description": "For large servers with mods",
+        "features": {
+          "feature1": "16GB RAM",
+          "feature2": "No player limit",
+          "feature3": "DDoS protection",
+          "feature4": "High-speed SSD",
+          "40gbddr4": "40GB DDR4 RAM",
+          "6cores": "6 CPU cores",
+          "fullssd": "Full SSD storage",
+          "pelican": "Pelican panel included",
+          "support": "24/7 Support",
+          "2databases": "2 Databases",
+          "2backup": "2 Backups"
+        }
+      },
+      "relic": {
+        "title": "Relic",
+        "name": "Relic",
+        "description": "For events and large communities",
+        "features": {
+          "feature1": "32GB RAM",
+          "feature2": "No player limit",
+          "feature3": "DDoS protection",
+          "feature4": "High-speed SSD",
+          "64gbddr4": "64GB DDR4 RAM",
+          "8cores": "8 CPU cores",
+          "fullssd": "Full SSD storage",
+          "pelican": "Pelican panel included",
+          "support": "24/7 Support",
+          "2databases": "2 Databases",
+          "2backup": "2 Backups"
+        }
+      },
+      "enterprise": {
+        "title": "Enterprise",
+        "name": "Enterprise",
+        "description": "For very large communities",
+        "features": {
+          "feature1": "64GB RAM",
+          "feature2": "No player limit",
+          "feature3": "DDoS protection",
+          "feature4": "High-speed SSD",
+          "ram": "Customized RAM allocation",
+          "cores": "Dedicated CPU cores",
+          "ssd": "Customized SSD storage",
+          "pelican": "Pelican panel included",
+          "support": "Priority 24/7 Support",
+          "databases": "Unlimited databases",
+          "backups": "Daily backups"
+        }
+      }
+    },
+    "pelicanPanel": {
+      "title": "Palworld Server Control",
+      "subtitle": "With The Pelican Panel",
+      "description": "The Pelican Panel is an easy-to-use game control panel that lets you control your game server with a few clicks. You can start, stop, restart your server, install mods, change maps, and much more.",
+      "featuresTitle": "Some of our features:",
+      "features": {
+        "ftpLogin": "FTP login",
+        "browserFileManagement": "Browser file management",
+        "subuserLogin": "Subuser login",
+        "createDatabases": "Create databases",
+        "serverBackups": "Server backups",
+        "consoleInput": "Console input",
+        "restartServer": "Restart your server",
+        "scheduledCommand": "Scheduled command",
+        "scheduledPowerAction": "Scheduled power action",
+        "databaseManagement": "Database management"
+      },
+      "buttonText": "More information",
+      "feature1": {
+        "title": "Easy to use",
+        "description": "Our intuitive interface makes server management extremely simple."
+      },
+      "feature2": {
+        "title": "One-click mod installation",
+        "description": "Install mods with a single click directly from the control panel."
+      },
+      "feature3": {
+        "title": "Map configuration",
+        "description": "Easily change maps and configure map settings."
+      },
+      "feature4": {
+        "title": "Instant restart",
+        "description": "Restart your server instantly with a single click."
+      },
+      "button": "More information"
+    }
+  },
   "Reviews": {
     "title": "What our customers say",
     "poweredBy": "Powered by",

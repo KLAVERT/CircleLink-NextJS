@@ -598,5 +598,196 @@
       "subtitle": "Témoignages de clients RUST",
       "description": "Nos clients adorent nos serveurs RUST pour leur stabilité, leurs performances et le support incroyable que nous fournissons."
     }
+  },
+  "palworld": {
+    "hero": {
+      "badge": "HÉBERGEMENT PALWORLD",
+      "title": "Hébergement de Serveur Palworld",
+      "subtitle": "Les meilleurs serveurs Palworld à partir de 4,50 € par mois",
+      "description": "Avec CircleLink, vous obtenez un serveur Palworld de pointe avec un support client qualifié 24/7 et un système de gestion facile à utiliser.",
+      "features": {
+        "dedicatedServers": "Serveurs dédiés haute performance",
+        "modInstallation": "Installation de mods en un clic",
+        "uptime": "24/7 en ligne avec 99,9% de disponibilité",
+        "ddosProtection": "Protection DDoS incluse"
+      },
+      "buttons": {
+        "getStarted": "Commencer",
+        "viewPlans": "Voir les Plans"
+      },
+      "bottomFeatures": {
+        "ddosProtection": "Protection DDoS",
+        "premiumHardware": "Matériel premium",
+        "online": "24/7 en ligne",
+        "instantDelivery": "Livraison instantanée"
+      }
+    },
+    "packages": {
+      "title": "Packs de Serveurs Palworld",
+      "subtitle": "Choisissez le pack qui correspond le mieux à vos besoins",
+      "selectButton": "Sélectionner {name}",
+      "leaf": {
+        "title": "Leaf",
+        "name": "Leaf",
+        "description": "Pour les petits serveurs conviviaux",
+        "features": {
+          "feature1": "2 Go RAM",
+          "feature2": "Pas de limite de joueurs",
+          "feature3": "Protection DDoS",
+          "feature4": "SSD haute vitesse",
+          "16gbddr4": "16 Go RAM DDR4",
+          "2cores": "2 cœurs CPU",
+          "fullssd": "Stockage SSD complet",
+          "pelican": "Panneau Pelican inclus",
+          "support": "Support 24/7",
+          "2databases": "2 Bases de données",
+          "2backup": "2 Sauvegardes"
+        }
+      },
+      "stone": {
+        "title": "Stone",
+        "name": "Stone",
+        "description": "Pour les serveurs de taille moyenne",
+        "features": {
+          "feature1": "4 Go RAM",
+          "feature2": "Pas de limite de joueurs",
+          "feature3": "Protection DDoS",
+          "feature4": "SSD haute vitesse",
+          "20gbddr4": "20 Go RAM DDR4",
+          "4cores": "4 cœurs CPU",
+          "fullssd": "Stockage SSD complet",
+          "pelican": "Panneau Pelican inclus",
+          "support": "Support 24/7",
+          "2databases": "2 Bases de données",
+          "2backup": "2 Sauvegardes"
+        }
+      },
+      "iron": {
+        "title": "Iron",
+        "name": "Iron",
+        "description": "Pour les grands serveurs",
+        "features": {
+          "feature1": "8 Go RAM",
+          "feature2": "Pas de limite de joueurs",
+          "feature3": "Protection DDoS",
+          "feature4": "SSD haute vitesse",
+          "24gbddr4": "24 Go RAM DDR4",
+          "4cores": "4 cœurs CPU",
+          "fullssd": "Stockage SSD complet",
+          "pelican": "Panneau Pelican inclus",
+          "support": "Support 24/7",
+          "2databases": "2 Bases de données",
+          "2backup": "2 Sauvegardes"
+        }
+      },
+      "titanium": {
+        "title": "Titanium",
+        "name": "Titanium",
+        "description": "Pour les serveurs PvP intensifs",
+        "features": {
+          "feature1": "12 Go RAM",
+          "feature2": "Pas de limite de joueurs",
+          "feature3": "Protection DDoS",
+          "feature4": "SSD haute vitesse",
+          "32gbddr4": "32 Go RAM DDR4",
+          "6cores": "6 cœurs CPU",
+          "fullssd": "Stockage SSD complet",
+          "pelican": "Panneau Pelican inclus",
+          "support": "Support 24/7",
+          "2databases": "2 Bases de données",
+          "2backup": "2 Sauvegardes"
+        }
+      },
+      "ancient": {
+        "title": "Ancient",
+        "name": "Ancient",
+        "description": "Pour les grands serveurs avec mods",
+        "features": {
+          "feature1": "16 Go RAM",
+          "feature2": "Pas de limite de joueurs",
+          "feature3": "Protection DDoS",
+          "feature4": "SSD haute vitesse",
+          "40gbddr4": "40 Go RAM DDR4",
+          "6cores": "6 cœurs CPU",
+          "fullssd": "Stockage SSD complet",
+          "pelican": "Panneau Pelican inclus",
+          "support": "Support 24/7",
+          "2databases": "2 Bases de données",
+          "2backup": "2 Sauvegardes"
+        }
+      },
+      "relic": {
+        "title": "Relic",
+        "name": "Relic",
+        "description": "Pour les événements et grandes communautés",
+        "features": {
+          "feature1": "32 Go RAM",
+          "feature2": "Pas de limite de joueurs",
+          "feature3": "Protection DDoS",
+          "feature4": "SSD haute vitesse",
+          "64gbddr4": "64 Go RAM DDR4",
+          "8cores": "8 cœurs CPU",
+          "fullssd": "Stockage SSD complet",
+          "pelican": "Panneau Pelican inclus",
+          "support": "Support 24/7",
+          "2databases": "2 Bases de données",
+          "2backup": "2 Sauvegardes"
+        }
+      },
+      "enterprise": {
+        "title": "Enterprise",
+        "name": "Enterprise",
+        "description": "Pour les très grandes communautés",
+        "features": {
+          "feature1": "64 Go RAM",
+          "feature2": "Pas de limite de joueurs",
+          "feature3": "Protection DDoS",
+          "feature4": "SSD haute vitesse",
+          "ram": "Allocation RAM personnalisée",
+          "cores": "Cœurs CPU dédiés",
+          "ssd": "Stockage SSD personnalisé",
+          "pelican": "Panneau Pelican inclus",
+          "support": "Support prioritaire 24/7",
+          "databases": "Bases de données illimitées",
+          "backups": "Sauvegardes quotidiennes"
+        }
+      }
+    },
+    "pelicanPanel": {
+      "title": "Contrôle de Serveur Palworld",
+      "subtitle": "Avec Le Panneau Pelican",
+      "description": "Le Panneau Pelican est un panneau de contrôle de jeu facile à utiliser qui vous permet de contrôler votre serveur de jeu en quelques clics. Vous pouvez démarrer, arrêter, redémarrer votre serveur, installer des mods, changer de cartes et bien plus encore.",
+      "featuresTitle": "Quelques-unes de nos fonctionnalités :",
+      "features": {
+        "ftpLogin": "Connexion FTP",
+        "browserFileManagement": "Gestion de fichiers via navigateur",
+        "subuserLogin": "Connexion sous-utilisateur",
+        "createDatabases": "Créer des bases de données",
+        "serverBackups": "Sauvegardes du serveur",
+        "consoleInput": "Entrée console",
+        "restartServer": "Redémarrer votre serveur",
+        "scheduledCommand": "Commande programmée",
+        "scheduledPowerAction": "Action d'alimentation programmée",
+        "databaseManagement": "Gestion de base de données"
+      },
+      "buttonText": "Plus d'informations",
+      "feature1": {
+        "title": "Facile à utiliser",
+        "description": "Notre interface intuitive rend la gestion du serveur extrêmement simple."
+      },
+      "feature2": {
+        "title": "Installation de mods en un clic",
+        "description": "Installez des mods en un seul clic directement depuis le panneau de contrôle."
+      },
+      "feature3": {
+        "title": "Configuration de carte",
+        "description": "Changez facilement de cartes et configurez les paramètres de carte."
+      },
+      "feature4": {
+        "title": "Redémarrage instantané",
+        "description": "Redémarrez votre serveur instantanément en un seul clic."
+      },
+      "button": "Plus d'informations"
+    }
   }
 }
