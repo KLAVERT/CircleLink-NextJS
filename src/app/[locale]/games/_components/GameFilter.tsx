@@ -2,7 +2,6 @@
 
 import React from 'react';
 import { FaFilter } from 'react-icons/fa';
-import Button from '@/components/Button/Button';
 
 export type GameCategory = 'all' | 'survival' | 'simulation' | 'sandbox' | 'fpsRpg';
 
@@ -25,12 +24,6 @@ const GameFilter: React.FC<GameFilterProps> = ({
   
   const handleFilterClick = (categoryId: string) => {
     console.log('Filter clicked:', categoryId);
-    setActiveFilter(categoryId as GameCategory);
-  };
-
-  // Adding more direct handling
-  const handleDivClick = (categoryId: string) => {
-    console.log('Div clicked:', categoryId);
     setActiveFilter(categoryId as GameCategory);
   };
 
