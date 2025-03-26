@@ -805,5 +805,164 @@
     "poweredBy": "Mogelijk gemaakt door",
     "loading": "Reviews laden...",
     "viewMore": "Bekijk meer reviews"
+  },
+  "fivem": {
+    "hero": {
+      "badge": "FIVEM HOSTING",
+      "title": "Professionele FiveM Server Hosting",
+      "subtitle": "Creëer Je Perfecte Roleplay Ervaring",
+      "description": "Host je FiveM server met onze premium infrastructuur. Krijg directe setup, DDoS-bescherming en volledige controle over je server. Perfect voor roleplay communities en aangepaste spelmodi.",
+      "features": {
+        "dedicatedServers": "Dedicated FiveM servers",
+        "modInstallation": "Eenvoudige mod installatie",
+        "uptime": "99.9% uptime garantie",
+        "ddosProtection": "Geavanceerde DDoS-bescherming"
+      },
+      "buttons": {
+        "getStarted": "Aan de slag",
+        "viewPlans": "Bekijk Pakketten"
+      },
+      "bottomFeatures": {
+        "ddosProtection": "DDoS-bescherming",
+        "premiumHardware": "Premium Hardware",
+        "online": "24/7 Online",
+        "instantDelivery": "Directe Levering"
+      }
+    },
+    "packages": {
+      "title": "Kies Je Perfecte Plan",
+      "subtitle": "Selecteer het plan dat het beste past bij jouw FiveM server behoeften",
+      "recommended": "Aanbevolen",
+      "mostChosen": "Meest Gekozen",
+      "selectButton": "Selecteer {name}",
+      "starter": {
+        "name": "Starter",
+        "description": "Perfect voor kleine FiveM communities",
+        "features": {
+          "4gbddr4": "4GB DDR4 RAM",
+          "2cores": "2 CPU Cores",
+          "fullssd": "Volledige SSD Opslag",
+          "pelican": "Pelican Panel Toegang",
+          "support": "Email Support",
+          "2databases": "2 Databases",
+          "2backup": "2 Backups"
+        }
+      },
+      "basic": {
+        "name": "Basic",
+        "description": "Ideaal voor groeiende FiveM servers",
+        "features": {
+          "6gbddr4": "6GB DDR4 RAM",
+          "2cores": "2 CPU Cores",
+          "fullssd": "Volledige SSD Opslag",
+          "pelican": "Pelican Panel Toegang",
+          "support": "Prioriteit Support",
+          "2databases": "2 Databases",
+          "2backup": "2 Backups"
+        }
+      },
+      "normal": {
+        "name": "Normal",
+        "description": "Voor gevestigde FiveM communities",
+        "features": {
+          "8gbddr4": "8GB DDR4 RAM",
+          "3cores": "3 CPU Cores",
+          "fullssd": "Volledige SSD Opslag",
+          "pelican": "Pelican Panel Toegang",
+          "support": "Prioriteit Support",
+          "2databases": "2 Databases",
+          "2backup": "2 Backups"
+        }
+      },
+      "medium": {
+        "name": "Medium",
+        "description": "Voor grotere FiveM communities",
+        "features": {
+          "12gbddr4": "12GB DDR4 RAM",
+          "4cores": "4 CPU Cores",
+          "fullssd": "Volledige SSD Opslag",
+          "pelican": "Pelican Panel Toegang",
+          "support": "24/7 Support",
+          "2databases": "2 Databases",
+          "2backup": "2 Backups"
+        }
+      },
+      "large": {
+        "name": "Large",
+        "description": "Voor professionele FiveM servers",
+        "features": {
+          "16gbddr4": "16GB DDR4 RAM",
+          "4cores": "4 CPU Cores",
+          "fullssd": "Volledige SSD Opslag",
+          "pelican": "Pelican Panel Toegang",
+          "support": "24/7 Support",
+          "2databases": "2 Databases",
+          "2backup": "2 Backups"
+        }
+      },
+      "ultra": {
+        "name": "Ultra",
+        "description": "Voor enterprise-level FiveM servers",
+        "features": {
+          "20gbddr4": "20GB DDR4 RAM",
+          "6cores": "6 CPU Cores",
+          "fullssd": "Volledige SSD Opslag",
+          "pelican": "Pelican Panel Toegang",
+          "support": "24/7 Prioriteit Support",
+          "2databases": "2 Databases",
+          "2backup": "2 Backups"
+        }
+      },
+      "enterprise": {
+        "name": "Enterprise",
+        "description": "Aangepaste oplossingen voor grootschalige FiveM operaties",
+        "features": {
+          "ram": "Aangepaste RAM Configuratie",
+          "cores": "Aangepaste CPU Cores",
+          "ssd": "Aangepaste SSD Opslag",
+          "pelican": "Pelican Panel Toegang",
+          "support": "Dedicated 24/7 Support",
+          "databases": "Aangepaste Database Configuratie",
+          "backups": "Aangepaste Backup Oplossing"
+        }
+      }
+    },
+    "reviews": {
+      "title": "Wat Onze Klanten Zeggen",
+      "subtitle": "Lees reviews van onze FiveM server hosting klanten",
+      "loadMore": "Meer Reviews Laden"
+    },
+    "pelicanPanel": {
+      "title": "Pelican Panel voor FiveM",
+      "subtitle": "Geavanceerd serverbeheer eenvoudig gemaakt",
+      "description": "Ons Pelican Panel biedt je alles wat je nodig hebt om je FiveM server efficiënt te beheren. Van resource management tot speler monitoring, je hebt volledige controle.",
+      "features": {
+        "title": "Panel Features",
+        "resourceManager": "Resource Manager",
+        "playerManagement": "Speler Beheer",
+        "backupSystem": "Backup Systeem",
+        "consoleAccess": "Console Toegang",
+        "fileManager": "Bestandsbeheer",
+        "performance": "Prestatie Monitoring"
+      }
+    },
+    "faq": {
+      "title": "Veelgestelde Vragen",
+      "subtitle": "Veel voorkomende vragen over onze FiveM hosting diensten",
+      "questions": {
+        "setup": {
+          "question": "Hoe lang duurt het om mijn FiveM server op te zetten?",
+          "answer": "Onze FiveM servers worden direct na betaling opgezet. Je kunt direct beginnen met het configureren van je server."
+        },
+        "mods": {
+          "question": "Kan ik aangepaste mods en resources installeren?",
+          "answer": "Ja, je hebt volledige toegang om alle mods en resources te installeren die compatibel zijn met FiveM. Ons panel maakt het eenvoudig om al je server resources te beheren."
+        },
+        "support": {
+          "question": "Wat voor soort support bieden jullie voor FiveM servers?",
+          "answer": "We bieden uitgebreide support voor al onze FiveM hosting pakketten, van basis e-mail support tot 24/7 prioriteit support op premium plannen."
+        }
+      }
+    }
   }
 }
