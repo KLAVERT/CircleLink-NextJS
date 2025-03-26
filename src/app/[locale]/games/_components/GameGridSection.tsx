@@ -110,7 +110,7 @@ const GameGridSection = () => {
       slug: '/games/fivem',
       popularity: 8,
       description: t('gameDescriptions.fivem'),
-      price: 9.50,
+      price: 2.50,
       backgroundImage: '/images/webp/games/backgrounds/fivem-wallpaper.webp',
       backgroundWidth: 'w-2/3'
     },
