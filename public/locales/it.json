@@ -802,5 +802,164 @@
       },
       "button": "Maggiori informazioni"
     }
+  },
+  "fivem": {
+    "hero": {
+      "badge": "HOSTING FIVEM",
+      "title": "Hosting Professionale di Server FiveM",
+      "subtitle": "Crea la Tua Esperienza di Roleplay Perfetta",
+      "description": "Ospita il tuo server FiveM con la nostra infrastruttura premium. Ottieni configurazione istantanea, protezione DDoS e controllo totale sul tuo server. Perfetto per le comunità di roleplay e le modalità di gioco personalizzate.",
+      "features": {
+        "dedicatedServers": "Server FiveM dedicati",
+        "modInstallation": "Installazione facile delle mod",
+        "uptime": "Garanzia di uptime del 99,9%",
+        "ddosProtection": "Protezione DDoS avanzata"
+      },
+      "buttons": {
+        "getStarted": "Inizia",
+        "viewPlans": "Vedi i Piani"
+      },
+      "bottomFeatures": {
+        "ddosProtection": "Protezione DDoS",
+        "premiumHardware": "Hardware Premium",
+        "online": "Online 24/7",
+        "instantDelivery": "Consegna Istantanea"
+      }
+    },
+    "packages": {
+      "title": "Scegli il Tuo Piano Perfetto",
+      "subtitle": "Seleziona il piano che meglio si adatta alle tue esigenze di server FiveM",
+      "recommended": "Consigliato",
+      "mostChosen": "Più Popolare",
+      "selectButton": "Seleziona {name}",
+      "starter": {
+        "name": "Starter",
+        "description": "Perfetto per piccole comunità FiveM",
+        "features": {
+          "4gbddr4": "4GB RAM DDR4",
+          "2cores": "2 Core CPU",
+          "fullssd": "Storage SSD Completo",
+          "pelican": "Accesso al Pannello Pelican",
+          "support": "Supporto via Email",
+          "2databases": "2 Database",
+          "2backup": "2 Backup"
+        }
+      },
+      "basic": {
+        "name": "Basic",
+        "description": "Ideale per server FiveM in crescita",
+        "features": {
+          "6gbddr4": "6GB RAM DDR4",
+          "2cores": "2 Core CPU",
+          "fullssd": "Storage SSD Completo",
+          "pelican": "Accesso al Pannello Pelican",
+          "support": "Supporto Prioritario",
+          "2databases": "2 Database",
+          "2backup": "2 Backup"
+        }
+      },
+      "normal": {
+        "name": "Normal",
+        "description": "Per comunità FiveM consolidate",
+        "features": {
+          "8gbddr4": "8GB RAM DDR4",
+          "3cores": "3 Core CPU",
+          "fullssd": "Storage SSD Completo",
+          "pelican": "Accesso al Pannello Pelican",
+          "support": "Supporto Prioritario",
+          "2databases": "2 Database",
+          "2backup": "2 Backup"
+        }
+      },
+      "medium": {
+        "name": "Medium",
+        "description": "Per grandi comunità FiveM",
+        "features": {
+          "12gbddr4": "12GB RAM DDR4",
+          "4cores": "4 Core CPU",
+          "fullssd": "Storage SSD Completo",
+          "pelican": "Accesso al Pannello Pelican",
+          "support": "Supporto 24/7",
+          "2databases": "2 Database",
+          "2backup": "2 Backup"
+        }
+      },
+      "large": {
+        "name": "Large",
+        "description": "Per server FiveM professionali",
+        "features": {
+          "16gbddr4": "16GB RAM DDR4",
+          "4cores": "4 Core CPU",
+          "fullssd": "Storage SSD Completo",
+          "pelican": "Accesso al Pannello Pelican",
+          "support": "Supporto 24/7",
+          "2databases": "2 Database",
+          "2backup": "2 Backup"
+        }
+      },
+      "ultra": {
+        "name": "Ultra",
+        "description": "Per server FiveM di livello enterprise",
+        "features": {
+          "20gbddr4": "20GB RAM DDR4",
+          "6cores": "6 Core CPU",
+          "fullssd": "Storage SSD Completo",
+          "pelican": "Accesso al Pannello Pelican",
+          "support": "Supporto Prioritario 24/7",
+          "2databases": "2 Database",
+          "2backup": "2 Backup"
+        }
+      },
+      "enterprise": {
+        "name": "Enterprise",
+        "description": "Soluzioni personalizzate per operazioni FiveM su larga scala",
+        "features": {
+          "ram": "Configurazione RAM Personalizzata",
+          "cores": "Core CPU Personalizzati",
+          "ssd": "Storage SSD Personalizzato",
+          "pelican": "Accesso al Pannello Pelican",
+          "support": "Supporto Dedicato 24/7",
+          "databases": "Configurazione Database Personalizzata",
+          "backups": "Soluzione Backup Personalizzata"
+        }
+      }
+    },
+    "reviews": {
+      "title": "Cosa Dicono i Nostri Clienti",
+      "subtitle": "Leggi le recensioni dei nostri clienti di hosting FiveM",
+      "loadMore": "Carica Più Recensioni"
+    },
+    "pelicanPanel": {
+      "title": "Pelican Panel per FiveM",
+      "subtitle": "Gestione avanzata dei server semplificata",
+      "description": "Il nostro Pelican Panel ti fornisce tutto ciò di cui hai bisogno per gestire efficientemente il tuo server FiveM. Dalla gestione delle risorse al monitoraggio dei giocatori, hai il controllo totale.",
+      "features": {
+        "title": "Funzionalità del Panel",
+        "resourceManager": "Gestore delle Risorse",
+        "playerManagement": "Gestione dei Giocatori",
+        "backupSystem": "Sistema di Backup",
+        "consoleAccess": "Accesso alla Console",
+        "fileManager": "Gestore dei File",
+        "performance": "Monitoraggio delle Prestazioni"
+      }
+    },
+    "faq": {
+      "title": "Domande Frequenti",
+      "subtitle": "Domande comuni sui nostri servizi di hosting FiveM",
+      "questions": {
+        "setup": {
+          "question": "Quanto tempo ci vuole per configurare il mio server FiveM?",
+          "answer": "I nostri server FiveM vengono configurati istantaneamente dopo il pagamento. Puoi iniziare a configurare il tuo server immediatamente."
+        },
+        "mods": {
+          "question": "Posso installare mod e risorse personalizzate?",
+          "answer": "Sì, hai accesso completo per installare tutte le mod e le risorse compatibili con FiveM. Il nostro panel rende facile la gestione di tutte le risorse del tuo server."
+        },
+        "support": {
+          "question": "Che tipo di supporto offrite per i server FiveM?",
+          "answer": "Forniamo supporto completo per tutti i nostri piani di hosting FiveM, dal supporto email di base al supporto prioritario 24/7 sui piani premium."
+        }
+      }
+    }
   }
 }

@@ -800,6 +800,165 @@
       "button": "More information"
     }
   },
+  "fivem": {
+    "hero": {
+      "badge": "FIVEM HOSTING",
+      "title": "Professional FiveM Server Hosting",
+      "subtitle": "Create Your Perfect Roleplay Experience",
+      "description": "Host your FiveM server with our premium infrastructure. Get instant setup, DDoS protection, and full control over your server. Perfect for roleplay communities and custom game modes.",
+      "features": {
+        "dedicatedServers": "Dedicated FiveM servers",
+        "modInstallation": "Easy mod installation",
+        "uptime": "99.9% uptime guarantee",
+        "ddosProtection": "Advanced DDoS protection"
+      },
+      "buttons": {
+        "getStarted": "Get Started",
+        "viewPlans": "View Plans"
+      },
+      "bottomFeatures": {
+        "ddosProtection": "DDoS Protection",
+        "premiumHardware": "Premium Hardware",
+        "online": "24/7 Online",
+        "instantDelivery": "Instant Delivery"
+      }
+    },
+    "packages": {
+      "title": "Choose Your Perfect Plan",
+      "subtitle": "Select the plan that best fits your FiveM server needs",
+      "recommended": "Recommended",
+      "mostChosen": "Most Chosen",
+      "selectButton": "Select {name}",
+      "starter": {
+        "name": "Starter",
+        "description": "Perfect for small FiveM communities",
+        "features": {
+          "4gbddr4": "4GB DDR4 RAM",
+          "2cores": "2 CPU Cores",
+          "fullssd": "Full SSD Storage",
+          "pelican": "Pelican Panel Access",
+          "support": "Email Support",
+          "2databases": "2 Databases",
+          "2backup": "2 Backups"
+        }
+      },
+      "basic": {
+        "name": "Basic",
+        "description": "Ideal for growing FiveM servers",
+        "features": {
+          "6gbddr4": "6GB DDR4 RAM",
+          "2cores": "2 CPU Cores",
+          "fullssd": "Full SSD Storage",
+          "pelican": "Pelican Panel Access",
+          "support": "Priority Support",
+          "2databases": "2 Databases",
+          "2backup": "2 Backups"
+        }
+      },
+      "normal": {
+        "name": "Normal",
+        "description": "For established FiveM communities",
+        "features": {
+          "8gbddr4": "8GB DDR4 RAM",
+          "3cores": "3 CPU Cores",
+          "fullssd": "Full SSD Storage",
+          "pelican": "Pelican Panel Access",
+          "support": "Priority Support",
+          "2databases": "2 Databases",
+          "2backup": "2 Backups"
+        }
+      },
+      "medium": {
+        "name": "Medium",
+        "description": "For larger FiveM communities",
+        "features": {
+          "12gbddr4": "12GB DDR4 RAM",
+          "4cores": "4 CPU Cores",
+          "fullssd": "Full SSD Storage",
+          "pelican": "Pelican Panel Access",
+          "support": "24/7 Support",
+          "2databases": "2 Databases",
+          "2backup": "2 Backups"
+        }
+      },
+      "large": {
+        "name": "Large",
+        "description": "For professional FiveM servers",
+        "features": {
+          "16gbddr4": "16GB DDR4 RAM",
+          "4cores": "4 CPU Cores",
+          "fullssd": "Full SSD Storage",
+          "pelican": "Pelican Panel Access",
+          "support": "24/7 Support",
+          "2databases": "2 Databases",
+          "2backup": "2 Backups"
+        }
+      },
+      "ultra": {
+        "name": "Ultra",
+        "description": "For enterprise-level FiveM servers",
+        "features": {
+          "20gbddr4": "20GB DDR4 RAM",
+          "6cores": "6 CPU Cores",
+          "fullssd": "Full SSD Storage",
+          "pelican": "Pelican Panel Access",
+          "support": "Priority 24/7 Support",
+          "2databases": "2 Databases",
+          "2backup": "2 Backups"
+        }
+      },
+      "enterprise": {
+        "name": "Enterprise",
+        "description": "Custom solutions for large-scale FiveM operations",
+        "features": {
+          "ram": "Custom RAM Configuration",
+          "cores": "Custom CPU Cores",
+          "ssd": "Custom SSD Storage",
+          "pelican": "Pelican Panel Access",
+          "support": "Dedicated 24/7 Support",
+          "databases": "Custom Database Configuration",
+          "backups": "Custom Backup Solution"
+        }
+      }
+    },
+    "reviews": {
+      "title": "What Our Customers Say",
+      "subtitle": "Read reviews from our FiveM server hosting customers",
+      "loadMore": "Load More Reviews"
+    },
+    "pelicanPanel": {
+      "title": "Pelican Panel for FiveM",
+      "subtitle": "Advanced server management made easy",
+      "description": "Our Pelican Panel provides you with everything you need to manage your FiveM server efficiently. From resource management to player monitoring, you have full control.",
+      "features": {
+        "title": "Panel Features",
+        "resourceManager": "Resource Manager",
+        "playerManagement": "Player Management",
+        "backupSystem": "Backup System",
+        "consoleAccess": "Console Access",
+        "fileManager": "File Manager",
+        "performance": "Performance Monitoring"
+      }
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "subtitle": "Common questions about our FiveM hosting services",
+      "questions": {
+        "setup": {
+          "question": "How long does it take to set up my FiveM server?",
+          "answer": "Our FiveM servers are set up instantly after payment. You can start configuring your server right away."
+        },
+        "mods": {
+          "question": "Can I install custom mods and resources?",
+          "answer": "Yes, you have full access to install any mods and resources compatible with FiveM. Our panel makes it easy to manage all your server resources."
+        },
+        "support": {
+          "question": "What kind of support do you offer for FiveM servers?",
+          "answer": "We provide comprehensive support for all our FiveM hosting packages, from basic email support to 24/7 priority support on premium plans."
+        }
+      }
+    }
+  },
   "Reviews": {
     "title": "What our customers say",
     "poweredBy": "Powered by",
