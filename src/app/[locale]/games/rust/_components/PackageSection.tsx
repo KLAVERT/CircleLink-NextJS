@@ -206,6 +206,7 @@ function DDRProvider({ children }: { children: React.ReactNode }) {
 
 function DDRToggle() {
   const { isDDR4, toggleDDR } = useDDR();
+  const t = useTranslations('rust');
   
   return (
     <div className="flex justify-center">

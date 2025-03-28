@@ -475,141 +475,128 @@
   },
   "rust": {
     "hero": {
-      "badge": "HOSTING SERVER RUST",
-      "title": "HOSTING SERVER RUST",
-      "subtitle": "Crea il tuo server RUST",
-      "description": "Implementa il tuo server RUST in pochi minuti con il nostro pannello di controllo facile da usare. Goditi SSD veloci, alte prestazioni e disponibilità 24/7!",
+      "badge": "HOSTING RUST",
+      "title": "Hosting Server RUST",
+      "subtitle": "I migliori server RUST a partire da €4,50 al mese",
+      "description": "Con CircleLink, ottieni un server RUST all'avanguardia con assistenza clienti qualificata 24/7 e un sistema di gestione facile da usare.",
       "features": {
-        "dedicatedServers": "Server dedicati",
-        "modInstallation": "Installazione mod",
-        "uptime": "99,9% di disponibilità",
-        "ddosProtection": "Protezione DDoS"
+        "feature1": "Protezione DDoS aziendale",
+        "feature2": "Pannello di controllo facile",
+        "feature3": "Hardware premium",
+        "feature4": "Configurazione personalizzabile"
       },
       "buttons": {
-        "getStarted": "INIZIA",
-        "viewPlans": "VEDI PIANI"
+        "viewPricing": "Vedi prezzi",
+        "contactUs": "Contattaci"
       },
       "bottomFeatures": {
-        "ddosProtection": "Protezione DDoS",
-        "premiumHardware": "Hardware premium",
-        "online": "Online 24/7",
-        "instantDelivery": "Consegna istantanea"
+        "feature1": "Hardware premium",
+        "feature2": "Server pronto in 2 min",
+        "feature3": "97,5% di soddisfazione cliente"
       }
     },
     "packages": {
       "title": "Pacchetti Server RUST",
-      "subtitle": "Scegli il pacchetto più adatto alla tua esperienza di server RUST",
-      "selectButton": "SELEZIONA",
+      "subtitle": "Scegli il pacchetto più adatto alle tue esigenze",
       "wood": {
-        "name": "Wood",
-        "description": "Perfetto per piccoli gruppi di amici",
+        "title": "Wood",
+        "description": "Per piccoli server amichevoli",
         "features": {
-          "8gbddr4": "8 GB RAM DDR4",
-          "3cores": "3 core CPU",
-          "fullssd": "SSD completo",
-          "pelican": "Pannello Pelican",
-          "support": "Supporto 24/7",
-          "2databases": "2 database",
-          "2backup": "2 backup"
+          "feature1": "2GB RAM",
+          "feature2": "Nessun limite di giocatori",
+          "feature3": "Protezione DDoS",
+          "feature4": "SSD ad alta velocità"
         }
       },
       "stone": {
-        "name": "Stone",
-        "description": "Ideale per comunità di medie dimensioni",
+        "title": "Stone",
+        "description": "Per server di medie dimensioni",
         "features": {
-          "10gbddr4": "10 GB RAM DDR4",
-          "4cores": "4 core CPU",
-          "fullssd": "SSD completo",
-          "pelican": "Pannello Pelican",
-          "support": "Supporto 24/7",
-          "2databases": "2 database",
-          "2backup": "2 backup"
+          "feature1": "4GB RAM",
+          "feature2": "Nessun limite di giocatori",
+          "feature3": "Protezione DDoS",
+          "feature4": "SSD ad alta velocità"
         }
       },
       "metal": {
-        "name": "Metal",
-        "description": "Per comunità di giocatori attive",
+        "title": "Metal",
+        "description": "Per server grandi",
         "features": {
-          "12gbddr4": "12 GB RAM DDR4",
-          "4cores": "4 core CPU",
-          "fullssd": "SSD completo",
-          "pelican": "Pannello Pelican",
-          "support": "Supporto 24/7",
-          "2databases": "2 database",
-          "2backup": "2 backup"
+          "feature1": "8GB RAM",
+          "feature2": "Nessun limite di giocatori",
+          "feature3": "Protezione DDoS",
+          "feature4": "SSD ad alta velocità"
         }
       },
-      "sulfer": {
-        "name": "Sulfur",
-        "description": "Alte prestazioni per server in crescita",
+      "sulfur": {
+        "title": "Sulfur",
+        "description": "Per server PvP intensivi",
         "features": {
-          "16gbddr4": "16 GB RAM DDR4",
-          "6cores": "6 core CPU",
-          "fullssd": "SSD completo",
-          "pelican": "Pannello Pelican",
-          "support": "Supporto 24/7",
-          "2databases": "2 database",
-          "2backup": "2 backup"
+          "feature1": "12GB RAM",
+          "feature2": "Nessun limite di giocatori",
+          "feature3": "Protezione DDoS",
+          "feature4": "SSD ad alta velocità"
         }
       },
       "hqm": {
-        "name": "HQM",
-        "description": "Prestazioni premium per grandi comunità",
+        "title": "HQM",
+        "description": "Per server grandi con mod",
         "features": {
-          "20gbddr4": "20 GB RAM DDR4",
-          "6cores": "6 core CPU",
-          "fullssd": "SSD completo",
-          "pelican": "Pannello Pelican",
-          "support": "Supporto 24/7",
-          "2databases": "2 database",
-          "2backup": "2 backup"
+          "feature1": "16GB RAM",
+          "feature2": "Nessun limite di giocatori",
+          "feature3": "Protezione DDoS",
+          "feature4": "SSD ad alta velocità"
         }
       },
       "tech": {
-        "name": "Tech",
-        "description": "Massime prestazioni senza compromessi",
+        "title": "Tech",
+        "description": "Per eventi e comunità grandi",
         "features": {
-          "24gbddr4": "24 GB RAM DDR4",
-          "8cores": "8 core CPU",
-          "fullssd": "SSD completo",
-          "pelican": "Pannello Pelican",
-          "support": "Supporto 24/7",
-          "2databases": "2 database",
-          "2backup": "2 backup"
+          "feature1": "32GB RAM",
+          "feature2": "Nessun limite di giocatori",
+          "feature3": "Protezione DDoS",
+          "feature4": "SSD ad alta velocità"
         }
       },
       "enterprise": {
-        "name": "Enterprise",
-        "description": "Soluzione personalizzata per grandi server",
+        "title": "Enterprise",
+        "description": "Per comunità molto grandi",
         "features": {
-          "ram": "32+ GB RAM",
-          "cores": "8+ core CPU",
-          "ssd": "SSD NVMe",
-          "pelican": "Pannello Pelican",
-          "support": "Supporto prioritario",
-          "databases": "Database illimitati",
-          "backups": "Backup illimitati"
+          "feature1": "64GB RAM",
+          "feature2": "Nessun limite di giocatori",
+          "feature3": "Protezione DDoS",
+          "feature4": "SSD ad alta velocità"
         }
       }
     },
     "pelicanPanel": {
-      "title": "Server RUST con Pannello Pelican",
-      "subtitle": "Gestione del server amichevole e potente",
-      "description": "Il nostro Pannello Pelican offre il modo più semplice per gestire il tuo server RUST. Con controlli intuitivi e funzionalità potenti, puoi personalizzare il tuo server in modo ottimale.",
-      "featuresTitle": "Funzionalità del pannello",
+      "title": "Controllo Server RUST",
+      "subtitle": "Con il Pannello Pelican",
+      "description": "Il Pannello Pelican è un pannello di controllo di gioco facile da usare che ti permette di controllare il tuo server di gioco con pochi clic. Puoi avviare, fermare, riavviare il tuo server, installare mod, cambiare mappa e molto altro.",
       "features": {
-        "ftpLogin": "Accesso FTP",
-        "browserFileManagement": "Gestione file tramite browser",
-        "subuserLogin": "Accesso utenti secondari",
-        "createDatabases": "Creazione database",
-        "serverBackups": "Backup del server",
-        "consoleInput": "Input della console",
-        "restartServer": "Riavvio del server",
-        "scheduledCommand": "Comandi programmati",
-        "scheduledPowerAction": "Azioni di alimentazione programmate",
-        "databaseManagement": "Gestione database"
+        "feature1": {
+          "title": "Facile da usare",
+          "description": "La nostra interfaccia intuitiva rende la gestione del server estremamente semplice."
+        },
+        "feature2": {
+          "title": "Installazione mod con un clic",
+          "description": "Installa mod con un solo clic direttamente dal pannello di controllo."
+        },
+        "feature3": {
+          "title": "Configurazione mappa",
+          "description": "Cambia facilmente mappa e configura le impostazioni della mappa."
+        },
+        "feature4": {
+          "title": "Riavvio istantaneo",
+          "description": "Riavvia il tuo server istantaneamente con un solo clic."
+        }
       },
-      "buttonText": "Scopri di più"
+      "button": "Maggiori informazioni"
+    },
+    "reviews": {
+      "title": "Cosa dicono i nostri clienti",
+      "subtitle": "Testimonianze dei clienti RUST",
+      "description": "I nostri clienti amano i nostri server RUST per la stabilità, le prestazioni e il supporto incredibile che forniamo."
     }
   },
   "palworld": {

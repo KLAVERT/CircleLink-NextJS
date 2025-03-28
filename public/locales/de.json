@@ -475,141 +475,123 @@
   },
   "rust": {
     "hero": {
-      "badge": "RUST SERVER HOSTING",
-      "title": "RUST SERVER HOSTING",
-      "subtitle": "Erstellen Sie Ihren eigenen RUST-Server",
-      "description": "Stellen Sie Ihren eigenen RUST-Server in wenigen Minuten mit unserer benutzerfreundlichen Steuerung bereit. Genießen Sie schnelle SSDs, hohe Leistung und 24/7 Online-Verfügbarkeit!",
+      "badge": "RUST HOSTING",
+      "title": "RUST Server Hosting",
+      "subtitle": "Die besten RUST Server ab €4,50 pro Monat",
+      "description": "Mit CircleLink erhalten Sie einen hochmodernen RUST-Server mit qualifiziertem 24/7-Kundensupport und einem benutzerfreundlichen Verwaltungssystem.",
       "features": {
-        "dedicatedServers": "Dedizierte Server",
-        "modInstallation": "Mod-Installation",
-        "uptime": "99,9% Uptime",
-        "ddosProtection": "DDoS-Schutz"
+        "feature1": "Enterprise DDoS-Schutz",
+        "feature2": "Einfaches Kontrollpanel",
+        "feature3": "Premium Hardware",
+        "feature4": "Anpassbare Konfiguration"
       },
       "buttons": {
-        "getStarted": "JETZT STARTEN",
-        "viewPlans": "PLÄNE ANZEIGEN"
+        "viewPricing": "Preise anzeigen",
+        "contactUs": "Kontaktieren Sie uns"
       },
       "bottomFeatures": {
-        "ddosProtection": "DDoS-Schutz",
-        "premiumHardware": "Premium-Hardware",
-        "online": "24/7 Online",
-        "instantDelivery": "Sofortige Lieferung"
+        "feature1": "Premium Hardware",
+        "feature2": "Server in 2 Min. einsatzbereit",
+        "feature3": "97,5% Kundenzufriedenheit"
       }
     },
     "packages": {
-      "title": "RUST Server Pakete",
-      "subtitle": "Wählen Sie das richtige Paket für Ihr RUST-Servererlebnis",
-      "selectButton": "AUSWÄHLEN",
+      "title": "RUST Serverpakete",
+      "subtitle": "Wählen Sie das Paket, das am besten zu Ihren Bedürfnissen passt",
       "wood": {
-        "name": "Wood",
-        "description": "Perfekt für kleine Gruppen von Freunden",
+        "title": "Wood",
+        "description": "Für kleine, freundliche Server",
         "features": {
-          "8gbddr4": "8 GB DDR4 RAM",
-          "3cores": "3 CPU-Kerne",
-          "fullssd": "Volle SSD",
-          "pelican": "Pelican Panel",
-          "support": "24/7 Support",
-          "2databases": "2 Datenbanken",
-          "2backup": "2 Backups"
+          "feature1": "2GB RAM",
+          "feature2": "Keine Spielerbegrenzung",
+          "feature3": "DDoS-Schutz",
+          "feature4": "High-Speed SSD"
         }
       },
       "stone": {
-        "name": "Stone",
-        "description": "Ideal für mittelgroße Communities",
+        "title": "Stone",
+        "description": "Für mittelgroße Server",
         "features": {
-          "10gbddr4": "10 GB DDR4 RAM",
-          "4cores": "4 CPU-Kerne",
-          "fullssd": "Volle SSD",
-          "pelican": "Pelican Panel",
-          "support": "24/7 Support",
-          "2databases": "2 Datenbanken",
-          "2backup": "2 Backups"
+          "feature1": "4GB RAM",
+          "feature2": "Keine Spielerbegrenzung",
+          "feature3": "DDoS-Schutz",
+          "feature4": "High-Speed SSD"
         }
       },
       "metal": {
-        "name": "Metal",
-        "description": "Für aktive Spieler-Communities",
+        "title": "Metal",
+        "description": "Für große Server",
         "features": {
-          "12gbddr4": "12 GB DDR4 RAM",
-          "4cores": "4 CPU-Kerne",
-          "fullssd": "Volle SSD",
-          "pelican": "Pelican Panel",
-          "support": "24/7 Support",
-          "2databases": "2 Datenbanken",
-          "2backup": "2 Backups"
+          "feature1": "8GB RAM",
+          "feature2": "Keine Spielerbegrenzung",
+          "feature3": "DDoS-Schutz",
+          "feature4": "High-Speed SSD"
         }
       },
-      "sulfer": {
-        "name": "Sulfur",
-        "description": "Hohe Leistung für wachsende Server",
+      "sulfur": {
+        "title": "Sulfur",
+        "description": "Für intensive PvP-Server",
         "features": {
-          "16gbddr4": "16 GB DDR4 RAM",
-          "6cores": "6 CPU-Kerne",
-          "fullssd": "Volle SSD",
-          "pelican": "Pelican Panel",
-          "support": "24/7 Support",
-          "2databases": "2 Datenbanken",
-          "2backup": "2 Backups"
+          "feature1": "12GB RAM",
+          "feature2": "Keine Spielerbegrenzung",
+          "feature3": "DDoS-Schutz",
+          "feature4": "High-Speed SSD"
         }
       },
       "hqm": {
-        "name": "HQM",
-        "description": "Premium-Leistung für große Communities",
+        "title": "HQM",
+        "description": "Für große Server mit Mods",
         "features": {
-          "20gbddr4": "20 GB DDR4 RAM",
-          "6cores": "6 CPU-Kerne",
-          "fullssd": "Volle SSD",
-          "pelican": "Pelican Panel",
-          "support": "24/7 Support",
-          "2databases": "2 Datenbanken",
-          "2backup": "2 Backups"
+          "feature1": "16GB RAM",
+          "feature2": "Keine Spielerbegrenzung",
+          "feature3": "DDoS-Schutz",
+          "feature4": "High-Speed SSD"
         }
       },
       "tech": {
-        "name": "Tech",
-        "description": "Maximale Leistung ohne Kompromisse",
+        "title": "Tech",
+        "description": "Für Events und große Communities",
         "features": {
-          "24gbddr4": "24 GB DDR4 RAM",
-          "8cores": "8 CPU-Kerne",
-          "fullssd": "Volle SSD",
-          "pelican": "Pelican Panel",
-          "support": "24/7 Support",
-          "2databases": "2 Datenbanken",
-          "2backup": "2 Backups"
+          "feature1": "32GB RAM",
+          "feature2": "Keine Spielerbegrenzung",
+          "feature3": "DDoS-Schutz",
+          "feature4": "High-Speed SSD"
         }
       },
       "enterprise": {
-        "name": "Enterprise",
-        "description": "Maßgeschneiderte Lösung für große Server",
+        "title": "Enterprise",
+        "description": "Für sehr große Communities",
         "features": {
-          "ram": "32+ GB RAM",
-          "cores": "8+ CPU-Kerne",
-          "ssd": "NVMe SSD",
-          "pelican": "Pelican Panel",
-          "support": "Prioritäts-Support",
-          "databases": "Unbegrenzte Datenbanken",
-          "backups": "Unbegrenzte Backups"
+          "feature1": "64GB RAM",
+          "feature2": "Keine Spielerbegrenzung",
+          "feature3": "DDoS-Schutz",
+          "feature4": "High-Speed SSD"
         }
       }
     },
     "pelicanPanel": {
-      "title": "RUST Server mit Pelican Panel",
-      "subtitle": "Benutzerfreundliche und leistungsstarke Serververwaltung",
-      "description": "Unser Pelican Panel bietet die einfachste Möglichkeit, Ihren RUST-Server zu verwalten. Mit intuitiven Steuerungen und leistungsstarken Funktionen können Sie Ihren Server optimal anpassen.",
-      "featuresTitle": "Panel-Funktionen",
+      "title": "RUST Serversteuerung",
+      "subtitle": "Mit dem Pelican Panel",
+      "description": "Das Pelican Panel ist ein benutzerfreundliches Spielesteuerungspanel, mit dem Sie Ihren Spieleserver mit wenigen Klicks steuern können. Sie können Ihren Server starten, stoppen, neu starten, Mods installieren, Karten wechseln und vieles mehr.",
       "features": {
-        "ftpLogin": "FTP-Login",
-        "browserFileManagement": "Browser-Dateiverwaltung",
-        "subuserLogin": "Subuser-Login",
-        "createDatabases": "Datenbankerstellung",
-        "serverBackups": "Server-Backups",
-        "consoleInput": "Konsoleneingabe",
-        "restartServer": "Server neustarten",
-        "scheduledCommand": "Geplante Befehle",
-        "scheduledPowerAction": "Geplante Power-Aktionen",
-        "databaseManagement": "Datenbankverwaltung"
+        "feature1": {
+          "title": "Benutzerfreundlich",
+          "description": "Unsere intuitive Oberfläche macht die Serververwaltung extrem einfach."
+        },
+        "feature2": {
+          "title": "Ein-Klick-Mod-Installation",
+          "description": "Installieren Sie Mods mit einem einzigen Klick direkt über das Kontrollpanel."
+        },
+        "feature3": {
+          "title": "Kartenkonfiguration",
+          "description": "Wechseln Sie problemlos die Karte und konfigurieren Sie die Karteneinstellungen."
+        },
+        "feature4": {
+          "title": "Sofortiger Neustart",
+          "description": "Starten Sie Ihren Server mit einem einzigen Klick sofort neu."
+        }
       },
-      "buttonText": "Mehr erfahren"
+      "button": "Mehr Informationen"
     },
     "reviews": {
       "title": "Was unsere Kunden sagen",
