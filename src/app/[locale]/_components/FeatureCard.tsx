@@ -2,6 +2,7 @@
 
 import React, { ReactNode } from 'react';
 import { motion } from 'framer-motion';
+import Grid, { GridItem } from '@/components/Grid';
 
 interface FeatureCardProps {
   title: string;
@@ -111,30 +112,34 @@ const FeatureCard = ({ title, description, icon, index = 0 }: FeatureCardProps) 
         whileHover={{ scale: 1.2, opacity: 0.15 }}
       />
 
-      <motion.div 
-        className="w-14 h-14 bg-[var(--color-secondary)] dark:bg-[var(--color-quaternary)] rounded-2xl flex items-center justify-center mb-4 relative z-10"
-        variants={iconVariants}
-      >
-        <svg xmlns="http://www.w3.org/2000/svg" className="h-7 w-7 text-[var(--color-senary)] dark:text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          {icon}
-        </svg>
-      </motion.div>
-      
-      <motion.h3 
-        className="text-xl font-bold text-[var(--color-text-primary)] dark:text-white mb-3 relative z-10"
-        variants={textVariants}
-        custom={index}
-      >
-        {title}
-      </motion.h3>
-      
-      <motion.p 
-        className="text-[var(--color-text-primary)] dark:text-[var(--color-text-primary)] relative z-10 flex-grow"
-        variants={textVariants}
-        custom={index + 0.5}
-      >
-        {description}
-      </motion.p>
+      <Grid spacing="md" className="h-full">
+        <GridItem className="relative z-10">
+          <motion.div 
+            className="w-14 h-14 bg-[var(--color-secondary)] dark:bg-[var(--color-quaternary)] rounded-2xl flex items-center justify-center mb-4"
+            variants={iconVariants}
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-7 w-7 text-[var(--color-senary)] dark:text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              {icon}
+            </svg>
+          </motion.div>
+          
+          <motion.h3 
+            className="text-xl font-bold text-[var(--color-text-primary)] dark:text-white mb-3"
+            variants={textVariants}
+            custom={index}
+          >
+            {title}
+          </motion.h3>
+          
+          <motion.p 
+            className="text-[var(--color-text-primary)] dark:text-[var(--color-text-primary)] flex-grow"
+            variants={textVariants}
+            custom={index + 0.5}
+          >
+            {description}
+          </motion.p>
+        </GridItem>
+      </Grid>
     </motion.div>
   );
 };

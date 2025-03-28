@@ -9,6 +9,7 @@ import Slider from '@/components/Slider/Slider';
 import AnimatedBackground from '@/components/AnimatedBackground/AnimatedBackground';
 import Image from 'next/image';
 import { useMediaQuery } from '@/hooks/useMediaQuery';
+import Grid, { GridItem } from '@/components/Grid';
 
 const HeroSection = () => {
   const t = useTranslations('gameHosting');
@@ -154,19 +155,19 @@ const HeroSection = () => {
 
   return (
     <AnimatedBackground variant="primary" className="absolute top-0 left-0 right-0 min-h-screen flex items-center justify-center">
-      <div className="container mx-auto px-4 pt-20 md:pt-0 overflow-hidden">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8 lg:gap-12">
+      <Grid container maxWidth="xl" className="pt-20 md:pt-0 overflow-hidden">
+        <Grid columns={1} mdColumns={2} spacing="lg" className="items-center max-w-7xl mx-auto">
           {/* Left column - Text content that changes */}
-          <div className="w-full md:w-1/2 space-y-6 relative">
+          <GridItem className="space-y-6 relative">
             <Slider 
               slides={slideContent}
               autoPlayInterval={10000}
               showIndicators={true}
             />
-          </div>
+          </GridItem>
           
           {/* Right column - Image */}
-          <div className="w-full md:w-1/2 flex flex-col items-center mt-12 md:mt-0 max-w-full">
+          <GridItem className="flex flex-col items-center mt-12 md:mt-0 max-w-full">
             <motion.div 
               className="relative w-full flex justify-center px-4"
               {...getAnimationProps()}
@@ -185,9 +186,9 @@ const HeroSection = () => {
                 )}
               </div>
             </motion.div>
-          </div>
-        </div>
-      </div>
+          </GridItem>
+        </Grid>
+      </Grid>
     </AnimatedBackground>
   );
 };

@@ -6,6 +6,7 @@ import { FaGamepad, FaGlobe, FaDiscord } from 'react-icons/fa';
 import { useTranslations } from 'next-intl';
 import FeatureCard from '@/components/FeatureCard/FeatureCard';
 import type { Feature } from '@/components/FeatureCard/FeatureCard';
+import Grid from '@/components/Grid';
 
 interface HostingOption {
   id: string;
@@ -81,9 +82,9 @@ const HostingOptionsSection = () => {
 
   return (
     <section className="min-h-[100vh] min-h-[800px] py-16 flex items-center justify-center" style={{ backgroundColor: 'var(--color-tertiary)' }}>
-      <div className="container mx-auto px-4 flex flex-col items-center">
+      <Grid container maxWidth="xl">
         <motion.div 
-          className="text-center mb-12 max-w-3xl"
+          className="text-center mb-12 max-w-3xl mx-auto"
           initial={{ opacity: 0, y: -10 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -95,13 +96,7 @@ const HostingOptionsSection = () => {
           </p>
         </motion.div>
 
-        <motion.div 
-          className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full max-w-6xl mx-auto"
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.1 }}
-        >
+        <Grid columns={1} mdColumns={2} lgColumns={3} spacing="lg" className="max-w-6xl mx-auto">
           {hostingOptions.map((option) => {
             const features: Feature[] = option.featuresKeys.map(key => ({
               text: t(key),
@@ -109,21 +104,29 @@ const HostingOptionsSection = () => {
             }));
 
             return (
-              <FeatureCard
+              <motion.div
                 key={option.id}
-                title={t(option.titleKey)}
-                price={option.price}
-                description={t(option.descriptionKey)}
-                features={features}
-                icon={option.icon}
-                style={option.style}
-                buttonText={t('hosting.viewMore')}
-                priceSubtext={t('hosting.perMonth')}
-              />
+                variants={containerVariants}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.1 }}
+                className="p-4"
+              >
+                <FeatureCard
+                  title={t(option.titleKey)}
+                  price={option.price}
+                  description={t(option.descriptionKey)}
+                  features={features}
+                  icon={option.icon}
+                  style={option.style}
+                  buttonText={t('hosting.viewMore')}
+                  priceSubtext={t('hosting.perMonth')}
+                />
+              </motion.div>
             );
           })}
-        </motion.div>
-      </div>
+        </Grid>
+      </Grid>
     </section>
   );
 };

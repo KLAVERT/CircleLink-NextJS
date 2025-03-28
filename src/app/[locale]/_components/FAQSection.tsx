@@ -4,6 +4,7 @@ import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
 import AnimatedBackground from '@/components/AnimatedBackground/AnimatedBackground';
 import Link from 'next/link';
+import Grid, { GridItem } from '@/components/Grid';
 
 const FAQSection = () => {
   const t = useTranslations();
@@ -35,47 +36,46 @@ const FAQSection = () => {
 
   return (
     <AnimatedBackground variant="tertiary" className="min-h-[100vh] md:h-screen flex items-center justify-center py-16 md:py-0">
-      <div className="container mx-auto px-4 py-8 md:py-0">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
+      <Grid container maxWidth="xl" className="py-8 md:py-0">
+        <Grid columns={1} lgColumns={12} spacing="lg" className="items-start">
           {/* Left Column */}
-          <motion.div 
-            className="lg:col-span-5 px-2 md:px-0"
-            initial={{ opacity: 0, y: 20 }}
-            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-          >
-            <div className="sticky top-24">
-              <motion.h2 
-                className="text-3xl md:text-4xl font-bold text-[var(--color-text-primary)] mb-4"
-                initial={{ opacity: 0, y: 20 }}
-                animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-                transition={{ duration: 0.5, delay: 0.3 }}
-              >
-                {t('faq.title')}
-              </motion.h2>
-              <motion.p 
-                className="text-[var(--color-text-primary)]"
-                initial={{ opacity: 0, y: 20 }}
-                animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-                transition={{ duration: 0.5, delay: 0.4 }}
-              >
-                {t('faq.subtitle.text')}{' '}
-                <Link 
-                  href="/contact" 
-                  className="text-[var(--color-link)] hover:underline"
+          <GridItem lgColSpan={5} className="px-4 md:px-0">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+            >
+              <div className="sticky top-24">
+                <motion.h2 
+                  className="text-3xl md:text-4xl font-bold text-[var(--color-text-primary)] mb-4"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+                  transition={{ duration: 0.5, delay: 0.3 }}
                 >
-                  {t('faq.subtitle.link')}
-                </Link>
-              </motion.p>
-            </div>
-          </motion.div>
+                  {t('faq.title')}
+                </motion.h2>
+                <motion.p 
+                  className="text-[var(--color-text-primary)]"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+                  transition={{ duration: 0.5, delay: 0.4 }}
+                >
+                  {t('faq.subtitle.text')}{' '}
+                  <Link 
+                    href="/contact" 
+                    className="text-[var(--color-link)] hover:underline"
+                  >
+                    {t('faq.subtitle.link')}
+                  </Link>
+                </motion.p>
+              </div>
+            </motion.div>
+          </GridItem>
           
           {/* Right Column - Restored subtle horizontal animation */}
-          <motion.div 
-            className="lg:col-span-7 overflow-hidden"
-            ref={sectionRef}
-          >
+          <GridItem lgColSpan={7} className="overflow-hidden">
             <motion.div
+              ref={sectionRef}
               className="w-full"
               initial={{ opacity: 0, x: 30 }}
               animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 30 }}
@@ -83,9 +83,9 @@ const FAQSection = () => {
             >
               <FAQ faqs={faqs} />
             </motion.div>
-          </motion.div>
-        </div>
-      </div>
+          </GridItem>
+        </Grid>
+      </Grid>
     </AnimatedBackground>
   );
 };

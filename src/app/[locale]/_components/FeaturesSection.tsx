@@ -5,6 +5,7 @@ import FeatureCard from './FeatureCard';
 import { useTranslations } from 'next-intl';
 import { motion, useInView, useAnimation, AnimatePresence } from 'framer-motion';
 import AnimatedBackground from '@/components/AnimatedBackground/AnimatedBackground';
+import Grid from '@/components/Grid';
 
 const FeaturesSection = () => {
   const t = useTranslations('features');
@@ -93,64 +94,49 @@ const FeaturesSection = () => {
     }
   };
   
-  // Grid container animatie
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        delayChildren: 0.3,
-        staggerChildren: 0.1
-      }
-    }
-  };
-
   return (
     <AnimatedBackground variant="secondary" className="min-h-[100vh] md:h-screen flex items-center justify-center py-24 md:py-0">
-      <div className="container mx-auto px-4 flex flex-col items-center" ref={ref}>
-        {/* Section title met nieuwe animatie */}
-        <motion.div 
-          className="text-center mb-16 max-w-3xl"
-          variants={titleVariants}
-          initial="hidden"
-          animate={controls}
-        >
-          <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text-primary)] dark:text-[var(--color-text-primary)] mb-4">
-            {t('sectionTitle.part1')} <span className="text-[var(--color-quinary)] dark:text-[var(--color-quinary)]">{t('sectionTitle.part2')}</span>
-          </h2>
-        </motion.div>
-        
-        {/* Features grid met nieuwe animaties */}
-        <motion.div 
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-6xl"
-          variants={containerVariants}
-          initial="hidden"
-          animate={controls}
-        >
-          <AnimatePresence>
-            {features.map((feature, index) => (
-              <motion.div
-                key={`${feature.title}-${index}`}
-                className="h-full"
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{
-                  duration: 0.5,
-                  delay: index * 0.1,
-                  ease: [0.43, 0.13, 0.23, 0.96]
-                }}
-              >
-                <FeatureCard 
-                  title={feature.title}
-                  description={feature.description}
-                  icon={feature.icon}
-                  index={index}
-                />
-              </motion.div>
-            ))}
-          </AnimatePresence>
-        </motion.div>
-      </div>
+      <Grid container maxWidth="xl" className="flex flex-col items-center">
+        <div ref={ref}>
+          {/* Section title met nieuwe animatie */}
+          <motion.div 
+            className="text-center mb-16 max-w-3xl"
+            variants={titleVariants}
+            initial="hidden"
+            animate={controls}
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text-primary)] dark:text-[var(--color-text-primary)] mb-4">
+              {t('sectionTitle.part1')} <span className="text-[var(--color-quinary)] dark:text-[var(--color-quinary)]">{t('sectionTitle.part2')}</span>
+            </h2>
+          </motion.div>
+          
+          {/* Features grid met nieuwe animaties */}
+          <Grid columns={1} mdColumns={2} lgColumns={3} spacing="lg" className="w-full max-w-6xl">
+            <AnimatePresence>
+              {features.map((feature, index) => (
+                <motion.div
+                  key={`${feature.title}-${index}`}
+                  className="h-full p-2"
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{
+                    duration: 0.5,
+                    delay: index * 0.1,
+                    ease: [0.43, 0.13, 0.23, 0.96]
+                  }}
+                >
+                  <FeatureCard 
+                    title={feature.title}
+                    description={feature.description}
+                    icon={feature.icon}
+                    index={index}
+                  />
+                </motion.div>
+              ))}
+            </AnimatePresence>
+          </Grid>
+        </div>
+      </Grid>
     </AnimatedBackground>
   );
 };

@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { FaCheck, FaTimes } from 'react-icons/fa';
 import Image from 'next/image';
 import Button from '../Button/Button';
+import Grid, { GridItem } from '@/components/Grid';
 
 export type CardStyle = 'default' | 'minimal' | 'gradient' | 'bordered' | 'dark';
 export type FeatureStatus = 'included' | 'excluded' | 'none';
@@ -101,8 +102,8 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
           {subtext}
         </div>
       )}
-      <div className="p-6 pt-8 flex flex-col flex-grow overflow-hidden">
-        <div className="flex flex-col items-center text-center mb-6">
+      <Grid spacing="md" className="p-6 pt-8 flex-grow overflow-hidden flex flex-col">
+        <GridItem className="flex flex-col items-center text-center mb-6">
           {imagePath ? (
             <div className="relative w-16 h-16 mb-4">
               <Image
@@ -123,13 +124,15 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
             <span className="text-3xl font-bold text-[var(--color-success)]">{price}</span>
             <span className="text-[var(--color-text-primary)]"> {priceSubtext}</span>
           </div>
-        </div>
+        </GridItem>
 
-        <p className="text-[var(--color-text-primary)] mb-6 text-center">
-          {description}
-        </p>
+        <GridItem className="text-center mb-6">
+          <p className="text-[var(--color-text-primary)]">
+            {description}
+          </p>
+        </GridItem>
 
-        <div className="space-y-3 flex-grow">
+        <GridItem className="space-y-3 flex-grow">
           {features.map((feature, index) => (
             <motion.div
               key={index}
@@ -151,8 +154,8 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
               <span className="text-[var(--color-text-primary)]">{feature.text}</span>
             </motion.div>
           ))}
-        </div>
-      </div>
+        </GridItem>
+      </Grid>
 
       <div className="p-6 mt-auto border-t border-[var(--color-border)]">
         <Button

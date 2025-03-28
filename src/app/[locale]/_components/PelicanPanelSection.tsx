@@ -4,6 +4,7 @@ import React, { useRef, useState } from 'react';
 import { useTranslations } from 'next-intl';
 import { motion, useInView, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
+import Grid, { GridItem } from '@/components/Grid';
 
 // Modal Component
 const ImageModal = ({ isOpen, onClose, imageSrc, title }: { isOpen: boolean; onClose: () => void; imageSrc: string; title: string }) => {
@@ -95,8 +96,8 @@ const PanelFeatureItem = ({ title, description, iconSrc, index = 0 }: PanelFeatu
       <div className="flex-shrink-0 mr-4">
         <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[var(--color-quaternary)] to-[var(--color-quinary)] flex items-center justify-center text-white">
           <Image 
-            src={iconSrc} 
-            alt={title} 
+            src={iconSrc}
+            alt={title}
             width={24} 
             height={24} 
             className="text-white" 
@@ -194,142 +195,138 @@ const PelicanPanelSection = () => {
 
   return (
     <section id="panel">
-    <div className="py-24 md:py-32 relative overflow-hidden">
-      <ImageModal
-        isOpen={!!selectedImage}
-        onClose={() => setSelectedImage(null)}
-        imageSrc={selectedImage?.src || ''}
-        title={selectedImage?.title || ''}
-      />
-      <div className="hidden lg:block absolute inset-0 w-full h-full opacity-20">
-        <Image
-          src="/images/jpg/mainpage/sons_of_the_forest.jpg"
-          alt="Background"
-          fill
-          style={{ objectFit: 'cover', objectPosition: 'center' }}
-          className="w-full h-full"
-          priority
+      <div className="py-24 md:py-32 relative overflow-hidden">
+        <ImageModal
+          isOpen={!!selectedImage}
+          onClose={() => setSelectedImage(null)}
+          imageSrc={selectedImage?.src || ''}
+          title={selectedImage?.title || ''}
         />
-      </div>
-      <div ref={sectionRef} className="container mx-auto px-4 relative z-10">
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          animate={isInView ? "visible" : "hidden"}
-          className="max-w-6xl mx-auto"
-        >
-          {/* Section Header */}
-          <motion.div variants={titleVariants} className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text-primary)] dark:text-[var(--color-text-primary)] mb-4">
-              {t('title')} <span className="text-[var(--color-quinary)] dark:text-[var(--color-quinary)]">{t('subtitle')}</span>
-            </h2>
-            <p className="text-[var(--color-text-subtle)] dark:text-[var(--color-text-subtle)] max-w-2xl mx-auto">
-              {t('description')}
-            </p>
-          </motion.div>
-
-          {/* Main Content */}
-          <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-start">
-            {/* Left Column - Panels */}
-            <motion.div
-              variants={imageVariants}
-              className="lg:col-span-7 grid grid-cols-1 gap-6"
-            >
-              {/* Eerste panel - Dashboard */}
-              <motion.div
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-                className="bg-[var(--color-card-bg)] dark:bg-[var(--color-card-bg)] rounded-xl shadow-xl w-full border border-[var(--color-border)] dark:border-[var(--color-border)] flex flex-col overflow-hidden lg:cursor-pointer"
-                onClick={() => {
-                  if (window.innerWidth >= 1024) {
-                    setSelectedImage({ src: '/images/jpg/mainpage/dashboard.jpg', title: 'Pelican Panel - Dashboard' });
-                  }
-                }}
-              >
-                <div className="flex-shrink-0 h-12 bg-[var(--color-bg-secondary)] dark:bg-[var(--color-bg-secondary)] flex items-center px-4 border-b border-[var(--color-border)]">
-                  <div className="flex space-x-2">
-                    <div className="w-3 h-3 rounded-full bg-red-500"></div>
-                    <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
-                    <div className="w-3 h-3 rounded-full bg-green-500"></div>
-                  </div>
-                  <div className="flex-1 text-center text-sm font-medium text-[var(--color-text-primary)] dark:text-[var(--color-text-primary)]">Pelican Panel - Dashboard</div>
-                </div>
-                <div className="relative">
-                  <Image 
-                    src="/images/jpg/mainpage/dashboard.jpg" 
-                    alt="Server Dashboard" 
-                    width={800}
-                    height={450}
-                    className="w-full h-auto"
-                    priority
-                  />
-                </div>
-              </motion.div>
-
-              {/* Tweede panel - File Editor */}
-              <motion.div
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-                className="bg-[var(--color-card-bg)] dark:bg-[var(--color-card-bg)] rounded-xl shadow-xl w-full border border-[var(--color-border)] dark:border-[var(--color-border)] flex flex-col overflow-hidden lg:cursor-pointer"
-                onClick={() => {
-                  if (window.innerWidth >= 1024) {
-                    setSelectedImage({ src: '/images/jpg/mainpage/filemanage.jpg', title: 'Pelican Panel - File Editor' });
-                  }
-                }}
-              >
-                <div className="flex-shrink-0 h-12 bg-[var(--color-bg-secondary)] dark:bg-[var(--color-bg-secondary)] flex items-center px-4 border-b border-[var(--color-border)]">
-                  <div className="flex space-x-2">
-                    <div className="w-3 h-3 rounded-full bg-red-500"></div>
-                    <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
-                    <div className="w-3 h-3 rounded-full bg-green-500"></div>
-                  </div>
-                  <div className="flex-1 text-center text-sm font-medium text-[var(--color-text-primary)] dark:text-[var(--color-text-primary)]">Pelican Panel - File Editor</div>
-                </div>
-                <div className="relative">
-                  <Image 
-                    src="/images/jpg/mainpage/filemanage.jpg" 
-                    alt="File Editor" 
-                    width={800}
-                    height={450}
-                    className="w-full h-auto"
-                    priority
-                  />
-                </div>
-              </motion.div>
+        <div className="hidden lg:block absolute inset-0 w-full h-full opacity-20">
+          <Image
+            src="/images/jpg/mainpage/sons_of_the_forest.jpg"
+            alt="Background"
+            fill
+            style={{ objectFit: 'cover', objectPosition: 'center' }}
+            className="w-full h-full"
+            priority
+          />
+        </div>
+        <Grid container maxWidth="xl" className="relative z-10">
+          <motion.div
+            variants={containerVariants}
+            initial="hidden"
+            animate={isInView ? "visible" : "hidden"}
+            className="max-w-6xl mx-auto"
+            ref={sectionRef}
+          >
+            {/* Section Header */}
+            <motion.div variants={titleVariants} className="text-center mb-4">
+              <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text-primary)] dark:text-[var(--color-text-primary)] mb-1">
+                {t('title')} <span className="text-[var(--color-quinary)] dark:text-[var(--color-quinary)]">{t('subtitle')}</span>
+              </h2>
+              <p className="text-[var(--color-text-subtle)] dark:text-[var(--color-text-subtle)] max-w-2xl mx-auto">
+                {t('description')}
+              </p>
             </motion.div>
 
-            {/* Right Column - Features List */}
-            <div className="lg:col-span-5 flex flex-col">
-              <motion.h3 
-                variants={titleVariants} 
-                className="text-2xl font-bold text-[var(--color-text-primary)] dark:text-[var(--color-text-primary)] mb-6"
-              >
-                {t('features.title')}
-              </motion.h3>
-              
-              <div className="space-y-4">
-                {panelFeatures.map((feature, index) => (
-                  <PanelFeatureItem
-                    key={index}
-                    title={feature.title}
-                    description={feature.description}
-                    iconSrc={feature.iconSrc}
-                    index={index}
-                  />
-                ))}
-              </div>
+            {/* Main Content */}
+            <Grid columns={1} lgColumns={12} spacing="lg" className="items-start">
+              {/* Left Column - Panels */}
+              <GridItem lgColSpan={7}>
+                <motion.div
+                  variants={imageVariants}
+                  className="grid grid-cols-1 gap-3"
+                >
+                  {/* Eerste panel - Dashboard */}
+                  <motion.div
+                    whileHover={{ scale: 1.02 }}
+                    whileTap={{ scale: 0.98 }}
+                    className="bg-[var(--color-card-bg)] dark:bg-[var(--color-card-bg)] rounded-xl shadow-xl w-full border border-[var(--color-border)] dark:border-[var(--color-border)] flex flex-col overflow-hidden lg:cursor-pointer"
+                    onClick={() => {
+                      if (window.innerWidth >= 1024) {
+                        setSelectedImage({ src: '/images/jpg/mainpage/dashboard.jpg', title: 'Pelican Panel - Dashboard' });
+                      }
+                    }}
+                  >
+                    <div className="flex-shrink-0 h-5 bg-[var(--color-bg-secondary)] dark:bg-[var(--color-bg-secondary)] flex items-center px-1 border-b border-[var(--color-border)]">
+                      <div className="flex space-x-0.5">
+                        <div className="w-2.5 h-2.5 rounded-full bg-red-500"></div>
+                        <div className="w-2.5 h-2.5 rounded-full bg-yellow-500"></div>
+                        <div className="w-2.5 h-2.5 rounded-full bg-green-500"></div>
+                      </div>
+                      <div className="flex-1 text-center text-sm font-medium text-[var(--color-text-primary)] dark:text-[var(--color-text-primary)]">Pelican Panel - Dashboard</div>
+                    </div>
+                    <div className="relative">
+                      <Image 
+                        src="/images/jpg/mainpage/dashboard.jpg" 
+                        alt="Server Dashboard" 
+                        width={800}
+                        height={450}
+                        className="w-full h-auto"
+                        priority
+                      />
+                    </div>
+                  </motion.div>
 
-              {/* Call to Action Button */}
-              <motion.div 
-                variants={titleVariants}
-                className="mt-10 text-center lg:text-left"
-              >
-              </motion.div>
-            </div>
-          </div>
-        </motion.div>
+                  {/* Tweede panel - File Editor */}
+                  <motion.div
+                    whileHover={{ scale: 1.02 }}
+                    whileTap={{ scale: 0.98 }}
+                    className="bg-[var(--color-card-bg)] dark:bg-[var(--color-card-bg)] rounded-xl shadow-xl w-full border border-[var(--color-border)] dark:border-[var(--color-border)] flex flex-col overflow-hidden lg:cursor-pointer"
+                    onClick={() => {
+                      if (window.innerWidth >= 1024) {
+                        setSelectedImage({ src: '/images/jpg/mainpage/filemanage.jpg', title: 'Pelican Panel - File Editor' });
+                      }
+                    }}
+                  >
+                    <div className="flex-shrink-0 h-5 bg-[var(--color-bg-secondary)] dark:bg-[var(--color-bg-secondary)] flex items-center px-1 border-b border-[var(--color-border)]">
+                      <div className="flex space-x-0.5">
+                      <div className="w-2.5 h-2.5 rounded-full bg-red-500"></div>
+                        <div className="w-2.5 h-2.5 rounded-full bg-yellow-500"></div>
+                        <div className="w-2.5 h-2.5 rounded-full bg-green-500"></div>
+                      </div>
+                      <div className="flex-1 text-center text-sm font-medium text-[var(--color-text-primary)] dark:text-[var(--color-text-primary)]">Pelican Panel - File Editor</div>
+                    </div>
+                    <div className="relative">
+                      <Image 
+                        src="/images/jpg/mainpage/filemanage.jpg" 
+                        alt="File Editor" 
+                        width={800}
+                        height={450}
+                        className="w-full h-auto"
+                        priority
+                      />
+                    </div>
+                  </motion.div>
+                </motion.div>
+              </GridItem>
+
+              {/* Right Column - Features List */}
+              <GridItem lgColSpan={5} className="flex flex-col">
+                <motion.h3 
+                  variants={titleVariants} 
+                  className="text-2xl font-bold text-[var(--color-text-primary)] dark:text-[var(--color-text-primary)] mb-3"
+                >
+                  {t('features.title')}
+                </motion.h3>
+                
+                <div className="space-y-2">
+                  {panelFeatures.map((feature, index) => (
+                    <PanelFeatureItem
+                      key={index}
+                      title={feature.title}
+                      description={feature.description}
+                      iconSrc={feature.iconSrc}
+                      index={index}
+                    />
+                  ))}
+                </div>
+              </GridItem>
+            </Grid>
+          </motion.div>
+        </Grid>
       </div>
-    </div>
     </section>
   );
 };
