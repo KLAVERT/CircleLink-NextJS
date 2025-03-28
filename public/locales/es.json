@@ -476,120 +476,159 @@
   "rust": {
     "hero": {
       "badge": "HOSTING RUST",
-      "title": "Hosting de Servidor RUST",
-      "subtitle": "Los mejores servidores RUST desde €4,50 al mes",
-      "description": "Con CircleLink, obtienes un servidor RUST de última generación con soporte al cliente calificado 24/7 y un sistema de gestión fácil de usar.",
+      "title": "RUST",
+      "subtitle": "PREMIUM GAME SERVERS",
+      "description": "Únete a nuestra comunidad de Rust y sobrevive en un mundo duro donde cada jugador es una amenaza potencial. Construye bases, forma alianzas y defiende tu territorio con nuestro alojamiento de servidor Rust de alto rendimiento.",
       "features": {
-        "feature1": "Protección DDoS empresarial",
-        "feature2": "Panel de control fácil",
-        "feature3": "Hardware premium",
-        "feature4": "Configuración personalizable"
+        "dedicatedServers": "Servidores dedicados de alto rendimiento",
+        "modInstallation": "Instalación de mods con un clic",
+        "uptime": "24/7 online con 99,9% de tiempo de actividad",
+        "ddosProtection": "Protección DDoS incluida"
       },
       "buttons": {
-        "viewPricing": "Ver precios",
-        "contactUs": "Contáctanos"
+        "getStarted": "Comenzar",
+        "viewPlans": "Ver Planes"
       },
       "bottomFeatures": {
-        "feature1": "Hardware premium",
-        "feature2": "Servidor listo en 2 min",
-        "feature3": "97,5% de satisfacción del cliente"
+        "ddosProtection": "Protección DDoS",
+        "premiumHardware": "Hardware premium",
+        "online": "24/7 online",
+        "instantDelivery": "Entrega instantánea"
       }
     },
     "packages": {
-      "title": "Paquetes de Servidor RUST",
-      "subtitle": "Elige el paquete que mejor se adapte a tus necesidades",
+      "title": "Elige Tu Paquete de Servidor Rust",
+      "subtitle": "Selecciona el servidor que mejor se adapte a las necesidades de tu clan. Todos los paquetes incluyen hardware de alto rendimiento y protección DDoS.",
+      "selectButton": "Seleccionar {name}",
+      "ddr": {
+        "ddr4": "DDR4",
+        "ddr3": "DDR3"
+      },
       "wood": {
-        "title": "Wood",
-        "description": "Para servidores pequeños y amigables",
+        "name": "Wood",
+        "description": "Ideal para clanes medianos que recién comienzan",
         "features": {
-          "feature1": "2GB RAM",
-          "feature2": "Sin límite de jugadores",
-          "feature3": "Protección DDoS",
-          "feature4": "SSD de alta velocidad"
+          "8gbddr4": "8GB DDR4 RAM",
+          "3cores": "3 Núcleos CPU",
+          "fullssd": "Almacenamiento SSD Completo",
+          "pelican": "Panel Pelican",
+          "support": "Soporte 12/7",
+          "2databases": "2 Bases de datos",
+          "2backup": "2 Copias de seguridad"
         }
       },
       "stone": {
-        "title": "Stone",
-        "description": "Para servidores medianos",
+        "name": "Stone",
+        "description": "Nuestro paquete recomendado para clanes en crecimiento",
         "features": {
-          "feature1": "4GB RAM",
-          "feature2": "Sin límite de jugadores",
-          "feature3": "Protección DDoS",
-          "feature4": "SSD de alta velocidad"
+          "10gbddr4": "10GB DDR4 RAM",
+          "4cores": "4 Núcleos CPU",
+          "fullssd": "Almacenamiento SSD Completo",
+          "pelican": "Panel Pelican",
+          "support": "Soporte 12/7",
+          "2databases": "2 Bases de datos",
+          "2backup": "2 Copias de seguridad"
         }
       },
       "metal": {
-        "title": "Metal",
-        "description": "Para servidores grandes",
+        "name": "Metal",
+        "description": "Rendimiento mejorado para clanes más grandes con múltiples mods",
         "features": {
-          "feature1": "8GB RAM",
-          "feature2": "Sin límite de jugadores",
-          "feature3": "Protección DDoS",
-          "feature4": "SSD de alta velocidad"
+          "12gbddr4": "12GB DDR4 RAM",
+          "4cores": "4 Núcleos CPU",
+          "fullssd": "Almacenamiento SSD Completo",
+          "pelican": "Panel Pelican",
+          "support": "Soporte Prioritario",
+          "2databases": "2 Bases de datos",
+          "2backup": "2 Copias de seguridad"
         }
       },
-      "sulfur": {
-        "title": "Sulfur",
-        "description": "Para servidores PvP intensivos",
+      "sulfer": {
+        "name": "Sulfur",
+        "description": "Nuestro paquete más popular para clanes establecidos",
         "features": {
-          "feature1": "12GB RAM",
-          "feature2": "Sin límite de jugadores",
-          "feature3": "Protección DDoS",
-          "feature4": "SSD de alta velocidad"
+          "16gbddr4": "16GB DDR4 RAM",
+          "6cores": "6 Núcleos CPU",
+          "fullssd": "Almacenamiento SSD Completo",
+          "pelican": "Panel Pelican",
+          "support": "Soporte Prioritario",
+          "2databases": "2 Bases de datos",
+          "2backup": "2 Copias de seguridad"
         }
       },
       "hqm": {
-        "title": "HQM",
-        "description": "Para servidores grandes con mods",
+        "name": "HQM",
+        "description": "Rendimiento superior para clanes grandes con mods pesados",
         "features": {
-          "feature1": "16GB RAM",
-          "feature2": "Sin límite de jugadores",
-          "feature3": "Protección DDoS",
-          "feature4": "SSD de alta velocidad"
+          "20gbddr4": "20GB DDR4 RAM",
+          "6cores": "6 Núcleos CPU",
+          "fullssd": "Almacenamiento SSD Completo",
+          "pelican": "Panel Pelican",
+          "support": "Soporte Prioritario",
+          "2databases": "2 Bases de datos",
+          "2backup": "2 Copias de seguridad"
         }
       },
       "tech": {
-        "title": "Tech",
-        "description": "Para eventos y comunidades grandes",
+        "name": "Tech",
+        "description": "Rendimiento definitivo para las experiencias Rust más exigentes",
         "features": {
-          "feature1": "32GB RAM",
-          "feature2": "Sin límite de jugadores",
-          "feature3": "Protección DDoS",
-          "feature4": "SSD de alta velocidad"
+          "24gbddr4": "24GB DDR4 RAM",
+          "8cores": "8 Núcleos CPU",
+          "fullssd": "Almacenamiento SSD Completo",
+          "pelican": "Panel Pelican",
+          "support": "Soporte 12/7",
+          "2databases": "2 Bases de datos",
+          "2backup": "2 Copias de seguridad"
         }
       },
       "enterprise": {
-        "title": "Enterprise",
-        "description": "Para comunidades muy grandes",
+        "name": "Enterprise",
+        "description": "Solución personalizada para comunidades profesionales de Rust y eventos",
         "features": {
-          "feature1": "64GB RAM",
-          "feature2": "Sin límite de jugadores",
-          "feature3": "Protección DDoS",
-          "feature4": "SSD de alta velocidad"
+          "ram": "RAM Personalizada",
+          "cores": "Núcleos CPU Personalizados",
+          "ssd": "Almacenamiento SSD Personalizado",
+          "pelican": "Panel Pelican",
+          "support": "Soporte 12/7",
+          "databases": "Bases de datos Personalizadas",
+          "backups": "Copias de seguridad Personalizadas"
         }
       }
     },
     "pelicanPanel": {
       "title": "Control de Servidor RUST",
       "subtitle": "Con el Panel Pelican",
-      "description": "El Panel Pelican es un panel de control de juego fácil de usar que te permite controlar tu servidor de juego con unos pocos clics. Puedes iniciar, detener, reiniciar tu servidor, instalar mods, cambiar mapas y mucho más.",
+      "featuresTitle": "Algunas de nuestras características:",
       "features": {
-        "feature1": {
-          "title": "Fácil de usar",
-          "description": "Nuestra interfaz intuitiva hace que la gestión del servidor sea extremadamente simple."
-        },
-        "feature2": {
-          "title": "Instalación de mods con un clic",
-          "description": "Instala mods con un solo clic directamente desde el panel de control."
-        },
-        "feature3": {
-          "title": "Configuración de mapa",
-          "description": "Cambia fácilmente de mapa y configura los ajustes del mapa."
-        },
-        "feature4": {
-          "title": "Reinicio instantáneo",
-          "description": "Reinicia tu servidor instantáneamente con un solo clic."
-        }
+        "ftpLogin": "Inicio de sesión FTP",
+        "browserFileManagement": "Gestión de archivos en navegador",
+        "subuserLogin": "Inicio de sesión de subusuario",
+        "createDatabases": "Crear bases de datos",
+        "serverBackups": "Copias de seguridad del servidor",
+        "consoleInput": "Entrada de consola",
+        "restartServer": "Reiniciar tu servidor",
+        "scheduledCommand": "Comando programado",
+        "scheduledPowerAction": "Acción de energía programada",
+        "databaseManagement": "Gestión de bases de datos"
+      },
+      "buttonText": "Saber más",
+      "description": "El Panel Pelican es un panel de control de juego fácil de usar que te permite controlar tu servidor de juego con unos pocos clics. Puedes iniciar, detener, reiniciar tu servidor, instalar mods, cambiar mapas y mucho más.",
+      "feature1": {
+        "title": "Fácil de usar",
+        "description": "Nuestra interfaz intuitiva hace que la gestión del servidor sea extremadamente simple."
+      },
+      "feature2": {
+        "title": "Instalación de mods con un clic",
+        "description": "Instala mods con un solo clic directamente desde el panel de control."
+      },
+      "feature3": {
+        "title": "Configuración de mapa",
+        "description": "Cambia fácilmente de mapa y configura los ajustes del mapa."
+      },
+      "feature4": {
+        "title": "Reinicio instantáneo",
+        "description": "Reinicia tu servidor instantáneamente con un solo clic."
       },
       "button": "Más información"
     },
@@ -920,15 +959,20 @@
       "title": "Pelican Panel para FiveM",
       "subtitle": "Gestión avanzada de servidores simplificada",
       "description": "Nuestro Pelican Panel te proporciona todo lo que necesitas para gestionar eficientemente tu servidor FiveM. Desde la gestión de recursos hasta el monitoreo de jugadores, tienes control total.",
+      "featuresTitle": "Algunas de nuestras características:",
       "features": {
-        "title": "Características del Panel",
-        "resourceManager": "Gestor de Recursos",
-        "playerManagement": "Gestión de Jugadores",
-        "backupSystem": "Sistema de Copias de Seguridad",
-        "consoleAccess": "Acceso a la Consola",
-        "fileManager": "Gestor de Archivos",
-        "performance": "Monitoreo de Rendimiento"
-      }
+        "ftpLogin": "Inicio de sesión FTP",
+        "browserFileManagement": "Gestión de archivos desde el navegador",
+        "subuserLogin": "Inicio de sesión de subusuario",
+        "createDatabases": "Crear bases de datos",
+        "serverBackups": "Copias de seguridad del servidor",
+        "consoleInput": "Entrada de consola",
+        "restartServer": "Reiniciar tu servidor",
+        "scheduledCommand": "Comando programado",
+        "scheduledPowerAction": "Acción de energía programada",
+        "databaseManagement": "Gestión de bases de datos"
+      },
+      "buttonText": "Más información"
     },
     "faq": {
       "title": "Preguntas Frecuentes",

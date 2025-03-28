@@ -936,15 +936,20 @@
       "title": "Pelican Panel voor FiveM",
       "subtitle": "Geavanceerd serverbeheer eenvoudig gemaakt",
       "description": "Ons Pelican Panel biedt je alles wat je nodig hebt om je FiveM server efficiënt te beheren. Van resource management tot speler monitoring, je hebt volledige controle.",
+      "featuresTitle": "Enkele van onze functies:",
       "features": {
-        "title": "Panel Features",
-        "resourceManager": "Resource Manager",
-        "playerManagement": "Speler Beheer",
-        "backupSystem": "Backup Systeem",
-        "consoleAccess": "Console Toegang",
-        "fileManager": "Bestandsbeheer",
-        "performance": "Prestatie Monitoring"
-      }
+        "ftpLogin": "FTP inloggen",
+        "browserFileManagement": "Browser bestandsbeheer",
+        "subuserLogin": "Subgebruiker inloggen",
+        "createDatabases": "Databases aanmaken",
+        "serverBackups": "Server backups",
+        "consoleInput": "Console invoer",
+        "restartServer": "Server herstarten",
+        "scheduledCommand": "Geplande opdrachten",
+        "scheduledPowerAction": "Geplande stroomacties",
+        "databaseManagement": "Database beheer"
+      },
+      "buttonText": "Meer informatie"
     },
     "faq": {
       "title": "Veelgestelde Vragen",

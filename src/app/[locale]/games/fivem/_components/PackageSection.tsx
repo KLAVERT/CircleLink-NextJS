@@ -206,7 +206,6 @@ function DDRProvider({ children }: { children: React.ReactNode }) {
 
 function DDRToggle() {
   const { isDDR4, toggleDDR } = useDDR();
-  const t = useTranslations('fivem');
   
   return (
     <div className="flex justify-center">
@@ -238,6 +237,8 @@ function DDRToggle() {
 }
 
 const PackageSection = () => {
+  // The t variable is used in JSX below for translations
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const t = useTranslations('fivem');
 
   return (

@@ -6,7 +6,7 @@ import Image from 'next/image';
 import Button from '../../../../../components/Button/Button';
 
 const PelicanPanelSection = () => {
-  const t = useTranslations('rust.pelicanPanel');
+  const t = useTranslations('fivem.pelicanPanel');
 
   return (
     <div className="py-16 bg-[var(--color-tertiary)]">
