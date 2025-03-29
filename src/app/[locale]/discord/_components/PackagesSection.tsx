@@ -7,6 +7,7 @@ import type { Feature } from '@/components/FeatureCard/FeatureCard';
 import { useTranslations } from 'next-intl';
 import { FaDiscord } from 'react-icons/fa';
 import { BtwProvider, BtwToggle, useBtw } from '@/components/btw/btw';
+import Grid, { GridItem } from '@/components/Grid';
 
 interface Package {
   name: string;
@@ -139,7 +140,7 @@ function PackageCards({ packages }: { packages: Package[] }) {
 
   return (
     <>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <Grid columns={1} mdColumns={2} lgColumns={3} spacing="lg">
         {packages.slice(0, -1).map((pkg) => {
           const features: Feature[] = pkg.features.map(feature => ({
             text: t(feature.text),
@@ -147,26 +148,27 @@ function PackageCards({ packages }: { packages: Package[] }) {
           }));
 
           return (
-            <FeatureCard
-              key={pkg.name}
-              icon={<FaDiscord />}
-              title={t(`packages.${pkg.name.toLowerCase()}.name`)}
-              price={calculatePrice(pkg.price)}
-              description={t(pkg.description)}
-              features={features}
-              style="gradient"
-              buttonText={t('packages.selectButton', { name: t(`packages.${pkg.name.toLowerCase()}.name`) })}
-              sub={pkg.sub}
-              subtext={pkg.subtext}
-              href="#contact"
-            />
+            <GridItem key={pkg.name}>
+              <FeatureCard
+                icon={<FaDiscord />}
+                title={t(`packages.${pkg.name.toLowerCase()}.name`)}
+                price={calculatePrice(pkg.price)}
+                description={t(pkg.description)}
+                features={features}
+                style="gradient"
+                buttonText={t('packages.selectButton', { name: t(`packages.${pkg.name.toLowerCase()}.name`) })}
+                sub={pkg.sub}
+                subtext={pkg.subtext}
+                href="#contact"
+              />
+            </GridItem>
           );
         })}
-      </div>
+      </Grid>
       
       {/* Enterprise package centered */}
       <div className="mt-8 flex justify-center">
-        <div className="w-full max-w-md">
+        <div className="w-full max-w-[33.33%]">
           <FeatureCard
             key={packages[3].name}
             icon={<FaDiscord />}

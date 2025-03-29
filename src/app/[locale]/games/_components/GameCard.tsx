@@ -6,6 +6,7 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
 import { FaCheck } from 'react-icons/fa';
+import Grid, { GridItem } from '@/components/Grid';
 
 interface GameCardProps {
   id?: string;
@@ -95,24 +96,32 @@ const GameCard = ({
             </p>
             
             {/* Features */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-x-4 gap-y-2 mt-4">
-              <div className="flex items-center gap-2">
-                <FaCheck className="text-[var(--color-success)]" />
-                <span className="text-sm text-[var(--color-text-primary)]">12/7 Support</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <FaCheck className="text-[var(--color-success)]" />
-                <span className="text-sm text-[var(--color-text-primary)]">{t('gameCard.unlimitedSlots')}</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <FaCheck className="text-[var(--color-success)]" />
-                <span className="text-sm text-[var(--color-text-primary)]">DDoS {t('gameCard.protection')}</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <FaCheck className="text-[var(--color-success)]" />
-                <span className="text-sm text-[var(--color-text-primary)]">Pelican {t('gameCard.panel')}</span>
-              </div>
-            </div>
+            <Grid columns={2} mdColumns={4} spacing="sm">
+              <GridItem>
+                <div className="flex items-center gap-2">
+                  <FaCheck className="text-[var(--color-success)]" />
+                  <span className="text-sm text-[var(--color-text-primary)]">12/7 Support</span>
+                </div>
+              </GridItem>
+              <GridItem>
+                <div className="flex items-center gap-2">
+                  <FaCheck className="text-[var(--color-success)]" />
+                  <span className="text-sm text-[var(--color-text-primary)]">{t('gameCard.unlimitedSlots')}</span>
+                </div>
+              </GridItem>
+              <GridItem>
+                <div className="flex items-center gap-2">
+                  <FaCheck className="text-[var(--color-success)]" />
+                  <span className="text-sm text-[var(--color-text-primary)]">DDoS {t('gameCard.protection')}</span>
+                </div>
+              </GridItem>
+              <GridItem>
+                <div className="flex items-center gap-2">
+                  <FaCheck className="text-[var(--color-success)]" />
+                  <span className="text-sm text-[var(--color-text-primary)]">Pelican {t('gameCard.panel')}</span>
+                </div>
+              </GridItem>
+            </Grid>
           </div>
           
           {/* CTA Button */}

@@ -6,6 +6,7 @@ import { motion } from 'framer-motion';
 import { FaSearch } from 'react-icons/fa';
 import GameCard from './GameCard';
 import GameFilter, { GameCategory } from './GameFilter';
+import Grid, { GridItem } from '@/components/Grid';
 
 interface Game {
   id: string;
@@ -201,7 +202,7 @@ const GameGridSection = () => {
 
           {/* Search and filter with improved pointer-events */}
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 mb-8 relative z-30 pointer-events-auto">
-            <div className="relative w-full md:w-96 pointer-events-auto">
+            <div className="relative w-full md:w-auto flex-1 pointer-events-auto">
               <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                 <FaSearch className="text-[var(--color-text-subtle)]" />
               </div>
@@ -215,7 +216,7 @@ const GameGridSection = () => {
             </div>
 
             {/* Using the new GameFilter component with improved pointer-events */}
-            <div className="w-full md:w-auto relative z-50 pointer-events-auto">
+            <div className="flex items-center relative z-50 pointer-events-auto">
               <GameFilter 
                 activeFilter={activeFilter}
                 setActiveFilter={handleFilterChange}
@@ -229,22 +230,25 @@ const GameGridSection = () => {
             variants={containerVariants}
             initial="hidden"
             animate={isLoaded ? "visible" : "hidden"}
-            className="space-y-6 relative z-10"
+            className="relative z-10"
           >
             {filteredGames.length > 0 ? (
-              filteredGames.map((game) => (
-                <GameCard
-                  key={game.id}
-                  name={game.name}
-                  edition={game.edition}
-                  description={game.description}
-                  price={game.price}
-                  image={game.image}
-                  slug={game.slug}
-                  backgroundImage={game.backgroundImage}
-                  backgroundWidth={game.backgroundWidth}
-                />
-              ))
+              <Grid columns={1} spacing="md">
+                {filteredGames.map((game) => (
+                  <GridItem key={game.id}>
+                    <GameCard
+                      name={game.name}
+                      edition={game.edition}
+                      description={game.description}
+                      price={game.price}
+                      image={game.image}
+                      slug={game.slug}
+                      backgroundImage={game.backgroundImage}
+                      backgroundWidth={game.backgroundWidth}
+                    />
+                  </GridItem>
+                ))}
+              </Grid>
             ) : (
               <div className="py-12 text-center">
                 <p className="text-[var(--color-text-subtle)] text-lg">

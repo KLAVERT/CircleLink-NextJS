@@ -7,6 +7,7 @@ import { MdDashboard } from 'react-icons/md';
 import { HiCheck } from 'react-icons/hi';
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
+import Grid, { GridItem } from '@/components/Grid';
 
 interface Feature {
   icon: React.ReactNode;
@@ -362,36 +363,39 @@ const InfoSection = () => {
           variants={containerVariants}
         >
           <motion.div 
-            className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-6"
+            className="max-w-7xl mx-auto"
           >
-            {features.map((feature, index) => (
-              <motion.div
-                key={index}
-                className="bg-white/90 backdrop-blur-sm rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300"
-                variants={cardVariants}
-                initial="hidden"
-                animate="visible"
-                whileHover="hover"
-                whileTap="tap"
-                custom={index}
-              >
-                <div className="text-[var(--color-quinary)] mb-4">
-                  {feature.icon}
-                </div>
-                <motion.h3 
-                  className="text-xl font-bold mb-2 text-[var(--color-text-dark)]"
-                  variants={titleVariants}
-                >
-                  {feature.title}
-                </motion.h3>
-                <motion.p 
-                  className="text-[var(--color-text-dark)]"
-                  variants={itemVariants}
-                >
-                  {feature.description}
-                </motion.p>
-              </motion.div>
-            ))}
+            <Grid columns={1} mdColumns={2} lgColumns={4} spacing="md">
+              {features.map((feature, index) => (
+                <GridItem key={index}>
+                  <motion.div
+                    className="bg-white/90 backdrop-blur-sm rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300"
+                    variants={cardVariants}
+                    initial="hidden"
+                    animate="visible"
+                    whileHover="hover"
+                    whileTap="tap"
+                    custom={index}
+                  >
+                    <div className="text-[var(--color-quinary)] mb-4">
+                      {feature.icon}
+                    </div>
+                    <motion.h3 
+                      className="text-xl font-bold mb-2 text-[var(--color-text-dark)]"
+                      variants={titleVariants}
+                    >
+                      {feature.title}
+                    </motion.h3>
+                    <motion.p 
+                      className="text-[var(--color-text-dark)]"
+                      variants={itemVariants}
+                    >
+                      {feature.description}
+                    </motion.p>
+                  </motion.div>
+                </GridItem>
+              ))}
+            </Grid>
           </motion.div>
         </motion.div>
       </div>

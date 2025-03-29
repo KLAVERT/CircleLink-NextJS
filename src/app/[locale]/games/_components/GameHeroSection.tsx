@@ -6,6 +6,7 @@ import { motion } from 'framer-motion';
 import { FaGamepad, FaServer, FaCogs } from 'react-icons/fa';
 import Image from 'next/image';
 import Button from '@/components/Button/Button';
+import Grid, { GridItem } from '@/components/Grid';
 
 const GameHeroSection = () => {
   const t = useTranslations('games');
@@ -143,39 +144,40 @@ const GameHeroSection = () => {
             <h2 className="text-2xl md:text-3xl font-bold text-center mb-6 text-[var(--color-text-primary)]">
               {t('heroSection.featuredTitle') || 'Popular Game Servers'}
             </h2>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+            <Grid columns={2} mdColumns={4} spacing="md">
               {featuredGames.map((game, index) => (
-                <motion.a
-                  key={index}
-                  href={game.slug}
-                  className="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
-                  whileHover={{ 
-                    scale: 1.03,
-                    transition: { duration: 0.2 }
-                  }}
-                  whileTap={{ scale: 0.98 }}
-                >
-                  <div className="relative h-48 md:h-64 w-full">
-                    <Image
-                      src={game.image}
-                      alt={game.name}
-                      fill
-                      priority={game.name === 'Rust' || index < 2}
-                      sizes="(max-width: 768px) 50vw, 25vw"
-                      style={{ objectFit: 'cover' }}
-                      className="group-hover:scale-110 transition-transform duration-500"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-70 group-hover:opacity-90 transition-opacity duration-300" />
-                    <div className="absolute bottom-0 left-0 right-0 p-4">
-                      <h3 className="text-xl font-bold text-white">{game.name}</h3>
-                      <p className="text-white/80 text-sm mt-1">
-                        {t('heroSection.viewDetails') || 'View details'}
-                      </p>
+                <GridItem key={index}>
+                  <motion.a
+                    href={game.slug}
+                    className="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 block h-full"
+                    whileHover={{ 
+                      scale: 1.03,
+                      transition: { duration: 0.2 }
+                    }}
+                    whileTap={{ scale: 0.98 }}
+                  >
+                    <div className="relative h-48 md:h-64 w-full rounded-xl overflow-hidden">
+                      <Image
+                        src={game.image}
+                        alt={game.name}
+                        fill
+                        priority={game.name === 'Rust' || index < 2}
+                        sizes="(max-width: 768px) 50vw, 25vw"
+                        style={{ objectFit: 'cover' }}
+                        className="group-hover:scale-110 transition-transform duration-500"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-70 group-hover:opacity-90 transition-opacity duration-300" />
+                      <div className="absolute bottom-0 left-0 right-0 p-4">
+                        <h3 className="text-xl font-bold text-white">{game.name}</h3>
+                        <p className="text-white/80 text-sm mt-1">
+                          {t('heroSection.viewDetails') || 'View details'}
+                        </p>
+                      </div>
                     </div>
-                  </div>
-                </motion.a>
+                  </motion.a>
+                </GridItem>
               ))}
-            </div>
+            </Grid>
           </motion.div>
         </motion.div>
       </div>
