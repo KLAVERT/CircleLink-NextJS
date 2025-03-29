@@ -201,8 +201,8 @@ const GameGridSection = () => {
           </div>
 
           {/* Search and filter with improved pointer-events */}
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4 mb-8 relative z-30 pointer-events-auto">
-            <div className="relative w-full md:w-auto flex-1 pointer-events-auto">
+          <div className="flex flex-col md:flex-row md:justify-between space-y-3 md:space-y-0 items-start md:items-center gap-2 md:gap-4 mb-8 relative z-30 pointer-events-auto">
+            <div className="relative w-full md:flex-1 pointer-events-auto">
               <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                 <FaSearch className="text-[var(--color-text-subtle)]" />
               </div>
@@ -216,7 +216,7 @@ const GameGridSection = () => {
             </div>
 
             {/* Using the new GameFilter component with improved pointer-events */}
-            <div className="flex items-center relative z-50 pointer-events-auto">
+            <div className="w-full md:w-auto flex items-center relative z-50 pointer-events-auto">
               <GameFilter 
                 activeFilter={activeFilter}
                 setActiveFilter={handleFilterChange}
