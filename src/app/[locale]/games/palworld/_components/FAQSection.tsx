@@ -4,6 +4,7 @@ import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
 import AnimatedBackground from '@/components/AnimatedBackground/AnimatedBackground';
 import Link from 'next/link';
+import Grid, { GridItem } from '@/components/Grid';
 
 const FAQSection = () => {
   const t = useTranslations();
@@ -34,56 +35,41 @@ const FAQSection = () => {
   ];
 
   return (
-    <AnimatedBackground variant="tertiary" className="min-h-[100vh] md:h-screen flex items-center justify-center py-16 md:py-0">
-      <div className="container mx-auto px-4 py-8 md:py-0">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
-          {/* Left Column */}
-          <motion.div 
-            className="lg:col-span-5 px-2 md:px-0"
-            initial={{ opacity: 0, y: 20 }}
-            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-          >
-            <div className="sticky top-24">
-              <motion.h2 
-                className="text-3xl md:text-4xl font-bold text-[var(--color-text-primary)] mb-4"
-                initial={{ opacity: 0, y: 20 }}
-                animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-                transition={{ duration: 0.5, delay: 0.3 }}
-              >
+    <AnimatedBackground variant="tertiary" className="py-16">
+      <div className="container mx-auto px-4">
+        <div className="max-w-6xl mx-auto">
+          <div className="flex flex-col lg:flex-row gap-8">
+            {/* Titel kolom */}
+            <div className="lg:w-1/3 flex-shrink-0">
+              <h2 className="text-5xl font-extrabold text-[var(--color-text-primary)] tracking-tight">
                 {t('faq.title')}
-              </motion.h2>
-              <motion.p 
-                className="text-[var(--color-text-primary)]"
-                initial={{ opacity: 0, y: 20 }}
-                animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-                transition={{ duration: 0.5, delay: 0.4 }}
-              >
-                {t('faq.subtitle.text')}{' '}
-                <Link 
-                  href="/contact" 
-                  className="text-[var(--color-link)] hover:underline"
-                >
-                  {t('faq.subtitle.link')}
-                </Link>
-              </motion.p>
+              </h2>
+              <div className="mt-4">
+                <p className="text-lg text-[var(--color-text-primary)]">
+                  {t('faq.subtitle.text')}{' '}
+                  <Link 
+                    href="/contact" 
+                    className="text-[var(--color-link)] hover:underline"
+                  >
+                    {t('faq.subtitle.link')}
+                  </Link>
+                </p>
+              </div>
             </div>
-          </motion.div>
-          
-          {/* Right Column - Restored subtle horizontal animation */}
-          <motion.div 
-            className="lg:col-span-7 overflow-hidden"
-            ref={sectionRef}
-          >
-            <motion.div
-              className="w-full"
-              initial={{ opacity: 0, x: 30 }}
-              animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 30 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-            >
-              <FAQ faqs={faqs} />
-            </motion.div>
-          </motion.div>
+            
+            {/* FAQ kolom */}
+            <div className="lg:w-2/3">
+              <motion.div
+                ref={sectionRef}
+                className="w-full"
+                initial={{ opacity: 0 }}
+                animate={isInView ? { opacity: 1 } : { opacity: 0 }}
+                transition={{ duration: 0.5 }}
+              >
+                <FAQ faqs={faqs} />
+              </motion.div>
+            </div>
+          </div>
         </div>
       </div>
     </AnimatedBackground>

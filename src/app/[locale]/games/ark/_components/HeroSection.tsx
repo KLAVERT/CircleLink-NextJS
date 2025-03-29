@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
 import Button from '@/components/Button/Button';
 import { FaCheck, FaServer, FaClock, FaShieldAlt } from 'react-icons/fa';
+import Grid, { GridItem } from '@/components/Grid';
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -127,23 +128,33 @@ const HeroSection = () => {
 
       {/* Bottom features */}
       <div className="relative z-10 bg-[rgba(0,0,0,0.7)] py-6 backdrop-blur-sm w-full">
-        <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-6">
-          <div className="flex items-center justify-center gap-3 text-[var(--color-text-primary)]">
-            <FaShieldAlt className="text-blue-400 text-xl" /> 
-            <span>{t('bottomFeatures.ddosProtection')}</span>
-          </div>
-          <div className="flex items-center justify-center gap-3 text-[var(--color-text-primary)]">
-            <FaServer className="text-blue-400 text-xl" /> 
-            <span>{t('bottomFeatures.premiumHardware')}</span>
-          </div>
-          <div className="flex items-center justify-center gap-3 text-[var(--color-text-primary)]">
-            <FaClock className="text-blue-400 text-xl" /> 
-            <span>{t('bottomFeatures.online')}</span>
-          </div>
-          <div className="flex items-center justify-center gap-3 text-[var(--color-text-primary)]">
-            <FaCheck className="text-blue-400 text-xl" /> 
-            <span>{t('bottomFeatures.instantDelivery')}</span>
-          </div>
+        <div className="container mx-auto px-4">
+          <Grid columns={1} mdColumns={4} spacing="md">
+            <GridItem>
+              <div className="flex items-center justify-center gap-3 text-[var(--color-text-primary)]">
+                <FaShieldAlt className="text-blue-400 text-xl" /> 
+                <span>{t('bottomFeatures.ddosProtection')}</span>
+              </div>
+            </GridItem>
+            <GridItem>
+              <div className="flex items-center justify-center gap-3 text-[var(--color-text-primary)]">
+                <FaServer className="text-blue-400 text-xl" /> 
+                <span>{t('bottomFeatures.premiumHardware')}</span>
+              </div>
+            </GridItem>
+            <GridItem>
+              <div className="flex items-center justify-center gap-3 text-[var(--color-text-primary)]">
+                <FaClock className="text-blue-400 text-xl" /> 
+                <span>{t('bottomFeatures.online')}</span>
+              </div>
+            </GridItem>
+            <GridItem>
+              <div className="flex items-center justify-center gap-3 text-[var(--color-text-primary)]">
+                <FaCheck className="text-blue-400 text-xl" /> 
+                <span>{t('bottomFeatures.instantDelivery')}</span>
+              </div>
+            </GridItem>
+          </Grid>
         </div>
       </div>
     </section>

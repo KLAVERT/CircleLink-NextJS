@@ -6,6 +6,7 @@ import FeatureCard from '@/components/FeatureCard/FeatureCard';
 import type { Feature } from '@/components/FeatureCard/FeatureCard';
 import { BtwProvider, BtwToggle, useBtw } from '@/components/btw/btw';
 import { useTranslations } from 'next-intl';
+import Grid, { GridItem } from '@/components/Grid';
 
 interface Package {
   name: string;
@@ -196,55 +197,38 @@ function PackageCards({ packages }: { packages: Package[] }) {
   const { calculatePrice } = useBtw();
 
   return (
-    <>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {packages.slice(0, 6).map((pkg) => {
-          const features: Feature[] = pkg.features.map(feature => ({
-            text: t(feature.text),
-            status: feature.included ? 'included' : 'excluded'
-          }));
+    <Grid columns={1} mdColumns={2} lgColumns={3} spacing="lg">
+      {packages.map((pkg) => {
+        const features: Feature[] = pkg.features.map(feature => ({
+          text: t(feature.text),
+          status: feature.included ? 'included' : 'excluded'
+        }));
 
-          const packageName = pkg.name.toLowerCase();
-          const title = t(`packages.${packageName}.name`);
-          const description = t(pkg.description);
-          const buttonText = t('packages.selectButton', { name: title });
-
-          return (
-            <FeatureCard
-              key={pkg.name}
-              imagePath={"/images/webp/games/logos/ark.webp"}
-              imageAlt={"Official Ark Logo from the game"}
-              title={title}
-              price={calculatePrice(pkg.price)}
-              description={description}
-              features={features}
-              style="gradient"
-              buttonText={buttonText}
-              sub={pkg.sub}
-              subtext={pkg.subtext}
-              href="#contact"
-            />
-          );
-        })}
-      </div>
-      
-      {/* Enterprise package centered */}
-      <div className="mt-8 flex justify-center">
-        <div className="w-full max-w-md">
-          {(() => {
-            const pkg = packages[6];
-            const packageName = pkg.name.toLowerCase();
-            const title = t(`packages.${packageName}.name`);
-            const description = t(pkg.description);
-            const buttonText = t('packages.selectButton', { name: title });
-            const features: Feature[] = pkg.features.map(feature => ({
-              text: t(feature.text),
-              status: feature.included ? 'included' : 'excluded'
-            }));
-
-            return (
+        const packageName = pkg.name.toLowerCase();
+        const title = t(`packages.${packageName}.name`);
+        const description = t(pkg.description);
+        const buttonText = t('packages.selectButton', { name: title });
+        
+        const isEnterprise = pkg.name === "Enterprise";
+        
+        return (
+          <GridItem key={pkg.name} className={isEnterprise ? "lg:col-start-2" : ""}>
+            {isEnterprise ? (
+              <div className="rounded-2xl overflow-hidden">
+                <FeatureCard
+                  imagePath={"/images/webp/games/logos/ark.webp"}
+                  imageAlt={"Official Ark Logo from the game"}
+                  title={title}
+                  price={calculatePrice(pkg.price)}
+                  description={description}
+                  features={features}
+                  style="gradient"
+                  buttonText={buttonText}
+                  href="#contact"
+                />
+              </div>
+            ) : (
               <FeatureCard
-                key={pkg.name}
                 imagePath={"/images/webp/games/logos/ark.webp"}
                 imageAlt={"Official Ark Logo from the game"}
                 title={title}
@@ -253,13 +237,15 @@ function PackageCards({ packages }: { packages: Package[] }) {
                 features={features}
                 style="gradient"
                 buttonText={buttonText}
+                sub={pkg.sub}
+                subtext={pkg.subtext}
                 href="#contact"
               />
-            );
-          })()}
-        </div>
-      </div>
-    </>
+            )}
+          </GridItem>
+        );
+      })}
+    </Grid>
   );
 } 
 
