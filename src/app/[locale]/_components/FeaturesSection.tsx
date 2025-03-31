@@ -97,7 +97,7 @@ const FeaturesSection = () => {
   return (
     <AnimatedBackground variant="secondary" className="min-h-[100vh] md:h-screen flex items-center justify-center py-24 md:py-0">
       <Grid container maxWidth="xl" className="flex flex-col items-center">
-        <div ref={ref}>
+        <div ref={ref} className="w-full flex flex-col items-center">
           {/* Section title met nieuwe animatie */}
           <motion.div 
             className="text-center mb-16 max-w-3xl"
@@ -111,7 +111,7 @@ const FeaturesSection = () => {
           </motion.div>
           
           {/* Features grid met nieuwe animaties */}
-          <Grid columns={1} mdColumns={2} lgColumns={3} spacing="lg" className="w-full max-w-6xl">
+          <Grid columns={1} mdColumns={2} lgColumns={3} spacing="lg" className="w-full max-w-6xl mx-auto">
             <AnimatePresence>
               {features.map((feature, index) => (
                 <motion.div
