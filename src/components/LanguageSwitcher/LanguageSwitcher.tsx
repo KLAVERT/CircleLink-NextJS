@@ -48,28 +48,35 @@ export default function LanguageSwitcher() {
   };
 
   const trigger = (
-    <>
-      <span className="flex items-center">
-        <div className="w-6 h-4 relative">
-          <Image
-            src={LANGUAGES[currentLocale as keyof typeof LANGUAGES].flag}
-            alt={`${LANGUAGES[currentLocale as keyof typeof LANGUAGES].name} flag`}
-            fill
-            sizes="24px"
-            className="object-contain"
-          />
-        </div>
-      </span>
-      <span className="flex-1 ml-2 text-sm">
-        {LANGUAGES[currentLocale as keyof typeof LANGUAGES].name}
-      </span>
-      <span className="text-xs">▼</span>
-    </>
+    <div className="flex items-center h-6 gap-1">
+      <div className="w-5 h-4 relative">
+        <Image
+          src={LANGUAGES[currentLocale as keyof typeof LANGUAGES].flag}
+          alt={`${LANGUAGES[currentLocale as keyof typeof LANGUAGES].name} flag`}
+          fill
+          sizes="20px"
+          className="object-contain"
+        />
+      </div>
+      <svg 
+        width="6" 
+        height="6" 
+        viewBox="0 0 8 8" 
+        fill="none" 
+        className="opacity-50"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path 
+          d="M4 6L0.535898 0L7.4641 0L4 6Z" 
+          fill="currentColor"
+        />
+      </svg>
+    </div>
   );
 
   const items = Object.entries(LANGUAGES).map(([code, {name, flag}]) => ({
     content: (
-      <div className="flex items-center gap-2 w-full">
+      <div className="flex items-center gap-2 w-full transition-all duration-300 ease-in-out transform hover:scale-105">
         <div className="w-6 h-4 relative flex-shrink-0">
           <Image 
             src={flag} 
@@ -79,7 +86,7 @@ export default function LanguageSwitcher() {
             className="object-contain"
           />
         </div>
-        <span className="text-sm truncate">{name}</span>
+        <span className="text-sm truncate animate-fadeIn">{name}</span>
       </div>
     ),
     onClick: () => switchLanguage(code),
@@ -87,11 +94,12 @@ export default function LanguageSwitcher() {
   }));
 
   return (
-    <Dropdown
-      trigger={trigger}
-      items={items}
-      variant="language"
-      width="180px"
-    />
+    <div className="relative inline-block">
+      <Dropdown
+        trigger={trigger}
+        items={items}
+        variant="language"
+      />
+    </div>
   );
 } 

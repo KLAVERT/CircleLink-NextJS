@@ -155,8 +155,8 @@ export default function Navbar() {
           {/* Right: Language, Theme, Panel Login */}
           <div className="hidden min-[1101px]:flex items-center space-x-6 lg:pl-8">
             <LanguageSwitcher />
-            <div className="w-px h-6 bg-gray-200 dark:bg-gray-700" />
-            <ThemeSwitch />
+            {/* <div className="w-px h-6 bg-gray-200 dark:bg-gray-700" />
+            <ThemeSwitch /> */}
             <div className="w-px h-6 bg-gray-200 dark:bg-gray-700" />
             {/* <Button variant="secondary" href="https://panel.circlelink.eu/">Panel login</Button> */}
             <Dropdown
