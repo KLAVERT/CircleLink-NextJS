@@ -4,7 +4,6 @@ import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
 import AnimatedBackground from '@/components/AnimatedBackground/AnimatedBackground';
 import Link from 'next/link';
-import Grid, { GridItem } from '@/components/Grid';
 
 const FAQSection = () => {
   const t = useTranslations();

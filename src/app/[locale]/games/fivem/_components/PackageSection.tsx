@@ -237,8 +237,6 @@ function DDRToggle() {
 }
 
 const PackageSection = () => {
-  // The t variable is used in JSX below for translations
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const t = useTranslations('fivem');
 
   return (
