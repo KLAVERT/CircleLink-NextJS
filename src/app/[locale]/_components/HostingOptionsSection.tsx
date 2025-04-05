@@ -82,50 +82,54 @@ const HostingOptionsSection = () => {
 
   return (
     <section className="min-h-[100vh] min-h-[800px] py-16 flex items-center justify-center" style={{ backgroundColor: 'var(--color-tertiary)' }}>
-      <Grid container maxWidth="xl">
-        <motion.div 
-          className="text-center mb-12 max-w-3xl mx-auto"
-          initial={{ opacity: 0, y: -10 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-        >
-          <h2 className="text-3xl md:text-4xl font-bold mb-3 text-[var(--color-text-primary)]">{t('hosting.sectionTitle')}</h2>
-          <p className="text-lg text-[var(--color-text-primary)]">
-            {t('hosting.sectionSubtitle')}
-          </p>
-        </motion.div>
+      <Grid container maxWidth="xl" className="flex flex-col items-center">
+        <div className="w-full flex flex-col items-center">
+          <motion.div 
+            className="text-center mb-12 max-w-3xl"
+            initial={{ opacity: 0, y: -10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+          >
+            <h2 className="text-3xl md:text-4xl font-bold mb-3 text-[var(--color-text-primary)]">{t('hosting.sectionTitle')}</h2>
+            <p className="text-lg text-[var(--color-text-primary)]">
+              {t('hosting.sectionSubtitle')}
+            </p>
+          </motion.div>
 
-        <Grid columns={1} mdColumns={2} lgColumns={3} spacing="lg" className="max-w-6xl mx-auto">
-          {hostingOptions.map((option) => {
-            const features: Feature[] = option.featuresKeys.map(key => ({
-              text: t(key),
-              status: 'included'
-            }));
+          <div className="w-full max-w-7xl mx-auto">
+            <Grid columns={1} mdColumns={2} lgColumns={3} spacing="lg">
+              {hostingOptions.map((option) => {
+                const features: Feature[] = option.featuresKeys.map(key => ({
+                  text: t(key),
+                  status: 'included'
+                }));
 
-            return (
-              <motion.div
-                key={option.id}
-                variants={containerVariants}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true, amount: 0.1 }}
-                className="p-4"
-              >
-                <FeatureCard
-                  title={t(option.titleKey)}
-                  price={option.price}
-                  description={t(option.descriptionKey)}
-                  features={features}
-                  icon={option.icon}
-                  style={option.style}
-                  buttonText={t('hosting.viewMore')}
-                  priceSubtext={t('hosting.perMonth')}
-                />
-              </motion.div>
-            );
-          })}
-        </Grid>
+                return (
+                  <motion.div
+                    key={option.id}
+                    variants={containerVariants}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true, amount: 0.1 }}
+                    className="h-full"
+                  >
+                    <FeatureCard
+                      title={t(option.titleKey)}
+                      price={option.price}
+                      description={t(option.descriptionKey)}
+                      features={features}
+                      icon={option.icon}
+                      style={option.style}
+                      buttonText={t('hosting.viewMore')}
+                      priceSubtext={t('hosting.perMonth')}
+                    />
+                  </motion.div>
+                );
+              })}
+            </Grid>
+          </div>
+        </div>
       </Grid>
     </section>
   );
