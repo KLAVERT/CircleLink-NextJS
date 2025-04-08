@@ -139,13 +139,13 @@ export default function Dropdown({
   // Language variant or any variant with useButtonUI=true
   if (variant === 'language' || useButtonUI) {
     return (
-      <div className={`relative inline-block ${className}`} style={{ width: variant === 'language' ? '40px' : width || 'auto' }}>
+      <div className={`relative inline-block ${className}`} style={{ width: width || 'auto' }}>
         <Button
           variant={buttonVariant}
           onClick={() => setIsOpen(!isOpen)}
           fullWidth={false}
           ariaLabel={isOpen ? 'Close dropdown menu' : 'Open dropdown menu'}
-          className={`${variant === 'language' ? 'px-2 py-1 h-8' : ''} justify-between ${variant !== 'language' && 'inline-flex items-center'}`}
+          className={`h-8 justify-between ${variant !== 'language' && 'inline-flex items-center'}`}
         >
           {trigger}
         </Button>

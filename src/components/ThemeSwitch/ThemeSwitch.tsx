@@ -17,18 +17,18 @@ export default function ThemeSwitch() {
 
   return (
     <button
-      className="relative w-[48px] h-6 rounded-full bg-gray-200 dark:bg-gray-800 cursor-pointer"
+      className="relative w-[48px] h-8 rounded-full bg-gray-200 dark:bg-gray-800 cursor-pointer flex items-center px-1"
       onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}
       aria-label={`Switch to ${theme === 'light' ? 'dark' : 'light'} mode`}
     >
       <div className={`
-        absolute top-[2px] left-[2px] w-5 h-5 rounded-full 
+        absolute w-6 h-6 rounded-full 
         bg-white dark:bg-gray-600 shadow-md
         flex items-center justify-center
         transition-transform duration-300 ease-in-out
         ${theme === 'dark' ? 'translate-x-[24px]' : 'translate-x-0'}
       `}>
-        <span className="text-[12px] leading-none">
+        <span className="text-[14px] leading-none">
           {theme === 'light' ? '☀️' : '🌙'}
         </span>
       </div>

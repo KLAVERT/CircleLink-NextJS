@@ -48,7 +48,7 @@ export default function LanguageSwitcher() {
   };
 
   const trigger = (
-    <div className="flex items-center h-6 gap-1">
+    <div className="flex items-center h-8 gap-1 px-1">
       <div className="w-5 h-4 relative">
         <Image
           src={LANGUAGES[currentLocale as keyof typeof LANGUAGES].flag}
@@ -99,6 +99,7 @@ export default function LanguageSwitcher() {
         trigger={trigger}
         items={items}
         variant="language"
+        className="h-8"
       />
     </div>
   );
