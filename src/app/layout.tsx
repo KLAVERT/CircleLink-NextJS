@@ -1,7 +1,7 @@
 import "./globals.scss";
-import { ThemeProvider } from 'next-themes';
 import { Metadata } from 'next';
 import RootPreloader from '@/components/Preloader/RootPreloader';
+import Providers from '@/components/Providers/Providers';
 
 export const metadata: Metadata = {
   title: 'Circlelink - VOF',
@@ -16,10 +16,10 @@ export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="nl" suppressHydrationWarning>
       <body>
-        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
+        <Providers>
           <RootPreloader />
           {children}
-        </ThemeProvider>
+        </Providers>
       </body>
     </html>
   );
