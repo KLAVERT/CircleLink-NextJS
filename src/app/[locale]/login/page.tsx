@@ -1,13 +1,10 @@
 'use client'
 import { signIn } from 'next-auth/react'
 import { useState } from 'react'
-import { useLocale, useTranslations } from 'next-intl';
 
 export default function LoginPage() {
   const [username, setUsername] = useState('')
   const [password, setPassword] = useState('')
-  const t = useTranslations('navigation');
-  const locale = useLocale();
 
   const handleLogin = async () => {
     await signIn('credentials', { username, password, callbackUrl: '/admin' })

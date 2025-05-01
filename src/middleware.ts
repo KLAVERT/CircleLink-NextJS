@@ -1,5 +1,4 @@
 import { NextRequest } from 'next/server'
-import { withAuth } from 'next-auth/middleware'
 import createIntlMiddleware from 'next-intl/middleware'
 
 // Configs
@@ -13,23 +12,10 @@ const intlMiddleware = createIntlMiddleware({
   localePrefix: 'always'
 })
 
-const authMiddleware = withAuth({
-  pages: {
-    signIn: '/login'
-  }
-})
-
 export function middleware(request: NextRequest) {
-  const pathname = request.nextUrl.pathname
-
   // First, apply intl middleware for all pages
   const intlResult = intlMiddleware(request)
   if (intlResult) return intlResult
-
-  // Then apply auth only to /admin pages
-  if (pathname.startsWith('/admin')) {
-    return authMiddleware(request)
-  }
 
   return null // default passthrough
 }
