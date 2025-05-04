@@ -157,7 +157,7 @@ export default function Navbar() {
             <div className="flex items-center h-8">
               <LanguageSwitcher />
             </div>
-            <div className="w-px h-6 bg-gray-200 dark:bg-gray-700" />
+            <div className="w-px h-6 bg-white" />
             <div className="flex items-center h-8">
               <Dropdown
                 trigger={'panels'}

@@ -48,7 +48,7 @@ export default function LanguageSwitcher() {
   };
 
   const trigger = (
-    <div className="flex items-center h-8 gap-1 px-1">
+    <div className="flex items-center h-8 gap-2.5 px-1">
       <div className="w-5 h-4 relative">
         <Image
           src={LANGUAGES[currentLocale as keyof typeof LANGUAGES].flag}
@@ -58,16 +58,17 @@ export default function LanguageSwitcher() {
           className="object-contain"
         />
       </div>
-      <svg 
-        width="6" 
-        height="6" 
-        viewBox="0 0 8 8" 
-        fill="none" 
-        className="opacity-50"
+      <svg
+        width="10"
+        height="10"
+        viewBox="0 0 8 8"
+        fill="none"
+        className="text-white self-center mt-0.5"
+        style={{ display: 'block' }}
         xmlns="http://www.w3.org/2000/svg"
       >
-        <path 
-          d="M4 6L0.535898 0L7.4641 0L4 6Z" 
+        <path
+          d="M4 6L0.535898 0L7.4641 0L4 6Z"
           fill="currentColor"
         />
       </svg>
