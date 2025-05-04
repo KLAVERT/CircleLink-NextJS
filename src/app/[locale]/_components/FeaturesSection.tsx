@@ -111,32 +111,30 @@ const FeaturesSection = () => {
           </motion.div>
           
           {/* Features grid met nieuwe animaties */}
-          <div className="w-full max-w-7xl mx-auto">
-            <Grid columns={1} mdColumns={2} lgColumns={3} spacing="lg">
-              <AnimatePresence>
-                {features.map((feature, index) => (
-                  <motion.div
-                    key={`${feature.title}-${index}`}
-                    className="h-full"
-                    initial={{ opacity: 0, scale: 0.9 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{
-                      duration: 0.5,
-                      delay: index * 0.1,
-                      ease: [0.43, 0.13, 0.23, 0.96]
-                    }}
-                  >
-                    <FeatureCard 
-                      title={feature.title}
-                      description={feature.description}
-                      icon={feature.icon}
-                      index={index}
-                    />
-                  </motion.div>
-                ))}
-              </AnimatePresence>
-            </Grid>
-          </div>
+          <Grid columns={1} mdColumns={2} lgColumns={3} spacing="lg" className="px-4 sm:px-6 lg:px-8">
+            <AnimatePresence>
+              {features.map((feature, index) => (
+                <motion.div
+                  key={`${feature.title}-${index}`}
+                  className="h-full"
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{
+                    duration: 0.5,
+                    delay: index * 0.1,
+                    ease: [0.43, 0.13, 0.23, 0.96]
+                  }}
+                >
+                  <FeatureCard 
+                    title={feature.title}
+                    description={feature.description}
+                    icon={feature.icon}
+                    index={index}
+                  />
+                </motion.div>
+              ))}
+            </AnimatePresence>
+          </Grid>
         </div>
       </Grid>
     </AnimatedBackground>

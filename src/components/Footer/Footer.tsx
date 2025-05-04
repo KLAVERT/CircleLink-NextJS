@@ -16,7 +16,6 @@ interface FooterLinkProps {
 }
 
 const FooterLink: React.FC<FooterLinkProps> = ({ href, alt, children, external = false }) => {
-  // Gemeenschappelijke animatie-eigenschappen
   const animationProps = {
     whileHover: { scale: 1.1 },
     whileTap: { scale: 0.95 }
@@ -53,219 +52,139 @@ const FooterLink: React.FC<FooterLinkProps> = ({ href, alt, children, external =
   );
 };
 
-// Speciale component voor links in de footer kolommen
-const FooterColumnLink: React.FC<FooterLinkProps> = ({ href, alt, children, external = false }) => {
-  return (
-    <motion.li
-      whileHover={{ x: 5 }}
-      transition={{ type: "spring", stiffness: 300, damping: 20 }}
-    >
-      <FooterLink href={href} alt={alt || (typeof children === 'string' ? children : undefined)} external={external}>
-        {children}
-      </FooterLink>
-    </motion.li>
-  );
-};
-
 const Footer = () => {
   const t = useTranslations();
   
-  // Animation variants
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1,
-        delayChildren: 0.2
-      }
-    }
-  };
-  
-  const itemVariants = {
-    hidden: { y: 20, opacity: 0 },
-    visible: {
-      y: 0,
-      opacity: 1,
-      transition: {
-        type: "spring",
-        stiffness: 100,
-        damping: 10
-      }
-    }
-  };
-  
-  const socialIconVariants = {
-    hidden: { scale: 0, opacity: 0 },
-    visible: {
-      scale: 1,
-      opacity: 1,
-      transition: {
-        type: "spring",
-        stiffness: 200,
-        damping: 10
-      }
-    }
-  };
-  
   return (
     <footer className="bg-[var(--color-tertiary)]">
-      {/* Main footer content */}
-      <div className="container mx-auto px-4 py-16 pb-8">
-        <motion.div 
-          className="grid grid-cols-1 md:grid-cols-4 gap-8"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.1 }}
-          variants={containerVariants}
-        >
-          {/* Quick Links */}
-          <motion.div variants={itemVariants}>
-            <h3 className="text-lg font-semibold mb-4 text-[var(--color-text-primary)]">{t('footer.quickLinks')}</h3>
-            <ul className="space-y-2">
-              <FooterColumnLink href="https://discord.gg/circlelink" alt="Join Circlelink Discord server" external>
-                Discord
-              </FooterColumnLink>
-              <FooterColumnLink href="/status" alt="Check Circlelink online status">
-                {t('footer.onlineStatus')}
-              </FooterColumnLink>
-            </ul>
-          </motion.div>
-          
-          {/* Shopping */}
-          <motion.div variants={itemVariants}>
-            <h3 className="text-lg font-semibold mb-4 text-[var(--color-text-primary)]">{t('footer.shopping')}</h3>
-            <ul className="space-y-2">
-              <FooterColumnLink href="/game-hosting" alt="Learn about our game hosting services">
-                {t('footer.gameHosting')}
-              </FooterColumnLink>
-              <FooterColumnLink href="/website-hosting" alt="Learn about our website hosting services">
-                {t('footer.websiteHosting')}
-              </FooterColumnLink>
-              <FooterColumnLink href="/discord-hosting" alt="Learn about our Discord hosting services">
-                {t('footer.discordHosting')}
-              </FooterColumnLink>
-            </ul>
-          </motion.div>
-          
-          {/* Panels */}
-          <motion.div variants={itemVariants}>
-            <h3 className="text-lg font-semibold mb-4 text-[var(--color-text-primary)]">{t('footer.panels')}</h3>
-            <ul className="space-y-2">
-              <FooterColumnLink href="https://panel.circlelink.eu" alt="Access Circlelink gaming panel" external>
-                {t('footer.gamingPanel')}
-              </FooterColumnLink>
-              <FooterColumnLink href="https://webpanel.circlelink.eu" alt="Access Circlelink web panel" external>
-                {t('footer.webPanel')}
-              </FooterColumnLink>
-              <FooterColumnLink href="https://billing.circlelink.eu" alt="Access Circlelink billing panel" external>
-                {t('footer.billingPanel')}
-              </FooterColumnLink>
-            </ul>
-          </motion.div>
-          
-          {/* Contact */}
-          <motion.div variants={itemVariants}>
-            <h3 className="text-lg font-semibold mb-4 text-[var(--color-text-primary)]">{t('footer.contact')}</h3>
-            <ul className="space-y-2">
-              <li className="flex items-center gap-2">
-                <FaEnvelope className="text-[var(--color-text-primary)]" />
-                <FooterLink href="mailto:support@circlelink.eu" alt="Email Circlelink support">
-                  support@circlelink.eu
-                </FooterLink>
-              </li>
-              <li className="flex items-center gap-2">
-                <FaEnvelope className="text-[var(--color-text-primary)]" />
-                <FooterLink href="mailto:info@circlelink.eu" alt="Email Circlelink information">
-                  info@circlelink.eu
-                </FooterLink>
-              </li>
-              <motion.li 
-                className="flex items-center gap-2"
-                whileHover={{ x: 5 }}
-                transition={{ type: "spring", stiffness: 300, damping: 20 }}
-              >
-                <FaPhone className="text-[var(--color-text-primary)]" />
-                <span className="text-[var(--color-text-primary)]">KvK: 94372594</span>
-              </motion.li>
-              <motion.li 
-                className="flex items-center gap-2"
-                whileHover={{ x: 5 }}
-                transition={{ type: "spring", stiffness: 300, damping: 20 }}
-              >
-                <FaBuilding className="text-[var(--color-text-primary)]" />
-                <span className="text-[var(--color-text-primary)]">VAT: NL866753795B01</span>
-              </motion.li>
-            </ul>
-          </motion.div>
-        </motion.div>
-      </div>
-      
-      {/* Compact bottom section */}
-      <motion.div 
-        className="border-t border-[var(--color-border)] bg-[var(--color-tertiary)]"
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.5 }}
-      >
-        <div className="container mx-auto px-4 py-4">
-          <div className="flex flex-row justify-between items-center">
-            {/* Logo */}
-            <motion.div
-              initial={{ x: -20, opacity: 0 }}
-              animate={{ x: 0, opacity: 1 }}
-              transition={{ duration: 0.5 }}
-            >
-              <Link href="/" className="flex items-center">
-                <span className="text-xl font-bold text-[var(--color-text-primary)]">
-                  <span className="text-blue-500">Circle</span>
-                  <span>link</span>
-                </span>
-              </Link>
-            </motion.div>
-            
-            {/* Center copyright */}
-            <motion.div 
-              className="text-center text-sm text-[var(--color-text-primary)]"
-              initial={{ y: 10, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-            >
-              <p>© {new Date().getFullYear()} Circlelink. {t('footer.allRightsReserved')}</p>
-            </motion.div>
-            
-            {/* Social icons */}
-            <motion.div 
-              className="flex space-x-4"
-              initial="hidden"
-              animate="visible"
-              variants={containerVariants}
-            >
-              <motion.div variants={socialIconVariants}>
+      <div className="max-w-7xl mx-auto">
+        {/* Main content */}
+        <div className="px-4 sm:px-6 lg:px-8 py-16">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+            {/* Quick Links */}
+            <div>
+              <h3 className="text-lg font-semibold mb-4 text-[var(--color-text-primary)]">{t('footer.quickLinks')}</h3>
+              <ul className="space-y-2">
+                <li>
+                  <FooterLink href="https://discord.gg/circlelink" alt="Join Circlelink Discord server" external>
+                    Discord
+                  </FooterLink>
+                </li>
+                <li>
+                  <FooterLink href="/status" alt="Check Circlelink online status">
+                    {t('footer.onlineStatus')}
+                  </FooterLink>
+                </li>
+              </ul>
+            </div>
+
+            {/* Shopping */}
+            <div>
+              <h3 className="text-lg font-semibold mb-4 text-[var(--color-text-primary)]">{t('footer.shopping')}</h3>
+              <ul className="space-y-2">
+                <li>
+                  <FooterLink href="/game-hosting" alt="Learn about our game hosting services">
+                    {t('footer.gameHosting')}
+                  </FooterLink>
+                </li>
+                <li>
+                  <FooterLink href="/website-hosting" alt="Learn about our website hosting services">
+                    {t('footer.websiteHosting')}
+                  </FooterLink>
+                </li>
+                <li>
+                  <FooterLink href="/discord-hosting" alt="Learn about our Discord hosting services">
+                    {t('footer.discordHosting')}
+                  </FooterLink>
+                </li>
+              </ul>
+            </div>
+
+            {/* Panels */}
+            <div>
+              <h3 className="text-lg font-semibold mb-4 text-[var(--color-text-primary)]">{t('footer.panels')}</h3>
+              <ul className="space-y-2">
+                <li>
+                  <FooterLink href="https://panel.circlelink.eu" alt="Access Circlelink gaming panel" external>
+                    {t('footer.gamingPanel')}
+                  </FooterLink>
+                </li>
+                <li>
+                  <FooterLink href="https://webpanel.circlelink.eu" alt="Access Circlelink web panel" external>
+                    {t('footer.webPanel')}
+                  </FooterLink>
+                </li>
+                <li>
+                  <FooterLink href="https://billing.circlelink.eu" alt="Access Circlelink billing panel" external>
+                    {t('footer.billingPanel')}
+                  </FooterLink>
+                </li>
+              </ul>
+            </div>
+
+            {/* Contact */}
+            <div>
+              <h3 className="text-lg font-semibold mb-4 text-[var(--color-text-primary)]">{t('footer.contact')}</h3>
+              <ul className="space-y-2">
+                <li className="flex items-center">
+                  <FaEnvelope className="text-[var(--color-text-primary)] w-6" />
+                  <span className="ml-2 break-all">support@circlelink.eu</span>
+                </li>
+                <li className="flex items-center">
+                  <FaEnvelope className="text-[var(--color-text-primary)] w-6" />
+                  <span className="ml-2 break-all">info@circlelink.eu</span>
+                </li>
+                <li className="flex items-center">
+                  <FaPhone className="text-[var(--color-text-primary)] w-6" />
+                  <span className="ml-2">KvK: 94372594</span>
+                </li>
+                <li className="flex items-center">
+                  <FaBuilding className="text-[var(--color-text-primary)] w-6" />
+                  <span className="ml-2">VAT: NL866753795B01</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        {/* Bottom section */}
+        <div className="border-t border-[var(--color-border)]">
+          <div className="px-4 sm:px-6 lg:px-8 py-4">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 items-center">
+              {/* Logo */}
+              <div className="flex justify-center md:justify-start">
+                <Link href="/" className="flex items-center">
+                  <span className="text-xl font-bold text-[var(--color-text-primary)]">
+                    <span className="text-blue-500">Circle</span>
+                    <span>link</span>
+                  </span>
+                </Link>
+              </div>
+
+              {/* Copyright */}
+              <div className="text-center text-sm text-[var(--color-text-primary)]">
+                <p>© {new Date().getFullYear()} Circlelink. {t('footer.allRightsReserved')}</p>
+              </div>
+
+              {/* Social icons */}
+              <div className="flex justify-center md:justify-end space-x-4">
                 <FooterLink href="https://discord.gg/circlelink" alt="Join Circlelink Discord server" external>
                   <SiDiscord className="text-2xl hover:text-[#5865F2] transition-colors duration-200" />
                 </FooterLink>
-              </motion.div>
-              <motion.div variants={socialIconVariants}>
                 <FooterLink href="https://youtube.com/circlelink" alt="Visit Circlelink YouTube channel" external>
                   <FaYoutube className="text-2xl hover:text-[#FF0000] transition-colors duration-200" />
                 </FooterLink>
-              </motion.div>
-              <motion.div variants={socialIconVariants}>
                 <FooterLink href="https://twitter.com/circlelink" alt="Follow Circlelink on Twitter" external>
                   <FaXTwitter className="text-2xl hover:text-[#000000] transition-colors duration-200" />
                 </FooterLink>
-              </motion.div>
-              <motion.div variants={socialIconVariants}>
                 <FooterLink href="https://instagram.com/circlelink" alt="Follow Circlelink on Instagram" external>
                   <FaInstagram className="text-2xl hover:text-[#E1306C] transition-colors duration-200" />
                 </FooterLink>
-              </motion.div>
-            </motion.div>
+              </div>
+            </div>
           </div>
         </div>
-      </motion.div>
+      </div>
     </footer>
   );
 };

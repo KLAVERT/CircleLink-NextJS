@@ -96,15 +96,15 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 ${
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-colors duration-300 ${
       scrolled || isMenuOpen
-        ? 'bg-[var(--color-tertiary)] shadow-lg' 
+        ? 'bg-[var(--color-tertiary)] shadow-lg'
         : 'bg-transparent'
-    } transition-colors duration-300 z-50`}>
+    }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center h-16 lg:grid lg:[grid-template-columns:auto_1fr_auto] lg:items-center">
           {/* Left: Logo */}
-          <div className="flex-shrink-0 lg:pr-8">
+          <div className="flex-shrink-0 flex items-center">
             <Link href={`/${locale}`}>
               {mounted ? (
                 resolvedTheme === 'dark' ? (
@@ -153,7 +153,7 @@ export default function Navbar() {
           </div>
 
           {/* Right: Language, Theme, Panel Login */}
-          <div className="hidden min-[1101px]:flex items-center gap-4">
+          <div className="hidden min-[1101px]:flex items-center gap-4 justify-end">
             <div className="flex items-center h-8">
               <LanguageSwitcher />
             </div>
@@ -179,7 +179,7 @@ export default function Navbar() {
                 document.body.style.overflow = '';
               }
             }}
-            className="min-[1101px]:hidden"
+            className="min-[1101px]:hidden col-span-1 justify-self-end"
             ariaLabel={isMenuOpen ? 'Close menu' : 'Open menu'}
           >
             <svg

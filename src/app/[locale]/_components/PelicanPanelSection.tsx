@@ -232,7 +232,7 @@ const PelicanPanelSection = () => {
                 ref={sectionRef}
               >
                 {/* Main Content */}
-                <Grid columns={1} lgColumns={12} spacing="lg" className="items-start">
+                <Grid columns={1} lgColumns={12} spacing="lg" className="items-start px-4 sm:px-6 lg:px-8">
                   {/* Left Column - Panels */}
                   <GridItem lgColSpan={7}>
                     <motion.div

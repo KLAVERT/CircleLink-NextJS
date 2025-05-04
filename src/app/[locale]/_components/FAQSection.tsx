@@ -39,7 +39,7 @@ const FAQSection = () => {
       <Grid container maxWidth="xl" className="flex flex-col items-center">
         <div className="w-full flex flex-col items-center">
           <div className="w-full max-w-7xl mx-auto">
-            <Grid columns={1} lgColumns={12} spacing="lg" className="items-start">
+            <Grid columns={1} lgColumns={12} spacing="lg" className="items-start px-4 sm:px-6 lg:px-8">
               {/* Left Column */}
               <GridItem lgColSpan={5} className="px-4 md:px-0">
                 <motion.div

@@ -97,38 +97,36 @@ const HostingOptionsSection = () => {
             </p>
           </motion.div>
 
-          <div className="w-full max-w-7xl mx-auto">
-            <Grid columns={1} mdColumns={2} lgColumns={3} spacing="lg">
-              {hostingOptions.map((option) => {
-                const features: Feature[] = option.featuresKeys.map(key => ({
-                  text: t(key),
-                  status: 'included'
-                }));
+          <Grid columns={1} mdColumns={2} lgColumns={3} spacing="lg" className="px-4 sm:px-6 lg:px-8">
+            {hostingOptions.map((option) => {
+              const features: Feature[] = option.featuresKeys.map(key => ({
+                text: t(key),
+                status: 'included'
+              }));
 
-                return (
-                  <motion.div
-                    key={option.id}
-                    variants={containerVariants}
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: true, amount: 0.1 }}
-                    className="h-full"
-                  >
-                    <FeatureCard
-                      title={t(option.titleKey)}
-                      price={option.price}
-                      description={t(option.descriptionKey)}
-                      features={features}
-                      icon={option.icon}
-                      style={option.style}
-                      buttonText={t('hosting.viewMore')}
-                      priceSubtext={t('hosting.perMonth')}
-                    />
-                  </motion.div>
-                );
-              })}
-            </Grid>
-          </div>
+              return (
+                <motion.div
+                  key={option.id}
+                  variants={containerVariants}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true, amount: 0.1 }}
+                  className="h-full"
+                >
+                  <FeatureCard
+                    title={t(option.titleKey)}
+                    price={option.price}
+                    description={t(option.descriptionKey)}
+                    features={features}
+                    icon={option.icon}
+                    style={option.style}
+                    buttonText={t('hosting.viewMore')}
+                    priceSubtext={t('hosting.perMonth')}
+                  />
+                </motion.div>
+              );
+            })}
+          </Grid>
         </div>
       </Grid>
     </section>

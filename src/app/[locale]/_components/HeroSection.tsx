@@ -156,7 +156,7 @@ const HeroSection = () => {
   return (
     <AnimatedBackground variant="primary" className="absolute top-0 left-0 right-0 min-h-screen flex items-center justify-center">
       <Grid container maxWidth="xl" className="pt-20 md:pt-0 overflow-hidden">
-        <Grid columns={1} mdColumns={2} spacing="lg" className="items-center max-w-7xl mx-auto">
+        <Grid columns={1} mdColumns={2} spacing="lg" className="items-center px-4 sm:px-6 lg:px-8">
           {/* Left column - Text content that changes */}
           <GridItem className="space-y-6 relative">
             <Slider 
