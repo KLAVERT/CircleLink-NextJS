@@ -95,8 +95,8 @@ const FeaturesSection = () => {
   };
   
   return (
-    <AnimatedBackground variant="secondary" className="min-h-[100vh] md:h-screen flex items-center justify-center py-24 md:py-0">
-      <Grid container maxWidth="xl" className="flex flex-col items-center">
+    <AnimatedBackground variant="secondary" className="min-h-screen w-full py-24 md:py-32">
+      <Grid container maxWidth="xl" className="flex flex-col items-center h-full">
         <div ref={ref} className="w-full flex flex-col items-center">
           {/* Section title met nieuwe animatie */}
           <motion.div 

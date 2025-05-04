@@ -35,8 +35,8 @@ const FAQSection = () => {
   ];
 
   return (
-    <AnimatedBackground variant="tertiary" className="min-h-[100vh] md:h-screen flex items-center justify-center py-16 md:py-0">
-      <Grid container maxWidth="xl" className="flex flex-col items-center">
+    <AnimatedBackground variant="tertiary" className="min-h-screen w-full py-16 md:py-32">
+      <Grid container maxWidth="xl" className="flex flex-col items-center h-full">
         <div className="w-full flex flex-col items-center">
           <div className="w-full max-w-7xl mx-auto">
             <Grid columns={1} lgColumns={12} spacing="lg" className="items-start px-4 sm:px-6 lg:px-8">

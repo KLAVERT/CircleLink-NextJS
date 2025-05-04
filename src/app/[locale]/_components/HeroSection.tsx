@@ -154,8 +154,8 @@ const HeroSection = () => {
   }, [isMobile, shouldReduceMotion]);
 
   return (
-    <AnimatedBackground variant="primary" className="absolute top-0 left-0 right-0 min-h-screen flex items-center justify-center">
-      <Grid container maxWidth="xl" className="pt-20 md:pt-0 overflow-hidden">
+    <AnimatedBackground variant="primary" className="min-h-screen w-full py-20 md:py-32">
+      <Grid container maxWidth="xl" className="h-full">
         <Grid columns={1} mdColumns={2} spacing="lg" className="items-center px-4 sm:px-6 lg:px-8">
           {/* Left column - Text content that changes */}
           <GridItem className="space-y-6 relative">
