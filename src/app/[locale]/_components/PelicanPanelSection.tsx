@@ -47,7 +47,6 @@ const ImageModal = ({ isOpen, onClose, imageSrc, title }: { isOpen: boolean; onC
                 width={1600}
                 height={900}
                 className="w-full h-auto rounded-lg shadow-lg"
-                priority
               />
             </div>
           </motion.div>
@@ -207,9 +206,9 @@ const PelicanPanelSection = () => {
             src="/images/jpg/mainpage/sons_of_the_forest.jpg"
             alt="Background"
             fill
+            sizes="100vw"
             style={{ objectFit: 'cover', objectPosition: 'center' }}
             className="w-full h-full"
-            priority
           />
         </div>
         <Grid container maxWidth="xl" className="relative z-10 flex flex-col items-center">

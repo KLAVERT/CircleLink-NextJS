@@ -101,11 +101,11 @@ export default function Navbar() {
         ? 'bg-[var(--color-tertiary)] shadow-lg'
         : 'bg-transparent'
     }`}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center h-16 lg:grid lg:[grid-template-columns:auto_1fr_auto] lg:items-center">
-          {/* Left: Logo */}
-          <div className="flex-shrink-0 flex items-center">
-            <Link href={`/${locale}`}>
+      <div className="w-full px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-between h-16 w-full">
+            {/* Left: Logo */}
+            <Link href={`/${locale}`} className="flex-shrink-0 flex items-center">
               {mounted ? (
                 resolvedTheme === 'dark' ? (
                   <Image
@@ -132,33 +132,29 @@ export default function Navbar() {
                 <div className="w-auto h-10" aria-hidden="true" />
               )}
             </Link>
-          </div>
 
-          {/* Center: Navigation Links */}
-          <div className="hidden min-[1101px]:flex items-center justify-center space-x-8 lg:flex-1 lg:px-12">
-            <Dropdown
-              trigger={t('hosting')}
-              items={hostingOptions}
-              variant="hosting"
-            />
-            {navItems.map(({ label, href }) => (
-              <Link
-                key={href}
-                href={href}
-                className="text-[var(--color-text-primary)] hover:text-[var(--color-quinary)]"
-              >
-                {label}
-              </Link>
-            ))}
-          </div>
-
-          {/* Right: Language, Theme, Panel Login */}
-          <div className="hidden min-[1101px]:flex items-center gap-4 justify-end">
-            <div className="flex items-center h-8">
-              <LanguageSwitcher />
+            {/* Center: Navigation Links */}
+            <div className="hidden lg:flex items-center space-x-8 min-w-0">
+              <Dropdown
+                trigger={t('hosting')}
+                items={hostingOptions}
+                variant="hosting"
+              />
+              {navItems.map(({ label, href }) => (
+                <Link
+                  key={href}
+                  href={href}
+                  className="text-[var(--color-text-primary)] hover:text-[var(--color-quinary)]"
+                >
+                  {label}
+                </Link>
+              ))}
             </div>
-            <div className="w-px h-6 bg-white" />
-            <div className="flex items-center h-8">
+
+            {/* Right: Language, Theme, Panel Login */}
+            <div className="hidden lg:flex items-center gap-4">
+              <LanguageSwitcher />
+              <div className="w-px h-6 bg-white" />
               <Dropdown
                 trigger={'panels'}
                 items={panelOptions}
@@ -168,38 +164,40 @@ export default function Navbar() {
                 className="w-[120px]"
               />
             </div>
-          </div>
 
-          {/* Mobile Menu Button */}
-          <Button
-            variant="ghost"
-            onClick={() => {
-              setIsMenuOpen(!isMenuOpen);
-              if (isMenuOpen) {
-                document.body.style.overflow = '';
-              }
-            }}
-            className="min-[1101px]:hidden col-span-1 justify-self-end"
-            ariaLabel={isMenuOpen ? 'Close menu' : 'Open menu'}
-          >
-            <svg
-              className="w-6 h-6"
-              fill="none"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
+            {/* Mobile Menu Button */}
+            <Button
+              variant="ghost"
+              onClick={() => {
+                setIsMenuOpen(!isMenuOpen);
+                if (isMenuOpen) {
+                  document.body.style.overflow = '';
+                }
+              }}
+              className="lg:hidden"
+              ariaLabel={isMenuOpen ? 'Close menu' : 'Open menu'}
             >
-              {isMenuOpen ? (
-                <path d="M6 18L18 6M6 6l12 12" />
-              ) : (
-                <path d="M4 6h16M4 12h16M4 18h16" />
-              )}
-            </svg>
-          </Button>
+              <svg
+                className="w-6 h-6"
+                fill="none"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                {isMenuOpen ? (
+                  <path d="M6 18L18 6M6 6l12 12" />
+                ) : (
+                  <path d="M4 6h16M4 12h16M4 18h16" />
+                )}
+              </svg>
+            </Button>
+          </div>
         </div>
       </div>
+      {/* Witte lijn onder de navbar, full-width en alleen zichtbaar als gescrold */}
+      {scrolled && <div className="border-t border-white w-full" />}
 
       {/* Mobile Menu */}
       <div

@@ -156,9 +156,9 @@ const HeroSection = () => {
   return (
     <AnimatedBackground variant="primary" className="min-h-screen w-full py-20 md:py-32">
       <Grid container maxWidth="xl" className="h-full">
-        <Grid columns={1} mdColumns={2} spacing="lg" className="items-center px-4 sm:px-6 lg:px-8">
+        <Grid columns={1} mdColumns={2} spacing="lg" className="items-center">
           {/* Left column - Text content that changes */}
-          <GridItem className="space-y-6 relative">
+          <GridItem className="space-y-6 relative px-4 sm:px-6 lg:px-8">
             <Slider 
               slides={slideContent}
               autoPlayInterval={10000}
@@ -167,24 +167,20 @@ const HeroSection = () => {
           </GridItem>
           
           {/* Right column - Image */}
-          <GridItem className="flex flex-col items-center mt-12 md:mt-0 max-w-full">
+          <GridItem className="flex flex-col items-start mt-12 md:mt-0 max-w-full self-start">
             <motion.div 
-              className="relative w-full flex justify-center px-4"
+              className="relative flex justify-start"
               {...getAnimationProps()}
             >
-              <div 
-                className={`w-full h-auto ${isMobile ? 'max-w-[300px]' : 'max-w-[600px]'} ${animationReady && !isMobile ? 'animate-float' : ''}`}
-              >
-                {shouldRenderImage && (
-                  <Image
-                    src="/images/webp/mainpage/server-kast-guy.webp"
-                    alt={t('serverIllustrationAlt')}
-                    width={600}
-                    height={600}
-                    className="w-full h-auto"
-                  />
-                )}
-              </div>
+              {shouldRenderImage && (
+                <Image
+                  src="/images/webp/mainpage/server-kast-guy.webp"
+                  alt={t('serverIllustrationAlt')}
+                  width={600}
+                  height={600}
+                  className={`w-full h-auto ${animationReady && !isMobile ? 'animate-float' : ''}`}
+                />
+              )}
             </motion.div>
           </GridItem>
         </Grid>
