@@ -110,7 +110,7 @@ export default function PackagesSection() {
     <BtwProvider>
       <section className="py-12 px-4 md:px-8 bg-[var(--color-tertiary)]">
         <motion.div 
-          className="max-w-7xl mx-auto"
+          className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}

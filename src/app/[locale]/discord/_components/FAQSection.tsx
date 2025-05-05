@@ -35,60 +35,61 @@ const FAQSection = () => {
   ];
 
   return (
-    <AnimatedBackground variant="tertiary" className="min-h-[100vh] md:h-screen flex items-center justify-center py-16 md:py-0">
-      <div className="container mx-auto px-4 py-8 md:py-0">
-        <Grid columns={1} lgColumns={12} spacing="lg">
-          {/* Left Column */}
-          <GridItem lgColSpan={5} className="px-2 md:px-0">
-            <motion.div 
-              initial={{ opacity: 0, y: 20 }}
-              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-            >
-              <div className="sticky top-24">
-                <motion.h2 
-                  className="text-3xl md:text-4xl font-bold text-[var(--color-text-primary)] mb-4"
+    <AnimatedBackground variant="tertiary" className="min-h-screen w-full py-16 md:py-32">
+      <Grid container maxWidth="xl" className="flex flex-col items-center h-full">
+        <div className="w-full flex flex-col items-center">
+          <div className="w-full max-w-7xl mx-auto">
+            <Grid columns={1} lgColumns={12} spacing="lg" className="items-start px-4 sm:px-6 lg:px-8">
+              {/* Left Column */}
+              <GridItem lgColSpan={5} className="px-4 md:px-0">
+                <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-                  transition={{ duration: 0.5, delay: 0.3 }}
+                  transition={{ duration: 0.5, delay: 0.2 }}
                 >
-                  {t('faq.title')}
-                </motion.h2>
-                <motion.p 
-                  className="text-[var(--color-text-primary)]"
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-                  transition={{ duration: 0.5, delay: 0.4 }}
+                  <div className="sticky top-24">
+                    <motion.h2 
+                      className="text-3xl md:text-4xl font-bold text-[var(--color-text-primary)] mb-4"
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+                      transition={{ duration: 0.5, delay: 0.3 }}
+                    >
+                      {t('faq.title')}
+                    </motion.h2>
+                    <motion.p 
+                      className="text-[var(--color-text-primary)]"
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+                      transition={{ duration: 0.5, delay: 0.4 }}
+                    >
+                      {t('faq.subtitle.text')}{' '}
+                      <Link 
+                        href="/contact" 
+                        className="text-[var(--color-link)] hover:underline"
+                      >
+                        {t('faq.subtitle.link')}
+                      </Link>
+                    </motion.p>
+                  </div>
+                </motion.div>
+              </GridItem>
+              
+              {/* Right Column - Restored subtle horizontal animation */}
+              <GridItem lgColSpan={7} className="overflow-hidden">
+                <motion.div
+                  ref={sectionRef}
+                  className="w-full"
+                  initial={{ opacity: 0, x: 30 }}
+                  animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 30 }}
+                  transition={{ duration: 0.6, delay: 0.3 }}
                 >
-                  {t('faq.subtitle.text')}{' '}
-                  <Link 
-                    href="/contact" 
-                    className="text-[var(--color-link)] hover:underline"
-                  >
-                    {t('faq.subtitle.link')}
-                  </Link>
-                </motion.p>
-              </div>
-            </motion.div>
-          </GridItem>
-          
-          {/* Right Column - Restored subtle horizontal animation */}
-          <GridItem lgColSpan={7} className="overflow-hidden">
-            <motion.div 
-              ref={sectionRef}
-            >
-              <motion.div
-                className="w-full"
-                initial={{ opacity: 0, x: 30 }}
-                animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 30 }}
-                transition={{ duration: 0.6, delay: 0.3 }}
-              >
-                <FAQ faqs={faqs} />
-              </motion.div>
-            </motion.div>
-          </GridItem>
-        </Grid>
-      </div>
+                  <FAQ faqs={faqs} />
+                </motion.div>
+              </GridItem>
+            </Grid>
+          </div>
+        </div>
+      </Grid>
     </AnimatedBackground>
   );
 };

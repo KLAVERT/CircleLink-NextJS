@@ -307,7 +307,7 @@ const InfoSection = () => {
           viewport={{ once: true, margin: "-100px" }}
           variants={containerVariants}
         >
-          <motion.div className="max-w-3xl mx-auto">
+          <motion.div className="max-w-3xl mx-auto text-center">
             <motion.div variants={titleVariants}>
               <motion.span 
                 className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[var(--color-quinary)] text-white text-sm font-semibold mb-4"
@@ -320,7 +320,7 @@ const InfoSection = () => {
             </motion.div>
             
             <motion.h1 
-              className="text-4xl md:text-5xl font-bold mb-4 text-[var(--color-text-primary)]"
+              className="text-4xl md:text-5xl font-bold mb-4 text-[var(--color-text-primary)] text-left"
               variants={titleVariants}
             >
               {t('title')}
@@ -363,7 +363,7 @@ const InfoSection = () => {
           variants={containerVariants}
         >
           <motion.div 
-            className="max-w-7xl mx-auto"
+            className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
           >
             <Grid columns={1} mdColumns={2} lgColumns={4} spacing="md">
               {features.map((feature, index) => (
