@@ -157,131 +157,133 @@ const ReviewSection = () => {
   };
 
   return (
-    <section className="w-full py-16 px-8 bg-[var(--color-primary)] overflow-hidden">
-      <div className="max-w-7xl mx-auto">
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8">
-          <h2 className="text-4xl font-bold text-[var(--color-text-primary)] mb-4 md:mb-0">{t('title')}</h2>
-          <div className="flex items-center gap-2">
-            <span className="text-sm text-[var(--color-text-primary)]">{t('poweredBy')}</span>
-            <a 
-              href="https://www.trustpilot.com" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="no-underline"
-            >
-              <span className="font-bold text-xl bg-gradient-to-r from-[#00b67a] to-[#007055] bg-clip-text text-transparent px-2 py-1 rounded">Trustpilot</span>
-            </a>
-          </div>
-        </div>
-
-        {loading ? (
-          <div className="flex flex-col items-center justify-center min-h-[300px] w-full">
-            <div className="w-10 h-10 border-4 border-gray-200 border-t-blue-500 rounded-full animate-spin mb-4"></div>
-            <p className="text-[var(--color-text-primary)]">{t('loading')}</p>
-          </div>
-        ) : error ? (
-          <div className="flex justify-center items-center min-h-[200px] w-full text-red-500 text-center">
-            <p>{error}</p>
-          </div>
-        ) : (
-          <div 
-            ref={scrollRef}
-            className="flex overflow-x-auto pb-6 scrollbar-hide"
-            style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
-          >
-            <div className="flex space-x-6 pl-4 pr-20">
-              {/* Original reviews */}
-              {reviews.map((review, index) => (
-                <div 
-                  key={review.id} 
-                  className={`flex-shrink-0 w-80 bg-white rounded-lg p-6 shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-xl ${getStaggeredPosition(index)}`}
-                >
-                  <div className="flex justify-between items-center mb-4">
-                    <div className="flex items-center gap-3">
-                      <div className="w-10 h-10 rounded-full bg-blue-500 text-white flex justify-center items-center font-semibold text-xl">
-                        {review.name.charAt(0)}
-                      </div>
-                      <div className="flex flex-col">
-                        <h3 className="text-base font-semibold m-0 text-[var(--color-text-dark)]">{review.name}</h3>
-                        <span className="text-xs text-[var(--color-text-dark)]">
-                          {new Date(review.date).toLocaleDateString()}
-                        </span>
-                      </div>
-                    </div>
-                    <div className="flex gap-0.5">
-                      {renderStars(review.rating)}
-                    </div>
-                  </div>
-                  <h4 className="text-lg font-semibold mb-2 text-[var(--color-text-dark)]">{review.title}</h4>
-                  <p className="text-sm leading-relaxed text-[var(--color-text-dark)] line-clamp-4">{review.content}</p>
-                </div>
-              ))}
-
-              {/* First duplicate set */}
-              {reviews.map((review, index) => (
-                <div 
-                  key={`dup-1-${review.id}`} 
-                  className={`flex-shrink-0 w-80 bg-white rounded-lg p-6 shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-xl ${getStaggeredPosition(index + reviews.length)}`}
-                >
-                  <div className="flex justify-between items-center mb-4">
-                    <div className="flex items-center gap-3">
-                      <div className="w-10 h-10 rounded-full bg-blue-500 text-white flex justify-center items-center font-semibold text-xl">
-                        {review.name.charAt(0)}
-                      </div>
-                      <div className="flex flex-col">
-                        <h3 className="text-base font-semibold m-0 text-[var(--color-text-dark)]">{review.name}</h3>
-                        <span className="text-xs text-[var(--color-text-dark)]">
-                          {new Date(review.date).toLocaleDateString()}
-                        </span>
-                      </div>
-                    </div>
-                    <div className="flex gap-0.5">
-                      {renderStars(review.rating)}
-                    </div>
-                  </div>
-                  <h4 className="text-lg font-semibold mb-2 text-[var(--color-text-dark)]">{review.title}</h4>
-                  <p className="text-sm leading-relaxed text-[var(--color-text-dark)] line-clamp-4">{review.content}</p>
-                </div>
-              ))}
-
-              {/* Second duplicate set - to ensure enough content for smooth looping */}
-              {reviews.map((review, index) => (
-                <div 
-                  key={`dup-2-${review.id}`} 
-                  className={`flex-shrink-0 w-80 bg-white rounded-lg p-6 shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-xl ${getStaggeredPosition(index + reviews.length * 2)}`}
-                >
-                  <div className="flex justify-between items-center mb-4">
-                    <div className="flex items-center gap-3">
-                      <div className="w-10 h-10 rounded-full bg-blue-500 text-white flex justify-center items-center font-semibold text-xl">
-                        {review.name.charAt(0)}
-                      </div>
-                      <div className="flex flex-col">
-                        <h3 className="text-base font-semibold m-0 text-[var(--color-text-dark)]">{review.name}</h3>
-                        <span className="text-xs text-[var(--color-text-dark)]">
-                          {new Date(review.date).toLocaleDateString()}
-                        </span>
-                      </div>
-                    </div>
-                    <div className="flex gap-0.5">
-                      {renderStars(review.rating)}
-                    </div>
-                  </div>
-                  <h4 className="text-lg font-semibold mb-2 text-[var(--color-text-dark)]">{review.title}</h4>
-                  <p className="text-sm leading-relaxed text-[var(--color-text-dark)] line-clamp-4">{review.content}</p>
-                </div>
-              ))}
+    <section className="w-full py-16 bg-[var(--color-primary)] overflow-hidden">
+      <div className="w-full px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8">
+            <h2 className="text-4xl font-bold text-[var(--color-text-primary)] mb-4 md:mb-0">{t('title')}</h2>
+            <div className="flex items-center gap-2">
+              <span className="text-sm text-[var(--color-text-primary)]">{t('poweredBy')}</span>
+              <a 
+                href="https://www.trustpilot.com" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="no-underline"
+              >
+                <span className="font-bold text-xl bg-gradient-to-r from-[#00b67a] to-[#007055] bg-clip-text text-transparent px-2 py-1 rounded">Trustpilot</span>
+              </a>
             </div>
           </div>
-        )}
-        
-        <div className="flex justify-center mt-8">
-          <Button
-            href="https://www.trustpilot.com/review/circlelink.eu"
-            target="_blank"
-            variant="blue"
-          >
-            {t('viewMore')}
-          </Button>
+
+          {loading ? (
+            <div className="flex flex-col items-center justify-center min-h-[300px] w-full">
+              <div className="w-10 h-10 border-4 border-gray-200 border-t-blue-500 rounded-full animate-spin mb-4"></div>
+              <p className="text-[var(--color-text-primary)]">{t('loading')}</p>
+            </div>
+          ) : error ? (
+            <div className="flex justify-center items-center min-h-[200px] w-full text-red-500 text-center">
+              <p>{error}</p>
+            </div>
+          ) : (
+            <div 
+              ref={scrollRef}
+              className="flex overflow-x-auto pb-6 scrollbar-hide"
+              style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+            >
+              <div className="flex space-x-6 pl-4 pr-20">
+                {/* Original reviews */}
+                {reviews.map((review, index) => (
+                  <div 
+                    key={review.id} 
+                    className={`flex-shrink-0 w-80 bg-white rounded-lg p-6 shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-xl ${getStaggeredPosition(index)}`}
+                  >
+                    <div className="flex justify-between items-center mb-4">
+                      <div className="flex items-center gap-3">
+                        <div className="w-10 h-10 rounded-full bg-blue-500 text-white flex justify-center items-center font-semibold text-xl">
+                          {review.name.charAt(0)}
+                        </div>
+                        <div className="flex flex-col">
+                          <h3 className="text-base font-semibold m-0 text-[var(--color-text-dark)]">{review.name}</h3>
+                          <span className="text-xs text-[var(--color-text-dark)]">
+                            {new Date(review.date).toLocaleDateString()}
+                          </span>
+                        </div>
+                      </div>
+                      <div className="flex gap-0.5">
+                        {renderStars(review.rating)}
+                      </div>
+                    </div>
+                    <h4 className="text-lg font-semibold mb-2 text-[var(--color-text-dark)]">{review.title}</h4>
+                    <p className="text-sm leading-relaxed text-[var(--color-text-dark)] line-clamp-4">{review.content}</p>
+                  </div>
+                ))}
+
+                {/* First duplicate set */}
+                {reviews.map((review, index) => (
+                  <div 
+                    key={`dup-1-${review.id}`} 
+                    className={`flex-shrink-0 w-80 bg-white rounded-lg p-6 shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-xl ${getStaggeredPosition(index + reviews.length)}`}
+                  >
+                    <div className="flex justify-between items-center mb-4">
+                      <div className="flex items-center gap-3">
+                        <div className="w-10 h-10 rounded-full bg-blue-500 text-white flex justify-center items-center font-semibold text-xl">
+                          {review.name.charAt(0)}
+                        </div>
+                        <div className="flex flex-col">
+                          <h3 className="text-base font-semibold m-0 text-[var(--color-text-dark)]">{review.name}</h3>
+                          <span className="text-xs text-[var(--color-text-dark)]">
+                            {new Date(review.date).toLocaleDateString()}
+                          </span>
+                        </div>
+                      </div>
+                      <div className="flex gap-0.5">
+                        {renderStars(review.rating)}
+                      </div>
+                    </div>
+                    <h4 className="text-lg font-semibold mb-2 text-[var(--color-text-dark)]">{review.title}</h4>
+                    <p className="text-sm leading-relaxed text-[var(--color-text-dark)] line-clamp-4">{review.content}</p>
+                  </div>
+                ))}
+
+                {/* Second duplicate set - to ensure enough content for smooth looping */}
+                {reviews.map((review, index) => (
+                  <div 
+                    key={`dup-2-${review.id}`} 
+                    className={`flex-shrink-0 w-80 bg-white rounded-lg p-6 shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-xl ${getStaggeredPosition(index + reviews.length * 2)}`}
+                  >
+                    <div className="flex justify-between items-center mb-4">
+                      <div className="flex items-center gap-3">
+                        <div className="w-10 h-10 rounded-full bg-blue-500 text-white flex justify-center items-center font-semibold text-xl">
+                          {review.name.charAt(0)}
+                        </div>
+                        <div className="flex flex-col">
+                          <h3 className="text-base font-semibold m-0 text-[var(--color-text-dark)]">{review.name}</h3>
+                          <span className="text-xs text-[var(--color-text-dark)]">
+                            {new Date(review.date).toLocaleDateString()}
+                          </span>
+                        </div>
+                      </div>
+                      <div className="flex gap-0.5">
+                        {renderStars(review.rating)}
+                      </div>
+                    </div>
+                    <h4 className="text-lg font-semibold mb-2 text-[var(--color-text-dark)]">{review.title}</h4>
+                    <p className="text-sm leading-relaxed text-[var(--color-text-dark)] line-clamp-4">{review.content}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+          
+          <div className="flex justify-center mt-8">
+            <Button
+              href="https://www.trustpilot.com/review/circlelink.eu"
+              target="_blank"
+              variant="blue"
+            >
+              {t('viewMore')}
+            </Button>
+          </div>
         </div>
       </div>
     </section>

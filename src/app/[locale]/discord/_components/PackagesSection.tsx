@@ -168,7 +168,7 @@ function PackageCards({ packages }: { packages: Package[] }) {
       
       {/* Enterprise package centered */}
       <div className="mt-8 flex justify-center">
-        <div className="w-full max-w-[33.33%]">
+        <div className="w-full md:max-w-[33.33%]">
           <FeatureCard
             key={packages[3].name}
             icon={<FaDiscord />}

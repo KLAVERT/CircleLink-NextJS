@@ -301,13 +301,13 @@ const InfoSection = () => {
       <div className="relative z-10 flex flex-col justify-center">
         {/* Hero Section */}
         <motion.div 
-          className="pb-4 px-4 md:px-8"
+          className="pb-4 px-4 sm:px-6 lg:px-8"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
           variants={containerVariants}
         >
-          <motion.div className="max-w-3xl mx-auto text-center">
+          <motion.div className="max-w-3xl mx-auto text-center px-4 sm:px-6 lg:px-8">
             <motion.div variants={titleVariants}>
               <motion.span 
                 className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[var(--color-quinary)] text-white text-sm font-semibold mb-4"
@@ -327,24 +327,24 @@ const InfoSection = () => {
             </motion.h1>
 
             <motion.div variants={containerVariants}>
-              <ul className="space-y-3">
+              <ul className="space-y-3 list-none pl-0">
                 {t.raw('features').map((feature: string, index: number) => (
                   <motion.li 
                     key={index}
-                    className="flex items-center gap-3 text-lg text-[var(--color-text-primary)] group"
+                    className="flex items-start gap-2 text-lg text-[var(--color-text-primary)] group text-left"
                     variants={itemVariants}
                     whileHover={{ x: 10 }}
                     transition={{ duration: 0.2 }}
                   >
                     <motion.div
-                      className="bg-[var(--color-success)]/10 rounded-full p-1"
+                      className="bg-[var(--color-success)]/10 rounded-full w-6 h-6 flex-shrink-0 flex items-center justify-center"
                       variants={checkmarkVariants}
                       whileHover="hover"
                       custom={index}
                     >
                       <HiCheck className="w-5 h-5 text-[var(--color-success)]" />
                     </motion.div>
-                    <span className="group-hover:text-[var(--color-success)] transition-colors duration-200">
+                    <span className="flex-1 min-w-0 group-hover:text-[var(--color-success)] transition-colors duration-200 break-words">
                       {feature}
                     </span>
                   </motion.li>
@@ -356,7 +356,7 @@ const InfoSection = () => {
 
         {/* Features Grid */}
         <motion.div 
-          className="pt-12 px-4 md:px-8 pb-16 md:pb-20"
+          className="pt-12 px-4 sm:px-6 lg:px-8 pb-16 md:pb-20"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}

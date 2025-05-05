@@ -61,7 +61,7 @@ const HeroSection = () => {
       {/* Content */}
       <div className="container relative z-10 mx-auto px-4 py-24 sm:px-6 lg:px-8 min-h-screen flex flex-col items-center justify-center text-center">
         <motion.div
-          className="max-w-4xl"
+          className="max-w-4xl px-4 sm:px-6 lg:px-8"
           variants={containerVariants}
           initial="hidden"
           animate="visible"
@@ -127,22 +127,24 @@ const HeroSection = () => {
 
       {/* Bottom features */}
       <div className="relative z-10 bg-[rgba(0,0,0,0.7)] py-6 backdrop-blur-sm w-full">
-        <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-6">
-          <div className="flex items-center justify-center gap-3 text-[var(--color-text-primary)]">
-            <FaShieldAlt className="text-blue-400 text-xl" /> 
-            <span>{t('bottomFeatures.ddosProtection')}</span>
-          </div>
-          <div className="flex items-center justify-center gap-3 text-[var(--color-text-primary)]">
-            <FaServer className="text-blue-400 text-xl" /> 
-            <span>{t('bottomFeatures.premiumHardware')}</span>
-          </div>
-          <div className="flex items-center justify-center gap-3 text-[var(--color-text-primary)]">
-            <FaClock className="text-blue-400 text-xl" /> 
-            <span>{t('bottomFeatures.online')}</span>
-          </div>
-          <div className="flex items-center justify-center gap-3 text-[var(--color-text-primary)]">
-            <FaCheck className="text-blue-400 text-xl" /> 
-            <span>{t('bottomFeatures.instantDelivery')}</span>
+        <div className="w-full px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-6">
+            <div className="flex items-center justify-center gap-3 text-[var(--color-text-primary)]">
+              <FaShieldAlt className="text-blue-400 text-xl" /> 
+              <span>{t('bottomFeatures.ddosProtection')}</span>
+            </div>
+            <div className="flex items-center justify-center gap-3 text-[var(--color-text-primary)]">
+              <FaServer className="text-blue-400 text-xl" /> 
+              <span>{t('bottomFeatures.premiumHardware')}</span>
+            </div>
+            <div className="flex items-center justify-center gap-3 text-[var(--color-text-primary)]">
+              <FaClock className="text-blue-400 text-xl" /> 
+              <span>{t('bottomFeatures.online')}</span>
+            </div>
+            <div className="flex items-center justify-center gap-3 text-[var(--color-text-primary)]">
+              <FaCheck className="text-blue-400 text-xl" /> 
+              <span>{t('bottomFeatures.instantDelivery')}</span>
+            </div>
           </div>
         </div>
       </div>

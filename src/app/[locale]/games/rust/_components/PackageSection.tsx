@@ -244,7 +244,7 @@ const PackageSection = () => {
       <DDRProvider>
         <section className="py-12 px-4 md:px-8 bg-[#2a3b5f]">
           <motion.div 
-            className="max-w-7xl mx-auto"
+            className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-100px" }}
@@ -333,7 +333,7 @@ function PackageCards({ packages }: { packages: Package[] }) {
       
       {/* Enterprise package centered */}
       <div className="mt-8 flex justify-center">
-        <div className="w-full max-w-md">
+        <div className="w-full md:max-w-md">
           {(() => {
             const pkg = packages[6];
             const packageName = pkg.name.toLowerCase();
