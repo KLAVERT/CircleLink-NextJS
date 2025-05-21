@@ -19,7 +19,7 @@ const FeaturesSection = () => {
     }
   }, [isInView, controls]);
   
-  // Feature data with translation keys and categories
+  // Feature data
   const features = [
     {
       title: t('instantSetup.title'),
@@ -98,7 +98,6 @@ const FeaturesSection = () => {
     <AnimatedBackground variant="secondary" className="min-h-screen w-full py-24 md:py-32">
       <Grid container maxWidth="xl" className="flex flex-col items-center h-full">
         <div ref={ref} className="w-full flex flex-col items-center">
-          {/* Section title met nieuwe animatie */}
           <motion.div 
             className="text-center mb-16 max-w-3xl"
             variants={titleVariants}
@@ -110,7 +109,6 @@ const FeaturesSection = () => {
             </h2>
           </motion.div>
           
-          {/* Features grid met nieuwe animaties */}
           <Grid columns={1} mdColumns={2} lgColumns={3} spacing="lg" className="px-4 sm:px-6 lg:px-8">
             <AnimatePresence>
               {features.map((feature, index) => (

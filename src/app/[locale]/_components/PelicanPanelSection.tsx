@@ -56,7 +56,7 @@ const ImageModal = ({ isOpen, onClose, imageSrc, title }: { isOpen: boolean; onC
   );
 };
 
-// Feature item component met animatie
+// Feature item component
 interface PanelFeatureItemProps {
   title: string;
   description: string;
@@ -213,7 +213,6 @@ const PelicanPanelSection = () => {
         </div>
         <Grid container maxWidth="xl" className="relative z-10 flex flex-col items-center">
           <div className="w-full flex flex-col items-center">
-            {/* Section Header */}
             <motion.div variants={titleVariants} className="text-center mb-4 max-w-3xl">
               <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text-primary)] dark:text-[var(--color-text-primary)] mb-1">
                 {t('title')} <span className="text-[var(--color-quinary)] dark:text-[var(--color-quinary)]">{t('subtitle')}</span>
@@ -230,15 +229,13 @@ const PelicanPanelSection = () => {
                 animate={isInView ? "visible" : "hidden"}
                 ref={sectionRef}
               >
-                {/* Main Content */}
                 <Grid columns={1} lgColumns={12} spacing="lg" className="items-start px-4 sm:px-6 lg:px-8">
-                  {/* Left Column - Panels */}
                   <GridItem lgColSpan={7}>
                     <motion.div
                       variants={imageVariants}
                       className="grid grid-cols-1 gap-3"
                     >
-                      {/* Eerste panel - Dashboard */}
+                      {/* first panel - Dashboard */}
                       <motion.div
                         whileHover={{ scale: 1.02 }}
                         whileTap={{ scale: 0.98 }}
@@ -269,7 +266,7 @@ const PelicanPanelSection = () => {
                         </div>
                       </motion.div>
 
-                      {/* Tweede panel - File Editor */}
+                      {/* second panel - File Editor */}  
                       <motion.div
                         whileHover={{ scale: 1.02 }}
                         whileTap={{ scale: 0.98 }}

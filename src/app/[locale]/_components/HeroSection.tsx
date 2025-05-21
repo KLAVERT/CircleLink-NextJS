@@ -19,10 +19,10 @@ const HeroSection = () => {
   const [shouldRenderImage, setShouldRenderImage] = useState(false);
 
   useEffect(() => {
-    // Set animation ready immediately to prevent title delay
+    // Set animation ready immediately
     setAnimationReady(true);
     
-    // Only render the image on non-mobile devices
+    // Only render image non-mobile devices
     if (!isMobile) {
       setShouldRenderImage(true);
     } else {
@@ -30,7 +30,7 @@ const HeroSection = () => {
     }
   }, [isMobile]);
 
-  // Content voor elk type hosting
+  // Content for every hosting option we offer
   const slides = [
     {
       type: 'game',
@@ -85,7 +85,6 @@ const HeroSection = () => {
     }
   ];
 
-  // Transformeer de slides inhoud naar Slider-compatibele jsx elementen
   const slideContent = slides.map((slide, index) => (
     <div key={index} className="space-y-6">
       <motion.p 
@@ -97,7 +96,6 @@ const HeroSection = () => {
         {slide.tagline}
       </motion.p>
       <div className="space-y-1 min-h-[180px]">
-        {/* Render title immediately without motion wrapper to improve LCP */}
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold">
           <span className="text-[var(--color-text-primary)] dark:text-[var(--color-text-primary)]">{slide.heroTitle1} </span>
           <span className="text-[var(--color-quinary)] dark:text-[var(--color-quinary)]">{slide.heroTitle2} </span>
@@ -137,7 +135,7 @@ const HeroSection = () => {
     </div>
   ));
 
-  // Simplified animations for mobile
+  // Simplified animations for performance (mobile and desktop)
   const getAnimationProps = useCallback(() => {
     if (isMobile || shouldReduceMotion) {
       return {
@@ -157,7 +155,6 @@ const HeroSection = () => {
     <AnimatedBackground variant="primary" className="min-h-screen w-full py-20 md:py-32">
       <Grid container maxWidth="xl" className="h-full">
         <Grid columns={1} mdColumns={2} spacing="lg" className="items-center">
-          {/* Left column - Text content that changes */}
           <GridItem className="space-y-6 relative px-4 sm:px-6 lg:px-8">
             <Slider 
               slides={slideContent}
@@ -166,7 +163,6 @@ const HeroSection = () => {
             />
           </GridItem>
           
-          {/* Right column - Image */}
           <GridItem className="flex flex-col items-start mt-12 md:mt-0 max-w-full self-start">
             <motion.div 
               className="relative flex justify-start"

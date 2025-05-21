@@ -40,7 +40,6 @@ const FAQSection = () => {
         <div className="w-full flex flex-col items-center">
           <div className="w-full max-w-7xl mx-auto">
             <Grid columns={1} lgColumns={12} spacing="lg" className="items-start px-4 sm:px-6 lg:px-8">
-              {/* Left Column */}
               <GridItem lgColSpan={5} className="px-4 md:px-0">
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
@@ -74,7 +73,6 @@ const FAQSection = () => {
                 </motion.div>
               </GridItem>
               
-              {/* Right Column - Restored subtle horizontal animation */}
               <GridItem lgColSpan={7} className="overflow-hidden">
                 <motion.div
                   ref={sectionRef}

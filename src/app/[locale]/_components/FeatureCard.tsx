@@ -103,7 +103,6 @@ const FeatureCard = ({ title, description, icon, index = 0 }: FeatureCardProps) 
       whileTap="tap"
       custom={index}
     >
-      {/* Achtergrond accent effect */}
       <motion.div 
         className="absolute right-0 bottom-0 w-32 h-32 rounded-full -mr-16 -mb-16 bg-[var(--color-quinary)] dark:bg-[var(--color-quaternary)] opacity-10"
         initial={{ scale: 0 }}
