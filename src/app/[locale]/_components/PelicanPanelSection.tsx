@@ -6,7 +6,6 @@ import { motion, useInView, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
 import Grid, { GridItem } from '@/components/Grid';
 
-// Modal Component
 const ImageModal = ({ isOpen, onClose, imageSrc, title }: { isOpen: boolean; onClose: () => void; imageSrc: string; title: string }) => {
   return (
     <AnimatePresence>
@@ -154,7 +153,6 @@ const PelicanPanelSection = () => {
     }
   ];
 
-  // Animatie varianten voor de container
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -165,7 +163,6 @@ const PelicanPanelSection = () => {
     }
   };
 
-  // Titel animatie variants
   const titleVariants = {
     hidden: { opacity: 0, y: -20 },
     visible: {
@@ -178,7 +175,6 @@ const PelicanPanelSection = () => {
     }
   };
 
-  // Image animatie variants
   const imageVariants = {
     hidden: { opacity: 0, scale: 0.9, y: 20 },
     visible: {

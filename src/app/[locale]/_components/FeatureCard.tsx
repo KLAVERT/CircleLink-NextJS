@@ -12,7 +12,6 @@ interface FeatureCardProps {
 }
 
 const FeatureCard = ({ title, description, icon, index = 0 }: FeatureCardProps) => {
-  // Card animatie variants
   const cardVariants = {
     hidden: { 
       opacity: 0,

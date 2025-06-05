@@ -19,7 +19,6 @@ const FeaturesSection = () => {
     }
   }, [isInView, controls]);
   
-  // Feature data
   const features = [
     {
       title: t('instantSetup.title'),
@@ -74,7 +73,6 @@ const FeaturesSection = () => {
     }
   ];
   
-  // Title animatie variants
   const titleVariants = {
     hidden: { 
       opacity: 0,
