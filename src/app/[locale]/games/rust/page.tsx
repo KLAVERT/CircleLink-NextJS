@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import Preloader from '@/components/Preloader/Preloader';
 import GamePackageSection, { Package } from '@/components/gamesComponents/GamePackageSection';
-import ReviewSection from './_components/ReviewSection';
+import GameReviewSection from '@/components/gamesComponents/GameReviewSection';
 import PelicanPanelSection from './_components/PelicanPanelSection';
 import FAQSection from './_components/FAQSection';
 import { FaCheck, FaServer, FaClock, FaShieldAlt } from 'react-icons/fa';
@@ -196,7 +196,11 @@ export default function RustPage() {
           enableDDRToggle={true}
           translationNamespace="rust"
         />
-        <ReviewSection />
+        <GameReviewSection
+          title={{ key: 'title' }}
+          subtitle={{ key: 'poweredBy' }}
+          translationNamespace="Reviews"
+        />
         <PelicanPanelSection />
         <FAQSection />
       </div>
