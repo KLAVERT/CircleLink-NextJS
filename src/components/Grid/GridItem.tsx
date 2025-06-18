@@ -15,7 +15,6 @@ const GridItem: React.FC<GridItemProps> = ({
   mdColSpan,
   lgColSpan,
 }) => {
-  // Generate column span classes if provided
   const getColumnSpanClasses = () => {
     const classes = [];
     

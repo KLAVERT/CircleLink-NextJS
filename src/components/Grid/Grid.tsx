@@ -26,7 +26,6 @@ const Grid: React.FC<GridProps> = ({
   spacing = 'md',
   verticalSpacing,
 }) => {
-  // Custom rem-based spacing (closer to Tailwind's default scale)
   const getSpacingValue = (size: SpacingSize): string => {
     switch (size) {
       case 'xs': return '0.25rem'; // 4px
@@ -37,7 +36,6 @@ const Grid: React.FC<GridProps> = ({
     }
   };
 
-  // Convert max width to Tailwind classes
   const getMaxWidthClass = () => {
     switch (maxWidth) {
       case 'sm': return 'max-w-2xl';
@@ -49,7 +47,6 @@ const Grid: React.FC<GridProps> = ({
     }
   };
 
-  // Generate grid columns classes
   const getGridColumnsClass = () => {
     const baseColumns = `grid-cols-${columns}`;
     const mdColumnsClass = mdColumns ? `md:grid-cols-${mdColumns}` : '';
@@ -58,7 +55,6 @@ const Grid: React.FC<GridProps> = ({
     return [baseColumns, mdColumnsClass, lgColumnsClass].filter(Boolean).join(' ');
   };
 
-  // Get gap style with rem values
   const gapStyle = useMemo(() => {
     return {
       gap: verticalSpacing ? `${getSpacingValue(verticalSpacing)} ${getSpacingValue(spacing)}` : getSpacingValue(spacing)

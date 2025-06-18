@@ -16,7 +16,6 @@ const FAQ = ({ faqs }: FAQProps) => {
     setOpenIndex(openIndex === index ? null : index);
   };
 
-  // Simplified animation variants
   const containerVariants = {
     visible: { opacity: 1 }
   };

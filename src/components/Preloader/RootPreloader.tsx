@@ -10,7 +10,6 @@ export default function RootPreloader() {
 
   useEffect(() => {
     setMounted(true);
-    // Voorkom scrollen tijdens laden
     document.body.style.overflow = 'hidden';
     return () => {
       document.body.style.overflow = '';  
@@ -19,7 +18,6 @@ export default function RootPreloader() {
 
   useEffect(() => {
     const handleLoad = () => {
-      // Wacht even met uitfaden voor betere UX
       setTimeout(() => {
         setIsLoading(false);
       }, 800);

@@ -47,7 +47,7 @@ export default function Navbar() {
     };
 
     window.addEventListener('scroll', handleScroll);
-    handleScroll(); // Check initial position
+    handleScroll();
     
     return () => {
       window.removeEventListener('scroll', handleScroll);
@@ -196,7 +196,7 @@ export default function Navbar() {
           </div>
         </div>
       </div>
-      {/* Witte lijn onder de navbar, full-width en alleen zichtbaar als gescrold */}
+      {/* white line under the navbar */}
       {scrolled && <div className="border-t border-white w-full" />}
 
       {/* Mobile Menu */}
@@ -227,18 +227,18 @@ export default function Navbar() {
                 <path d="M19 9l-7 7-7-7" />
               </svg>
             </button>
-            <div className={`mt-2 space-y-1 ${isMobileHostingOpen ? 'block' : 'hidden'}`}>
+            <div className={`mt-2 space-y-0.5 ${isMobileHostingOpen ? 'block' : 'hidden'}`}>
               {hostingOptions.map((item, index) => (
                 <Link
                   key={index}
                   href={item.href || '#'}
-                  className="block pl-4 py-2"
+                  className="block pl-4 py-1"
                 >
-                  <div className="flex items-center space-x-3">
-                    <span className="text-2xl text-[var(--color-text-primary)]">{item.icon}</span>
+                  <div className="flex items-center space-x-2">
+                    <span className="text-xl text-[var(--color-text-primary)]">{item.icon}</span>
                     <div>
                       <div className="text-[var(--color-text-primary)]">{item.title}</div>
-                      <p className="text-sm text-[var(--color-text-subtle)]">{item.description}</p>
+                      <p className="text-xs text-[var(--color-text-subtle)]">{item.description}</p>
                     </div>
                   </div>
                 </Link>
@@ -258,9 +258,6 @@ export default function Navbar() {
           <div className="flex flex-col space-y-4 px-3 py-2">
             <div className="flex justify-center">
               <LanguageSwitcher />
-            </div>
-            <div className="flex justify-center">
-              <ThemeSwitch />
             </div>
             <div className="flex justify-center">
               <Dropdown

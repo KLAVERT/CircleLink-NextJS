@@ -34,10 +34,8 @@ const Slider: React.FC<SliderProps> = ({
   const mouseStartX = useRef(0);
   const isDragging = useRef(false);
   
-  // Bepaalt het totaal aantal slides
   const totalSlides = slides.length;
   
-  // Helperfunctie die de slide-update en animatie-afhandeling centraliseert
   const changeSlide = useCallback((newSlide: number, direction: 'left' | 'right') => {
     if (isAnimating) return;
     setIsAnimating(true);
@@ -61,7 +59,6 @@ const Slider: React.FC<SliderProps> = ({
     changeSlide(index, index > activeSlide ? 'right' : 'left');
   }, [activeSlide, isAnimating, changeSlide]);
 
-  // Automatisch naar volgende slide met correcte dependencies
   useEffect(() => {
     if (autoPlayInterval <= 0) return;
     
@@ -84,11 +81,10 @@ const Slider: React.FC<SliderProps> = ({
   const handleTouchEnd = () => {
     const swipeDistance = touchStartX.current - touchEndX.current;
     
-    // Detecteer swipe als het meer dan 50px is
     if (swipeDistance > 50) {
-      nextSlide(); // swipe links
+      nextSlide();
     } else if (swipeDistance < -50) {
-      prevSlide(); // swipe rechts
+      prevSlide();
     }
     
     // Reset waardes

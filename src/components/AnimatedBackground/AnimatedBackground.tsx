@@ -12,23 +12,19 @@ const AnimatedBackground: React.FC<AnimatedBackgroundProps> = ({
   children,
   className = ''
 }) => {
-  // Bepaal de kleuren op basis van de variant
   const getColors = () => {
     switch (variant) {
       case 'secondary':
-        // Features sectie
         return {
           background: 'var(--color-tertiary)',
           showAnimation: false
         };
       case 'tertiary':
-        // FAQ sectie
         return {
           background: 'var(--color-primary)',
           showAnimation: false
         };
       default:
-        // Hero sectie - alleen subtiele overgang naar features
         return {
           primary: 'var(--color-secondary)',
           secondary: 'var(--color-primary)',
@@ -42,21 +38,19 @@ const AnimatedBackground: React.FC<AnimatedBackgroundProps> = ({
 
   const colors = getColors();
 
-  // Functie om een random richting te genereren
   const getRandomDirection = (index: number) => {
     const directions = [-100, -75, -50, -25, 25, 50, 75, 100];
     return directions[index % directions.length];
   };
 
-  // Genereer stabiele particle data
   const particles = useMemo(() => {
-    const particleCount = 20; // Verhoogd van 15 naar 20 particles
+    const particleCount = 20;
     
     return Array.from({ length: particleCount }).map((_, i) => ({
       size: 1.5 + (i % 6),
       xStart: (i * 11) % 100,
       yStart: (i * 13) % 100,
-      duration: 12 + (i % 10), // Gebruik de langzamere animatie
+      duration: 12 + (i % 10),
       xDirection: getRandomDirection(i),
       yDirection: getRandomDirection(i + 1),
     }));

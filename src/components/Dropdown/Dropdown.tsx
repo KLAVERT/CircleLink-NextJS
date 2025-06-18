@@ -39,7 +39,6 @@ export default function Dropdown({
   const dropdownRef = useRef<HTMLDivElement>(null);
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
 
-  // Handle hover state with delay for better UX
   const handleMouseEnter = () => {
     if (timeoutRef.current) {
       clearTimeout(timeoutRef.current);
@@ -51,10 +50,9 @@ export default function Dropdown({
   const handleMouseLeave = () => {
     timeoutRef.current = setTimeout(() => {
       setIsHovering(false);
-    }, 100); // Small delay to prevent menu from closing when moving between elements
+    }, 100);
   };
 
-  // Clean up timeout on unmount
   useEffect(() => {
     return () => {
       if (timeoutRef.current) {
@@ -66,12 +64,12 @@ export default function Dropdown({
   const renderHostingItem = (item: DropdownItem) => (
     <Link
       href={item.href || '#'}
-      className="block px-4 py-3 group/item"
+      className="block px-4 py-1 group/item"
     >
-      <div className="flex items-center space-x-4 relative group-hover/item:bg-[var(--color-quinary)] rounded-md transition-transform duration-300 p-2 -mx-2">
+      <div className="flex items-center space-x-3 relative group-hover/item:bg-[var(--color-quinary)] rounded-md transition-transform duration-300 p-1 -mx-1">
         {item.icon && (
-          <div className="flex-shrink-0 flex items-center justify-center w-12 h-12">
-            <span className="text-4xl text-[var(--color-text-primary)] group-hover/item:text-white">
+          <div className="flex-shrink-0 flex items-center justify-center w-10 h-10">
+            <span className="text-3xl text-[var(--color-text-primary)] group-hover/item:text-white">
               {item.icon}
             </span>
           </div>
@@ -110,7 +108,6 @@ export default function Dropdown({
   );
 
   const renderDefaultItem = (item: DropdownItem) => {
-    // If the item has an href, render as a Link
     if (item.href) {
       return (
         <Link
@@ -122,7 +119,6 @@ export default function Dropdown({
       );
     }
     
-    // Otherwise render as a button
     return (
       <button
         onClick={() => {
@@ -174,7 +170,7 @@ export default function Dropdown({
     );
   }
 
-  // Standard hover-based dropdown for default and hosting variants
+  // Standard hover-based dropdown
   return (
     <div 
       className={`relative inline-block ${className}`}

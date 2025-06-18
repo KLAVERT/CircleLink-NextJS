@@ -202,7 +202,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        {/* Blauwe lijn onderaan de footer */}
+        {/* Blue line under the footer */}
         <div className="border-b border-white w-full" />
       </footer>
     </>
