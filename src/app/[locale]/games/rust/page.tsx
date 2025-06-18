@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import Preloader from '@/components/Preloader/Preloader';
 import GamePackageSection, { Package } from '@/components/gamesComponents/GamePackageSection';
 import GameReviewSection from '@/components/gamesComponents/GameReviewSection';
-import PelicanPanelSection from './_components/PelicanPanelSection';
+import GamePelicanPanelSection from '@/components/gamesComponents/GamePelicanPanelSection';
 import FAQSection from './_components/FAQSection';
 import { FaCheck, FaServer, FaClock, FaShieldAlt } from 'react-icons/fa';
 import GameHostingHero from '@/components/gamesComponents/GameHostingHero';
@@ -201,7 +201,27 @@ export default function RustPage() {
           subtitle={{ key: 'poweredBy' }}
           translationNamespace="Reviews"
         />
-        <PelicanPanelSection />
+        <GamePelicanPanelSection
+          title={{ key: 'title' }}
+          subtitle={{ key: 'subtitle' }}
+          featuresTitle={{ key: 'featuresTitle' }}
+          features={[
+            { text: { key: 'features.ftpLogin' } },
+            { text: { key: 'features.browserFileManagement' } },
+            { text: { key: 'features.subuserLogin' } },
+            { text: { key: 'features.createDatabases' } },
+            { text: { key: 'features.serverBackups' } },
+            { text: { key: 'features.consoleInput' } },
+            { text: { key: 'features.restartServer' } },
+            { text: { key: 'features.scheduledCommand' } },
+            { text: { key: 'features.scheduledPowerAction' } },
+            { text: { key: 'features.databaseManagement' } },
+          ]}
+          buttonText={{ key: 'buttonText' }}
+          imageSrc="/images/jpg/mainpage/dashboard.jpg"
+          imageAlt="Control Panel"
+          translationNamespace="rust.pelicanPanel"
+        />
         <FAQSection />
       </div>
     </main>
