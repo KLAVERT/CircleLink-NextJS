@@ -329,159 +329,45 @@
       "theforest": "Overleef na een vliegtuigcrash op een beboste schiereiland vol kannibalistische stammen. Bouw, verken en verdedig jezelf tegen de gevaren van het woud."
     }
   },
-  "ark": {
-    "hero": {
-      "badge": "GAME HOSTING",
-      "title": "ARK: SURVIVAL EVOLVED",
-      "subtitle": "PREMIUM GAME SERVERS",
-      "description": "Word lid van onze ARK-community en overleef in een wereld vol dinosaurussen en prehistorische wezens. Bouw je stam, tem beesten en verover het eiland met onze hoogwaardige ARK-server hosting.",
-      "features": {
-        "dedicatedServers": "Hoogwaardige dedicated servers",
-        "modInstallation": "Eén-klik mod installatie",
-        "uptime": "24/7 online met 99,9% uptime",
-        "ddosProtection": "DDoS-bescherming inbegrepen"
-      },
-      "buttons": {
-        "getStarted": "Aan de slag",
-        "viewPlans": "Bekijk plannen"
-      },
-      "bottomFeatures": {
-        "ddosProtection": "DDoS-bescherming",
-        "premiumHardware": "Premium hardware",
-        "online": "24/7 online",
-        "instantDelivery": "Directe levering"
-      }
-    },
-    "packages": {
-      "title": "Kies Je ARK Server Pakket",
-      "subtitle": "Selecteer de server die het beste bij je tribe past. Alle pakketten bevatten krachtige hardware en DDoS-bescherming.",
-      "selectButton": "Selecteer {name}",
-      "tatch": {
-        "name": "Tatch",
-        "description": "Perfect voor kleine tribes die net beginnen",
-        "features": {
-          "8gbddr4": "8GB DDR4 RAM",
-          "3cores": "3 CPU Cores",
-          "fullssd": "Volledige SSD Opslag",
-          "pelican": "Pelican Panel",
-          "support": "12/7 Support",
-          "2databases": "2 Databases",
-          "2backup": "2 Backups"
-        }
-      },
-      "wood": {
-        "name": "Wood",
-        "description": "Ideaal voor middelgrote tribes met mod-vereisten",
-        "features": {
-          "10gbddr4": "10GB DDR4 RAM",
-          "4cores": "4 CPU Cores",
-          "fullssd": "Volledige SSD Opslag",
-          "pelican": "Pelican Panel",
-          "support": "12/7 Support",
-          "2databases": "2 Databases",
-          "2backup": "2 Backups"
-        }
-      },
-      "clay": {
-        "name": "Clay",
-        "description": "Verbeterde prestaties voor grotere tribes met meerdere mods",
-        "features": {
-          "12gbddr4": "12GB DDR4 RAM",
-          "4cores": "4 CPU Cores",
-          "fullssd": "Volledige SSD Opslag",
-          "pelican": "Pelican Panel",
-          "support": "12/7 Support",
-          "2databases": "2 Databases",
-          "2backup": "2 Backups"
-        }
-      },
-      "stone": {
-        "name": "Stone",
-        "description": "Ons meest populaire pakket voor gevestigde tribes",
-        "features": {
-          "16gbddr4": "16GB DDR4 RAM",
-          "6cores": "6 CPU Cores",
-          "fullssd": "Volledige SSD Opslag",
-          "pelican": "Pelican Panel",
-          "support": "12/7 Support",
-          "2databases": "2 Databases",
-          "2backup": "2 Backups"
-        }
-      },
-      "metal": {
-        "name": "Metal",
-        "description": "Superieure prestaties voor grote tribes met zware mods",
-        "features": {
-          "20gbddr4": "20GB DDR4 RAM",
-          "6cores": "6 CPU Cores",
-          "fullssd": "Volledige SSD Opslag",
-          "pelican": "Pelican Panel",
-          "support": "12/7 Support",
-          "2databases": "2 Databases",
-          "2backup": "2 Backups"
-        }
-      },
-      "tek": {
-        "name": "TEK",
-        "description": "Ultieme prestaties voor de meest veeleisende ARK-ervaringen",
-        "features": {
-          "24gbddr4": "24GB DDR4 RAM",
-          "8cores": "8 CPU Cores",
-          "fullssd": "Volledige SSD Opslag",
-          "pelican": "Pelican Panel",
-          "support": "12/7 Support",
-          "2databases": "2 Databases",
-          "2backup": "2 Backups"
-        }
-      },
-      "enterprise": {
-        "name": "Enterprise",
-        "description": "Aangepaste oplossing voor professionele ARK-communities en evenementen",
-        "features": {
-          "ram": "Aangepaste RAM",
-          "cores": "Aangepaste CPU Cores",
-          "ssd": "Aangepaste SSD Opslag",
-          "pelican": "Pelican Panel",
-          "support": "12/7 Support",
-          "databases": "Aangepaste Databases",
-          "backups": "Aangepaste Backups"
-        }
-      }
-    },
-    "pelicanPanel": {
+  "pelicanPanelGameHosting": {
       "title": "Game Server Controlepaneel",
-      "subtitle": "Ervaar de meest intuïtieve en krachtige game hosting interface, ontworpen voor zowel beginners als gevorderde gebruikers.",
+      "subtitle": "Ervaar de meest intuïtieve en krachtige gamehosting-interface, ontworpen voor zowel beginners als gevorderde gebruikers.",
       "featuresTitle": "Enkele van onze functies:",
       "features": {
-        "ftpLogin": "FTP login",
-        "browserFileManagement": "Browser bestandsbeheer",
-        "subuserLogin": "Subgebruiker login",
+        "ftpLogin": "FTP-inlog",
+        "browserFileManagement": "Bestandsbeheer via browser",
+        "subuserLogin": "Subgebruiker-inlog",
         "createDatabases": "Databases aanmaken",
-        "serverBackups": "Server back-ups",
-        "consoleInput": "Console input",
+        "serverBackups": "Serverback-ups",
+        "consoleInput": "Console-invoer",
         "restartServer": "Herstart je server",
-        "scheduledCommand": "Geplande commando's",
-        "scheduledPowerAction": "Geplande stroomacties",
-        "databaseManagement": "Database beheer"
+        "scheduledCommand": "Geplande opdracht",
+        "scheduledPowerAction": "Geplande stroomactie",
+        "databaseManagement": "Databasebeheer"
       },
-      "buttonText": "Meer Info"
-    }
+      "buttonText": "Meer informatie"
+  },
+  "reviews": {
+    "title": "Beoordelingen",
+    "poweredBy": "Aangedreven door"
   },
   "rust": {
+    "recommended": "Aanbevolen",
+    "mostChosen": "Meest populair",
     "hero": {
       "badge": "GAME HOSTING",
       "title": "RUST",
       "subtitle": "PREMIUM GAME SERVERS",
-      "description": "Word lid van onze Rust-community en overleef in een harde wereld waar elke speler een potentiële bedreiging vormt. Bouw bases, vorm allianties en verdedig je territorium met onze hoogwaardige Rust serverhosting.",
+      "description": "Word lid van onze Rust-community en overleef in een harde wereld waar elke speler een bedreiging kan zijn. Bouw basissen, vorm allianties en verdedig je territorium met onze krachtige Rust-serverhosting.",
       "features": {
-        "dedicatedServers": "Hoogwaardige dedicated servers",
-        "modInstallation": "One-click mod installatie",
+        "dedicatedServers": "Hoge-prestatie dedicated servers",
+        "modInstallation": "Mod-installatie met één klik",
         "uptime": "24/7 online met 99,9% uptime",
         "ddosProtection": "DDoS-bescherming inbegrepen"
       },
       "buttons": {
-        "getStarted": "Aan de slag",
-        "viewPlans": "Bekijk plannen"
+        "getStarted": "Begin nu",
+        "viewPlans": "Bekijk pakketten"
       },
       "bottomFeatures": {
         "ddosProtection": "DDoS-bescherming",
@@ -491,61 +377,61 @@
       }
     },
     "packages": {
-      "title": "Kies Je Rust Server Pakket",
-      "subtitle": "Selecteer de server die het beste bij de behoeften van je clan past. Alle pakketten bevatten hoogwaardige hardware en DDoS-bescherming.",
+      "title": "Kies je Rust-serverpakket",
+      "subtitle": "Selecteer de server die het beste past bij de behoeften van je clan. Alle pakketten bevatten krachtige hardware en DDoS-bescherming.",
       "selectButton": "Selecteer {name}",
       "ddr": {
         "ddr4": "DDR4",
         "ddr3": "DDR3"
       },
       "wood": {
-        "name": "Wood",
+        "name": "Hout",
         "description": "Ideaal voor middelgrote clans die net beginnen",
         "features": {
           "8gbddr4": "8GB DDR4 RAM",
-          "3cores": "3 CPU Cores",
-          "fullssd": "Volledige SSD-opslag",
-          "pelican": "Pelican Panel",
+          "3cores": "3 CPU-kernen",
+          "fullssd": "Volledig SSD-opslag",
+          "pelican": "Pelican Paneel",
           "support": "12/7 Ondersteuning",
           "2databases": "2 Databases",
           "2backup": "2 Back-ups"
         }
       },
       "stone": {
-        "name": "Stone",
+        "name": "Steen",
         "description": "Ons aanbevolen pakket voor groeiende clans",
         "features": {
           "10gbddr4": "10GB DDR4 RAM",
-          "4cores": "4 CPU Cores",
-          "fullssd": "Volledige SSD-opslag",
-          "pelican": "Pelican Panel",
+          "4cores": "4 CPU-kernen",
+          "fullssd": "Volledig SSD-opslag",
+          "pelican": "Pelican Paneel",
           "support": "12/7 Ondersteuning",
           "2databases": "2 Databases",
           "2backup": "2 Back-ups"
         }
       },
       "metal": {
-        "name": "Metal",
+        "name": "Metaal",
         "description": "Verbeterde prestaties voor grotere clans met meerdere mods",
         "features": {
           "12gbddr4": "12GB DDR4 RAM",
-          "4cores": "4 CPU Cores",
-          "fullssd": "Volledige SSD-opslag",
-          "pelican": "Pelican Panel",
-          "support": "Prioriteit Ondersteuning",
+          "4cores": "4 CPU-kernen",
+          "fullssd": "Volledig SSD-opslag",
+          "pelican": "Pelican Paneel",
+          "support": "Prioriteitsondersteuning",
           "2databases": "2 Databases",
           "2backup": "2 Back-ups"
         }
       },
       "sulfer": {
-        "name": "Sulfur",
-        "description": "Ons meest gekozen pakket voor gevestigde clans",
+        "name": "Zwavel",
+        "description": "Ons populairste pakket voor gevestigde clans",
         "features": {
           "16gbddr4": "16GB DDR4 RAM",
-          "6cores": "6 CPU Cores",
-          "fullssd": "Volledige SSD-opslag",
-          "pelican": "Pelican Panel",
-          "support": "Prioriteit Ondersteuning",
+          "6cores": "6 CPU-kernen",
+          "fullssd": "Volledig SSD-opslag",
+          "pelican": "Pelican Paneel",
+          "support": "Prioriteitsondersteuning",
           "2databases": "2 Databases",
           "2backup": "2 Back-ups"
         }
@@ -555,10 +441,10 @@
         "description": "Superieure prestaties voor grote clans met zware mods",
         "features": {
           "20gbddr4": "20GB DDR4 RAM",
-          "6cores": "6 CPU Cores",
-          "fullssd": "Volledige SSD-opslag",
-          "pelican": "Pelican Panel",
-          "support": "Prioriteit Ondersteuning",
+          "6cores": "6 CPU-kernen",
+          "fullssd": "Volledig SSD-opslag",
+          "pelican": "Pelican Paneel",
+          "support": "Prioriteitsondersteuning",
           "2databases": "2 Databases",
           "2backup": "2 Back-ups"
         }
@@ -568,9 +454,9 @@
         "description": "Ultieme prestaties voor de meest veeleisende Rust-ervaringen",
         "features": {
           "24gbddr4": "24GB DDR4 RAM",
-          "8cores": "8 CPU Cores",
-          "fullssd": "Volledige SSD-opslag",
-          "pelican": "Pelican Panel",
+          "8cores": "8 CPU-kernen",
+          "fullssd": "Volledig SSD-opslag",
+          "pelican": "Pelican Paneel",
           "support": "12/7 Ondersteuning",
           "2databases": "2 Databases",
           "2backup": "2 Back-ups"
@@ -578,396 +464,18 @@
       },
       "enterprise": {
         "name": "Enterprise",
-        "description": "Aangepaste oplossing voor professionele Rust-communities en evenementen",
+        "description": "Aangepaste oplossing voor professionele Rust-community’s en evenementen",
         "features": {
-          "ram": "Aangepaste RAM",
-          "cores": "Aangepaste CPU Cores",
+          "ram": "Aangepast RAM",
+          "cores": "Aangepaste CPU-kernen",
           "ssd": "Aangepaste SSD-opslag",
-          "pelican": "Pelican Panel",
+          "pelican": "Pelican Paneel",
           "support": "12/7 Ondersteuning",
           "databases": "Aangepaste Databases",
           "backups": "Aangepaste Back-ups"
         }
       }
-    },
-    "pelicanPanel": {
-      "title": "Game Server Controlepaneel",
-      "subtitle": "Ervaar de meest intuïtieve en krachtige game hosting-interface, ontworpen voor zowel beginners als gevorderde gebruikers.",
-      "featuresTitle": "Enkele van onze functies:",
-      "features": {
-        "ftpLogin": "FTP-inlog",
-        "browserFileManagement": "Browser bestandsbeheer",
-        "subuserLogin": "Subgebruiker inlog",
-        "createDatabases": "Databases aanmaken",
-        "serverBackups": "Server back-ups",
-        "consoleInput": "Console-invoer",
-        "restartServer": "Herstart je server",
-        "scheduledCommand": "Geplande opdracht",
-        "scheduledPowerAction": "Geplande stroomactie",
-        "databaseManagement": "Database-beheer"
-      },
-      "buttonText": "Meer informatie"
-    }
-  },
-  "palworld": {
-    "hero": {
-      "badge": "PALWORLD HOSTING",
-      "title": "Palworld Server Hosting",
-      "subtitle": "De beste Palworld servers vanaf €4,50 per maand",
-      "description": "Met CircleLink krijg je een geavanceerde Palworld server met gekwalificeerde 24/7 klantenservice en een gebruiksvriendelijk beheersysteem.",
-      "features": {
-        "dedicatedServers": "Hoogwaardige dedicated servers",
-        "modInstallation": "Eén-klik mod installatie",
-        "uptime": "24/7 online met 99,9% uptime",
-        "ddosProtection": "DDoS-bescherming inbegrepen"
-      },
-      "buttons": {
-        "getStarted": "Aan de slag",
-        "viewPlans": "Bekijk plannen"
-      },
-      "bottomFeatures": {
-        "ddosProtection": "DDoS-bescherming",
-        "premiumHardware": "Premium hardware",
-        "online": "24/7 online",
-        "instantDelivery": "Directe levering"
-      }
-    },
-    "packages": {
-      "title": "Palworld Serverpakketten",
-      "subtitle": "Kies het pakket dat het beste bij jouw behoeften past",
-      "selectButton": "Selecteer {name}",
-      "leaf": {
-        "title": "Leaf",
-        "name": "Leaf",
-        "description": "Voor kleine, vriendelijke servers",
-        "features": {
-          "feature1": "2GB RAM",
-          "feature2": "Geen spelerlimiet",
-          "feature3": "DDoS-bescherming",
-          "feature4": "Snelle SSD",
-          "16gbddr4": "16GB DDR4 RAM",
-          "2cores": "2 CPU-cores",
-          "fullssd": "Volledige SSD-opslag",
-          "pelican": "Pelican paneel inbegrepen",
-          "support": "24/7 Ondersteuning",
-          "2databases": "2 Databases",
-          "2backup": "2 Back-ups"
-        }
-      },
-      "stone": {
-        "title": "Stone",
-        "name": "Stone",
-        "description": "Voor middelgrote servers",
-        "features": {
-          "feature1": "4GB RAM",
-          "feature2": "Geen spelerlimiet",
-          "feature3": "DDoS-bescherming",
-          "feature4": "Snelle SSD",
-          "20gbddr4": "20GB DDR4 RAM",
-          "4cores": "4 CPU-cores",
-          "fullssd": "Volledige SSD-opslag",
-          "pelican": "Pelican paneel inbegrepen",
-          "support": "24/7 Ondersteuning",
-          "2databases": "2 Databases",
-          "2backup": "2 Back-ups"
-        }
-      },
-      "iron": {
-        "title": "Iron",
-        "name": "Iron",
-        "description": "Voor grote servers",
-        "features": {
-          "feature1": "8GB RAM",
-          "feature2": "Geen spelerlimiet",
-          "feature3": "DDoS-bescherming",
-          "feature4": "Snelle SSD",
-          "24gbddr4": "24GB DDR4 RAM",
-          "4cores": "4 CPU-cores",
-          "fullssd": "Volledige SSD-opslag",
-          "pelican": "Pelican paneel inbegrepen",
-          "support": "24/7 Ondersteuning",
-          "2databases": "2 Databases",
-          "2backup": "2 Back-ups"
-        }
-      },
-      "titanium": {
-        "title": "Titanium",
-        "name": "Titanium",
-        "description": "Voor intensieve PvP-servers",
-        "features": {
-          "feature1": "12GB RAM",
-          "feature2": "Geen spelerlimiet",
-          "feature3": "DDoS-bescherming",
-          "feature4": "Snelle SSD",
-          "32gbddr4": "32GB DDR4 RAM",
-          "6cores": "6 CPU-cores",
-          "fullssd": "Volledige SSD-opslag",
-          "pelican": "Pelican paneel inbegrepen",
-          "support": "24/7 Ondersteuning",
-          "2databases": "2 Databases",
-          "2backup": "2 Back-ups"
-        }
-      },
-      "ancient": {
-        "title": "Ancient",
-        "name": "Ancient",
-        "description": "Voor grote servers met mods",
-        "features": {
-          "feature1": "16GB RAM",
-          "feature2": "Geen spelerlimiet",
-          "feature3": "DDoS-bescherming",
-          "feature4": "Snelle SSD",
-          "40gbddr4": "40GB DDR4 RAM",
-          "6cores": "6 CPU-cores",
-          "fullssd": "Volledige SSD-opslag",
-          "pelican": "Pelican paneel inbegrepen",
-          "support": "24/7 Ondersteuning",
-          "2databases": "2 Databases",
-          "2backup": "2 Back-ups"
-        }
-      },
-      "relic": {
-        "title": "Relic",
-        "name": "Relic",
-        "description": "Voor evenementen en grote communities",
-        "features": {
-          "feature1": "32GB RAM",
-          "feature2": "Geen spelerlimiet",
-          "feature3": "DDoS-bescherming",
-          "feature4": "Snelle SSD",
-          "64gbddr4": "64GB DDR4 RAM",
-          "8cores": "8 CPU-cores",
-          "fullssd": "Volledige SSD-opslag",
-          "pelican": "Pelican paneel inbegrepen",
-          "support": "24/7 Ondersteuning",
-          "2databases": "2 Databases",
-          "2backup": "2 Back-ups"
-        }
-      },
-      "enterprise": {
-        "title": "Enterprise",
-        "name": "Enterprise",
-        "description": "Voor zeer grote communities",
-        "features": {
-          "feature1": "64GB RAM",
-          "feature2": "Geen spelerlimiet",
-          "feature3": "DDoS-bescherming",
-          "feature4": "Snelle SSD",
-          "ram": "Aangepaste RAM-toewijzing",
-          "cores": "Toegewijde CPU-cores",
-          "ssd": "Aangepaste SSD-opslag",
-          "pelican": "Pelican paneel inbegrepen",
-          "support": "Prioriteit 24/7 Ondersteuning",
-          "databases": "Onbeperkte databases",
-          "backups": "Dagelijkse back-ups"
-        }
-      }
-    },
-    "pelicanPanel": {
-      "title": "Palworld Serverbeheer",
-      "subtitle": "Met Het Pelican Paneel",
-      "description": "Het Pelican Paneel is een gebruiksvriendelijk gamebesturingspaneel waarmee je je gameserver met enkele klikken kunt beheren. Je kunt je server starten, stoppen, herstarten, mods installeren, kaarten wijzigen en nog veel meer.",
-      "featuresTitle": "Enkele van onze functies:",
-      "features": {
-        "ftpLogin": "FTP-login",
-        "browserFileManagement": "Bestandsbeheer in browser",
-        "subuserLogin": "Subgebruiker login",
-        "createDatabases": "Databases aanmaken",
-        "serverBackups": "Server back-ups",
-        "consoleInput": "Console-invoer",
-        "restartServer": "Herstart je server",
-        "scheduledCommand": "Geplande commando's",
-        "scheduledPowerAction": "Geplande stroomacties",
-        "databaseManagement": "Database beheer"
-      },
-      "buttonText": "Meer informatie",
-      "feature1": {
-        "title": "Gebruiksvriendelijk",
-        "description": "Onze intuïtieve interface maakt serverbeheer uiterst eenvoudig."
-      },
-      "feature2": {
-        "title": "Mod-installatie met één klik",
-        "description": "Installeer mods met één klik rechtstreeks vanuit het controlepaneel."
-      },
-      "feature3": {
-        "title": "Kaartconfiguratie",
-        "description": "Wissel eenvoudig van kaart en configureer kaartinstellingen."
-      },
-      "feature4": {
-        "title": "Directe herstart",
-        "description": "Herstart je server direct met één klik."
-      },
-      "button": "Meer informatie"
-    }
-  },
-  "Reviews": {
-    "title": "Wat onze klanten zeggen",
-    "poweredBy": "Mogelijk gemaakt door",
-    "loading": "Reviews laden...",
-    "viewMore": "Bekijk meer reviews"
-  },
-  "fivem": {
-    "hero": {
-      "badge": "FIVEM HOSTING",
-      "title": "Professionele FiveM Server Hosting",
-      "subtitle": "Creëer Je Perfecte Roleplay Ervaring",
-      "description": "Host je FiveM server met onze premium infrastructuur. Krijg directe setup, DDoS-bescherming en volledige controle over je server. Perfect voor roleplay communities en aangepaste spelmodi.",
-      "features": {
-        "dedicatedServers": "Dedicated FiveM servers",
-        "modInstallation": "Eenvoudige mod installatie",
-        "uptime": "99.9% uptime garantie",
-        "ddosProtection": "Geavanceerde DDoS-bescherming"
-      },
-      "buttons": {
-        "getStarted": "Aan de slag",
-        "viewPlans": "Bekijk Pakketten"
-      },
-      "bottomFeatures": {
-        "ddosProtection": "DDoS-bescherming",
-        "premiumHardware": "Premium Hardware",
-        "online": "24/7 Online",
-        "instantDelivery": "Directe Levering"
-      }
-    },
-    "packages": {
-      "title": "Kies Je Perfecte Plan",
-      "subtitle": "Selecteer het plan dat het beste past bij jouw FiveM server behoeften",
-      "recommended": "Aanbevolen",
-      "mostChosen": "Meest Gekozen",
-      "selectButton": "Selecteer {name}",
-      "starter": {
-        "name": "Starter",
-        "description": "Perfect voor kleine FiveM communities",
-        "features": {
-          "4gbddr4": "4GB DDR4 RAM",
-          "2cores": "2 CPU Cores",
-          "fullssd": "Volledige SSD Opslag",
-          "pelican": "Pelican Panel Toegang",
-          "support": "Email Support",
-          "2databases": "2 Databases",
-          "2backup": "2 Backups"
-        }
-      },
-      "basic": {
-        "name": "Basic",
-        "description": "Ideaal voor groeiende FiveM servers",
-        "features": {
-          "6gbddr4": "6GB DDR4 RAM",
-          "2cores": "2 CPU Cores",
-          "fullssd": "Volledige SSD Opslag",
-          "pelican": "Pelican Panel Toegang",
-          "support": "Prioriteit Support",
-          "2databases": "2 Databases",
-          "2backup": "2 Backups"
-        }
-      },
-      "normal": {
-        "name": "Normal",
-        "description": "Voor gevestigde FiveM communities",
-        "features": {
-          "8gbddr4": "8GB DDR4 RAM",
-          "3cores": "3 CPU Cores",
-          "fullssd": "Volledige SSD Opslag",
-          "pelican": "Pelican Panel Toegang",
-          "support": "Prioriteit Support",
-          "2databases": "2 Databases",
-          "2backup": "2 Backups"
-        }
-      },
-      "medium": {
-        "name": "Medium",
-        "description": "Voor grotere FiveM communities",
-        "features": {
-          "12gbddr4": "12GB DDR4 RAM",
-          "4cores": "4 CPU Cores",
-          "fullssd": "Volledige SSD Opslag",
-          "pelican": "Pelican Panel Toegang",
-          "support": "24/7 Support",
-          "2databases": "2 Databases",
-          "2backup": "2 Backups"
-        }
-      },
-      "large": {
-        "name": "Large",
-        "description": "Voor professionele FiveM servers",
-        "features": {
-          "16gbddr4": "16GB DDR4 RAM",
-          "4cores": "4 CPU Cores",
-          "fullssd": "Volledige SSD Opslag",
-          "pelican": "Pelican Panel Toegang",
-          "support": "24/7 Support",
-          "2databases": "2 Databases",
-          "2backup": "2 Backups"
-        }
-      },
-      "ultra": {
-        "name": "Ultra",
-        "description": "Voor enterprise-level FiveM servers",
-        "features": {
-          "20gbddr4": "20GB DDR4 RAM",
-          "6cores": "6 CPU Cores",
-          "fullssd": "Volledige SSD Opslag",
-          "pelican": "Pelican Panel Toegang",
-          "support": "24/7 Prioriteit Support",
-          "2databases": "2 Databases",
-          "2backup": "2 Backups"
-        }
-      },
-      "enterprise": {
-        "name": "Enterprise",
-        "description": "Aangepaste oplossingen voor grootschalige FiveM operaties",
-        "features": {
-          "ram": "Aangepaste RAM Configuratie",
-          "cores": "Aangepaste CPU Cores",
-          "ssd": "Aangepaste SSD Opslag",
-          "pelican": "Pelican Panel Toegang",
-          "support": "Dedicated 24/7 Support",
-          "databases": "Aangepaste Database Configuratie",
-          "backups": "Aangepaste Backup Oplossing"
-        }
-      }
-    },
-    "reviews": {
-      "title": "Wat Onze Klanten Zeggen",
-      "subtitle": "Lees reviews van onze FiveM server hosting klanten",
-      "loadMore": "Meer Reviews Laden"
-    },
-    "pelicanPanel": {
-      "title": "Pelican Panel voor FiveM",
-      "subtitle": "Geavanceerd serverbeheer eenvoudig gemaakt",
-      "description": "Ons Pelican Panel biedt je alles wat je nodig hebt om je FiveM server efficiënt te beheren. Van resource management tot speler monitoring, je hebt volledige controle.",
-      "featuresTitle": "Enkele van onze functies:",
-      "features": {
-        "ftpLogin": "FTP inloggen",
-        "browserFileManagement": "Browser bestandsbeheer",
-        "subuserLogin": "Subgebruiker inloggen",
-        "createDatabases": "Databases aanmaken",
-        "serverBackups": "Server backups",
-        "consoleInput": "Console invoer",
-        "restartServer": "Server herstarten",
-        "scheduledCommand": "Geplande opdrachten",
-        "scheduledPowerAction": "Geplande stroomacties",
-        "databaseManagement": "Database beheer"
-      },
-      "buttonText": "Meer informatie"
-    },
-    "faq": {
-      "title": "Veelgestelde Vragen",
-      "subtitle": "Veel voorkomende vragen over onze FiveM hosting diensten",
-      "questions": {
-        "setup": {
-          "question": "Hoe lang duurt het om mijn FiveM server op te zetten?",
-          "answer": "Onze FiveM servers worden direct na betaling opgezet. Je kunt direct beginnen met het configureren van je server."
-        },
-        "mods": {
-          "question": "Kan ik aangepaste mods en resources installeren?",
-          "answer": "Ja, je hebt volledige toegang om alle mods en resources te installeren die compatibel zijn met FiveM. Ons panel maakt het eenvoudig om al je server resources te beheren."
-        },
-        "support": {
-          "question": "Wat voor soort support bieden jullie voor FiveM servers?",
-          "answer": "We bieden uitgebreide support voor al onze FiveM hosting pakketten, van basis e-mail support tot 24/7 prioriteit support op premium plannen."
-        }
-      }
     }
   }
+
 }

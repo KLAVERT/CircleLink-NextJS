@@ -5,10 +5,9 @@ import Preloader from '@/components/Preloader/Preloader';
 import GamePackageSection, { Package } from '@/components/gamesComponents/GamePackageSection';
 import GameReviewSection from '@/components/gamesComponents/GameReviewSection';
 import GameFAQSection from '@/components/gamesComponents/GameFAQSection';
-import PelicanPanelSection from './_components/PelicanPanelSection';
+import GamePelicanPanelSection from '@/components/gamesComponents/GamePelicanPanelSection';
 import { FaCheck, FaServer, FaClock, FaShieldAlt } from 'react-icons/fa';
 import GameHostingHero from '@/components/gamesComponents/GameHostingHero';
-import { useTranslations } from 'next-intl';
 
 const packagesDDR4: Package[] = [
   {
@@ -43,7 +42,7 @@ const packagesDDR4: Package[] = [
         { text: { key: "packages.stone.features.2backup" }, included: true },
     ],
     sub: true,
-    subtext: { key: "Recommended" },
+    subtext: { key: "recommended" },
     href: "#",
     ddr3Href: "#",
   },
@@ -79,7 +78,7 @@ const packagesDDR4: Package[] = [
         { text: { key: "packages.sulfer.features.2backup" }, included: true },
     ],
     sub: true,
-    subtext: { key: "Most Chosen" },
+    subtext: { key: "mostChosen" },
     href: "#",
     ddr3Href: "#",
   },
@@ -138,7 +137,6 @@ const packagesDDR4: Package[] = [
 
 export default function RustPage() {
   const [isLoading, setIsLoading] = useState(true);
-  const t = useTranslations('rust.hero');
 
   useEffect(() => {
     // Wait until the page is fully loaded
@@ -160,9 +158,38 @@ export default function RustPage() {
 
   const faqs = [
     {
-      question: { key: 'faq.ddr3.question' },
-      answer: { key: 'faq.ddr3.answer' }
+      question: { key: 'ddr3.question' },
+      answer: { key: 'ddr3.answer' }
+    },
+    {
+      question: { key: 'webhosting.question' },
+      answer: { key: 'webhosting.answer' }
+    },
+    {
+      question: { key: 'palican.question' },
+      answer: { key: 'palican.answer' }
+    },
+    {
+      question: { key: 'locations.question' },
+      answer: { key: 'locations.answer' }
+    },
+    {
+      question: { key: 'payment.question' },
+      answer: { key: 'payment.answer' }
     }
+  ];
+
+  const pelicanFeatures = [
+    { key: 'features.ftpLogin' },
+    { key: 'features.browserFileManagement' },
+    { key: 'features.subuserLogin' },
+    { key: 'features.createDatabases' },
+    { key: 'features.serverBackups' },
+    { key: 'features.consoleInput' },
+    { key: 'features.restartServer' },
+    { key: 'features.scheduledCommand' },
+    { key: 'features.scheduledPowerAction' },
+    { key: 'features.databaseManagement' }
   ];
 
   return (
@@ -206,18 +233,28 @@ export default function RustPage() {
         <GameReviewSection
           title={{ key: 'title' }}
           subtitle={{ key: 'poweredBy' }}
-          translationNamespace="Reviews"
+          translationNamespace="reviews"
         />
-        <PelicanPanelSection />
+        <GamePelicanPanelSection
+          title={{ key: 'title' }}
+          subtitle={{ key: 'subtitle' }}
+          featuresTitle={{ key: 'featuresTitle' }}
+          features={pelicanFeatures}
+          buttonText={{ key: 'buttonText' }}
+          buttonHref="/#panel"
+          imageSrc="/images/jpg/mainpage/dashboard.jpg"
+          imageAlt="Control Panel"
+          translationNamespace="pelicanPanelGameHosting"
+        />
         <GameFAQSection
-          title={{ key: 'faq.title' }}
+          title={{ key: 'title' }}
           subtitle={{
-            text: { key: 'faq.subtitle.text' },
-            link: { key: 'faq.subtitle.link' },
+            text: { key: 'subtitle.text' },
+            link: { key: 'subtitle.link' },
             linkHref: '/contact'
           }}
           faqs={faqs}
-          translationNamespace="rust"
+          translationNamespace="faq"
         />
       </div>
     </main>
