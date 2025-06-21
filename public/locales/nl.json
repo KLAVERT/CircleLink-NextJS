@@ -484,7 +484,7 @@
       "badge": "GAME HOSTING",
       "title": "ARK",
       "subtitle": "PREMIUM GAME SERVERS",
-      "description": "Word lid van onze Ark-community en overleef in een harde wereld waar elke speler een bedreiging kan zijn. Bouw basissen, vorm allianties en verdedig je territorium met onze krachtige Ark-serverhosting.",
+      "description": "Ben jij klaar om te vechten tegen de gevaren in Ark Survival Evolved? Bouw je eigen base en maak tripes om zo te kunnen overleven in de gevaarlijke wereld vol dinosaurussen! Neem alles wat je kan, want in deze wereld is het nemen of gegeten worden.",
       "features": {
         "dedicatedServers": "Hoge-prestatie dedicated servers",
         "modInstallation": "Mod-installatie met één klik",
@@ -504,15 +504,11 @@
     },
     "packages": {
       "title": "Kies je Ark-serverpakket",
-      "subtitle": "Selecteer de server die het beste past bij de behoeften van je clan. Alle pakketten bevatten krachtige hardware en DDoS-bescherming.",
+      "subtitle": "Selecteer de server die het beste past bij de behoeften van je vriendengroep of community. Alle pakketten bevatten krachtige hardware en DDoS-bescherming.",
       "selectButton": "Selecteer {name}",
-      "ddr": {
-        "ddr4": "DDR4",
-        "ddr3": "DDR3"
-      },
       "tatch": {
         "name": "Riet",
-        "description": "Ideaal voor middelgrote clans die net beginnen",
+        "description": "Ideaal voor communities die net beginnen of als dev server",
         "features": {
           "8gbddr4": "8GB DDR4 RAM",
           "3cores": "3 CPU-kernen",
@@ -525,7 +521,7 @@
       },
       "wood": {
         "name": "Hout",
-        "description": "Ons aanbevolen pakket voor groeiende clans",
+        "description": "Ons aanbevolen pakket voor groeiende servers",
         "features": {
           "10gbddr4": "10GB DDR4 RAM",
           "4cores": "4 CPU-kernen",
@@ -538,7 +534,7 @@
       },
       "stone": {
         "name": "Steen",
-        "description": "Verbeterde prestaties voor grotere clans met meerdere mods",
+        "description": "Verbeterde prestaties voor grotere communities met meerdere mods",
         "features": {
           "12gbddr4": "12GB DDR4 RAM",
           "4cores": "4 CPU-kernen",
@@ -551,7 +547,7 @@
       },
       "sulfer": {
         "name": "Sulfer",
-        "description": "Ons populairste pakket voor gevestigde clans",
+        "description": "Ons populairste pakket voor gevestigde communities met veel vaste spelers",
         "features": {
           "16gbddr4": "16GB DDR4 RAM",
           "6cores": "6 CPU-kernen",
@@ -564,7 +560,7 @@
       },
       "metal": {
         "name": "Metaal",
-        "description": "Superieure prestaties voor grote clans met zware mods",
+        "description": "Goede optie voor servers met veel spelers en zware mods",
         "features": {
           "20gbddr4": "20GB DDR4 RAM",
           "6cores": "6 CPU-kernen",
@@ -590,7 +586,7 @@
       },
       "enterprise": {
         "name": "Enterprise",
-        "description": "Aangepaste oplossing voor professionele Ark-community’s en evenementen",
+        "description": "Aangepaste oplossing voor professionele Ark-community’s",
         "features": {
           "ram": "Aangepast RAM",
           "cores": "Aangepaste CPU-kernen",
