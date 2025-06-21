@@ -476,6 +476,132 @@
         }
       }
     }
+  },
+  "ark": {
+    "recommended": "Aanbevolen",
+    "mostChosen": "Meest populair",
+    "hero": {
+      "badge": "GAME HOSTING",
+      "title": "ARK",
+      "subtitle": "PREMIUM GAME SERVERS",
+      "description": "Word lid van onze Ark-community en overleef in een harde wereld waar elke speler een bedreiging kan zijn. Bouw basissen, vorm allianties en verdedig je territorium met onze krachtige Ark-serverhosting.",
+      "features": {
+        "dedicatedServers": "Hoge-prestatie dedicated servers",
+        "modInstallation": "Mod-installatie met één klik",
+        "uptime": "24/7 online met 99,9% uptime",
+        "ddosProtection": "DDoS-bescherming inbegrepen"
+      },
+      "buttons": {
+        "getStarted": "Begin nu",
+        "viewPlans": "Bekijk pakketten"
+      },
+      "bottomFeatures": {
+        "ddosProtection": "DDoS-bescherming",
+        "premiumHardware": "Premium hardware",
+        "online": "24/7 online",
+        "instantDelivery": "Directe levering"
+      }
+    },
+    "packages": {
+      "title": "Kies je Ark-serverpakket",
+      "subtitle": "Selecteer de server die het beste past bij de behoeften van je clan. Alle pakketten bevatten krachtige hardware en DDoS-bescherming.",
+      "selectButton": "Selecteer {name}",
+      "ddr": {
+        "ddr4": "DDR4",
+        "ddr3": "DDR3"
+      },
+      "tatch": {
+        "name": "Riet",
+        "description": "Ideaal voor middelgrote clans die net beginnen",
+        "features": {
+          "8gbddr4": "8GB DDR4 RAM",
+          "3cores": "3 CPU-kernen",
+          "fullssd": "Volledig SSD-opslag",
+          "pelican": "Pelican Paneel",
+          "support": "12/7 Ondersteuning",
+          "2databases": "2 Databases",
+          "2backup": "2 Back-ups"
+        }
+      },
+      "wood": {
+        "name": "Hout",
+        "description": "Ons aanbevolen pakket voor groeiende clans",
+        "features": {
+          "10gbddr4": "10GB DDR4 RAM",
+          "4cores": "4 CPU-kernen",
+          "fullssd": "Volledig SSD-opslag",
+          "pelican": "Pelican Paneel",
+          "support": "12/7 Ondersteuning",
+          "2databases": "2 Databases",
+          "2backup": "2 Back-ups"
+        }
+      },
+      "stone": {
+        "name": "Steen",
+        "description": "Verbeterde prestaties voor grotere clans met meerdere mods",
+        "features": {
+          "12gbddr4": "12GB DDR4 RAM",
+          "4cores": "4 CPU-kernen",
+          "fullssd": "Volledig SSD-opslag",
+          "pelican": "Pelican Paneel",
+          "support": "Prioriteitsondersteuning",
+          "2databases": "2 Databases",
+          "2backup": "2 Back-ups"
+        }
+      },
+      "sulfer": {
+        "name": "Sulfer",
+        "description": "Ons populairste pakket voor gevestigde clans",
+        "features": {
+          "16gbddr4": "16GB DDR4 RAM",
+          "6cores": "6 CPU-kernen",
+          "fullssd": "Volledig SSD-opslag",
+          "pelican": "Pelican Paneel",
+          "support": "Prioriteitsondersteuning",
+          "2databases": "2 Databases",
+          "2backup": "2 Back-ups"
+        }
+      },
+      "metal": {
+        "name": "Metaal",
+        "description": "Superieure prestaties voor grote clans met zware mods",
+        "features": {
+          "20gbddr4": "20GB DDR4 RAM",
+          "6cores": "6 CPU-kernen",
+          "fullssd": "Volledig SSD-opslag",
+          "pelican": "Pelican Paneel",
+          "support": "Prioriteitsondersteuning",
+          "2databases": "2 Databases",
+          "2backup": "2 Back-ups"
+        }
+      },
+      "tek": {
+        "name": "Tek",
+        "description": "Ultieme prestaties voor de meest veeleisende Ark-ervaringen",
+        "features": {
+          "24gbddr4": "24GB DDR4 RAM",
+          "8cores": "8 CPU-kernen",
+          "fullssd": "Volledig SSD-opslag",
+          "pelican": "Pelican Paneel",
+          "support": "12/7 Ondersteuning",
+          "2databases": "2 Databases",
+          "2backup": "2 Back-ups"
+        }
+      },
+      "enterprise": {
+        "name": "Enterprise",
+        "description": "Aangepaste oplossing voor professionele Ark-community’s en evenementen",
+        "features": {
+          "ram": "Aangepast RAM",
+          "cores": "Aangepaste CPU-kernen",
+          "ssd": "Aangepaste SSD-opslag",
+          "pelican": "Pelican Paneel",
+          "support": "12/7 Ondersteuning",
+          "databases": "Aangepaste Databases",
+          "backups": "Aangepaste Back-ups"
+        }
+      }
+    }
   }
 
 }

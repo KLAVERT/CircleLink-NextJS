@@ -59,7 +59,6 @@ const cardVariants = {
   }
 };
 
-// Create a DDR toggle context
 interface DDRContextType {
   isDDR4: boolean;
   toggleDDR: () => void;
@@ -184,7 +183,6 @@ const GamePackageSection: React.FC<GamePackageSectionProps> = ({
     </section>
   );
 
-  // Wrap with providers if needed
   if (enableBTWToggle && enableDDRToggle) {
     return (
       <BtwProvider>
@@ -222,8 +220,23 @@ function PackageCards({
   translationNamespace?: string;
 }) {
   const t = useTranslations(translationNamespace || undefined);
-  const { calculatePrice } = useBtw();
-  const { isDDR4 } = useDDR();
+  
+  let calculatePrice: ((price: string) => string) | undefined;
+  let isDDR4: boolean = true;
+  
+  try {
+    const btwContext = useBtw();
+    calculatePrice = btwContext.calculatePrice;
+  } catch (error) {
+    calculatePrice = (price: string) => price;
+  }
+  
+  try {
+    const ddrContext = useDDR();
+    isDDR4 = ddrContext.isDDR4;
+  } catch (error) {
+    isDDR4 = true;
+  }
 
   return (
     <>
@@ -239,13 +252,10 @@ function PackageCards({
           const description = resolveText(t, pkg.description);
           const buttonText = resolveText(t, { key: 'packages.selectButton' }, { name: title });
           
-          // Use DDR4 or DDR3 price and href based on toggle state
           const price = isDDR4 ? pkg.price : (pkg.ddr3Price || pkg.price);
           const href = isDDR4 ? pkg.href : (pkg.ddr3Href || pkg.href);
           
-          // Update feature text to show correct DDR type
           const updatedFeatures = features.map(feature => {
-            // Check if feature contains DDR4 and update it to DDR3 if needed
             if (!isDDR4 && feature.text.includes('DDR4')) {
               return {
                 ...feature,
@@ -285,7 +295,6 @@ function PackageCards({
               const description = resolveText(t, pkg.description);
               const buttonText = resolveText(t, { key: 'packages.selectButton' }, { name: title });
               
-              // Use DDR4 or DDR3 price and href based on toggle state
               const price = isDDR4 ? pkg.price : (pkg.ddr3Price || pkg.price);
               const href = isDDR4 ? pkg.href : (pkg.ddr3Href || pkg.href);
               
@@ -295,7 +304,6 @@ function PackageCards({
                   status: feature.included ? 'included' as FeatureStatus : 'excluded' as FeatureStatus
                 };
                 
-                // Check if feature contains DDR4 and update it to DDR3 if needed
                 if (!isDDR4 && featureObj.text.includes('DDR4')) {
                   return {
                     ...featureObj,
