@@ -4,8 +4,8 @@ import { useState, useEffect } from 'react';
 import Preloader from '@/components/Preloader/Preloader';
 import GamePackageSection, { Package } from '@/components/gamesComponents/GamePackageSection';
 import GameReviewSection from '@/components/gamesComponents/GameReviewSection';
+import GameFAQSection from '@/components/gamesComponents/GameFAQSection';
 import PelicanPanelSection from './_components/PelicanPanelSection';
-import FAQSection from './_components/FAQSection';
 import { FaCheck, FaServer, FaClock, FaShieldAlt } from 'react-icons/fa';
 import GameHostingHero from '@/components/gamesComponents/GameHostingHero';
 import { useTranslations } from 'next-intl';
@@ -158,6 +158,13 @@ export default function RustPage() {
     }
   }, []);
 
+  const faqs = [
+    {
+      question: { key: 'faq.ddr3.question' },
+      answer: { key: 'faq.ddr3.answer' }
+    }
+  ];
+
   return (
     <main className="min-h-screen">
       {isLoading && <Preloader />}
@@ -202,7 +209,16 @@ export default function RustPage() {
           translationNamespace="Reviews"
         />
         <PelicanPanelSection />
-        <FAQSection />
+        <GameFAQSection
+          title={{ key: 'faq.title' }}
+          subtitle={{
+            text: { key: 'faq.subtitle.text' },
+            link: { key: 'faq.subtitle.link' },
+            linkHref: '/contact'
+          }}
+          faqs={faqs}
+          translationNamespace="rust"
+        />
       </div>
     </main>
   );
