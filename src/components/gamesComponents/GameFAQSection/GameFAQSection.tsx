@@ -6,33 +6,41 @@ import AnimatedBackground from '@/components/AnimatedBackground/AnimatedBackgrou
 import Link from 'next/link';
 import Grid, { GridItem } from '@/components/Grid';
 
-const FAQSection = () => {
-  const t = useTranslations();
+export interface FAQItem {
+  question: string | { key: string };
+  answer: string | { key: string };
+}
+
+export interface GameFAQSectionProps {
+  title: string | { key: string };
+  subtitle: {
+    text: string | { key: string };
+    link: string | { key: string };
+    linkHref: string;
+  };
+  faqs: FAQItem[];
+  translationNamespace?: string;
+}
+
+function resolveText(t: (k: string) => string, value: string | { key: string }) {
+  if (typeof value === 'string') return value;
+  return t(value.key);
+}
+
+const GameFAQSection: React.FC<GameFAQSectionProps> = ({
+  title,
+  subtitle,
+  faqs,
+  translationNamespace
+}) => {
+  const t = useTranslations(translationNamespace || undefined);
   const sectionRef = useRef(null);
   const isInView = useInView(sectionRef, { once: true });
 
-  const faqs = [
-    {
-      question: t('faq.ddr3.question'),
-      answer: t('faq.ddr3.answer')
-    },
-    {
-      question: t('faq.palican.question'),
-      answer: t('faq.palican.answer')
-    },
-    {
-      question: t('faq.webhosting.question'),
-      answer: t('faq.webhosting.answer')
-    },
-    {
-      question: t('faq.locations.question'),
-      answer: t('faq.locations.answer')
-    },
-    {
-      question: t('faq.payment.question'),
-      answer: t('faq.payment.answer')
-    }
-  ];
+  const resolvedFaqs = faqs.map(faq => ({
+    question: resolveText(t, faq.question),
+    answer: resolveText(t, faq.answer)
+  }));
 
   return (
     <AnimatedBackground variant="tertiary" className="min-h-screen w-full py-16 md:py-32">
@@ -54,7 +62,7 @@ const FAQSection = () => {
                       animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                       transition={{ duration: 0.5, delay: 0.3 }}
                     >
-                      {t('faq.title')}
+                      {resolveText(t, title)}
                     </motion.h2>
                     <motion.p 
                       className="text-[var(--color-text-primary)]"
@@ -62,12 +70,12 @@ const FAQSection = () => {
                       animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                       transition={{ duration: 0.5, delay: 0.4 }}
                     >
-                      {t('faq.subtitle.text')}{' '}
+                      {resolveText(t, subtitle.text)}{' '}
                       <Link 
-                        href="/contact" 
+                        href={subtitle.linkHref} 
                         className="text-[var(--color-link)] hover:underline"
                       >
-                        {t('faq.subtitle.link')}
+                        {resolveText(t, subtitle.link)}
                       </Link>
                     </motion.p>
                   </div>
@@ -83,7 +91,7 @@ const FAQSection = () => {
                   animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 30 }}
                   transition={{ duration: 0.6, delay: 0.3 }}
                 >
-                  <FAQ faqs={faqs} />
+                  <FAQ faqs={resolvedFaqs} />
                 </motion.div>
               </GridItem>
             </Grid>
@@ -94,4 +102,4 @@ const FAQSection = () => {
   );
 };
 
-export default FAQSection; 
+export default GameFAQSection; 

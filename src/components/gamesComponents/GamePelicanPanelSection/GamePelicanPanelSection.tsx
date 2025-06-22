@@ -1,33 +1,27 @@
-'use client';
-
 import React from 'react';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import Button from '@/components/Button/Button';
 
-export interface FeatureItem {
-  icon?: React.ReactNode; // optioneel, voor toekomstige uitbreidingen
-  text: string | { key: string };
+export interface PelicanFeature {
+  key: string;
 }
 
 export interface GamePelicanPanelSectionProps {
   title: string | { key: string };
   subtitle: string | { key: string };
   featuresTitle: string | { key: string };
-  features: FeatureItem[];
+  features: PelicanFeature[];
   buttonText: string | { key: string };
+  buttonHref: string;
   imageSrc: string;
   imageAlt: string;
   translationNamespace?: string;
 }
 
-function resolveText(
-  t: (k: string, values?: Record<string, any>) => string,
-  value: string | { key: string },
-  values?: Record<string, any>
-) {
+function resolveText(t: (k: string) => string, value: string | { key: string }) {
   if (typeof value === 'string') return value;
-  return t(value.key, values);
+  return t(value.key);
 }
 
 const GamePelicanPanelSection: React.FC<GamePelicanPanelSectionProps> = ({
@@ -36,6 +30,7 @@ const GamePelicanPanelSection: React.FC<GamePelicanPanelSectionProps> = ({
   featuresTitle,
   features,
   buttonText,
+  buttonHref,
   imageSrc,
   imageAlt,
   translationNamespace
@@ -62,22 +57,24 @@ const GamePelicanPanelSection: React.FC<GamePelicanPanelSectionProps> = ({
               <h3 className="text-xl font-bold text-[var(--color-text-primary)] mb-4">
                 {resolveText(t, featuresTitle)}
               </h3>
+              
               <div className="grid grid-cols-2 gap-x-8 gap-y-3">
-                {features.map((feature, idx) => (
-                  <div className="flex items-center" key={idx}>
+                {features.map((feature, index) => (
+                  <div key={index} className="flex items-center">
                     <div className="w-6 h-6 rounded-full bg-[var(--color-quaternary)] flex items-center justify-center mr-2 flex-shrink-0">
                       <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3 text-[var(--color-text-primary)]" viewBox="0 0 20 20" fill="currentColor">
                         <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                       </svg>
                     </div>
-                    <span className="text-[var(--color-text-primary)]">{resolveText(t, feature.text)}</span>
+                    <span className="text-[var(--color-text-primary)]">{t(feature.key)}</span>
                   </div>
                 ))}
               </div>
+              
               <div className="pt-6">
                 <Button
                   variant="blue"
-                  href='/#panel'
+                  href={buttonHref}
                 >
                   {resolveText(t, buttonText)}
                 </Button>

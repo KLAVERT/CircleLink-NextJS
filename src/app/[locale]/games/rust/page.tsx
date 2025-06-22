@@ -4,11 +4,10 @@ import { useState, useEffect } from 'react';
 import Preloader from '@/components/Preloader/Preloader';
 import GamePackageSection, { Package } from '@/components/gamesComponents/GamePackageSection';
 import GameReviewSection from '@/components/gamesComponents/GameReviewSection';
+import GameFAQSection from '@/components/gamesComponents/GameFAQSection';
 import GamePelicanPanelSection from '@/components/gamesComponents/GamePelicanPanelSection';
-import FAQSection from './_components/FAQSection';
 import { FaCheck, FaServer, FaClock, FaShieldAlt } from 'react-icons/fa';
 import GameHostingHero from '@/components/gamesComponents/GameHostingHero';
-import { useTranslations } from 'next-intl';
 
 const packagesDDR4: Package[] = [
   {
@@ -43,7 +42,7 @@ const packagesDDR4: Package[] = [
         { text: { key: "packages.stone.features.2backup" }, included: true },
     ],
     sub: true,
-    subtext: { key: "Recommended" },
+    subtext: { key: "recommended" },
     href: "#",
     ddr3Href: "#",
   },
@@ -79,7 +78,7 @@ const packagesDDR4: Package[] = [
         { text: { key: "packages.sulfer.features.2backup" }, included: true },
     ],
     sub: true,
-    subtext: { key: "Most Chosen" },
+    subtext: { key: "mostChosen" },
     href: "#",
     ddr3Href: "#",
   },
@@ -138,7 +137,6 @@ const packagesDDR4: Package[] = [
 
 export default function RustPage() {
   const [isLoading, setIsLoading] = useState(true);
-  const t = useTranslations('rust.hero');
 
   useEffect(() => {
     // Wait until the page is fully loaded
@@ -157,6 +155,42 @@ export default function RustPage() {
       return () => window.removeEventListener('load', handleLoad);
     }
   }, []);
+
+  const faqs = [
+    {
+      question: { key: 'ddr3.question' },
+      answer: { key: 'ddr3.answer' }
+    },
+    {
+      question: { key: 'webhosting.question' },
+      answer: { key: 'webhosting.answer' }
+    },
+    {
+      question: { key: 'palican.question' },
+      answer: { key: 'palican.answer' }
+    },
+    {
+      question: { key: 'locations.question' },
+      answer: { key: 'locations.answer' }
+    },
+    {
+      question: { key: 'payment.question' },
+      answer: { key: 'payment.answer' }
+    }
+  ];
+
+  const pelicanFeatures = [
+    { key: 'features.ftpLogin' },
+    { key: 'features.browserFileManagement' },
+    { key: 'features.subuserLogin' },
+    { key: 'features.createDatabases' },
+    { key: 'features.serverBackups' },
+    { key: 'features.consoleInput' },
+    { key: 'features.restartServer' },
+    { key: 'features.scheduledCommand' },
+    { key: 'features.scheduledPowerAction' },
+    { key: 'features.databaseManagement' }
+  ];
 
   return (
     <main className="min-h-screen">
@@ -199,30 +233,29 @@ export default function RustPage() {
         <GameReviewSection
           title={{ key: 'title' }}
           subtitle={{ key: 'poweredBy' }}
-          translationNamespace="Reviews"
+          translationNamespace="reviews"
         />
         <GamePelicanPanelSection
           title={{ key: 'title' }}
           subtitle={{ key: 'subtitle' }}
           featuresTitle={{ key: 'featuresTitle' }}
-          features={[
-            { text: { key: 'features.ftpLogin' } },
-            { text: { key: 'features.browserFileManagement' } },
-            { text: { key: 'features.subuserLogin' } },
-            { text: { key: 'features.createDatabases' } },
-            { text: { key: 'features.serverBackups' } },
-            { text: { key: 'features.consoleInput' } },
-            { text: { key: 'features.restartServer' } },
-            { text: { key: 'features.scheduledCommand' } },
-            { text: { key: 'features.scheduledPowerAction' } },
-            { text: { key: 'features.databaseManagement' } },
-          ]}
+          features={pelicanFeatures}
           buttonText={{ key: 'buttonText' }}
+          buttonHref="/#panel"
           imageSrc="/images/jpg/mainpage/dashboard.jpg"
           imageAlt="Control Panel"
-          translationNamespace="rust.pelicanPanel"
+          translationNamespace="pelicanPanelGameHosting"
         />
-        <FAQSection />
+        <GameFAQSection
+          title={{ key: 'title' }}
+          subtitle={{
+            text: { key: 'subtitle.text' },
+            link: { key: 'subtitle.link' },
+            linkHref: '/contact'
+          }}
+          faqs={faqs}
+          translationNamespace="faq"
+        />
       </div>
     </main>
   );
