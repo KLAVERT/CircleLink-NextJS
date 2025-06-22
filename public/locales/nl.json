@@ -388,78 +388,78 @@
         "name": "Hout",
         "description": "Ideaal voor middelgrote clans die net beginnen",
         "features": {
-          "8gbddr4": "8GB DDR4 RAM",
-          "3cores": "3 CPU-kernen",
-          "fullssd": "Volledig SSD-opslag",
+          "ram": "8GB DDR4 RAM",
+          "cores": "3 CPU-kernen",
+          "storage": "Volledig SSD-opslag",
           "pelican": "Pelican Paneel",
           "support": "12/7 Ondersteuning",
-          "2databases": "2 Databases",
-          "2backup": "2 Back-ups"
+          "databases": "2 Databases",
+          "backup": "2 Back-ups"
         }
       },
       "stone": {
         "name": "Steen",
         "description": "Ons aanbevolen pakket voor groeiende clans",
         "features": {
-          "10gbddr4": "10GB DDR4 RAM",
-          "4cores": "4 CPU-kernen",
-          "fullssd": "Volledig SSD-opslag",
+          "ram": "10GB DDR4 RAM",
+          "cores": "4 CPU-kernen",
+          "storage": "Volledig SSD-opslag",
           "pelican": "Pelican Paneel",
           "support": "12/7 Ondersteuning",
-          "2databases": "2 Databases",
-          "2backup": "2 Back-ups"
+          "databases": "2 Databases",
+          "backup": "2 Back-ups"
         }
       },
       "metal": {
         "name": "Metaal",
         "description": "Verbeterde prestaties voor grotere clans met meerdere mods",
         "features": {
-          "12gbddr4": "12GB DDR4 RAM",
-          "4cores": "4 CPU-kernen",
-          "fullssd": "Volledig SSD-opslag",
+          "ram": "12GB DDR4 RAM",
+          "cores": "4 CPU-kernen",
+          "storage": "Volledig SSD-opslag",
           "pelican": "Pelican Paneel",
           "support": "Prioriteitsondersteuning",
-          "2databases": "2 Databases",
-          "2backup": "2 Back-ups"
+          "databases": "2 Databases",
+          "backup": "2 Back-ups"
         }
       },
       "sulfer": {
         "name": "Zwavel",
         "description": "Ons populairste pakket voor gevestigde clans",
         "features": {
-          "16gbddr4": "16GB DDR4 RAM",
-          "6cores": "6 CPU-kernen",
-          "fullssd": "Volledig SSD-opslag",
+          "ram": "16GB DDR4 RAM",
+          "cores": "6 CPU-kernen",
+          "storage": "Volledig SSD-opslag",
           "pelican": "Pelican Paneel",
           "support": "Prioriteitsondersteuning",
-          "2databases": "2 Databases",
-          "2backup": "2 Back-ups"
+          "databases": "2 Databases",
+          "backup": "2 Back-ups"
         }
       },
       "hqm": {
         "name": "HQM",
         "description": "Superieure prestaties voor grote clans met zware mods",
         "features": {
-          "20gbddr4": "20GB DDR4 RAM",
-          "6cores": "6 CPU-kernen",
-          "fullssd": "Volledig SSD-opslag",
+          "ram": "20GB DDR4 RAM",
+          "cores": "6 CPU-kernen",
+          "storage": "Volledig SSD-opslag",
           "pelican": "Pelican Paneel",
           "support": "Prioriteitsondersteuning",
-          "2databases": "2 Databases",
-          "2backup": "2 Back-ups"
+          "databases": "2 Databases",
+          "backup": "2 Back-ups"
         }
       },
       "tech": {
         "name": "Tech",
         "description": "Ultieme prestaties voor de meest veeleisende Rust-ervaringen",
         "features": {
-          "24gbddr4": "24GB DDR4 RAM",
-          "8cores": "8 CPU-kernen",
-          "fullssd": "Volledig SSD-opslag",
+          "ram": "24GB DDR4 RAM",
+          "cores": "8 CPU-kernen",
+          "storage": "Volledig SSD-opslag",
           "pelican": "Pelican Paneel",
           "support": "12/7 Ondersteuning",
-          "2databases": "2 Databases",
-          "2backup": "2 Back-ups"
+          "databases": "2 Databases",
+          "backup": "2 Back-ups"
         }
       },
       "enterprise": {
@@ -468,7 +468,7 @@
         "features": {
           "ram": "Aangepast RAM",
           "cores": "Aangepaste CPU-kernen",
-          "ssd": "Aangepaste SSD-opslag",
+          "storage": "Aangepaste SSD-opslag",
           "pelican": "Pelican Paneel",
           "support": "12/7 Ondersteuning",
           "databases": "Aangepaste Databases",
@@ -510,78 +510,78 @@
         "name": "Riet",
         "description": "Ideaal voor communities die net beginnen of als dev server",
         "features": {
-          "8gbddr4": "8GB DDR4 RAM",
-          "3cores": "3 CPU-kernen",
-          "fullssd": "Volledig SSD-opslag",
+          "ram": "8GB DDR4 RAM",
+          "cores": "3 CPU-kernen",
+          "storage": "Volledig SSD-opslag",
           "pelican": "Pelican Paneel",
           "support": "12/7 Ondersteuning",
-          "2databases": "2 Databases",
-          "2backup": "2 Back-ups"
+          "databases": "2 Databases",
+          "backup": "2 Back-ups"
         }
       },
       "wood": {
         "name": "Hout",
         "description": "Ons aanbevolen pakket voor groeiende servers",
         "features": {
-          "10gbddr4": "10GB DDR4 RAM",
-          "4cores": "4 CPU-kernen",
-          "fullssd": "Volledig SSD-opslag",
+          "ram": "10GB DDR4 RAM",
+          "cores": "4 CPU-kernen",
+          "storage": "Volledig SSD-opslag",
           "pelican": "Pelican Paneel",
           "support": "12/7 Ondersteuning",
-          "2databases": "2 Databases",
-          "2backup": "2 Back-ups"
+          "databases": "2 Databases",
+          "backup": "2 Back-ups"
         }
       },
       "stone": {
         "name": "Steen",
         "description": "Verbeterde prestaties voor grotere communities met meerdere mods",
         "features": {
-          "12gbddr4": "12GB DDR4 RAM",
-          "4cores": "4 CPU-kernen",
-          "fullssd": "Volledig SSD-opslag",
+          "ram": "12GB DDR4 RAM",
+          "cores": "4 CPU-kernen",
+          "storage": "Volledig SSD-opslag",
           "pelican": "Pelican Paneel",
           "support": "Prioriteitsondersteuning",
-          "2databases": "2 Databases",
-          "2backup": "2 Back-ups"
+          "databases": "2 Databases",
+          "backup": "2 Back-ups"
         }
       },
       "sulfer": {
         "name": "Sulfer",
         "description": "Ons populairste pakket voor gevestigde communities met veel vaste spelers",
         "features": {
-          "16gbddr4": "16GB DDR4 RAM",
-          "6cores": "6 CPU-kernen",
-          "fullssd": "Volledig SSD-opslag",
+          "ram": "16GB DDR4 RAM",
+          "cores": "6 CPU-kernen",
+          "storage": "Volledig SSD-opslag",
           "pelican": "Pelican Paneel",
           "support": "Prioriteitsondersteuning",
-          "2databases": "2 Databases",
-          "2backup": "2 Back-ups"
+          "databases": "2 Databases",
+          "backup": "2 Back-ups"
         }
       },
       "metal": {
         "name": "Metaal",
         "description": "Goede optie voor servers met veel spelers en zware mods",
         "features": {
-          "20gbddr4": "20GB DDR4 RAM",
-          "6cores": "6 CPU-kernen",
-          "fullssd": "Volledig SSD-opslag",
+          "ram": "20GB DDR4 RAM",
+          "cores": "6 CPU-kernen",
+          "storage": "Volledig SSD-opslag",
           "pelican": "Pelican Paneel",
           "support": "Prioriteitsondersteuning",
-          "2databases": "2 Databases",
-          "2backup": "2 Back-ups"
+          "databases": "2 Databases",
+          "backup": "2 Back-ups"
         }
       },
       "tek": {
         "name": "Tek",
         "description": "Ultieme prestaties voor de meest veeleisende Ark-ervaringen",
         "features": {
-          "24gbddr4": "24GB DDR4 RAM",
-          "8cores": "8 CPU-kernen",
-          "fullssd": "Volledig SSD-opslag",
+          "ram": "24GB DDR4 RAM",
+          "cores": "8 CPU-kernen",
+          "storage": "Volledig SSD-opslag",
           "pelican": "Pelican Paneel",
           "support": "12/7 Ondersteuning",
-          "2databases": "2 Databases",
-          "2backup": "2 Back-ups"
+          "databases": "2 Databases",
+          "backup": "2 Back-ups"
         }
       },
       "enterprise": {
@@ -590,7 +590,7 @@
         "features": {
           "ram": "Aangepast RAM",
           "cores": "Aangepaste CPU-kernen",
-          "ssd": "Aangepaste SSD-opslag",
+          "storage": "Aangepaste SSD-opslag",
           "pelican": "Pelican Paneel",
           "support": "12/7 Ondersteuning",
           "databases": "Aangepaste Databases",
@@ -625,89 +625,89 @@
       }
     },
     "packages": {
-      "title": "Kies je Ark-serverpakket",
+      "title": "Kies je FiveM-serverpakket",
       "subtitle": "Selecteer de server die het beste past bij de behoeften van je clan. Alle pakketten bevatten krachtige hardware en DDoS-bescherming.",
       "selectButton": "Selecteer {name}",
       "ddr": {
         "ddr4": "DDR4",
         "ddr3": "DDR3"
       },
-      "tatch": {
-        "name": "Riet",
-        "description": "Ideaal voor middelgrote clans die net beginnen",
+      "fivem1": {
+        "name": "FiveM I",
+        "description": "Ideaal voor community's die net beginnen",
         "features": {
-          "8gbddr4": "8GB DDR4 RAM",
-          "3cores": "3 CPU-kernen",
-          "fullssd": "Volledig SSD-opslag",
+          "ram": "4GB DDR4 RAM",
+          "cores": "2 CPU-kernen",
+          "storage": "Volledig SSD-opslag",
           "pelican": "Pelican Paneel",
           "support": "12/7 Ondersteuning",
-          "2databases": "2 Databases",
-          "2backup": "2 Back-ups"
+          "databases": "2 Databases",
+          "backup": "2 Back-ups"
         }
       },
-      "wood": {
-        "name": "Hout",
-        "description": "Ons aanbevolen pakket voor groeiende clans",
+      "fivem2": {
+        "name": "FiveM II",
+        "description": "Ons aanbevolen pakket voor groeiende servers",
         "features": {
-          "10gbddr4": "10GB DDR4 RAM",
-          "4cores": "4 CPU-kernen",
-          "fullssd": "Volledig SSD-opslag",
+          "ram": "6GB DDR4 RAM",
+          "cores": "2 CPU-kernen",
+          "storage": "Volledig SSD-opslag",
           "pelican": "Pelican Paneel",
           "support": "12/7 Ondersteuning",
-          "2databases": "2 Databases",
-          "2backup": "2 Back-ups"
+          "databases": "2 Databases",
+          "backup": "2 Back-ups"
         }
       },
-      "stone": {
-        "name": "Steen",
-        "description": "Verbeterde prestaties voor grotere clans met meerdere mods",
+      "fivem3": {
+        "name": "FiveM III",
+        "description": "Verbeterde prestaties voor grotere community's met meerdere mods",
         "features": {
-          "12gbddr4": "12GB DDR4 RAM",
-          "4cores": "4 CPU-kernen",
-          "fullssd": "Volledig SSD-opslag",
+          "ram": "12GB DDR4 RAM",
+          "cores": "3 CPU-kernen",
+          "storage": "Volledig SSD-opslag",
           "pelican": "Pelican Paneel",
           "support": "Prioriteitsondersteuning",
-          "2databases": "2 Databases",
-          "2backup": "2 Back-ups"
+          "databases": "2 Databases",
+          "backup": "2 Back-ups"
         }
       },
-      "sulfer": {
-        "name": "Sulfer",
-        "description": "Ons populairste pakket voor gevestigde clans",
+      "fivem4": {
+        "name": "FiveM IV",
+        "description": "Ons populairste pakket voor servers die al een tijdje draaien",
         "features": {
-          "16gbddr4": "16GB DDR4 RAM",
-          "6cores": "6 CPU-kernen",
-          "fullssd": "Volledig SSD-opslag",
+          "ram": "16GB DDR4 RAM",
+          "cores": "4 CPU-kernen",
+          "storage": "Volledig SSD-opslag",
           "pelican": "Pelican Paneel",
           "support": "Prioriteitsondersteuning",
-          "2databases": "2 Databases",
-          "2backup": "2 Back-ups"
+          "databases": "2 Databases",
+          "backup": "2 Back-ups"
         }
       },
-      "metal": {
-        "name": "Metaal",
-        "description": "Superieure prestaties voor grote clans met zware mods",
+      "fivem5": {
+        "name": "FiveM V",
+        "description": "Superieure prestaties voor grote servers veel resources",
         "features": {
-          "20gbddr4": "20GB DDR4 RAM",
-          "6cores": "6 CPU-kernen",
-          "fullssd": "Volledig SSD-opslag",
+          "ram": "20GB DDR4 RAM",
+          "cores": "4 CPU-kernen",
+          "storage": "Volledig SSD-opslag",
           "pelican": "Pelican Paneel",
           "support": "Prioriteitsondersteuning",
-          "2databases": "2 Databases",
-          "2backup": "2 Back-ups"
+          "databases": "2 Databases",
+          "backup": "2 Back-ups"
         }
       },
-      "tek": {
-        "name": "Tek",
+      "fivem6": {
+        "name": "FiveM VI",
         "description": "Ultieme prestaties voor de meest veeleisende FiveM-ervaringen",
         "features": {
-          "24gbddr4": "24GB DDR4 RAM",
-          "8cores": "8 CPU-kernen",
-          "fullssd": "Volledig SSD-opslag",
+          "ram": "24GB DDR4 RAM",
+          "cores": "6 CPU-kernen",
+          "storage": "Volledig SSD-opslag",
           "pelican": "Pelican Paneel",
           "support": "12/7 Ondersteuning",
-          "2databases": "2 Databases",
-          "2backup": "2 Back-ups"
+          "databases": "2 Databases",
+          "backup": "2 Back-ups"
         }
       },
       "enterprise": {
@@ -725,5 +725,4 @@
       }
     }
   }
-
 }
