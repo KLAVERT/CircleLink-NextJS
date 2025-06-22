@@ -124,7 +124,7 @@ const packagesDDR4: Package[] = [
     features: [
         { text: { key: "packages.enterprise.features.ram" }, included: true },
         { text: { key: "packages.enterprise.features.cores" }, included: true },
-        { text: { key: "packages.enterprise.features.ssd" }, included: true },
+        { text: { key: "packages.enterprise.features.storage" }, included: true },
         { text: { key: "packages.enterprise.features.pelican" }, included: true },
         { text: { key: "packages.enterprise.features.support" }, included: true },
         { text: { key: "packages.enterprise.features.databases" }, included: true },
