@@ -107,7 +107,7 @@ const packagesDDR4: Package[] = [
     features: [
         { text: { key: "packages.gmod6.features.ram" }, included: true },
         { text: { key: "packages.gmod6.features.cores" }, included: true },
-        { text: { key: "packages.gmod6.features.fullssd" }, included: true },
+        { text: { key: "packages.gmod6.features.storage" }, included: true },
         { text: { key: "packages.gmod6.features.pelican" }, included: true },
         { text: { key: "packages.gmod6.features.support" }, included: true },
         { text: { key: "packages.gmod6.features.databases" }, included: true },

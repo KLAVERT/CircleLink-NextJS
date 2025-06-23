@@ -484,7 +484,7 @@
       "badge": "GAME HOSTING",
       "title": "ARK",
       "subtitle": "PREMIUM GAME SERVERS",
-      "description": "Ben jij klaar om te vechten tegen de gevaren in Ark Survival Evolved? Bouw je eigen base en maak tripes om zo te kunnen overleven in de gevaarlijke wereld vol dinosaurussen! Neem alles wat je kan, want in deze wereld is het nemen of gegeten worden.",
+      "description": "Sluit je aan bij onze Ark-community en trotseer een wereld vol prehistorische gevaren. Tem dinosaurussen, bouw je eigen nederzetting en overleef samen of alleen op onze stabiele en snelle Ark-serverhosting.",
       "features": {
         "dedicatedServers": "Hoge-prestatie dedicated servers",
         "modInstallation": "Mod-installatie met één klik",
@@ -606,7 +606,7 @@
       "badge": "GAME HOSTING",
       "title": "FIVEM",
       "subtitle": "PREMIUM GAME SERVERS",
-      "description": "Word lid van onze FiveM-community en overleef in een harde wereld waar elke speler een bedreiging kan zijn. Bouw basissen, vorm allianties en verdedig je territorium met onze krachtige FiveM-serverhosting.",
+      "description": "Stap in een dynamische wereld van roleplay met onze krachtige FiveM-serverhosting. Bouw je eigen stad, speel unieke rollen en creëer een onvergetelijke ervaring in een community waar jij de regels bepaalt.",
       "features": {
         "dedicatedServers": "Hoge-prestatie dedicated servers",
         "modInstallation": "Mod-installatie met één klik",
@@ -716,7 +716,637 @@
         "features": {
           "ram": "Aangepast RAM",
           "cores": "Aangepaste CPU-kernen",
-          "ssd": "Aangepaste SSD-opslag",
+          "storage": "Aangepaste SSD-opslag",
+          "pelican": "Pelican Paneel",
+          "support": "12/7 Ondersteuning",
+          "databases": "Aangepaste Databases",
+          "backups": "Aangepaste Back-ups"
+        }
+      }
+    }
+  },
+  "palworld": {
+    "recommended": "Aanbevolen",
+    "mostChosen": "Meest populair",
+    "hero": {
+      "badge": "GAME HOSTING",
+      "title": "PALWORLD",
+      "subtitle": "PREMIUM GAME SERVERS",
+      "description": "Verken een kleurrijke wereld vol mysterieuze wezens in Palworld. Vang, train en strijd met Pals terwijl je base-building en survival combineert op onze betrouwbare Palworld-servers.",
+      "features": {
+        "dedicatedServers": "Hoge-prestatie dedicated servers",
+        "modInstallation": "Mod-installatie met één klik",
+        "uptime": "24/7 online met 99,9% uptime",
+        "ddosProtection": "DDoS-bescherming inbegrepen"
+      },
+      "buttons": {
+        "getStarted": "Begin nu",
+        "viewPlans": "Bekijk pakketten"
+      },
+      "bottomFeatures": {
+        "ddosProtection": "DDoS-bescherming",
+        "premiumHardware": "Premium hardware",
+        "online": "24/7 online",
+        "instantDelivery": "Directe levering"
+      }
+    },
+    "packages": {
+      "title": "Kies je FiveM-serverpakket",
+      "subtitle": "Selecteer de server die het beste past bij de behoeften van je clan. Alle pakketten bevatten krachtige hardware en DDoS-bescherming.",
+      "selectButton": "Selecteer {name}",
+      "ddr": {
+        "ddr4": "DDR4",
+        "ddr3": "DDR3"
+      },
+      "palworld1": {
+        "name": "Palworld I",
+        "description": "Ideaal voor community's die net beginnen",
+        "features": {
+          "ram": "4GB DDR4 RAM",
+          "cores": "2 CPU-kernen",
+          "storage": "Volledig SSD-opslag",
+          "pelican": "Pelican Paneel",
+          "support": "12/7 Ondersteuning",
+          "databases": "2 Databases",
+          "backup": "2 Back-ups"
+        }
+      },
+      "palworld2": {
+        "name": "Palworld II",
+        "description": "Ons aanbevolen pakket voor groeiende servers",
+        "features": {
+          "ram": "6GB DDR4 RAM",
+          "cores": "2 CPU-kernen",
+          "storage": "Volledig SSD-opslag",
+          "pelican": "Pelican Paneel",
+          "support": "12/7 Ondersteuning",
+          "databases": "2 Databases",
+          "backup": "2 Back-ups"
+        }
+      },
+      "palworld3": {
+        "name": "Palworld III",
+        "description": "Verbeterde prestaties voor grotere community's met meerdere mods",
+        "features": {
+          "ram": "12GB DDR4 RAM",
+          "cores": "3 CPU-kernen",
+          "storage": "Volledig SSD-opslag",
+          "pelican": "Pelican Paneel",
+          "support": "Prioriteitsondersteuning",
+          "databases": "2 Databases",
+          "backup": "2 Back-ups"
+        }
+      },
+      "palworld4": {
+        "name": "Palworld IV",
+        "description": "Ons populairste pakket voor servers die al een tijdje draaien",
+        "features": {
+          "ram": "16GB DDR4 RAM",
+          "cores": "4 CPU-kernen",
+          "storage": "Volledig SSD-opslag",
+          "pelican": "Pelican Paneel",
+          "support": "Prioriteitsondersteuning",
+          "databases": "2 Databases",
+          "backup": "2 Back-ups"
+        }
+      },
+      "palworld5": {
+        "name": "Palworld V",
+        "description": "Superieure prestaties voor grote servers veel resources",
+        "features": {
+          "ram": "20GB DDR4 RAM",
+          "cores": "4 CPU-kernen",
+          "storage": "Volledig SSD-opslag",
+          "pelican": "Pelican Paneel",
+          "support": "Prioriteitsondersteuning",
+          "databases": "2 Databases",
+          "backup": "2 Back-ups"
+        }
+      },
+      "palworld6": {
+        "name": "Palworld VI",
+        "description": "Ultieme prestaties voor de meest veeleisende Palworld-ervaringen",
+        "features": {
+          "ram": "24GB DDR4 RAM",
+          "cores": "6 CPU-kernen",
+          "storage": "Volledig SSD-opslag",
+          "pelican": "Pelican Paneel",
+          "support": "12/7 Ondersteuning",
+          "databases": "2 Databases",
+          "backup": "2 Back-ups"
+        }
+      },
+      "enterprise": {
+        "name": "Enterprise",
+        "description": "Aangepaste oplossing voor professionele FiveM-community’s en evenementen",
+        "features": {
+          "ram": "Aangepast RAM",
+          "cores": "Aangepaste CPU-kernen",
+          "storage": "Aangepaste SSD-opslag",
+          "pelican": "Pelican Paneel",
+          "support": "12/7 Ondersteuning",
+          "databases": "Aangepaste Databases",
+          "backups": "Aangepaste Back-ups"
+        }
+      }
+    }
+  },
+  "gmod": {
+    "recommended": "Aanbevolen",
+    "mostChosen": "Meest populair",
+    "hero": {
+      "badge": "GAME HOSTING",
+      "title": "GARRY'S MOD",
+      "subtitle": "PREMIUM GAME SERVERS",
+      "description": "Ontketen je creativiteit in Garry’s Mod met onze geoptimaliseerde serverhosting. Bouw, speel, roleplay of experimenteer vrij met duizenden mods – alleen jouw verbeelding bepaalt de grenzen.",
+      "features": {
+        "dedicatedServers": "Hoge-prestatie dedicated servers",
+        "modInstallation": "Mod-installatie met één klik",
+        "uptime": "24/7 online met 99,9% uptime",
+        "ddosProtection": "DDoS-bescherming inbegrepen"
+      },
+      "buttons": {
+        "getStarted": "Begin nu",
+        "viewPlans": "Bekijk pakketten"
+      },
+      "bottomFeatures": {
+        "ddosProtection": "DDoS-bescherming",
+        "premiumHardware": "Premium hardware",
+        "online": "24/7 online",
+        "instantDelivery": "Directe levering"
+      }
+    },
+    "packages": {
+      "title": "Kies je Garry's Mod-serverpakket",
+      "subtitle": "Selecteer de server die het beste past bij de behoeften van je clan. Alle pakketten bevatten krachtige hardware en DDoS-bescherming.",
+      "selectButton": "Selecteer {name}",
+      "ddr": {
+        "ddr4": "DDR4",
+        "ddr3": "DDR3"
+      },
+      "gmod1": {
+        "name": "Garry's Mod I",
+        "description": "Ideaal voor community's die net beginnen",
+        "features": {
+          "ram": "4GB DDR4 RAM",
+          "cores": "2 CPU-kernen",
+          "storage": "Volledig SSD-opslag",
+          "pelican": "Pelican Paneel",
+          "support": "12/7 Ondersteuning",
+          "databases": "2 Databases",
+          "backup": "2 Back-ups"
+        }
+      },
+      "gmod2": {
+        "name": "Garry's Mod II",
+        "description": "Ons aanbevolen pakket voor groeiende servers",
+        "features": {
+          "ram": "6GB DDR4 RAM",
+          "cores": "2 CPU-kernen",
+          "storage": "Volledig SSD-opslag",
+          "pelican": "Pelican Paneel",
+          "support": "12/7 Ondersteuning",
+          "databases": "2 Databases",
+          "backup": "2 Back-ups"
+        }
+      },
+      "gmod3": {
+        "name": "Garry's Mod III",
+        "description": "Verbeterde prestaties voor grotere community's met meerdere mods",
+        "features": {
+          "ram": "12GB DDR4 RAM",
+          "cores": "3 CPU-kernen",
+          "storage": "Volledig SSD-opslag",
+          "pelican": "Pelican Paneel",
+          "support": "Prioriteitsondersteuning",
+          "databases": "2 Databases",
+          "backup": "2 Back-ups"
+        }
+      },
+      "gmod4": {
+        "name": "Garry's Mod IV",
+        "description": "Ons populairste pakket voor servers die al een tijdje draaien",
+        "features": {
+          "ram": "16GB DDR4 RAM",
+          "cores": "4 CPU-kernen",
+          "storage": "Volledig SSD-opslag",
+          "pelican": "Pelican Paneel",
+          "support": "Prioriteitsondersteuning",
+          "databases": "2 Databases",
+          "backup": "2 Back-ups"
+        }
+      },
+      "gmod5": {
+        "name": "Garry's Mod V",
+        "description": "Superieure prestaties voor grote servers veel resources",
+        "features": {
+          "ram": "20GB DDR4 RAM",
+          "cores": "4 CPU-kernen",
+          "storage": "Volledig SSD-opslag",
+          "pelican": "Pelican Paneel",
+          "support": "Prioriteitsondersteuning",
+          "databases": "2 Databases",
+          "backup": "2 Back-ups"
+        }
+      },
+      "gmod6": {
+        "name": "Garry's Mod VI",
+        "description": "Ultieme prestaties voor de meest veeleisende Garry's Mod-ervaringen",
+        "features": {
+          "ram": "24GB DDR4 RAM",
+          "cores": "6 CPU-kernen",
+          "storage": "Volledig SSD-opslag",
+          "pelican": "Pelican Paneel",
+          "support": "12/7 Ondersteuning",
+          "databases": "2 Databases",
+          "backup": "2 Back-ups"
+        }
+      },
+      "enterprise": {
+        "name": "Enterprise",
+        "description": "Aangepaste oplossing voor professionele FiveM-community’s en evenementen",
+        "features": {
+          "ram": "Aangepast RAM",
+          "cores": "Aangepaste CPU-kernen",
+          "storage": "Aangepaste SSD-opslag",
+          "pelican": "Pelican Paneel",
+          "support": "12/7 Ondersteuning",
+          "databases": "Aangepaste Databases",
+          "backups": "Aangepaste Back-ups"
+        }
+      }
+    }
+  },
+  "theforest": {
+    "recommended": "Aanbevolen",
+    "mostChosen": "Meest populair",
+    "hero": {
+      "badge": "GAME HOSTING",
+      "title": "THE FOREST",
+      "subtitle": "PREMIUM GAME SERVERS",
+      "description": "Strijd om te overleven na een vliegtuigcrash in een dodelijk woud vol kannibalen. Verzamel, bouw en ontdek de duistere geheimen van het eiland op onze stabiele en snelle The Forest-servers.",
+      "features": {
+        "dedicatedServers": "Hoge-prestatie dedicated servers",
+        "modInstallation": "Mod-installatie met één klik",
+        "uptime": "24/7 online met 99,9% uptime",
+        "ddosProtection": "DDoS-bescherming inbegrepen"
+      },
+      "buttons": {
+        "getStarted": "Begin nu",
+        "viewPlans": "Bekijk pakketten"
+      },
+      "bottomFeatures": {
+        "ddosProtection": "DDoS-bescherming",
+        "premiumHardware": "Premium hardware",
+        "online": "24/7 online",
+        "instantDelivery": "Directe levering"
+      }
+    },
+    "packages": {
+      "title": "Kies je The Forest-serverpakket",
+      "subtitle": "Selecteer de server die het beste past bij de behoeften van je clan. Alle pakketten bevatten krachtige hardware en DDoS-bescherming.",
+      "selectButton": "Selecteer {name}",
+      "ddr": {
+        "ddr4": "DDR4",
+        "ddr3": "DDR3"
+      },
+      "theforest1": {
+        "name": "The Forest I",
+        "description": "Ideaal voor community's die net beginnen",
+        "features": {
+          "ram": "4GB DDR4 RAM",
+          "cores": "2 CPU-kernen",
+          "storage": "Volledig SSD-opslag",
+          "pelican": "Pelican Paneel",
+          "support": "12/7 Ondersteuning",
+          "databases": "2 Databases",
+          "backup": "2 Back-ups"
+        }
+      },
+      "theforest2": {
+        "name": "The Forest II",
+        "description": "Ons aanbevolen pakket voor groeiende servers",
+        "features": {
+          "ram": "6GB DDR4 RAM",
+          "cores": "2 CPU-kernen",
+          "storage": "Volledig SSD-opslag",
+          "pelican": "Pelican Paneel",
+          "support": "12/7 Ondersteuning",
+          "databases": "2 Databases",
+          "backup": "2 Back-ups"
+        }
+      },
+      "theforest3": {
+        "name": "The Forest III",
+        "description": "Verbeterde prestaties voor grotere community's met meerdere mods",
+        "features": {
+          "ram": "12GB DDR4 RAM",
+          "cores": "3 CPU-kernen",
+          "storage": "Volledig SSD-opslag",
+          "pelican": "Pelican Paneel",
+          "support": "Prioriteitsondersteuning",
+          "databases": "2 Databases",
+          "backup": "2 Back-ups"
+        }
+      },
+      "theforest4": {
+        "name": "The Forest IV",
+        "description": "Ons populairste pakket voor servers die al een tijdje draaien",
+        "features": {
+          "ram": "16GB DDR4 RAM",
+          "cores": "4 CPU-kernen",
+          "storage": "Volledig SSD-opslag",
+          "pelican": "Pelican Paneel",
+          "support": "Prioriteitsondersteuning",
+          "databases": "2 Databases",
+          "backup": "2 Back-ups"
+        }
+      },
+      "theforest5": {
+        "name": "The Forest V",
+        "description": "Superieure prestaties voor grote servers veel resources",
+        "features": {
+          "ram": "20GB DDR4 RAM",
+          "cores": "4 CPU-kernen",
+          "storage": "Volledig SSD-opslag",
+          "pelican": "Pelican Paneel",
+          "support": "Prioriteitsondersteuning",
+          "databases": "2 Databases",
+          "backup": "2 Back-ups"
+        }
+      },
+      "theforest6": {
+        "name": "The Forest VI",
+        "description": "Ultieme prestaties voor de meest veeleisende The Forest-ervaringen",
+        "features": {
+          "ram": "24GB DDR4 RAM",
+          "cores": "6 CPU-kernen",
+          "storage": "Volledig SSD-opslag",
+          "pelican": "Pelican Paneel",
+          "support": "12/7 Ondersteuning",
+          "databases": "2 Databases",
+          "backup": "2 Back-ups"
+        }
+      },
+      "enterprise": {
+        "name": "Enterprise",
+        "description": "Aangepaste oplossing voor professionele FiveM-community’s en evenementen",
+        "features": {
+          "ram": "Aangepast RAM",
+          "cores": "Aangepaste CPU-kernen",
+          "storage": "Aangepaste SSD-opslag",
+          "pelican": "Pelican Paneel",
+          "support": "12/7 Ondersteuning",
+          "databases": "Aangepaste Databases",
+          "backups": "Aangepaste Back-ups"
+        }
+      }
+    }
+  },
+  "sotf": {
+    "recommended": "Aanbevolen",
+    "mostChosen": "Meest populair",
+    "hero": {
+      "badge": "GAME HOSTING",
+      "title": "SONS OF THE FOREST",
+      "subtitle": "PREMIUM GAME SERVERS",
+      "description": "Overleef in een angstaanjagende open wereld vol mutanten en geheimen. Bouw, vecht en verken samen met anderen op onze krachtige Sons of the Forest-serverhosting – alleen de sterksten blijven leven.",
+      "features": {
+        "dedicatedServers": "Hoge-prestatie dedicated servers",
+        "modInstallation": "Mod-installatie met één klik",
+        "uptime": "24/7 online met 99,9% uptime",
+        "ddosProtection": "DDoS-bescherming inbegrepen"
+      },
+      "buttons": {
+        "getStarted": "Begin nu",
+        "viewPlans": "Bekijk pakketten"
+      },
+      "bottomFeatures": {
+        "ddosProtection": "DDoS-bescherming",
+        "premiumHardware": "Premium hardware",
+        "online": "24/7 online",
+        "instantDelivery": "Directe levering"
+      }
+    },
+    "packages": {
+      "title": "Kies je Sons of the Forest-serverpakket",
+      "subtitle": "Selecteer de server die het beste past bij de behoeften van je clan. Alle pakketten bevatten krachtige hardware en DDoS-bescherming.",
+      "selectButton": "Selecteer {name}",
+      "ddr": {
+        "ddr4": "DDR4",
+        "ddr3": "DDR3"
+      },
+      "sotf1": {
+        "name": "Sons of the Forest I",
+        "description": "Ideaal voor community's die net beginnen",
+        "features": {
+          "ram": "4GB DDR4 RAM",
+          "cores": "2 CPU-kernen",
+          "storage": "Volledig SSD-opslag",
+          "pelican": "Pelican Paneel",
+          "support": "12/7 Ondersteuning",
+          "databases": "2 Databases",
+          "backup": "2 Back-ups"
+        }
+      },
+      "sotf2": {
+        "name": "Sons of the Forest II",
+        "description": "Ons aanbevolen pakket voor groeiende servers",
+        "features": {
+          "ram": "6GB DDR4 RAM",
+          "cores": "2 CPU-kernen",
+          "storage": "Volledig SSD-opslag",
+          "pelican": "Pelican Paneel",
+          "support": "12/7 Ondersteuning",
+          "databases": "2 Databases",
+          "backup": "2 Back-ups"
+        }
+      },
+      "sotf3": {
+        "name": "Sons of the Forest III",
+        "description": "Verbeterde prestaties voor grotere community's met meerdere mods",
+        "features": {
+          "ram": "12GB DDR4 RAM",
+          "cores": "3 CPU-kernen",
+          "storage": "Volledig SSD-opslag",
+          "pelican": "Pelican Paneel",
+          "support": "Prioriteitsondersteuning",
+          "databases": "2 Databases",
+          "backup": "2 Back-ups"
+        }
+      },
+      "sotf4": {
+        "name": "Sons of the Forest IV",
+        "description": "Ons populairste pakket voor servers die al een tijdje draaien",
+        "features": {
+          "ram": "16GB DDR4 RAM",
+          "cores": "4 CPU-kernen",
+          "storage": "Volledig SSD-opslag",
+          "pelican": "Pelican Paneel",
+          "support": "Prioriteitsondersteuning",
+          "databases": "2 Databases",
+          "backup": "2 Back-ups"
+        }
+      },
+      "sotf5": {
+        "name": "Sons of the Forest V",
+        "description": "Superieure prestaties voor grote servers veel resources",
+        "features": {
+          "ram": "20GB DDR4 RAM",
+          "cores": "4 CPU-kernen",
+          "storage": "Volledig SSD-opslag",
+          "pelican": "Pelican Paneel",
+          "support": "Prioriteitsondersteuning",
+          "databases": "2 Databases",
+          "backup": "2 Back-ups"
+        }
+      },
+      "sotf6": {
+        "name": "Sons of the Forest VI",
+        "description": "Ultieme prestaties voor de meest veeleisende Sons of the Forest-ervaringen",
+        "features": {
+          "ram": "24GB DDR4 RAM",
+          "cores": "6 CPU-kernen",
+          "storage": "Volledig SSD-opslag",
+          "pelican": "Pelican Paneel",
+          "support": "12/7 Ondersteuning",
+          "databases": "2 Databases",
+          "backup": "2 Back-ups"
+        }
+      },
+      "enterprise": {
+        "name": "Enterprise",
+        "description": "Aangepaste oplossing voor professionele FiveM-community’s en evenementen",
+        "features": {
+          "ram": "Aangepast RAM",
+          "cores": "Aangepaste CPU-kernen",
+          "storage": "Aangepaste SSD-opslag",
+          "pelican": "Pelican Paneel",
+          "support": "12/7 Ondersteuning",
+          "databases": "Aangepaste Databases",
+          "backups": "Aangepaste Back-ups"
+        }
+      }
+    }
+  },
+  "satisfactory": {
+    "recommended": "Aanbevolen",
+    "mostChosen": "Meest populair",
+    "hero": {
+      "badge": "GAME HOSTING",
+      "title": "SATISFACTORY",
+      "subtitle": "PREMIUM GAME SERVERS",
+      "description": "Bouw, produceer en overleef in een open wereld vol robotica en industriële complexen. Maak je eigen fabrieken, ontwikkel nieuwe producten en verkoop je producten op onze krachtige Satisfactory-serverhosting – alleen de sterksten blijven leven.",
+      "features": {
+        "dedicatedServers": "Hoge-prestatie dedicated servers",
+        "modInstallation": "Mod-installatie met één klik",
+        "uptime": "24/7 online met 99,9% uptime",
+        "ddosProtection": "DDoS-bescherming inbegrepen"
+      },
+      "buttons": {
+        "getStarted": "Begin nu",
+        "viewPlans": "Bekijk pakketten"
+      },
+      "bottomFeatures": {
+        "ddosProtection": "DDoS-bescherming",
+        "premiumHardware": "Premium hardware",
+        "online": "24/7 online",
+        "instantDelivery": "Directe levering"
+      }
+    },
+    "packages": {
+      "title": "Kies je Sons of the Forest-serverpakket",
+      "subtitle": "Selecteer de server die het beste past bij de behoeften van je clan. Alle pakketten bevatten krachtige hardware en DDoS-bescherming.",
+      "selectButton": "Selecteer {name}",
+      "ddr": {
+        "ddr4": "DDR4",
+        "ddr3": "DDR3"
+      },
+      "satisfactory1": {
+        "name": "Satisfactory I",
+        "description": "Ideaal voor community's die net beginnen",
+        "features": {
+          "ram": "4GB DDR4 RAM",
+          "cores": "2 CPU-kernen",
+          "storage": "Volledig SSD-opslag",
+          "pelican": "Pelican Paneel",
+          "support": "12/7 Ondersteuning",
+          "databases": "2 Databases",
+          "backup": "2 Back-ups"
+        }
+      },
+      "satisfactory2": {
+        "name": "Satisfactory II",
+        "description": "Ons aanbevolen pakket voor groeiende servers",
+        "features": {
+          "ram": "6GB DDR4 RAM",
+          "cores": "2 CPU-kernen",
+          "storage": "Volledig SSD-opslag",
+          "pelican": "Pelican Paneel",
+          "support": "12/7 Ondersteuning",
+          "databases": "2 Databases",
+          "backup": "2 Back-ups"
+        }
+      },
+      "satisfactory3": {
+        "name": "Satisfactory III",
+        "description": "Verbeterde prestaties voor grotere community's met meerdere mods",
+        "features": {
+          "ram": "12GB DDR4 RAM",
+          "cores": "3 CPU-kernen",
+          "storage": "Volledig SSD-opslag",
+          "pelican": "Pelican Paneel",
+          "support": "Prioriteitsondersteuning",
+          "databases": "2 Databases",
+          "backup": "2 Back-ups"
+        }
+      },
+      "satisfactory4": {
+        "name": "Satisfactory IV",
+        "description": "Ons populairste pakket voor servers die al een tijdje draaien",
+        "features": {
+          "ram": "16GB DDR4 RAM",
+          "cores": "4 CPU-kernen",
+          "storage": "Volledig SSD-opslag",
+          "pelican": "Pelican Paneel",
+          "support": "Prioriteitsondersteuning",
+          "databases": "2 Databases",
+          "backup": "2 Back-ups"
+        }
+      },
+      "satisfactory5": {
+        "name": "Satisfactory V",
+        "description": "Superieure prestaties voor grote servers veel resources",
+        "features": {
+          "ram": "20GB DDR4 RAM",
+          "cores": "4 CPU-kernen",
+          "storage": "Volledig SSD-opslag",
+          "pelican": "Pelican Paneel",
+          "support": "Prioriteitsondersteuning",
+          "databases": "2 Databases",
+          "backup": "2 Back-ups"
+        }
+      },
+      "satisfactory6": {
+        "name": "Satisfactory VI",
+        "description": "Ultieme prestaties voor de meest veeleisende Satisfactory-ervaringen",
+        "features": {
+          "ram": "24GB DDR4 RAM",
+          "cores": "6 CPU-kernen",
+          "storage": "Volledig SSD-opslag",
+          "pelican": "Pelican Paneel",
+          "support": "12/7 Ondersteuning",
+          "databases": "2 Databases",
+          "backup": "2 Back-ups"
+        }
+      },
+      "enterprise": {
+        "name": "Enterprise",
+        "description": "Aangepaste oplossing voor professionele FiveM-community’s en evenementen",
+        "features": {
+          "ram": "Aangepast RAM",
+          "cores": "Aangepaste CPU-kernen",
+          "storage": "Aangepaste SSD-opslag",
           "pelican": "Pelican Paneel",
           "support": "12/7 Ondersteuning",
           "databases": "Aangepaste Databases",
