@@ -241,7 +241,7 @@ export default function TheForestPage() {
           featuresTitle={{ key: 'featuresTitle' }}
           features={pelicanFeatures}
           buttonText={{ key: 'buttonText' }}
-          buttonHref="/#panel"
+          buttonHref="/games/pelican"
           imageSrc="/images/jpg/mainpage/dashboard.jpg"
           imageAlt="Control Panel"
           translationNamespace="pelicanPanelGameHosting"

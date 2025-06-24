@@ -292,7 +292,7 @@
       "title1": "Game Servers",
       "title2": "Gemaakt Eenvoudig",
       "description": "Host je favoriete gameserver met CircleLink. Eenvoudige setup, krachtige hardware en volledige controle over je game-ervaring.",
-      "primaryButton": "Begin Nu",
+      "primaryButton": "Bekijk Panel",
       "secondaryButton": "Bekijk Alle Games",
       "featuredTitle": "Populaire Game Servers",
       "viewDetails": "Bekijk details"
@@ -464,7 +464,7 @@
       },
       "enterprise": {
         "name": "Enterprise",
-        "description": "Aangepaste oplossing voor professionele Rust-community’s en evenementen",
+        "description": "Aangepaste oplossing voor professionele Rust-community's en evenementen",
         "features": {
           "ram": "Aangepast RAM",
           "cores": "Aangepaste CPU-kernen",
@@ -586,7 +586,7 @@
       },
       "enterprise": {
         "name": "Enterprise",
-        "description": "Aangepaste oplossing voor professionele Ark-community’s",
+        "description": "Aangepaste oplossing voor professionele Ark-community's",
         "features": {
           "ram": "Aangepast RAM",
           "cores": "Aangepaste CPU-kernen",
@@ -712,7 +712,7 @@
       },
       "enterprise": {
         "name": "Enterprise",
-        "description": "Aangepaste oplossing voor professionele FiveM-community’s en evenementen",
+        "description": "Aangepaste oplossing voor professionele FiveM-community's en evenementen",
         "features": {
           "ram": "Aangepast RAM",
           "cores": "Aangepaste CPU-kernen",
@@ -838,7 +838,7 @@
       },
       "enterprise": {
         "name": "Enterprise",
-        "description": "Aangepaste oplossing voor professionele FiveM-community’s en evenementen",
+        "description": "Aangepaste oplossing voor professionele FiveM-community's en evenementen",
         "features": {
           "ram": "Aangepast RAM",
           "cores": "Aangepaste CPU-kernen",
@@ -858,7 +858,7 @@
       "badge": "GAME HOSTING",
       "title": "GARRY'S MOD",
       "subtitle": "PREMIUM GAME SERVERS",
-      "description": "Ontketen je creativiteit in Garry’s Mod met onze geoptimaliseerde serverhosting. Bouw, speel, roleplay of experimenteer vrij met duizenden mods – alleen jouw verbeelding bepaalt de grenzen.",
+      "description": "Ontketen je creativiteit in Garry's Mod met onze geoptimaliseerde serverhosting. Bouw, speel, roleplay of experimenteer vrij met duizenden mods – alleen jouw verbeelding bepaalt de grenzen.",
       "features": {
         "dedicatedServers": "Hoge-prestatie dedicated servers",
         "modInstallation": "Mod-installatie met één klik",
@@ -964,7 +964,7 @@
       },
       "enterprise": {
         "name": "Enterprise",
-        "description": "Aangepaste oplossing voor professionele FiveM-community’s en evenementen",
+        "description": "Aangepaste oplossing voor professionele FiveM-community's en evenementen",
         "features": {
           "ram": "Aangepast RAM",
           "cores": "Aangepaste CPU-kernen",
@@ -1090,7 +1090,7 @@
       },
       "enterprise": {
         "name": "Enterprise",
-        "description": "Aangepaste oplossing voor professionele FiveM-community’s en evenementen",
+        "description": "Aangepaste oplossing voor professionele FiveM-community's en evenementen",
         "features": {
           "ram": "Aangepast RAM",
           "cores": "Aangepaste CPU-kernen",
@@ -1216,7 +1216,7 @@
       },
       "enterprise": {
         "name": "Enterprise",
-        "description": "Aangepaste oplossing voor professionele FiveM-community’s en evenementen",
+        "description": "Aangepaste oplossing voor professionele FiveM-community's en evenementen",
         "features": {
           "ram": "Aangepast RAM",
           "cores": "Aangepaste CPU-kernen",
@@ -1342,7 +1342,7 @@
       },
       "enterprise": {
         "name": "Enterprise",
-        "description": "Aangepaste oplossing voor professionele FiveM-community’s en evenementen",
+        "description": "Aangepaste oplossing voor professionele FiveM-community's en evenementen",
         "features": {
           "ram": "Aangepast RAM",
           "cores": "Aangepaste CPU-kernen",
@@ -1351,6 +1351,168 @@
           "support": "12/7 Ondersteuning",
           "databases": "Aangepaste Databases",
           "backups": "Aangepaste Back-ups"
+        }
+      }
+    }
+  },
+  "minecraft": {
+    "recommended": "Aanbevolen",
+    "mostChosen": "Meest populair",
+    "hero": {
+      "badge": "GAME HOSTING",
+      "title": "MINECRAFT",
+      "subtitle": "PREMIUM GAME SERVERS",
+      "description": "Bouw, ontdek en overleef in een grenzeloze blokkenwereld vol creativiteit en gevaar. Ontgin grondstoffen, bouw indrukwekkende structuren en trotseer vijanden alleen of samen met vrienden op onze krachtige Minecraft-serverhosting – de wereld is van jou, als je hem weet te temmen.",
+      "features": {
+        "dedicatedServers": "Hoge-prestatie dedicated servers",
+        "modInstallation": "Mod-installatie met één klik",
+        "uptime": "24/7 online met 99,9% uptime",
+        "ddosProtection": "DDoS-bescherming inbegrepen"
+      },
+      "buttons": {
+        "getStarted": "Begin nu",
+        "viewPlans": "Bekijk pakketten"
+      },
+      "bottomFeatures": {
+        "ddosProtection": "DDoS-bescherming",
+        "premiumHardware": "Premium hardware",
+        "online": "24/7 online",
+        "instantDelivery": "Directe levering"
+      }
+    },
+    "packages": {
+      "title": "Kies je Sons of the Forest-serverpakket",
+      "subtitle": "Selecteer de server die het beste past bij de behoeften van je clan. Alle pakketten bevatten krachtige hardware en DDoS-bescherming.",
+      "selectButton": "Selecteer {name}",
+      "ddr": {
+        "ddr4": "DDR4",
+        "ddr3": "DDR3"
+      },
+      "minecraft1": {
+        "name": "Minecraft I",
+        "description": "Ideaal voor community's die net beginnen",
+        "features": {
+          "ram": "4GB DDR4 RAM",
+          "cores": "2 CPU-kernen",
+          "storage": "Volledig SSD-opslag",
+          "pelican": "Pelican Paneel",
+          "support": "12/7 Ondersteuning",
+          "databases": "2 Databases",
+          "backup": "2 Back-ups"
+        }
+      },
+      "minecraft2": {
+        "name": "Minecraft II",
+        "description": "Ons aanbevolen pakket voor groeiende servers",
+        "features": {
+          "ram": "6GB DDR4 RAM",
+          "cores": "2 CPU-kernen",
+          "storage": "Volledig SSD-opslag",
+          "pelican": "Pelican Paneel",
+          "support": "12/7 Ondersteuning",
+          "databases": "2 Databases",
+          "backup": "2 Back-ups"
+        }
+      },
+      "minecraft3": {
+        "name": "Minecraft III",
+        "description": "Verbeterde prestaties voor grotere community's met meerdere mods",
+        "features": {
+          "ram": "12GB DDR4 RAM",
+          "cores": "3 CPU-kernen",
+          "storage": "Volledig SSD-opslag",
+          "pelican": "Pelican Paneel",
+          "support": "Prioriteitsondersteuning",
+          "databases": "2 Databases",
+          "backup": "2 Back-ups"
+        }
+      },
+      "minecraft4": {
+        "name": "Minecraft IV",
+        "description": "Ons populairste pakket voor servers die al een tijdje draaien",
+        "features": {
+          "ram": "16GB DDR4 RAM",
+          "cores": "4 CPU-kernen",
+          "storage": "Volledig SSD-opslag",
+          "pelican": "Pelican Paneel",
+          "support": "Prioriteitsondersteuning",
+          "databases": "2 Databases",
+          "backup": "2 Back-ups"
+        }
+      },
+      "minecraft5": {
+        "name": "Minecraft V",
+        "description": "Superieure prestaties voor grote servers veel resources",
+        "features": {
+          "ram": "20GB DDR4 RAM",
+          "cores": "4 CPU-kernen",
+          "storage": "Volledig SSD-opslag",
+          "pelican": "Pelican Paneel",
+          "support": "Prioriteitsondersteuning",
+          "databases": "2 Databases",
+          "backup": "2 Back-ups"
+        }
+      },
+      "minecraft6": {
+        "name": "Minecraft VI",
+        "description": "Ultieme prestaties voor de meest veeleisende Minecraft-ervaringen",
+        "features": {
+          "ram": "24GB DDR4 RAM",
+          "cores": "6 CPU-kernen",
+          "storage": "Volledig SSD-opslag",
+          "pelican": "Pelican Paneel",
+          "support": "12/7 Ondersteuning",
+          "databases": "2 Databases",
+          "backup": "2 Back-ups"
+        }
+      },
+      "enterprise": {
+        "name": "Enterprise",
+        "description": "Aangepaste oplossing voor professionele FiveM-community's en evenementen",
+        "features": {
+          "ram": "Aangepast RAM",
+          "cores": "Aangepaste CPU-kernen",
+          "storage": "Aangepaste SSD-opslag",
+          "pelican": "Pelican Paneel",
+          "support": "12/7 Ondersteuning",
+          "databases": "Aangepaste Databases",
+          "backups": "Aangepaste Back-ups"
+        }
+      }
+    }
+  },
+  "pelican": {
+    "hero": {
+      "badge": "PELICAN PANEL",
+      "title": "PELICAN PANEL",
+      "subtitle": "NEXT-GENERATION CONTROL",
+      "description": "Ervaar de meest intuïtieve en krachtige gamehosting-interface, ontworpen voor zowel beginners als gevorderde gebruikers.",
+      "buttons": {
+        "getStarted": "Verken functies",
+        "viewDemo": "Bekijk demo"
+      },
+      "bottomFeatures": {
+        "security": "Geavanceerde beveiliging",
+        "performance": "Hoge prestaties",
+        "uptime": "99.9% uptime",
+        "easySetup": "Eenvoudige setup"
+      },
+      "interactiveFeatures": {
+        "instantSetup": {
+          "title": "Instant Setup",
+          "description": "Server online binnen 3 minuten"
+        },
+        "multiUser": {
+          "title": "Multi-User Support",
+          "description": "Beheer meerdere gebruikers"
+        },
+        "monitoring": {
+          "title": "Real-time Monitoring",
+          "description": "Live server statistieken"
+        },
+        "control": {
+          "title": "Advanced Control",
+          "description": "Volledige server controle"
         }
       }
     }

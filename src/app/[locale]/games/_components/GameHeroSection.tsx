@@ -117,11 +117,11 @@ const GameHeroSection = () => {
             >
               <Button 
                 variant="primary" 
-                href="#game-list"
+                href="/games/pelican"
               >
                 <div className="flex items-center gap-2">
                   <FaServer className="w-4 h-4" />
-                  <span>{t('heroSection.primaryButton') || 'Get Started'}</span>
+                  <span>{t('heroSection.primaryButton') || 'See Panel'}</span>
                 </div>
               </Button>
               <Button 
