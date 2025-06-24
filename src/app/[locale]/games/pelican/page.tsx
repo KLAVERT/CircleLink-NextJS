@@ -3,6 +3,9 @@
 import { useState, useEffect } from 'react';
 import Preloader from '@/components/Preloader/Preloader';
 import PelicanHeroSection from './_components/PelicanHeroSection';
+import PelicanFeatureSection from './_components/PelicanFeatureSection';
+import PelicanDemo from './_components/PelicanDemo';
+import PelicanTransitionSection from './_components/PelicanTransitionSection';
 
 export default function PelicanPage() {
   const [isLoading, setIsLoading] = useState(true);
@@ -30,6 +33,9 @@ export default function PelicanPage() {
       {isLoading && <Preloader />}
       <div className={`w-full transition-opacity duration-1000 ${isLoading ? 'opacity-0' : 'opacity-100'}`}>
         <PelicanHeroSection />
+        <PelicanDemo />
+        <PelicanTransitionSection />
+        <PelicanFeatureSection />
         {/* Additional sections can be added here */}
       </div>
     </main>

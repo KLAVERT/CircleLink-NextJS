@@ -94,7 +94,7 @@ const GameHostingHero: React.FC<GameHostingHeroProps> = ({
           </motion.h1>
 
           <motion.h2
-            className="mb-6 text-2xl font-semibold text-[var(--color-quaternary)] md:text-3xl"
+            className="mb-6 text-2xl font-semibold text-[var(--color-secondary)] md:text-3xl"
             variants={titleVariants}
           >
             {resolveText(t, subtitle)}

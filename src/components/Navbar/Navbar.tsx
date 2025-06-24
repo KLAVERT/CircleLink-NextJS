@@ -5,7 +5,6 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useLocale, useTranslations } from 'next-intl';
 import LanguageSwitcher from '../LanguageSwitcher/LanguageSwitcher';
-import ThemeSwitch from '../ThemeSwitch/ThemeSwitch';
 import Button from '../Button/Button';
 import Dropdown from '../Dropdown/Dropdown';
 import { useTheme } from 'next-themes';
@@ -92,13 +91,13 @@ export default function Navbar() {
 
   const navItems = [
     { label: t('help'), href: `/${locale}#skills` },
-    { label: t('contact'), href: `/${locale}#contact` },
+    { label: t('aboutus'), href: `/${locale}#aboutus` },
   ];
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-colors duration-300 ${
       scrolled || isMenuOpen
-        ? 'bg-[var(--color-tertiary)] shadow-lg'
+        ? 'bg-[var(--color-secondary)] shadow-lg'
         : 'bg-transparent'
     }`}>
       <div className="w-full px-4 sm:px-6 lg:px-8">
@@ -207,7 +206,7 @@ export default function Navbar() {
             : 'max-h-0 opacity-0 invisible'
         }`}
       >
-        <div className={`px-4 pt-2 pb-3 space-y-1 border-t border-gray-200 dark:border-gray-700 bg-[var(--color-tertiary)]`}>
+        <div className={`px-4 pt-2 pb-3 space-y-1 border-t border-gray-200 dark:border-gray-700 bg-[var(--color-secondary)]`}>
           {/* Mobile Hosting Dropdown */}
           <div className="block px-3 py-2">
             <button

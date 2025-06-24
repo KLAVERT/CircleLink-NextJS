@@ -33,7 +33,7 @@ interface FeatureCardProps {
 const cardStyles: Record<CardStyle, string> = {
   default: 'bg-[var(--color-bg-primary)] shadow-lg',
   minimal: 'bg-white border border-[var(--color-border)]',
-  gradient: 'bg-gradient-to-br from-[var(--color-primary)] to-[var(--color-tertiary)]',
+  gradient: 'bg-gradient-to-br from-[var(--color-primary)] to-[var(--color-secondary)]',
   bordered: 'bg-[var(--color-bg-primary)] border-2 border-[var(--color-accent-cool)]',
   dark: 'bg-[var(--color-bg-surface)] text-white'
 };

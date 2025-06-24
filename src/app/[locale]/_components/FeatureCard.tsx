@@ -103,7 +103,7 @@ const FeatureCard = ({ title, description, icon, index = 0 }: FeatureCardProps) 
       custom={index}
     >
       <motion.div 
-        className="absolute right-0 bottom-0 w-32 h-32 rounded-full -mr-16 -mb-16 bg-[var(--color-quinary)] dark:bg-[var(--color-quaternary)] opacity-10"
+        className="absolute right-0 bottom-0 w-32 h-32 rounded-full -mr-16 -mb-16 bg-[var(--color-quinary)] dark:bg-[var(--color-secondary)] opacity-10"
         initial={{ scale: 0 }}
         animate={{ scale: 1 }}
         transition={{ duration: 0.6, delay: (index * 0.15) + 0.2 }}
@@ -113,7 +113,7 @@ const FeatureCard = ({ title, description, icon, index = 0 }: FeatureCardProps) 
       <Grid spacing="md" className="h-full">
         <GridItem className="relative z-10">
           <motion.div 
-            className="w-14 h-14 bg-[var(--color-secondary)] dark:bg-[var(--color-quaternary)] rounded-2xl flex items-center justify-center mb-4"
+            className="w-14 h-14 bg-[var(--color-secondary)] dark:bg-[var(--color-secondary)] rounded-2xl flex items-center justify-center mb-4"
             variants={iconVariants}
           >
             <svg xmlns="http://www.w3.org/2000/svg" className="h-7 w-7 text-[var(--color-senary)] dark:text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">

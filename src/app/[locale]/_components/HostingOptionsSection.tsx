@@ -81,7 +81,7 @@ const HostingOptionsSection = () => {
   };
 
   return (
-    <section className="min-h-[100vh] min-h-[800px] py-16 flex items-center justify-center" style={{ backgroundColor: 'var(--color-tertiary)' }}>
+    <section className="min-h-[100vh] min-h-[800px] py-16 flex items-center justify-center" style={{ backgroundColor: 'var(--color-secondary)' }}>
       <Grid container maxWidth="xl" className="flex flex-col items-center">
         <div className="w-full flex flex-col items-center">
           <motion.div 

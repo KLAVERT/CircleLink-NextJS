@@ -91,7 +91,7 @@ const GameHeroSection = () => {
           <div className="flex flex-col items-center text-center mb-16">
             <motion.span
               variants={itemVariants}
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[var(--color-quaternary)]/10 text-[var(--color-quinary)] text-sm font-semibold mb-4"
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[var(--color-secondary)]/10 text-[var(--color-quinary)] text-sm font-semibold mb-4"
             >
               <FaGamepad className="w-4 h-4" />
               {t('heroSection.badge') || 'GAME HOSTING'}

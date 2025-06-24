@@ -91,7 +91,7 @@ const HeroSection = () => {
         initial={{ opacity: 0 }}
         animate={animationReady ? { opacity: 1 } : { opacity: 0 }}
         transition={{ duration: 0.5, delay: 0.1 }} 
-        className="inline-block bg-[var(--color-quaternary)]/10 dark:bg-[var(--color-quaternary)]/30 text-[var(--color-quinary)] dark:text-[var(--color-quinary)] px-4 py-1 rounded-full text-sm font-medium"
+        className="inline-block bg-[var(--color-secondary)]/10 dark:bg-[var(--color-secondary)]/30 text-[var(--color-quinary)] dark:text-[var(--color-quinary)] px-4 py-1 rounded-full text-sm font-medium"
       >
         {slide.tagline}
       </motion.p>

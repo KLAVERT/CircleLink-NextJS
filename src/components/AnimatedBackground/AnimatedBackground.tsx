@@ -16,7 +16,7 @@ const AnimatedBackground: React.FC<AnimatedBackgroundProps> = ({
     switch (variant) {
       case 'secondary':
         return {
-          background: 'var(--color-tertiary)',
+          background: 'var(--color-secondary)',
           showAnimation: false
         };
       case 'tertiary':
@@ -28,7 +28,7 @@ const AnimatedBackground: React.FC<AnimatedBackgroundProps> = ({
         return {
           primary: 'var(--color-secondary)',
           secondary: 'var(--color-primary)',
-          accent: 'var(--color-tertiary)',
+          accent: 'var(--color-secondary)',
           background: 'var(--color-primary)',
           opacity: '0.30',
           showAnimation: true

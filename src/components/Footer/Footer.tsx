@@ -59,7 +59,7 @@ const Footer = () => {
     <>
       {/* Witte lijn bovenaan de footer */}
       <div className="border-t border-white w-full" />
-      <footer className="bg-[var(--color-tertiary)]">
+      <footer className="bg-[var(--color-secondary)]">
         <div className="max-w-7xl mx-auto">
           {/* Main content */}
           <div className="px-4 sm:px-6 lg:px-8 py-16">

@@ -2,7 +2,7 @@
   "common": {
     "welcome": "Welkom",
     "about": "Over ons",
-    "contact": "contact"
+    "aboutus": "Over ons"
   },
   "error": {
     "404": {
@@ -15,7 +15,7 @@
     "home": "Home",
     "hosting": "Hosting",
     "help": "Help",
-    "contact": "Contact",
+    "aboutus": "Over ons",
     "panelLogin": "Inloggen op het panel",
     "gameHosting": "Game Hosting",
     "gameHostingDescription": "Gehost met Pelican Panel voor de beste gebruikerservaring.",
@@ -1486,7 +1486,7 @@
       "badge": "PELICAN PANEL",
       "title": "PELICAN PANEL",
       "subtitle": "NEXT-GENERATION CONTROL",
-      "description": "Ervaar de meest intuïtieve en krachtige gamehosting-interface, ontworpen voor zowel beginners als gevorderde gebruikers.",
+      "description": "Pelican is de vervanger van pterodactyl, een van de meest populaire gamehosting-interfaces. Pelican is ontworpen door dezelfde developers maar heeft meer features en betere beveiliging. Voor uitgebreide features kan je de features bekijken!",
       "buttons": {
         "getStarted": "Verken functies",
         "viewDemo": "Bekijk demo"
@@ -1513,6 +1513,288 @@
         "control": {
           "title": "Advanced Control",
           "description": "Volledige server controle"
+        }
+      }
+    },
+    "demo": {
+      "title": "Pelican Panel Demo",
+      "description": "Bekijk hoe eenvoudig het is om je server te beheren met het Pelican Panel. Deze demo laat alle belangrijke functies zien.",
+      "live": "Live Demo",
+      "hd": "HD Kwaliteit",
+      "secure": "Beveiligd",
+      "cta": "Klaar om te beginnen? Start vandaag nog met het Pelican Panel!",
+      "startNow": "Nu Beginnen",
+      "learnMore": "Meer Informatie"
+    },
+    "transition": {
+      "title": "Waarom Kiezen voor Pelican Panel bij CircleLink?",
+      "description": "Ontdek waarom duizenden serverbeheerders vertrouwen op Pelican Panel voor hun game hosting behoeften.",
+      "stats": {
+        "setup": "Setup Tijd",
+        "setupDesc": "Server online binnen 3 minuten",
+        "uptime": "Uptime",
+        "uptimeDesc": "Gegarandeerde beschikbaarheid",
+        "support": "Support",
+        "supportDesc": "Altijd beschikbare hulp",
+        "users": "Tevreden Klanten",
+        "usersDesc": "Wereldwijd vertrouwd"
+      },
+      "cta": {
+        "title": "Klaar om te Starten?",
+        "description": "Join duizenden tevreden klanten en ervaar de kracht van Pelican Panel vandaag nog!",
+        "getStarted": "Nu Beginnen",
+        "learnMore": "Meer Informatie"
+      }
+    },
+    "features": {
+      "title": "Pelican Panel Features",
+      "description": "Ontdek de uitgebreide functionaliteiten van Pelican Panel, ontworpen voor zowel beginners als ervaren gebruikers.",
+      "cta": {
+        "title": "Klaar om te beginnen?",
+        "description": "Start vandaag nog met Pelican Panel en ervaar de kracht van professioneel server management.",
+        "getStarted": "Start Nu",
+        "learnMore": "Meer Info"
+      },
+      "categories": {
+        "serverManagement": {
+          "title": "Server Management",
+          "description": "Volledige controle over je game servers met geavanceerde management tools"
+        },
+        "fileManagement": {
+          "title": "File Management",
+          "description": "Krachtige file management tools voor eenvoudige bestandsbeheer"
+        },
+        "databaseManagement": {
+          "title": "Database Management",
+          "description": "Complete database controle met backup en security features"
+        },
+        "userManagement": {
+          "title": "User Management",
+          "description": "Geavanceerde user management met security en access control"
+        },
+        "backupRecovery": {
+          "title": "Backup & Recovery",
+          "description": "Betrouwbare backup systemen voor data protection en disaster recovery"
+        },
+        "securityFeatures": {
+          "title": "Security Features",
+          "description": "Enterprise-grade security features voor maximale bescherming"
+        },
+        "monitoringAnalytics": {
+          "title": "Monitoring & Analytics",
+          "description": "Real-time monitoring en analytics voor optimale performance"
+        },
+        "integrations": {
+          "title": "Integrations",
+          "description": "Uitgebreide integratie mogelijkheden voor workflow automation"
+        }
+      },
+      "serverManagement": {
+        "serverDashboard": {
+          "title": "Server Dashboard",
+          "description": "Real-time monitoring van alle server resources, performance metrics en live statistieken in één overzichtelijk dashboard."
+        },
+        "oneClickOperations": {
+          "title": "One-Click Operations",
+          "description": "Start, stop, restart en herstart servers met één klik. Volledige controle over server status en operaties."
+        },
+        "consoleAccess": {
+          "title": "Console Access",
+          "description": "Directe toegang tot server console voor real-time monitoring en command execution. Volledige controle over server output."
+        },
+        "performanceMonitoring": {
+          "title": "Performance Monitoring",
+          "description": "Gedetailleerde monitoring van CPU, RAM, storage en netwerk gebruik. Proactieve waarschuwingen bij hoge belasting."
+        },
+        "scheduledTasks": {
+          "title": "Scheduled Tasks",
+          "description": "Plan automatische taken zoals backups, restarts en maintenance windows. Volledig geautomatiseerde server management."
+        },
+        "powerManagement": {
+          "title": "Power Management",
+          "description": "Geavanceerde power management opties inclusief graceful shutdown, force stop en emergency restart procedures."
+        }
+      },
+      "fileManagement": {
+        "fileManager": {
+          "title": "File Manager",
+          "description": "Intuïtieve web-based file manager met drag & drop functionaliteit. Volledige controle over bestanden en mappen."
+        },
+        "codeEditor": {
+          "title": "Code Editor",
+          "description": "Geïntegreerde code editor met syntax highlighting voor alle populaire programmeertalen en configuratie bestanden."
+        },
+        "fileUploadDownload": {
+          "title": "File Upload/Download",
+          "description": "Snelle bulk upload en download functionaliteit. Ondersteuning voor alle bestandstypen en grote bestanden."
+        },
+        "fileSearch": {
+          "title": "File Search",
+          "description": "Krachtige zoekfunctionaliteit door alle bestanden en mappen. Regex ondersteuning en geavanceerde filters."
+        },
+        "filePermissions": {
+          "title": "File Permissions",
+          "description": "Geavanceerde bestandsrechten management. Volledige controle over read, write en execute permissions."
+        },
+        "fileHistory": {
+          "title": "File History",
+          "description": "Volledige versiegeschiedenis van alle bestanden. Rollback functionaliteit en change tracking."
+        }
+      },
+      "databaseManagement": {
+        "databaseManagement": {
+          "title": "Database Management",
+          "description": "Volledige controle over MySQL, PostgreSQL en SQLite databases. Database creation, backup en restore functionaliteit."
+        },
+        "databaseBackups": {
+          "title": "Database Backups",
+          "description": "Automatische database backups met configuratie opties. Scheduled backups en manual backup triggers."
+        },
+        "databaseUsers": {
+          "title": "Database Users",
+          "description": "Database user management met granular permissions. Create, modify en delete database accounts."
+        },
+        "databaseMonitoring": {
+          "title": "Database Monitoring",
+          "description": "Real-time database performance monitoring. Query analysis en performance optimization tools."
+        },
+        "databaseMigration": {
+          "title": "Database Migration",
+          "description": "Eenvoudige database migration tools. Import en export functionaliteit voor alle database types."
+        },
+        "databaseSecurity": {
+          "title": "Database Security",
+          "description": "Geavanceerde database security features. SSL connections, access control en audit logging."
+        }
+      },
+      "userManagement": {
+        "multiUserSupport": {
+          "title": "Multi-User Support",
+          "description": "Ondersteuning voor meerdere gebruikers met verschillende permission levels. Role-based access control."
+        },
+        "subuserManagement": {
+          "title": "Subuser Management",
+          "description": "Create en manage subusers met specifieke permissions. Granular access control voor verschillende functies."
+        },
+        "apiAccess": {
+          "title": "API Access",
+          "description": "Volledige API toegang voor externe integraties. RESTful API met comprehensive documentation."
+        },
+        "activityLogging": {
+          "title": "Activity Logging",
+          "description": "Volledige audit trail van alle user activiteiten. Detailed logging voor security en compliance."
+        },
+        "twoFactorAuthentication": {
+          "title": "Two-Factor Authentication",
+          "description": "Enhanced security met 2FA ondersteuning. TOTP en SMS-based authentication opties."
+        },
+        "sessionManagement": {
+          "title": "Session Management",
+          "description": "Geavanceerde session management met device tracking en remote logout functionaliteit."
+        }
+      },
+      "backupRecovery": {
+        "automatedBackups": {
+          "title": "Automated Backups",
+          "description": "Volledig geautomatiseerde backup systemen. Scheduled backups met configuratie opties."
+        },
+        "incrementalBackups": {
+          "title": "Incremental Backups",
+          "description": "Efficiënte incremental backup strategieën. Bespaar storage space en reduce backup times."
+        },
+        "backupScheduling": {
+          "title": "Backup Scheduling",
+          "description": "Flexibele backup scheduling met custom intervals. Daily, weekly en monthly backup opties."
+        },
+        "backupRetention": {
+          "title": "Backup Retention",
+          "description": "Configurable backup retention policies. Automatische cleanup van oude backups."
+        },
+        "backupRestoration": {
+          "title": "Backup Restoration",
+          "description": "One-click backup restoration functionaliteit. Point-in-time recovery opties."
+        },
+        "backupVerification": {
+          "title": "Backup Verification",
+          "description": "Automatische backup verification en integrity checks. Ensure backup reliability."
+        }
+      },
+      "securityFeatures": {
+        "ddosProtection": {
+          "title": "DDoS Protection",
+          "description": "Enterprise-grade DDoS protection. Real-time threat detection en mitigation."
+        },
+        "firewallManagement": {
+          "title": "Firewall Management",
+          "description": "Geavanceerde firewall configuratie en management. Custom rules en port management."
+        },
+        "sslCertificates": {
+          "title": "SSL Certificates",
+          "description": "Automatische SSL certificate management. Let's Encrypt integratie en custom certificates."
+        },
+        "accessControl": {
+          "title": "Access Control",
+          "description": "Granular access control met IP whitelisting en geoblocking functionaliteit."
+        },
+        "securityMonitoring": {
+          "title": "Security Monitoring",
+          "description": "Real-time security monitoring en threat detection. Automated alerts en incident response."
+        },
+        "complianceTools": {
+          "title": "Compliance Tools",
+          "description": "Built-in compliance tools voor GDPR, HIPAA en andere regulatory requirements."
+        }
+      },
+      "monitoringAnalytics": {
+        "realTimeMonitoring": {
+          "title": "Real-time Monitoring",
+          "description": "Live monitoring van alle server metrics. CPU, RAM, storage en network utilization."
+        },
+        "performanceAnalytics": {
+          "title": "Performance Analytics",
+          "description": "Gedetailleerde performance analytics en trend analysis. Historical data en forecasting."
+        },
+        "alertSystem": {
+          "title": "Alert System",
+          "description": "Configurable alert system met email, SMS en webhook notifications."
+        },
+        "resourceTracking": {
+          "title": "Resource Tracking",
+          "description": "Comprehensive resource tracking en usage analytics. Cost optimization tools."
+        },
+        "healthChecks": {
+          "title": "Health Checks",
+          "description": "Automated health checks en service monitoring. Proactive issue detection."
+        },
+        "reportingTools": {
+          "title": "Reporting Tools",
+          "description": "Advanced reporting tools met customizable dashboards en export functionaliteit."
+        }
+      },
+      "integrations": {
+        "apiIntegration": {
+          "title": "API Integration",
+          "description": "Comprehensive REST API voor externe integraties. Full documentation en SDK support."
+        },
+        "webhookSupport": {
+          "title": "Webhook Support",
+          "description": "Webhook integratie voor real-time notifications en event-driven workflows."
+        },
+        "thirdPartyTools": {
+          "title": "Third-party Tools",
+          "description": "Integratie met populaire development tools en CI/CD pipelines."
+        },
+        "cloudIntegration": {
+          "title": "Cloud Integration",
+          "description": "Native integratie met major cloud providers. AWS, Azure en Google Cloud support."
+        },
+        "mobileAccess": {
+          "title": "Mobile Access",
+          "description": "Mobile-optimized interface voor on-the-go server management."
+        },
+        "desktopApp": {
+          "title": "Desktop App",
+          "description": "Native desktop applicatie voor enhanced performance en offline capabilities."
         }
       }
     }

@@ -4,7 +4,7 @@ import { ReactNode } from 'react';
 
 interface ButtonProps {
   children: ReactNode;
-  onClick?: () => void;
+  onClick?: (e: React.MouseEvent<HTMLButtonElement | HTMLAnchorElement>) => void;
   disabled?: boolean;
   variant?: 'primary' | 'secondary' | 'ghost' | 'success' | 'blue' | 'error' | 'outline' | 'white';
   fullWidth?: boolean;
@@ -31,7 +31,7 @@ export default function Button({
   
   const variants = {
     primary: 'bg-[var(--color-primary)] text-[var(--color-text-primary)] hover:bg-[var(--color-secondary)] border border-[var(--color-border)]',
-    secondary: 'bg-[var(--color-secondary)] text-[var(--color-text-primary)] hover:bg-[var(--color-tertiary)]',
+    secondary: 'bg-[var(--color-secondary)] text-[var(--color-text-primary)] hover:bg-[var(--color-secondary)]',
     ghost: 'bg-transparent hover:bg-[var(--color-bg-surface)] text-[var(--color-text-primary)]',
     success: 'bg-[var(--color-success)] hover:bg-[var(--color-success)] text-white',
     blue: 'bg-[var(--color-quinary)] hover:bg-[var(--color-senary)] text-white',
@@ -57,6 +57,7 @@ export default function Button({
         href={href}
         target={target}
         rel={target === '_blank' ? 'noopener noreferrer' : undefined}
+        onClick={onClick}
         {...commonProps}
       >
         {children}

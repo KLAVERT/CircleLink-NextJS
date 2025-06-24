@@ -179,12 +179,12 @@ const GameGridSection = () => {
   };
 
   return (
-    <section id="game-list" className="bg-[var(--color-tertiary)] py-16 md:py-24 border-t border-[var(--color-border)] relative">
+    <section id="game-list" className="bg-[var(--color-secondary)] py-16 md:py-24 border-t border-[var(--color-border)] relative">
       {/* Explicit background styling to override any grid pattern */}
       <div
         className="absolute inset-0 z-0" 
         style={{
-          background: 'var(--color-tertiary)',
+          background: 'var(--color-secondary)',
           backgroundImage: 'none' // Explicitly override any grid pattern
         }}
       />

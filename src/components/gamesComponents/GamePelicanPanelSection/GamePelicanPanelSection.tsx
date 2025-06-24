@@ -38,7 +38,7 @@ const GamePelicanPanelSection: React.FC<GamePelicanPanelSectionProps> = ({
   const t = useTranslations(translationNamespace || undefined);
 
   return (
-    <div className="py-16 bg-[var(--color-tertiary)]">
+    <div className="py-16 bg-[var(--color-secondary)]">
       <div className="w-full px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10">

@@ -80,6 +80,11 @@
   --color-button-hover:   #4DA8FF;  // Hover color for buttons in dark mode
 }
 
+/* Smooth Scroll for all scrollable elements */
+html {
+  scroll-behavior: smooth;
+}
+
 /* Custom Scrollbar */
 ::-webkit-scrollbar {
   width: 10px;
@@ -113,6 +118,14 @@ body {
   position: relative; /* Zorg ervoor dat position: relative is voor betere scroll behavior */
   min-height: 100vh; /* Volledige viewport height */
   scroll-behavior: smooth; /* Soepele scroll */
+}
+
+/* Ensure all scrollable containers have smooth scroll */
+main, 
+section, 
+div[class*="overflow"],
+.scroll-container {
+  scroll-behavior: smooth;
 }
 
 /* Ensure navbar is always on top with enhanced styling */

@@ -45,7 +45,7 @@ const GameCard = ({
       transition={{ duration: 0.5 }}
       whileHover={{ y: -5 }}
     >
-      <div className="w-full h-full bg-gradient-to-br from-[var(--color-primary)] to-[var(--color-tertiary)] p-0.5 rounded-xl">
+      <div className="w-full h-full bg-gradient-to-br from-[var(--color-primary)] to-[var(--color-secondary)] p-0.5 rounded-xl">
         <div className={`bg-[var(--color-bg-primary)] rounded-xl p-6 flex flex-col md:flex-row items-center md:items-start gap-6 relative overflow-hidden`}>
           {/* Background Wallpaper with Fade */}
           {hasBackground && (
