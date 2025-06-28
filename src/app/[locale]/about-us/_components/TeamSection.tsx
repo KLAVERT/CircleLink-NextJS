@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import { useTranslations } from 'next-intl';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FaUsers, FaRocket, FaHeart, FaLightbulb, FaDiscord, FaCode } from 'react-icons/fa';
+import { FaEnvelope, FaRocket, FaDiscord, FaCode } from 'react-icons/fa';
 import Button from '@/components/Button/Button';
 
 interface TeamMember {
@@ -18,7 +18,6 @@ interface TeamMember {
   social?: {
     discord?: string;
     github?: string;
-    linkedin?: string;
     mail?: string;
   };
 }
@@ -101,7 +100,7 @@ const TeamSection = () => {
       name: 'Simon',
       role: t('team.members.simon.role') || 'Founder',
       description: t('team.members.simon.description') || 'Hoofd ontwikkelaar van de website en eigenaar van CircleLink',
-      skills: ['Leadership', 'Strategy', 'Gaming', 'Technology', 'Frontend', 'Backend'],
+      skills: ['scrum', "product owner", 'Gaming', 'Technology', 'Frontend', 'Backend'],
       experience: '3+ years',
       avatar: '/images/webp/mainpage/server-kast-guy.webp',
       color: 'var(--color-quinary)',
@@ -337,6 +336,12 @@ const TeamSection = () => {
                     <div className="flex items-center gap-2 text-[var(--color-quinary)]">
                       <FaCode />
                       <span className="text-sm">{selectedMember.social.github}</span>
+                    </div>
+                  )}
+                {selectedMember.social.mail && (
+                    <div className="flex items-center gap-2 text-[var(--color-quinary)]">
+                      <FaEnvelope />
+                      <span className="text-sm">{selectedMember.social.mail}</span>
                     </div>
                   )}
                 </div>
