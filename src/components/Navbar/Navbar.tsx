@@ -84,8 +84,12 @@ export default function Navbar() {
       href: 'https://nl.web1.circlelink.eu'
     },
     {
-      name: 'Php My Admin',
+      name: 'Database Panel',
       href: 'https://phpmyadmin.circlelink.eu'
+    },
+    {
+      name: 'Billing Panel',
+      href: 'https://billing.circlelink.eu'
     }
   ]
 

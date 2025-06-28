@@ -37,12 +37,11 @@ const PelicanDemo: React.FC = () => {
           transition={{ duration: 0.8, delay: 0.2 }}
         >
           {/* Video Wrapper */}
-          <div className="relative w-full aspect-video bg-[var(--color-secondary)] rounded-lg overflow-hidden shadow-2xl border border-[var(--color-quaternary)]">
+          <div className="relative w-full aspect-video bg-[var(--color-secondary)] rounded-lg overflow-hidden shadow-2xl border-[var(--color-quaternary)]">
             <iframe
               src="https://www.youtube.com/embed/HV4cBCtEnhg"
               title="Pelican Panel Demo"
               className="absolute inset-0 w-full h-full"
-              frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowFullScreen
             />
@@ -52,7 +51,7 @@ const PelicanDemo: React.FC = () => {
           <div className="absolute inset-0 pointer-events-none">
             {/* Play Button Glow Effect */}
             <motion.div
-              className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-20 h-20 bg-[var(--color-quinary)] rounded-full opacity-20"
+              className="absolute top-a/2 left-a/1"
               animate={{
                 scale: [1, 1.2, 1],
                 opacity: [0.2, 0.4, 0.2],

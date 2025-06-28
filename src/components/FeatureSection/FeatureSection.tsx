@@ -555,7 +555,7 @@ const FeatureSection: React.FC<FeatureSectionProps> = ({
                 {category.features.map((feature, featureIndex) => (
                   <motion.div
                     key={feature.title}
-                    className="bg-[var(--color-secondary)] rounded-lg p-6 border border-[var(--color-quaternary)] hover:border-[var(--color-quinary)] transition-all duration-300 hover:shadow-lg"
+                    className="bg-[var(--color-secondary)] rounded-lg p-6 border-2 border-[var(--color-quaternary)] hover:border-[var(--color-quinary)] transition-all duration-300 hover:shadow-lg"
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}

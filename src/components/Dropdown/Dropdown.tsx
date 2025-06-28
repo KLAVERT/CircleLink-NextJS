@@ -39,6 +39,25 @@ export default function Dropdown({
   const dropdownRef = useRef<HTMLDivElement>(null);
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
 
+  // Handle click outside to close dropdown
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+        setIsOpen(false);
+        setIsHovering(false);
+      }
+    };
+
+    // Only add listener if dropdown is open
+    if (isOpen || isHovering) {
+      document.addEventListener('mousedown', handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [isOpen, isHovering]);
+
   const handleMouseEnter = () => {
     if (timeoutRef.current) {
       clearTimeout(timeoutRef.current);
@@ -135,7 +154,7 @@ export default function Dropdown({
   // Language variant or any variant with useButtonUI=true
   if (variant === 'language' || useButtonUI) {
     return (
-      <div className={`relative inline-block ${className}`} style={{ width: width || 'auto' }}>
+      <div className={`relative inline-block ${className}`} style={{ width: width || 'auto' }} ref={dropdownRef}>
         <Button
           variant={buttonVariant}
           onClick={() => setIsOpen(!isOpen)}
@@ -150,7 +169,7 @@ export default function Dropdown({
             variant === 'language' ? 'top-full left-0 w-[160px]' : 
             variant === 'hosting' ? 'top-full -translate-x-1/2 left-1/2 w-80' : 
             'top-full left-0 w-48'
-          } mt-1 bg-[var(--color-bg-primary)] border border-[var(--color-border)] rounded-md shadow-lg transition-opacity transition-transform duration-300 z-50 overflow-hidden ${
+          } mt-1 bg-[var(--color-bg-primary)] border border-gray-300 rounded-md shadow-lg transition-opacity transition-transform duration-300 z-50 overflow-hidden ${
             isOpen 
               ? 'opacity-100 visible translate-y-0' 
               : 'opacity-0 invisible -translate-y-2'
@@ -188,7 +207,7 @@ export default function Dropdown({
       <div
         className={`absolute ${
           variant === 'hosting' ? '-translate-x-1/2 left-1/2 w-80' : 'left-0 w-48'
-        } mt-0 pt-2 pb-2 bg-[var(--color-bg-primary)] rounded-lg shadow-lg z-50 border border-[var(--color-border)] transition-opacity transition-transform duration-300
+        } mt-0 pt-2 pb-2 bg-[var(--color-bg-primary)] rounded-lg shadow-lg z-50 border border-gray-300 transition-opacity transition-transform duration-300
         ${isHovering ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible -translate-y-2 pointer-events-none'}`}
       >
         <div className="absolute w-full h-4 -top-4 bg-transparent"></div>

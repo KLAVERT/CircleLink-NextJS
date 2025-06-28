@@ -6,24 +6,44 @@ import { useTranslations } from 'next-intl';
 import { FaRocket, FaShieldAlt, FaChartLine, FaUsers, FaArrowRight, FaEye } from 'react-icons/fa';
 import Button from '@/components/Button/Button';
 
-const CountUp: React.FC<{ end: number; duration?: number; decimals?: number; suffix?: string }> = ({ end, duration = 2, decimals = 0, suffix = '' }) => {
+const CountUp: React.FC<{ end: number; duration?: number; decimals?: number; suffix?: string; trigger?: boolean }> = ({ end, duration = 2, decimals = 0, suffix = '', trigger = false }) => {
   const [value, setValue] = useState(0);
   const startTimestamp = useRef<number | null>(null);
   const raf = useRef<number | null>(null);
+  const lastTrigger = useRef<boolean>(false);
 
   useEffect(() => {
-    function animateCount(timestamp: number) {
-      if (!startTimestamp.current) startTimestamp.current = timestamp;
-      const progress = Math.min((timestamp - startTimestamp.current) / (duration * 1000), 1);
-      const current = end * progress;
-      setValue(progress < 1 ? current : end);
-      if (progress < 1) {
-        raf.current = requestAnimationFrame(animateCount);
+    // Only start animation when trigger changes from false to true
+    if (trigger && !lastTrigger.current) {
+      lastTrigger.current = true;
+      setValue(0);
+      startTimestamp.current = null;
+      
+      if (raf.current) {
+        cancelAnimationFrame(raf.current);
       }
+      
+      function animateCount(timestamp: number) {
+        if (!startTimestamp.current) startTimestamp.current = timestamp;
+        const progress = Math.min((timestamp - startTimestamp.current) / (duration * 1000), 1);
+        const current = end * progress;
+        setValue(progress < 1 ? current : end);
+        if (progress < 1) {
+          raf.current = requestAnimationFrame(animateCount);
+        }
+      }
+      raf.current = requestAnimationFrame(animateCount);
+    } else if (!trigger) {
+      lastTrigger.current = false;
     }
-    raf.current = requestAnimationFrame(animateCount);
-    return () => { if (raf.current) cancelAnimationFrame(raf.current); };
-  }, [end, duration]);
+    
+    return () => { 
+      if (raf.current) {
+        cancelAnimationFrame(raf.current);
+        raf.current = null;
+      }
+    };
+  }, [trigger, end, duration]);
 
   return (
     <span>
@@ -34,6 +54,7 @@ const CountUp: React.FC<{ end: number; duration?: number; decimals?: number; suf
 
 const PelicanTransitionSection: React.FC = () => {
   const t = useTranslations('pelican');
+  const [statsInView, setStatsInView] = useState(false);
 
   const stats = [
     {
@@ -119,7 +140,7 @@ const PelicanTransitionSection: React.FC = () => {
         </motion.div>
 
         <motion.div
-          className="absolute bottom-20 right-10 text-[var(--color-secondary)] opacity-15"
+          className="absolute bottom-20 right-10 text-[var(--color-quaternary)] opacity-15"
           animate={{
             y: [0, -15, 0],
             scale: [1, 1.1, 1],
@@ -151,7 +172,7 @@ const PelicanTransitionSection: React.FC = () => {
         />
 
         <motion.div
-          className="absolute bottom-0 left-0 w-80 h-80 bg-gradient-to-tr from-[var(--color-secondary)] to-transparent rounded-full opacity-8 blur-3xl"
+          className="absolute bottom-0 left-0 w-80 h-80 bg-gradient-to-tr from-[var(--color-quaternary)] to-transparent rounded-full opacity-8 blur-3xl"
           animate={{
             scale: [1, 1.3, 1],
             opacity: [0.08, 0.12, 0.08],
@@ -185,7 +206,14 @@ const PelicanTransitionSection: React.FC = () => {
 
       {/* Stats Grid */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <motion.div 
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          onViewportEnter={() => setStatsInView(true)}
+        >
           {stats.map((stat, index) => (
             <motion.div
               key={stat.label}
@@ -209,7 +237,7 @@ const PelicanTransitionSection: React.FC = () => {
               {/* Number */}
               <div className="mb-2 flex items-end justify-center gap-1">
                 <span className="text-4xl md:text-5xl font-bold text-[var(--color-text-primary)]">
-                  <CountUp end={stat.number} duration={2} decimals={stat.decimals} />
+                  <CountUp end={stat.number} duration={2} decimals={stat.decimals} trigger={statsInView} />
                 </span>
                 <span className="text-2xl md:text-3xl font-bold text-[var(--color-quinary)]">
                   {stat.unit}
@@ -227,7 +255,7 @@ const PelicanTransitionSection: React.FC = () => {
               </p>
             </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
 
       {/* Call to Action */}
@@ -239,7 +267,7 @@ const PelicanTransitionSection: React.FC = () => {
         transition={{ duration: 0.6, delay: 0.4 }}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-gradient-to-r from-[var(--color-secondary)] to-[var(--color-quinary)] rounded-2xl p-8 md:p-12 w-full">
+          <div className="bg-gradient-to-r from-[var(--color-quaternary)] to-[var(--color-quinary)] rounded-2xl p-8 md:p-12 w-full">
             <h3 className="text-2xl md:text-3xl font-bold text-[var(--color-text-primary)] mb-4">
               {t('transition.cta.title') || 'Klaar om te Starten?'}
             </h3>
