@@ -76,26 +76,26 @@ export default function Navbar() {
 
   const panelOptions = [
     {
-      name: 'Gaming Panel',
+      name: t('gamingPanel'),
       href: 'https://panel.circlelink.eu'
     },
     {
-      name: 'Web Hosting Panel',
+      name: t('webHostingPanel'),
       href: 'https://nl.web1.circlelink.eu'
     },
     {
-      name: 'Database Panel',
+      name: t('databasePanel'),
       href: 'https://phpmyadmin.circlelink.eu'
     },
     {
-      name: 'Billing Panel',
+      name: t('billingPanel'),
       href: 'https://billing.circlelink.eu'
     }
   ]
 
   const navItems = [
-    { label: t('help'), href: `/${locale}#skills` },
-    { label: t('aboutus'), href: `/${locale}#aboutus` },
+    { label: t('help'), href: `/${locale}/help` },
+    { label: t('aboutus'), href: `/${locale}/about-us` },
   ];
 
   return (
@@ -159,7 +159,7 @@ export default function Navbar() {
               <LanguageSwitcher />
               <div className="w-px h-6 bg-white" />
               <Dropdown
-                trigger={'panels'}
+                trigger={t('panels')}
                 items={panelOptions}
                 variant="default"
                 useButtonUI={true}
@@ -264,7 +264,7 @@ export default function Navbar() {
             </div>
             <div className="flex justify-center">
               <Dropdown
-                trigger={'panels'}
+                trigger={t('panels')}
                 items={panelOptions}
                 variant="default"
                 useButtonUI={true}

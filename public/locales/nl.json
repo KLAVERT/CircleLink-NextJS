@@ -17,6 +17,11 @@
     "help": "Help",
     "aboutus": "Over ons",
     "panelLogin": "Inloggen op het panel",
+    "panels": "Panels",
+    "gamingPanel": "Gaming Panel",
+    "webHostingPanel": "Webhosting Panel",
+    "databasePanel": "Database Panel",
+    "billingPanel": "Klanten Panel",
     "gameHosting": "Game Hosting",
     "gameHostingDescription": "Gehost met Pelican Panel voor de beste gebruikerservaring.",
     "webHosting": "Webhosting",
@@ -201,6 +206,108 @@
     "billingPanel": "Facturatie Panel",
     "contact": "Contact",
     "allRightsReserved": "Alle Rechten Voorbehouden"
+  },
+  "aboutUs": {
+    "hero": {
+      "badge": "OVER ONS",
+      "title": "Over CircleLink",
+      "subtitle": "Ons Verhaal",
+      "description": "Ontdek het verhaal achter CircleLink, waar passie voor technologie samenkomt met toewijding aan klanttevredenheid. Wij zijn meer dan alleen een hosting provider - wij zijn je partner in digitale groei.",
+      "buttons": {
+        "ourStory": "Ons Verhaal",
+        "meetTeam": "Ontmoet het Team"
+      },
+      "stats": {
+        "years": "Jaar Ervaring",
+        "clients": "Tevreden Klanten",
+        "servers": "Actieve Servers",
+        "uptime": "Uptime Percentage"
+      },
+      "mission": {
+        "title": "Onze Missie",
+        "description": "Het democratiseren van professionele hosting door betaalbare, betrouwbare en gebruiksvriendelijke oplossingen te bieden voor iedereen."
+      },
+      "vision": {
+        "title": "Onze Visie",
+        "description": "De toonaangevende hosting provider worden die innovatie, klanttevredenheid en technische excellentie combineert."
+      }
+    },
+    "story": {
+      "badge": "ONS VERHAAL",
+      "title": "Van Droom tot",
+      "subtitle": "Realiteit",
+      "description": "Ontdek hoe CircleLink is ontstaan uit een passie voor technologie en gaming, en hoe we zijn uitgegroeid tot een betrouwbare hosting partner met Nederlandse roots.",
+      "locations": {
+        "title": "Onze Nederlandse Vestigingen",
+        "description": "Met datacenters in Harderwijk en Woerden zijn we trots op onze Nederlandse roots en bieden we lokale support en snelle verbindingen.",
+        "harderwijk": {
+          "description": "Ons hoofdkantoor en eerste datacenter, gelegen in het hart van Nederland voor optimale connectiviteit.",
+          "features": "Hoofdkantoor • Support • Development"
+        },
+        "woerden": {
+          "description": "Ons tweede datacenter voor uitbreiding en redundantie, strategisch gelegen voor maximale betrouwbaarheid.",
+          "features": "Datacenter • Redundantie • Performance"
+        }
+      },
+      "timeline": {
+        "title": "Onze Reis Door de Jaren",
+        "description": "Van een klein idee tot een groeiende hosting provider - bekijk onze belangrijkste mijlpalen.",
+        "2022": {
+          "title": "Begin van CircleLink",
+          "description": "In 2022 is CircleLink opgericht door 2 vrienden. Toen de tijd hadden we een datacenter in Harderwijk en heette het bedrijf nog RealistiqHosting, Door een lack van tijd is dit project verdwenen van tafel."
+        },
+        "2023": {
+          "title": "Een nieuw begin",
+          "description": "Het idee is uitgegroeid en we zijn van plan gegaan om het door te zetten, we hebben hierbij de eerste klanten gehaald."
+        },
+        "2024": {
+          "title": "De website en uitbreiding",
+          "description": "Danzij de komst van een nieuwe overeenkomst en uitbreiding hebben we ons 2de datacenter in Woerden gezet."
+        },
+        "2025": {
+          "title": "Innovatie & Toekomst",
+          "description": "Vandaag zijn we trots op onze Nederlandse roots en blijven we innoveren met nieuwe technologieën zoals Pelican Panel en geavanceerde monitoring."
+        }
+      },
+      "values": {
+        "title": "Onze Waarden",
+        "trust": {
+          "title": "Vertrouwen",
+          "description": "We bouwen langdurige relaties op basis van transparantie en betrouwbaarheid."
+        },
+        "innovation": {
+          "title": "Innovatie",
+          "description": "We blijven voorop lopen in technologie om de beste ervaring te bieden."
+        },
+        "passion": {
+          "title": "Passie",
+          "description": "Onze liefde voor gaming en technologie drijft alles wat we doen."
+        }
+      },
+      "cta": "Ontmoet ons Team"
+    },
+    "team": {
+      "badge": "ONS TEAM",
+      "title": "Ontmoet het",
+      "subtitle": "CircleLink Team",
+      "description": "Ons gepassioneerde team van experts staat klaar om jouw hosting ervaring naar het volgende niveau te tillen.",
+      "members": {
+        "simon": {
+          "role": "Founder",
+          "description": "Hoofd ontwikkelaar van de website en eigenaar van CircleLink"
+        },
+        "quinten": {
+          "role": "Founder",
+          "description": "Hoofd in cyber security cloud & developer van de backend"
+        }
+      },
+      "cta": {
+        "title": "Klaar om te beginnen?",
+        "description": "Ons team staat klaar om je te helpen bij het opzetten van je perfecte hosting oplossing.",
+        "startHosting": "Start met Hosting",
+        "joinDiscord": "Join onze Discord"
+      }
+    }
   },
   "discord": {
     "info": {
