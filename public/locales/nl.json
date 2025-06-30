@@ -427,6 +427,7 @@
     "gameDescriptions": {
       "minecraft": "De creativiteit uitwerken op een minecraft server, alleen of met vrienden? Start je server vandaag bij CircleLink!",
       "rust": "Overleef in de harde wereld van Rust, waar elke speler een potentiële vijand is. Bouw je basis, vorm allianties en vecht om te overleven.",
+      "ascended": "Overleef in de harde wereld van Ascended, waar elke speler een potentiële vijand is. Bouw je basis, vorm allianties en vecht om te overleven.",
       "ark": "Strijd om te overleven in een wereld vol dinosaurussen en prehistorische wezens. Tem dino's, bouw bases en verken een enorm eiland.",
       "palworld": "Duik in Palworld, de grensverleggende game die avonturiers meeneemt naar een wereld waar overleven, bouwen en het vangen van Pals centraal staan.",
       "satisfactory": "Bouw enorme fabrieken, automatiseer productielijnen en verken een mysterieuze buitenaardse planeet in deze first-person factory-building game.",
@@ -611,6 +612,128 @@
     },
     "packages": {
       "title": "Kies je Ark-serverpakket",
+      "subtitle": "Selecteer de server die het beste past bij de behoeften van je vriendengroep of community. Alle pakketten bevatten krachtige hardware en DDoS-bescherming.",
+      "selectButton": "Selecteer {name}",
+      "tatch": {
+        "name": "Riet",
+        "description": "Ideaal voor communities die net beginnen of als dev server",
+        "features": {
+          "ram": "8GB DDR4 RAM",
+          "cores": "3 CPU-kernen",
+          "storage": "Volledig SSD-opslag",
+          "pelican": "Pelican Paneel",
+          "support": "12/7 Ondersteuning",
+          "databases": "2 Databases",
+          "backup": "2 Back-ups"
+        }
+      },
+      "wood": {
+        "name": "Hout",
+        "description": "Ons aanbevolen pakket voor groeiende servers",
+        "features": {
+          "ram": "10GB DDR4 RAM",
+          "cores": "4 CPU-kernen",
+          "storage": "Volledig SSD-opslag",
+          "pelican": "Pelican Paneel",
+          "support": "12/7 Ondersteuning",
+          "databases": "2 Databases",
+          "backup": "2 Back-ups"
+        }
+      },
+      "stone": {
+        "name": "Steen",
+        "description": "Verbeterde prestaties voor grotere communities met meerdere mods",
+        "features": {
+          "ram": "12GB DDR4 RAM",
+          "cores": "4 CPU-kernen",
+          "storage": "Volledig SSD-opslag",
+          "pelican": "Pelican Paneel",
+          "support": "Prioriteitsondersteuning",
+          "databases": "2 Databases",
+          "backup": "2 Back-ups"
+        }
+      },
+      "sulfer": {
+        "name": "Sulfer",
+        "description": "Ons populairste pakket voor gevestigde communities met veel vaste spelers",
+        "features": {
+          "ram": "16GB DDR4 RAM",
+          "cores": "6 CPU-kernen",
+          "storage": "Volledig SSD-opslag",
+          "pelican": "Pelican Paneel",
+          "support": "Prioriteitsondersteuning",
+          "databases": "2 Databases",
+          "backup": "2 Back-ups"
+        }
+      },
+      "metal": {
+        "name": "Metaal",
+        "description": "Goede optie voor servers met veel spelers en zware mods",
+        "features": {
+          "ram": "20GB DDR4 RAM",
+          "cores": "6 CPU-kernen",
+          "storage": "Volledig SSD-opslag",
+          "pelican": "Pelican Paneel",
+          "support": "Prioriteitsondersteuning",
+          "databases": "2 Databases",
+          "backup": "2 Back-ups"
+        }
+      },
+      "tek": {
+        "name": "Tek",
+        "description": "Ultieme prestaties voor de meest veeleisende Ark-ervaringen",
+        "features": {
+          "ram": "24GB DDR4 RAM",
+          "cores": "8 CPU-kernen",
+          "storage": "Volledig SSD-opslag",
+          "pelican": "Pelican Paneel",
+          "support": "12/7 Ondersteuning",
+          "databases": "2 Databases",
+          "backup": "2 Back-ups"
+        }
+      },
+      "enterprise": {
+        "name": "Enterprise",
+        "description": "Aangepaste oplossing voor professionele Ark-community's",
+        "features": {
+          "ram": "Aangepast RAM",
+          "cores": "Aangepaste CPU-kernen",
+          "storage": "Aangepaste SSD-opslag",
+          "pelican": "Pelican Paneel",
+          "support": "12/7 Ondersteuning",
+          "databases": "Aangepaste Databases",
+          "backups": "Aangepaste Back-ups"
+        }
+      }
+    }
+  },
+  "ascended": {
+    "recommended": "Aanbevolen",
+    "mostChosen": "Meest populair",
+    "hero": {
+      "badge": "GAME HOSTING",
+      "title": "ASCENDED",
+      "subtitle": "PREMIUM GAME SERVERS",
+      "description": "Sluit je aan bij onze Ascended-community en trotseer een wereld vol prehistorische gevaren. Tem dinosaurussen, bouw je eigen nederzetting en overleef samen of alleen op onze stabiele en snelle Ascended-serverhosting.",
+      "features": {
+        "dedicatedServers": "Hoge-prestatie dedicated servers",
+        "modInstallation": "Mod-installatie met één klik",
+        "uptime": "24/7 online met 99,9% uptime",
+        "ddosProtection": "DDoS-bescherming inbegrepen"
+      },
+      "buttons": {
+        "getStarted": "Begin nu",
+        "viewPlans": "Bekijk pakketten"
+      },
+      "bottomFeatures": {
+        "ddosProtection": "DDoS-bescherming",
+        "premiumHardware": "Premium hardware",
+        "online": "24/7 online",
+        "instantDelivery": "Directe levering"
+      }
+    },
+    "packages": {
+      "title": "Kies je Ascended-serverpakket",
       "subtitle": "Selecteer de server die het beste past bij de behoeften van je vriendengroep of community. Alle pakketten bevatten krachtige hardware en DDoS-bescherming.",
       "selectButton": "Selecteer {name}",
       "tatch": {

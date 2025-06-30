@@ -55,6 +55,19 @@ const GameGridSection = () => {
       backgroundWidth: 'w-2/3'
     },
     {
+      id: 'ascended',
+      name: 'Ascended',
+      edition: 'Survival Evolved',
+      category: ['survival', 'sandbox'],
+      image: '/images/webp/games/logos/ascended.webp',
+      slug: '/games/ascended',
+      popularity: 8,
+      description: t('gameDescriptions.ascended'),
+      price: 10.00,
+      backgroundImage: '/images/webp/games/backgrounds/ascended-wallpaper.webp',
+      backgroundWidth: 'w-2/3'
+    },
+    {
       id: 'ark',
       name: 'ARK',
       edition: 'Survival Evolved',
