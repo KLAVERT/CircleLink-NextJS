@@ -105,6 +105,18 @@ const GameGridSection = () => {
       backgroundWidth: 'w-2/3'
     },
     {
+      id: 'factorio',
+      name: 'Factorio',
+      category: ['simulation', 'sandbox'],
+      image: '/images/webp/games/logos/factorio.webp',
+      slug: '/games/factorio',
+      popularity: 7,
+      description: t('gameDescriptions.factorio'),
+      price: 6.50,
+      backgroundImage: '/images/webp/games/backgrounds/factorio-wallpaper.webp',
+      backgroundWidth: 'w-2/3'
+    },
+    {
       id: 'sotf',
       name: 'Sons of the Forest',
       category: ['survival', 'fpsRpg'],

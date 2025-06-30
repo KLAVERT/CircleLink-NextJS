@@ -431,6 +431,7 @@
       "ark": "Strijd om te overleven in een wereld vol dinosaurussen en prehistorische wezens. Tem dino's, bouw bases en verken een enorm eiland.",
       "palworld": "Duik in Palworld, de grensverleggende game die avonturiers meeneemt naar een wereld waar overleven, bouwen en het vangen van Pals centraal staan.",
       "satisfactory": "Bouw enorme fabrieken, automatiseer productielijnen en verken een mysterieuze buitenaardse planeet in deze first-person factory-building game.",
+      "factorio": "Bouw je eigen fabrieken, automatiseer productielijnen en verken een mysterieuze buitenaardse planeet in deze first-person factory-building game.",
       "sotf": "Overleef de gruwelen van een mysterieus eiland vol kannibalistische mutanten. Bouw, vecht en verken in deze angstaanjagende survival horror game.",
       "fivem": "Creëer je eigen GTA-ervaring met FiveM, het platform dat het mogelijk maakt om aangepaste rollenspel-servers te draaien in de wereld van GTA V.",
       "gmod": "Een sandbox-game met eindeloze mogelijkheden. Creëer je eigen speltypen, bouw constructies en experimenteer met de natuurkundige eigenschappen.",
@@ -817,6 +818,132 @@
       "enterprise": {
         "name": "Enterprise",
         "description": "Aangepaste oplossing voor professionele Ark-community's",
+        "features": {
+          "ram": "Aangepast RAM",
+          "cores": "Aangepaste CPU-kernen",
+          "storage": "Aangepaste SSD-opslag",
+          "pelican": "Pelican Paneel",
+          "support": "12/7 Ondersteuning",
+          "databases": "Aangepaste Databases",
+          "backups": "Aangepaste Back-ups"
+        }
+      }
+    }
+  },
+  "factorio": {
+    "recommended": "Aanbevolen",
+    "mostChosen": "Meest populair",
+    "hero": {
+      "badge": "GAME HOSTING",
+      "title": "FACTORIO",
+      "subtitle": "PREMIUM GAME SERVERS",
+      "description": "Bouw je eigen fabrieken, automatiseer productielijnen en verken een mysterieuze buitenaardse planeet in deze first-person factory-building game.",
+      "features": {
+        "dedicatedServers": "Hoge-prestatie dedicated servers",
+        "modInstallation": "Mod-installatie met één klik",
+        "uptime": "24/7 online met 99,9% uptime",
+        "ddosProtection": "DDoS-bescherming inbegrepen"
+      },
+      "buttons": {
+        "getStarted": "Begin nu",
+        "viewPlans": "Bekijk pakketten"
+      },
+      "bottomFeatures": {
+        "ddosProtection": "DDoS-bescherming",
+        "premiumHardware": "Premium hardware",
+        "online": "24/7 online",
+        "instantDelivery": "Directe levering"
+      }
+    },
+    "packages": {
+      "title": "Kies je Factorio-serverpakket",
+      "subtitle": "Selecteer de server die het beste past bij de behoeften van je clan. Alle pakketten bevatten krachtige hardware en DDoS-bescherming.",
+      "selectButton": "Selecteer {name}",
+      "ddr": {
+        "ddr4": "DDR4",
+        "ddr3": "DDR3"
+      },
+      "factorio1": {
+        "name": "Factorio I",
+        "description": "Ideaal voor community's die net beginnen",
+        "features": {
+          "ram": "4GB DDR4 RAM",
+          "cores": "2 CPU-kernen",
+          "storage": "Volledig SSD-opslag",
+          "pelican": "Pelican Paneel",
+          "support": "12/7 Ondersteuning",
+          "databases": "2 Databases",
+          "backup": "2 Back-ups"
+        }
+      },
+      "factorio2": {
+        "name": "Factorio II",
+        "description": "Ons aanbevolen pakket voor groeiende servers",
+        "features": {
+          "ram": "6GB DDR4 RAM",
+          "cores": "2 CPU-kernen",
+          "storage": "Volledig SSD-opslag",
+          "pelican": "Pelican Paneel",
+          "support": "12/7 Ondersteuning",
+          "databases": "2 Databases",
+          "backup": "2 Back-ups"
+        }
+      },
+      "factorio3": {
+        "name": "Factorio III",
+        "description": "Verbeterde prestaties voor grotere community's met meerdere mods",
+        "features": {
+          "ram": "12GB DDR4 RAM",
+          "cores": "3 CPU-kernen",
+          "storage": "Volledig SSD-opslag",
+          "pelican": "Pelican Paneel",
+          "support": "Prioriteitsondersteuning",
+          "databases": "2 Databases",
+          "backup": "2 Back-ups"
+        }
+      },
+      "factorio4": {
+        "name": "Factorio IV",
+        "description": "Ons populairste pakket voor servers die al een tijdje draaien",
+        "features": {
+          "ram": "16GB DDR4 RAM",
+          "cores": "4 CPU-kernen",
+          "storage": "Volledig SSD-opslag",
+          "pelican": "Pelican Paneel",
+          "support": "Prioriteitsondersteuning",
+          "databases": "2 Databases",
+          "backup": "2 Back-ups"
+        }
+      },
+      "factorio5": {
+        "name": "Factorio V",
+        "description": "Superieure prestaties voor grote servers veel resources",
+        "features": {
+          "ram": "20GB DDR4 RAM",
+          "cores": "4 CPU-kernen",
+          "storage": "Volledig SSD-opslag",
+          "pelican": "Pelican Paneel",
+          "support": "Prioriteitsondersteuning",
+          "databases": "2 Databases",
+          "backup": "2 Back-ups"
+        }
+      },
+      "factorio6": {
+        "name": "Factorio VI",
+        "description": "Ultieme prestaties voor de meest veeleisende FiveM-ervaringen",
+        "features": {
+          "ram": "24GB DDR4 RAM",
+          "cores": "6 CPU-kernen",
+          "storage": "Volledig SSD-opslag",
+          "pelican": "Pelican Paneel",
+          "support": "12/7 Ondersteuning",
+          "databases": "2 Databases",
+          "backup": "2 Back-ups"
+        }
+      },
+      "enterprise": {
+        "name": "Enterprise",
+        "description": "Aangepaste oplossing voor professionele FiveM-community's en evenementen",
         "features": {
           "ram": "Aangepast RAM",
           "cores": "Aangepaste CPU-kernen",
