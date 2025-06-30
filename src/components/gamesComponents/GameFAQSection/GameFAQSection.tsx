@@ -2,7 +2,6 @@ import FAQ from '@/components/FAQ/FAQ';
 import { useTranslations } from 'next-intl';
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
-import AnimatedBackground from '@/components/AnimatedBackground/AnimatedBackground';
 import Link from 'next/link';
 import Grid, { GridItem } from '@/components/Grid';
 
@@ -43,7 +42,7 @@ const GameFAQSection: React.FC<GameFAQSectionProps> = ({
   }));
 
   return (
-    <AnimatedBackground variant="tertiary" className="min-h-screen w-full py-16 md:py-32">
+    <section className="min-h-screen w-full bg-[var(--color-primary)] py-16 md:py-32">
       <Grid container maxWidth="xl" className="flex flex-col items-center h-full">
         <div className="w-full flex flex-col items-center">
           <div className="w-full max-w-7xl mx-auto">
@@ -98,7 +97,7 @@ const GameFAQSection: React.FC<GameFAQSectionProps> = ({
           </div>
         </div>
       </Grid>
-    </AnimatedBackground>
+    </section>
   );
 };
 

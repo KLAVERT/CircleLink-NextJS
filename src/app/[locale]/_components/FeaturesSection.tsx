@@ -4,7 +4,6 @@ import React, { useEffect, useRef } from 'react';
 import FeatureCard from './FeatureCard';
 import { useTranslations } from 'next-intl';
 import { motion, useInView, useAnimation, AnimatePresence } from 'framer-motion';
-import AnimatedBackground from '@/components/AnimatedBackground/AnimatedBackground';
 import Grid from '@/components/Grid';
 
 const FeaturesSection = () => {
@@ -93,7 +92,7 @@ const FeaturesSection = () => {
   };
   
   return (
-    <AnimatedBackground variant="secondary" className="min-h-screen w-full py-24 md:py-32">
+    <section className="min-h-screen w-full bg-[var(--color-secondary)] py-24 md:py-32">
       <Grid container maxWidth="xl" className="flex flex-col items-center h-full">
         <div ref={ref} className="w-full flex flex-col items-center">
           <motion.div 
@@ -133,7 +132,7 @@ const FeaturesSection = () => {
           </Grid>
         </div>
       </Grid>
-    </AnimatedBackground>
+    </section>
   );
 };
 

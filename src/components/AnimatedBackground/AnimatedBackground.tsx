@@ -1,4 +1,4 @@
-import React, { useMemo } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
 
 interface AnimatedBackgroundProps {
@@ -7,134 +7,65 @@ interface AnimatedBackgroundProps {
   className?: string;
 }
 
+// Pakketjes: posities, kleuren, animatie
+const packets = [
+  { top: '10%', height: 16, width: 36, color: 'var(--color-quaternary)', delay: 0, duration: 8, yMove: 40 },
+  { top: '22%', height: 14, width: 32, color: 'var(--color-highlight)', delay: 1, duration: 10, yMove: 60 },
+  { top: '35%', height: 18, width: 40, color: 'var(--color-quinary)', delay: 2, duration: 7, yMove: -30 },
+  { top: '48%', height: 12, width: 28, color: 'var(--color-quaternary)', delay: 0.5, duration: 9, yMove: 25 },
+  { top: '60%', height: 16, width: 36, color: 'var(--color-highlight)', delay: 1.5, duration: 11, yMove: -40 },
+  { top: '72%', height: 14, width: 32, color: 'var(--color-quinary)', delay: 2.5, duration: 8, yMove: 35 },
+  { top: '84%', height: 18, width: 40, color: 'var(--color-quaternary)', delay: 0.8, duration: 12, yMove: -20 },
+  { top: '90%', height: 12, width: 28, color: 'var(--color-highlight)', delay: 1.2, duration: 10, yMove: 50 },
+];
+
 const AnimatedBackground: React.FC<AnimatedBackgroundProps> = ({ 
   variant = 'primary',
   children,
   className = ''
 }) => {
-  const getColors = () => {
+  const getBgColor = () => {
     switch (variant) {
       case 'secondary':
-        return {
-          background: 'var(--color-secondary)',
-          showAnimation: false
-        };
+        return 'bg-[var(--color-secondary)]';
       case 'tertiary':
-        return {
-          background: 'var(--color-primary)',
-          showAnimation: false
-        };
+        return 'bg-[var(--color-primary)]';
       default:
-        return {
-          primary: 'var(--color-secondary)',
-          secondary: 'var(--color-primary)',
-          accent: 'var(--color-secondary)',
-          background: 'var(--color-primary)',
-          opacity: '0.30',
-          showAnimation: true
-        };
+        return 'bg-[var(--color-primary)]';
     }
   };
 
-  const colors = getColors();
-
-  const getRandomDirection = (index: number) => {
-    const directions = [-100, -75, -50, -25, 25, 50, 75, 100];
-    return directions[index % directions.length];
-  };
-
-  const particles = useMemo(() => {
-    const particleCount = 20;
-    
-    return Array.from({ length: particleCount }).map((_, i) => ({
-      size: 1.5 + (i % 6),
-      xStart: (i * 11) % 100,
-      yStart: (i * 13) % 100,
-      duration: 12 + (i % 10),
-      xDirection: getRandomDirection(i),
-      yDirection: getRandomDirection(i + 1),
-    }));
-  }, []);
-
   return (
-    <div 
-      className={`relative ${className}`}
-      style={{ 
-        background: colors.background,
-        marginTop: variant === 'secondary' ? '-1px' : '0',
-      }}
-    >
-      {colors.showAnimation && (
-        <div className="absolute inset-0 overflow-hidden">
-          {/* Large floating blobs */}
-          {[0, 1, 2].map(i => (
-            <motion.div
-              key={`blob-${i}`}
-              className="absolute"
-              style={{
-                width: `${70 + i * 10}%`,
-                height: `${70 + i * 10}%`,
-                background: i === 0 
-                  ? `radial-gradient(circle, ${colors.primary}30 0%, transparent 70%)`
-                  : i === 1 
-                  ? `radial-gradient(circle, ${colors.secondary}30 0%, transparent 70%)`
-                  : `radial-gradient(circle, ${colors.accent}30 0%, transparent 70%)`,
-                filter: 'blur(40px)',
-                opacity: colors.opacity,
-                mixBlendMode: 'soft-light',
-                willChange: 'transform',
-              }}
-              animate={{
-                x: [`${-10 + i * 20}%`, `${-5 + i * 20}%`, `${-10 + i * 20}%`],
-                y: [`${-10 + i * 20}%`, `${-15 + i * 20}%`, `${-10 + i * 20}%`],
-                scale: [0.9, 1.0, 0.9],
-                rotate: 0,
-              }}
-              transition={{
-                duration: 15,
-                repeat: Infinity,
-                ease: "easeInOut",
-                times: [0, 0.5, 1],
-              }}
-            />
-          ))}
-
-          {/* Animated particles */}
-          <div className="absolute inset-0 overflow-hidden">
-            {particles.map((particle, i) => (
-              <motion.div
-                key={`particle-${i}`}
-                className="absolute rounded-full"
-                style={{
-                  width: particle.size,
-                  height: particle.size,
-                  background: i % 3 === 0 
-                    ? colors.primary 
-                    : i % 3 === 1 
-                    ? colors.secondary 
-                    : colors.accent,
-                  left: `${particle.xStart}%`,
-                  top: `${particle.yStart}%`,
-                  willChange: 'transform, opacity',
-                }}
-                animate={{
-                  y: [0, particle.yDirection, 0],
-                  x: [0, particle.xDirection, 0],
-                  opacity: [0, 0.7, 0],
-                  scale: [1, 1.2, 1],
-                }}
-                transition={{
-                  duration: particle.duration,
-                  repeat: Infinity,
-                  ease: "linear",
-                  delay: -(particle.duration * (i % 10) / 10),
-                }}
-              />
-            ))}
-          </div>
-        </div>
-      )}
-
+    <div className={`relative overflow-hidden w-full h-full ${getBgColor()} ${className}`}>
+      {/* Bewegende datapakketjes */}
+      {packets.map((packet, i) => (
+        <motion.div
+          key={i}
+          className="absolute rounded-md shadow-lg z-0 pointer-events-none"
+          style={{
+            top: packet.top,
+            left: '-50px',
+            width: packet.width,
+            height: packet.height,
+            background: packet.color,
+            opacity: 0.85,
+            boxShadow: `0 0 8px 2px ${packet.color}`,
+          }}
+          initial={{ x: 0, y: 0, opacity: 0 }}
+          animate={{
+            x: '110vw',
+            y: packet.yMove,
+            opacity: [0, 1, 1, 0],
+          }}
+          transition={{
+            duration: packet.duration,
+            repeat: Infinity,
+            repeatType: 'loop',
+            delay: packet.delay,
+            ease: 'easeInOut',
+          }}
+        />
+      ))}
       {/* Content */}
       <div className="relative z-10">
         {children}
