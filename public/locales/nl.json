@@ -2195,5 +2195,14 @@
       "no": "Nee",
       "yes": "Ja"
     }
+  },
+  "help": {
+    "badge": "HELP",
+    "titleMain": "Hulp & Tutorials",
+    "titleAccent": "voor jouw server",
+    "subtitle": "Alles wat je wilt weten over je server, uitgelegd in duidelijke video's.",
+    "description": "Bekijk hieronder onze video's en handleidingen. Zo hoef je nooit meer te zoeken naar antwoorden! Toch niet gevonden wat je zoekt? Neem contact op met ons support Team, zij zullen je zo spoedig mogelijk helpen met jouw probleem!",
+    "buttonContact": "Contact support",
+    "buttonVideos": "Bekijk alle video's"
   }
 }
