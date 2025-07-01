@@ -2155,5 +2155,45 @@
         }
       }
     }
+  },
+  "advice": {
+    "title": "Welk pakket moet ik kiezen?",
+    "subtitle": "Vertel ons wat je met je server wil doen voor een advies.",
+    "button": "Vraag advies",
+    "onsAdvies": "Ons advies",
+    "basedOn": "Gebaseerd op je serververeisten.",
+    "perMonth": "per maand",
+    "ram": "RAM",
+    "orderNow": "Bestel nu",
+    "changeable": "Je kunt op elk moment up- of downgraden.",
+    "fillQuestions": "Vul de vragen in en klik op '{buttonText}'.",
+    "adviceDescription": "Advies op basis van je keuzes. Dit kun je verder verfijnen naar wens!"
+  },
+  "minecraftAdvice": {
+    "version": "Op welke Minecraft-versie wil je spelen?",
+    "versionOptions": {
+      "lt113": "Lager dan 1.13",
+      "gte113": "1.13 of hoger"
+    },
+    "players": "Hoeveel spelers moeten tegelijk kunnen spelen?",
+    "playersOptions": {
+      "5": "5",
+      "10": "10",
+      "20": "20",
+      "30": "30",
+      "50": "50+"
+    },
+    "plugins": "Hoeveel plugins wil je gebruiken?",
+    "pluginsOptions": {
+      "0": "0",
+      "5": "5",
+      "10": "10",
+      "20": "20+"
+    },
+    "modpack": "Wil je een modpack spelen?",
+    "modpackOptions": {
+      "no": "Nee",
+      "yes": "Ja"
+    }
   }
 }

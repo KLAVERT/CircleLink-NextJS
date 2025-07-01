@@ -33,6 +33,7 @@ export interface GamePackageSectionProps {
   enableBTWToggle?: boolean;
   enableDDRToggle?: boolean;
   translationNamespace?: string;
+  adviceSection?: React.ReactNode;
 }
 
 const containerVariants = {
@@ -137,7 +138,8 @@ const GamePackageSection: React.FC<GamePackageSectionProps> = ({
   gameLogoAlt,
   enableBTWToggle = false,
   enableDDRToggle = false,
-  translationNamespace
+  translationNamespace,
+  adviceSection
 }) => {
   const t = useTranslations(translationNamespace || undefined);
 
@@ -158,21 +160,22 @@ const GamePackageSection: React.FC<GamePackageSectionProps> = ({
             {resolveText(t, subtitle)}
           </p>
         </motion.div>
-        
+        {/* Adviescomponent boven de pakketten */}
+        {adviceSection && (
+          <div className="mb-8">{adviceSection}</div>
+        )}
         {/* DDR Toggle centered */}
         {enableDDRToggle && (
           <div className="flex justify-center mb-8">
             <DDRToggle />
           </div>
         )}
-        
         {/* BTW Toggle positioned above the packages, aligned right */}
         {enableBTWToggle && (
           <div className="flex justify-end mb-4">
             <BtwToggle />
           </div>
         )}
-
         <PackageCards 
           packages={packages} 
           gameLogo={gameLogo} 
