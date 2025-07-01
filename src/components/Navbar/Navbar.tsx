@@ -89,7 +89,7 @@ export default function Navbar() {
     },
     {
       name: t('billingPanel'),
-      href: 'https://billing.circlelink.eu'
+      href: 'https://billing.circlelink.eu/login'
     }
   ]
 
